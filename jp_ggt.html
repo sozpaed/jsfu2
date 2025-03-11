@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>JavaScript-Projekt: ggT berechnen</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./css/jp_style.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+        <script type="application/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+        <script language="javascript" type="text/javascript" src="./script/SozLib.js"></script>
+        <script language="javascript" type="text/javascript" src="./script/jp_ggt.js"></script>
+    </head>
+    <body>
+        <div class="sozmain">
+            <div id="sozhead">
+                <h1 id="Titel">ggT berechnen</h1>
+                <div class="menue">
+                    <p class="menue-item_off"><a href="./jp_index.html">Start</a></p>
+                </div>
+            </div>
+            <div class="sozmiddle">
+                <div id="sozleftside">
+                    <div class="mathmenue">
+                        <p class="mathmenue-item_on"><a href="./jp_ggt.html">ggT</a></p>
+                    </div>
+                </div>
+                <div id="sozcenter">
+                    <div id="showChallenge">Zum Berechnen drücke auf <b>"Berechnen"</b></div>
+                    <div id="getResultOfChallenge">
+                        <div id="SozProgress"></div>
+                        <div id="showCallbackOfChallenge"></div>
+                        <form name="userInputForm">
+                            <label for="firstValueFromUser">Trage die erste Zahl ein:</label>
+                            <input type="number" id="firstValueFromUser" name="firstValueFromUser" min="1" step="1" pattern="\d+" required />
+                            <br>
+                            <label for="secondValueFromUser">Trage die zweite Zahl ein:</label>
+                            <input type="number" id="secondValueFromUser" name="secondValueFromUser" min="1" step="1" pattern="\d+" required />
+                        </form>
+                    </div>
+                    <div id="listOfButtons">
+                        <form name="listOfButtons">
+                            <input type="button" id="calcGgT" value="Berechnen"/>
+                            <input type="button" id="sozReloadButton" value="Seite neu laden" onclick="location.reload(true)"/>
+                        </form>
+                    </div>
+                </div>
+                <div id="sozrightside"></div>
+            </div>
+            <div id="sozfoot"></div>
+        </div>
+    </body>
+</html>

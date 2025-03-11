@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Kopfübungen mit Multiplikation</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./css/sozstyle.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+        <script type="application/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+        <script language="javascript" type="text/javascript" src="./script/SozLib.js"></script>
+        <script language="javascript" type="text/javascript" src="./script/multicalcscript.js"></script>
+    </head>
+    <body>
+        <div class="sozmain">
+            <div id="sozhead">
+                <h1 id="Titel">Kopfübungen mit Multiplikation</h1>
+                <div class="menue">
+                    <p class="menue-item_off"><a href="./index.html">Start</a></p>
+                    <p class="menue-item_on"><a href="./mathetools.html">Mathe-Tools</a></p>
+                    <p class="menue-item_off"><a href="./impressum.html">Impressum</a></p>
+                </div>
+            </div>
+            <div class="sozmiddle">
+                <div id="sozleftside">
+                    <div class="mathmenue">
+                        <p class="mathmenue-item_on"><a href="./multicalcnew.html">Multiplikation</a></p>
+                        <p class="mathmenue-item_off"><a href="./wuerfelwahrscheinlichkeit.html">Wahrscheinlichkeit mit Würfeln</a></p>
+                        <p class="mathmenue-item_off"><a href="./winkelzeichnen.html">Winkelarten</a></p>
+                        <p class="mathmenue-item_off"><a href="./dreiwuerfel.html">3 Würfel</a></p>
+                        <p class="mathmenue-item_off"><a href="./doppelwuerfel.html">Würfelwahrscheinlichkeit mit 2</a></p>
+                    </div>
+                </div>
+                <div id="sozcenter">
+                    <div id="showChallenge">Zum Starten drücke auf <b>"Neue Aufgabe"</b></div>
+                    <div id="getResultOfChallenge">
+                        <div id="SozProgress"></div>
+                        <div id="showCallbackOfChallenge"></div>
+                        Trage hier Dein Ergebnis ein: <form name="userInputForm"><input type="number" id="resultFromUser" name="resultFromUser" /></form>
+                    </div>
+                    <div id="listOfButtons">
+                        <form name="listOfButtons">
+                            <input type="button" id="newButton" value="Neue Aufgabe"/>
+                            <input type="button" id="sozReloadButton" value="Seite neu laden" onclick="location.reload(true)"/>
+                            <input type="button" id="checkButton" value="Prüfe Dein Ergebnis"/>
+                            
+                        </form>
+                    </div>
+                    <div id="showCalcRange">Die Werte für die Aufgaben sind aus dem Bereich von 10 bis 10. Zum Ändern des Bereiches, den Regler unten betätigen.</div>
+                    <div id="mySlider"></div>
+                    
+                </div>
+                <div id="sozrightside"></div>
+            </div>
+            <div id="sozfoot"></div>
+        </div>
+    </body>
+</html>
