@@ -1,0 +1,25 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient für einen modernen 3D-Effekt -->
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E9892C"/>
+      <stop offset="100%" stop-color="#E31C79"/>
+    </linearGradient>
+    <!-- Drop-Shadow-Filter für 3D-Tiefe -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="3" dy="3" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Kalender-Icon als Symbol für Wochenpläne -->
+  <g filter="url(#shadow)">
+    <!-- Grundform des Kalenders mit abgerundeten Ecken -->
+    <rect x="15" y="20" width="70" height="65" rx="8" ry="8" fill="url(#bgGradient)"/>
+    <!-- Kopfzeile (z.B. für Wochentagsanzeige) -->
+    <rect x="15" y="20" width="70" height="15" rx="4" ry="4" fill="#E31C79"/>
+  </g>
+  
+  <!-- Checkmark als Symbol für die Pflichtaufgabe -->
+  <path d="M30,50 L45,65 L70,35" stroke="#E9892C" stroke-width="6" fill="none"
+        stroke-linecap="round" stroke-linejoin="round" filter="url(#shadow)"/>
+</svg>
