@@ -6,11 +6,8 @@
  * 
  * Inhalt
  * +++++++++++++++++++++++++++++
- * - createMultiplication -> Die Funktion berechnet von zwei Werten das Produkt
- * - createRandomValue -> Die Funktion berechnet einen zufälligern Wert bis zur rangeValue
- * - createProgressbar -> Die Funktion generiert die Progressbar
- * - valideEingabe -> Erzeugt die Texte und validiert die Ergebnisse der Aufgaben
- * - multiStart -> Die Funktion für die HTML-Datei
+ * - getInputAndCalculate -> Holt die Eingabe, validiert sie und berechnet den Durchschnitt
+ * - calculateNotenschnitt -> Berechnet den Durchschnitt der eingegebenen Noten
  * 
  * Lizenz
  * ++++++++++++++++++++++++++++
@@ -41,7 +38,7 @@ $(document).ready(function () {
 
         $('#showCallbackOfChallenge').css('background-color', '#c22b67');
         $('#showCallbackOfChallenge').css('visibility', 'visible');
-        $('#showCallbackOfChallenge').html('Durchschnitt: ' + getCalcDurchschnitt);
+        $('#showCallbackOfChallenge').html('Durchschnitt: ' + getCalcDurchschnitt + '. Anzahl Noten:' + count);
     }
 
     $('#calcDurchschnitt').click(function () {

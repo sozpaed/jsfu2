@@ -277,7 +277,7 @@ td, tr {
     background-color: #c29a2b;
     border-radius: 25px;
     visibility: visible;
-    float: right;
+    float: left;
     width: 30%;
     margin-top: 1em;
     padding-top: 1%;

@@ -6,11 +6,7 @@
  * 
  * Inhalt
  * +++++++++++++++++++++++++++++
- * - createMultiplication -> Die Funktion berechnet von zwei Werten das Produkt
- * - createRandomValue -> Die Funktion berechnet einen zufälligern Wert bis zur rangeValue
- * - createProgressbar -> Die Funktion generiert die Progressbar
- * - valideEingabe -> Erzeugt die Texte und validiert die Ergebnisse der Aufgaben
- * - multiStart -> Die Funktion für die HTML-Datei
+ * - calculateGgTOfTwoValues -> GGT-Berechnung nach Euklid
  * 
  * Lizenz
  * ++++++++++++++++++++++++++++
