@@ -19,39 +19,37 @@
 */
 
 $(document).ready(function () {
-    $('#calcDurchschnitt').click(function () {
-        let count = 0;
-        let sum = 0;
-        let getValueForCalc = 0;
+    let count = 0;
+    let sum = 0;
 
-        while (getInput > -1) {
-            getValueForCalc = $('#valueForCalc').val();
-            getValueForCalc =parseInt(getValueForCalc);
+    function getInputAndCalculate() {
+        let getValueForCalc = $('#valueForCalc').val();
+        getValueForCalc = parseInt(getValueForCalc);
 
-            sum = sum + getValueForCalc;
-            count++;
-
-            let getCalcDurchschnitt = calculateNotenschnitt(count,sum);
-
-            $('#showCallbackOfChallenge').css('background-color','#c22b67');
-            $('#showCallbackOfChallenge').css('visibility','visible');
-            $('#showCallbackOfChallenge').html('Durchschnitt:' + getCalcDurchschnitt);
+        // Überprüfen, ob die Eingabe eine ganze Zahl zwischen 1 und 6 ist
+        if (isNaN(getValueForCalc) || getValueForCalc < 1 || getValueForCalc > 6) {
+            $('#showCallbackOfChallenge').css('background-color', '#c22b67');
+            $('#showCallbackOfChallenge').css('visibility', 'visible');
+            $('#showCallbackOfChallenge').html('Bitte nur Zahlen zwischen 1 und 6 eintragen.');
+            return; // Beende die Funktion, wenn die Eingabe ungültig ist
         }
-        
+
+        sum += getValueForCalc;
+        count++;
+
+        let getCalcDurchschnitt = calculateNotenschnitt(sum, count);
+
+        $('#showCallbackOfChallenge').css('background-color', '#c22b67');
+        $('#showCallbackOfChallenge').css('visibility', 'visible');
+        $('#showCallbackOfChallenge').html('Durchschnitt: ' + getCalcDurchschnitt);
+    }
+
+    $('#calcDurchschnitt').click(function () {
+        getInputAndCalculate();
     });
-    
 });
 
-/*
- * calculateGgTOfTwoValues -> GGT-Berechnung nach Euklid
- * ---------------------------------------------------------------------------
- * value1 = erster Wert (int)
- * value2 = zweiter Wert (int)
- * 
- * Hinweis: es wird SozCalc aus der SozLib verwendet
-*/
-function calculateNotenschnitt(sum,count) {
-    
+function calculateNotenschnitt(sum, count) {
     let calcDurchschnitt = sum / count;
-    return calcDurchschnitt;
+    return calcDurchschnitt.toFixed(2); // Durchschnitt auf 2 Dezimalstellen runden
 }

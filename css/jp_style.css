@@ -136,6 +136,15 @@ td, tr {
     margin-top: 1%;
 }
 
+#valueForCalc {
+    font-size: 14px;
+    padding-top: 1%;
+    padding-inline-start: 1%;
+    padding-bottom: 1%;
+    border-radius: 25px;
+    margin-top: 1%;
+}
+
 #secondValueFromUser {
     font-size: 14px;
     padding-top: 1%;
@@ -263,7 +272,7 @@ td, tr {
     border: none;
 }
 
-#valueForCalc {
+#calcDurchschnitt {
     font-size: 14px;
     background-color: #c29a2b;
     border-radius: 25px;
