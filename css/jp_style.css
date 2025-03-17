@@ -144,7 +144,14 @@ td, tr {
     border-radius: 25px;
     margin-top: 1%;
 }
-
+#userChoice {
+    font-size: 14px;
+    padding-top: 1%;
+    padding-inline-start: 1%;
+    padding-bottom: 1%;
+    border-radius: 25px;
+    margin-top: 1%;
+}
 #secondValueFromUser {
     font-size: 14px;
     padding-top: 1%;
