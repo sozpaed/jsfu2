@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-        <title>JavaScript-Projekt: 1x1</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="./css/jp_style.css">
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
-        <script type="application/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
-        <script language="javascript" type="text/javascript" src="./script/SozLib.js"></script>
-        <script language="javascript" type="text/javascript" src="./script/jp_zahlenraten.js"></script>
-    </head>
+<head>
+    <title>JavaScript-Projekt: 1x1</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/jp_style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <script type="application/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script language="javascript" type="text/javascript" src="./script/SozLib.js"></script>
+    <script language="javascript" type="text/javascript" src="./script/jp_einmaleins.js"></script>
+</head>
 <body>
     <div class="sozmain">
         <div id="sozhead">
@@ -34,8 +34,10 @@
                     <div id="SozProgress"></div>
                     <div id="showCallbackOfChallenge"></div>
                     <form name="userInputForm">
-                        <label for="userChoice">Trage die erste Zahl ein:</label>
-                        <input type="number" id="userChoice" name="userChoice" min="1" step="1" pattern="\d+" required />
+                        <label for="firstNumber">Trage die Zahl der Reihe ein:</label>
+                        <input type="number" id="firstNumber" name="firstNumber" min="1" step="1" pattern="\d+" required />
+                        <label for="secondNumber">Trage die Anzahl der Reihen ein:</label>
+                        <input type="number" id="secondNumber" name="secondNumber" min="1" step="1" pattern="\d+" required />
                     </form>
                 </div>
                 <div id="listOfButtons">

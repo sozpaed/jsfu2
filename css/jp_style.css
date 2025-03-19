@@ -136,6 +136,24 @@ td, tr {
     margin-top: 1%;
 }
 
+#firstNumber {
+    font-size: 14px;
+    padding-top: 1%;
+    padding-inline-start: 1%;
+    padding-bottom: 1%;
+    border-radius: 25px;
+    margin-top: 1%;
+}
+
+#secondNumber {
+    font-size: 14px;
+    padding-top: 1%;
+    padding-inline-start: 1%;
+    padding-bottom: 1%;
+    border-radius: 25px;
+    margin-top: 1%;
+}   
+
 #valueForCalc {
     font-size: 14px;
     padding-top: 1%;
