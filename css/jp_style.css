@@ -312,6 +312,22 @@ td, tr {
     border: none;
 }
 
+#startmulti {
+    font-size: 14px;
+    background-color: #c29a2b;
+    border-radius: 25px;
+    visibility: visible;
+    float: left;
+    width: 30%;
+    margin-top: 1em;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+
 #calcDurchschnitt {
     font-size: 14px;
     background-color: #c29a2b;

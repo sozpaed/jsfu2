@@ -6,7 +6,7 @@
  * 
  * Inhalt
  * +++++++++++++++++++++++++++++
- * - playGame -> Holt die Eingabe, validiert sie und erstellt die Multiplikationsreihe
+ * - getValueForMulti -> Holt die Eingabe, validiert sie und erstellt die Multiplikationsreihe
  * 
  * Lizenz
  * ++++++++++++++++++++++++++++
@@ -15,38 +15,74 @@
 */
 
 $(document).ready(function () {
-    $('#playGame').click(function () {
-        playGame();
+    // Event-Listener: Führt die Funktion getValueForMulti aus, wenn der Button mit der ID 'startmulti' geklickt wird.
+    $('#startmulti').click(function () {
+        getValueForMulti();
     });
 
-    function playGame() {
-        let valueOfRow = $('#firstNumber').val();
-        let numberOfRow = $('#secondNumber').val();
+    /**
+     * Holt die Eingabewerte aus den HTML-Input-Feldern, validiert sie und erstellt die Multiplikationsreihe.
+     */
+    function getValueForMulti() {
+        // Holt die Werte aus den Input-Feldern mit den IDs 'firstNumber' und 'secondNumber'.
+        let valueOfRow = $('#firstNumber').val(); // Erste Zahl (Multiplikator)
+        let numberOfRow = $('#secondNumber').val(); // Anzahl der Reihen (Multiplikanden)
+
+        // Konvertiert die Eingaben von Strings zu Ganzzahlen.
         valueOfRow = parseInt(valueOfRow);
         numberOfRow = parseInt(numberOfRow);
 
-        // Überprüfen, ob die Eingaben ganze Zahlen sind
+        // Überprüft, ob die Eingaben gültige Zahlen sind (größer oder gleich 1).
         if (isNaN(valueOfRow) || valueOfRow < 1 || isNaN(numberOfRow) || numberOfRow < 1) {
-            $('#showCallbackOfChallenge').css('background-color', '#c22b67');
-            $('#showCallbackOfChallenge').css('visibility', 'visible');
-            $('#showCallbackOfChallenge').html('Bitte gültige Zahlen eintragen.');
-            return; // Beende die Funktion, wenn die Eingaben ungültig sind
+            // Zeigt eine Fehlermeldung an, wenn die Eingaben ungültig sind.
+            updateResultDisplay('Bitte gültige Zahlen eintragen.', 'error');
+            return; // Beendet die Funktion, wenn die Eingaben ungültig sind.
         }
 
-        let result = createMultiplicationRow(valueOfRow, numberOfRow);
-
-        $('#showCallbackOfChallenge').css('background-color', '#c22b67');
-        $('#showCallbackOfChallenge').css('visibility', 'visible');
-        $('#showCallbackOfChallenge').html(result);
+        // Erstellt die Multiplikationsreihe und zeigt das Ergebnis an.
+        let resultOfMulti = createMultiplicationRow(valueOfRow, numberOfRow);
+        updateResultDisplay(resultOfMulti, 'success');
     }
 
+    /**
+     * Erstellt eine Multiplikationsreihe basierend auf den übergebenen Werten.
+     * @param {number} valueOfRow - Die Basiszahl (Multiplikator).
+     * @param {number} numberOfRow - Die Anzahl der Multiplikanden.
+     * @returns {string} - Die HTML-formatierte Multiplikationsreihe.
+     */
     function createMultiplicationRow(valueOfRow, numberOfRow) {
-        let result = `<h3>Multiplikationsreihe für ${valueOfRow}:</h3>`;
-        let i = 1;
-        while (i <= numberOfRow) {
+        // Erstellt den Header für die Multiplikationsreihe.
+        let result = `<p><b>Multiplikationsreihe für ${valueOfRow}:</b></p>`;
+        
+        // Fügt für jeden Multiplikanden (1 bis numberOfRow) eine Zeile hinzu.
+        for (let i = 1; i <= numberOfRow; i++) {
             result += `${valueOfRow} x ${i} = ${valueOfRow * i}<br>`;
-            i++;
         }
+        
+        // Gibt die vollständige Multiplikationsreihe als String zurück.
         return result;
+    }
+
+    /**
+     * Aktualisiert die Anzeige des Ergebnisses oder einer Fehlermeldung.
+     * @param {string} message - Die anzuzeigende Nachricht (HTML-Format erlaubt).
+     * @param {string} type - Der Typ der Nachricht ('error' oder 'success').
+     */
+    function updateResultDisplay(message, type) {
+        // Wählt das HTML-Element mit der ID 'showCallbackOfChallenge' aus.
+        const resultElement = $('#showCallbackOfChallenge');
+        
+        // Macht das Element sichtbar.
+        resultElement.css('visibility', 'visible');
+        
+        // Setzt die Hintergrundfarbe basierend auf dem Typ der Nachricht.
+        if (type === 'error') {
+            resultElement.css('background-color', '#c22b67'); // Rot für Fehler.
+        } else if (type === 'success') {
+            resultElement.css('background-color', '#28a745'); // Grün für Erfolg.
+        }
+        
+        // Setzt den Inhalt des Elements auf die übergebene Nachricht.
+        resultElement.html(message);
     }
 });
