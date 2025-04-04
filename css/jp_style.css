@@ -136,6 +136,40 @@ td, tr {
     margin-top: 1%;
 }
 
+#firstNumber {
+    font-size: 14px;
+    padding-top: 1%;
+    padding-inline-start: 1%;
+    padding-bottom: 1%;
+    border-radius: 25px;
+    margin-top: 1%;
+}
+
+#secondNumber {
+    font-size: 14px;
+    padding-top: 1%;
+    padding-inline-start: 1%;
+    padding-bottom: 1%;
+    border-radius: 25px;
+    margin-top: 1%;
+}   
+
+#valueForCalc {
+    font-size: 14px;
+    padding-top: 1%;
+    padding-inline-start: 1%;
+    padding-bottom: 1%;
+    border-radius: 25px;
+    margin-top: 1%;
+}
+#userChoice {
+    font-size: 14px;
+    padding-top: 1%;
+    padding-inline-start: 1%;
+    padding-bottom: 1%;
+    border-radius: 25px;
+    margin-top: 1%;
+}
 #secondValueFromUser {
     font-size: 14px;
     padding-top: 1%;
@@ -206,7 +240,7 @@ td, tr {
 #showCallbackOfChallenge {
     border-radius: 25px;
     float: right;
-    width: 40%;
+    width: 50%;
     height: 18px;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -249,6 +283,36 @@ td, tr {
 */
 
 #calcGgT {
+    font-size: 14px;
+    background-color: #c29a2b;
+    border-radius: 25px;
+    visibility: visible;
+    float: left;
+    width: 30%;
+    margin-top: 1em;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+#playGame {
+    font-size: 14px;
+    background-color: #c29a2b;
+    border-radius: 25px;
+    visibility: visible;
+    float: left;
+    width: 30%;
+    margin-top: 1em;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+#calcDurchschnitt {
     font-size: 14px;
     background-color: #c29a2b;
     border-radius: 25px;

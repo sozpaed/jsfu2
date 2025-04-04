@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>JavaScript-Projekt: Stein, Schere, Papier</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./css/jp_style.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+        <script type="application/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+        <script language="javascript" type="text/javascript" src="./script/SozLib.js"></script>
+        <script language="javascript" type="text/javascript" src="./script/jp_steinscherepapier.js"></script>
+    </head>
+<body>
+    <div class="sozmain">
+        <div id="sozhead">
+            <h1 id="Titel">Stein, Schere, Papier</h1>
+            <div class="menue">
+                <p class="menue-item_off"><a href="./jp_index.html">Start</a></p>
+            </div>
+        </div>
+        <div class="sozmiddle">
+            <div id="sozleftside">
+                <div class="mathmenue">
+                    <p class="mathmenue-item_off"><a href="./jp_ggt.html">ggT</a></p>
+                    <p class="mathmenue-item_off"><a href="./jp_notenschnitt.html">Notendurchschnitt</a></p>
+                    <p class="mathmenue-item_on"><a href="./jp_steinscherepapier.html">Stein, Schere, Papier</a></p>
+                    <p class="mathmenue-item_off"><a href="./jp_zahlenraten.html">Zahlenraten</a></p>
+                    <p class="mathmenue-item_off"><a href="./jp_einmaleins.html">1 x 1</a></p>
+                </div>
+            </div>
+            <div id="sozcenter">
+                <div id="showChallenge">Zum Spielen drücke auf <b>"Spielen"</b></div>
+                <div id="getResultOfChallenge">
+                    <div id="SozProgress"></div>
+                    <div id="showCallbackOfChallenge"></div>
+                    <form name="userInputForm">
+                        <label for="userChoice">Wähle Stein (1), Schere (2), Papier (3):</label>
+                        <input type="number" id="userChoice" min="1" max="3">
+                    </form>
+                </div>
+                <div id="listOfButtons">
+                    <form name="listOfButtons">
+                        <input type="button" id="playGame" value="Spielen"/>
+                        <input type="button" id="sozReloadButton" value="Seite neu laden" onclick="location.reload(true)"/>
+                    </form>
+                </div>
+            </div>
+            <div id="sozrightside"></div>
+        </div>
+        <div id="sozfoot"></div>
+    </div>
+</body>
+</html>
