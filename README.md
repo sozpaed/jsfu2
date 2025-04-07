@@ -23,6 +23,7 @@ Dieses Projekt wurde entwickelt, um Schülerinnen und Schüler der Klasse 9 schr
 1. Klone das Repository:
    ```bash
    git clone https://github.com/<dein-benutzername>/jsfu2-1.git
+   ```
 2. Öffne die Datei start.html in deinem Browser, um das Projekt zu starten.
 
 ## Projektstruktur
