@@ -161,17 +161,24 @@
     <!-- Aufgabe 4.6 -->
     <div>
         <div class="aufgabenr expertenstandard">Aufgabe 4.6 🔴</div>
-        <div class="aufgabentext">Schreibe Code, um eine Variable  punktzahl mit dem Wert 75 zu deklarieren. Erhöhe die Punktzahl um 20 und gib die neue Punktzahl in der Konsole aus. Subtrahiere dann 10 von der Punktzahl und gib das erneute Ergebnis aus.</div>
+        <div class="aufgabentext">
+            Deklariere eine Variable <code>age</code> mit dem Wert <code>15</code> und eine Konstante <code>personName</code> mit dem Wert <code>"Lisa"</code>. Erstelle eine Variable <code>isAdult</code>, die überprüft, ob <code>age</code> größer oder gleich <code>18</code> ist, und eine Variable <code>nextYearAge</code>, die das Alter im nächsten Jahr berechnet. Gib alle Variablen sowie eine Begrüßung <code>greating</code> <code>"Hallo, Lisa!"</code> in der Konsole aus.
+        </div>
         <div class="code-container">
             <span class="toggle-button">Lösung anzeigen</span>
             <div class="code-content">
                 <pre class="aufgabenloesung">
                     <code class="language-js">
-                        let punktzahl = 75;
-                        punktzahl += 20;
-                        console.log(punktzahl);
-                        punktzahl -= 10;
-                        console.log(punktzahl);
+                        let age = 15;
+                        const personName = "Lisa";
+                        let isAdult = age >= 18;
+                        let nextYearAge = age + 1;
+                        let greeting = "Hallo, " + personName + "!";
+                        console.log("Name:", personName);
+                        console.log("Alter:", age);
+                        console.log("Volljährig?", isAdult);
+                        console.log("Nächstes Jahr werde ich:", nextYearAge);
+                        console.log(greeting);
                     </code>
                 </pre>
             </div>
@@ -182,11 +189,16 @@
             <div id="feedback-aufgabe-4-6" class="feedback"></div>
         </div>
         <script id="aufgabe46">
-            let punktzahl = 75;
-            punktzahl += 20;
-            console.log(punktzahl);
-            punktzahl -= 10;
-            console.log(punktzahl);
+            let age = 15;
+            const personName = "Lisa";
+            let isAdult = age >= 18;
+            let nextYearAge = age + 1;
+            let greeting = "Hallo, " + personName + "!";
+            console.log("Name:", personName);
+            console.log("Alter:", age);
+            console.log("Volljährig?", isAdult);
+            console.log("Nächstes Jahr werde ich:", nextYearAge);
+            console.log(greeting);
         </script>
     </div>
 
