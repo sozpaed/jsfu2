@@ -16,7 +16,7 @@
 
 $(document).ready(function () {
     // Event-Listener: Führt die Funktion getValueForMulti aus, wenn der Button mit der ID 'startmulti' geklickt wird.
-    $('#startmulti').click(function () {
+    $('#sozStartButton').click(function () {
         getValueForMulti();
     });
 

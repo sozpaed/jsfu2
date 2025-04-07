@@ -1,0 +1,39 @@
+.link-container {
+    margin-top: 30px;
+    font-family: Arial, sans-serif;
+}
+.link-container a {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: white;
+    background-color: #007BFF;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+.link-container a:hover {
+    background-color: #0056b3;
+}
+
+#start{
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 15px 15px 15px;
+    text-decoration: none;
+    color: white;
+    background-color: #bb0ab2;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+#start:hover {
+    background-color: #81047b;
+}
+
+#start:active {
+    background-color: #bb0ab2;
+}

@@ -17,12 +17,12 @@
 */
 
 $(document).ready(function () {
-    $('#playGame').click(function () {
+    $('#sozStartButton').click(function () {
         playGame();
     });
 
     function playGame() {
-        let userChoice = $('#userChoice').val();
+        let userChoice = $('#firstNumber').val();
         userChoice = parseInt(userChoice);
 
         // Überprüfen, ob die Eingabe eine ganze Zahl zwischen 1 und 3 ist

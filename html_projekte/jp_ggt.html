@@ -1,56 +1,48 @@
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-        <title>JavaScript-Projekt: ggT berechnen</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="../css/jp_projekte.css">
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
-        <script language="javascript" type="text/javascript" src="../script/SozLib.js"></script>
-        <script language="javascript" type="text/javascript" src="../script/jp_ggt.js"></script>
-    </head>
-    <body>
-        <div class="sozmain">
-            <div id="sozhead">
-                <h1 id="Titel">ggT berechnen</h1>
-                <div class="menue">
-                    <p class="menue-item_off"><a href="./jp_index.html">Start</a></p>
-                </div>
-            </div>
-            <div class="sozmiddle">
-                <div id="sozleftside">
-                    <div class="mathmenue">
-                        <p class="mathmenue-item_on"><a href="./jp_ggt.html">ggT</a></p>
-                        <p class="mathmenue-item_off"><a href="./jp_notenschnitt.html">Notendurchschnitt</a></p>
-                        <p class="mathmenue-item_off"><a href="./jp_steinscherepapier.html">Stein, Schere, Papier</a></p>
-                        <p class="mathmenue-item_off"><a href="./jp_zahlenraten.html">Zahlenraten</a></p>
-                        <p class="mathmenue-item_off"><a href="./jp_einmaleins.html">1 x 1</a></p>
-                    </div>
-                </div>
-                <div id="sozcenter">
-                    <div id="showChallenge">Zum Berechnen drücke auf <b>"Berechnen"</b></div>
-                    <div id="getResultOfChallenge">
-                        <div id="SozProgress"></div>
-                        <div id="showCallbackOfChallenge"></div>
-                        <form name="userInputForm">
-                            <label for="firstValueFromUser">Trage die erste Zahl ein:</label>
-                            <input type="number" id="firstValueFromUser" name="firstValueFromUser" min="1" step="1" pattern="\d+" required />
-                            <br>
-                            <label for="secondValueFromUser">Trage die zweite Zahl ein:</label>
-                            <input type="number" id="secondValueFromUser" name="secondValueFromUser" min="1" step="1" pattern="\d+" required />
-                        </form>
-                    </div>
-                    <div id="listOfButtons">
-                        <form name="listOfButtons">
-                            <input type="button" id="calcGgT" value="Berechnen"/>
-                            <input type="button" id="sozReloadButton" value="Seite neu laden" onclick="location.reload(true)"/>
-                        </form>
-                    </div>
-                </div>
-                <div id="sozrightside"></div>
-            </div>
-            <div id="sozfoot"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Größter gemeinsamer Teiler</title>
+    <link rel="stylesheet" href="../css/jp_projekte.css">
+    <link rel="stylesheet" href="../css/jp_menue.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script src="../script/jp_ggt.js"></script>
+</head>
+<body>
+    <div class="link-container">
+        <a id="start" href="../start.html">Start</a>
+        <a href="./jp_einmaleins.html">Einmaleins</a>
+        <a href="./jp_ggt.html">Größter gemeinsamer Teiler</a>
+        <a href="./jp_notenschnitt.html">Notenschnitt berechnen</a>
+        <a href="./jp_steinscherepapier.html">Stein, Schere, Papier</a>
+        <a href="./jp_zahlenraten.html">Zahlenraten</a>
+    </div>
+    <h1>Größter gemeinsamer Teiler</h1>
+    <div class="content">
+        <h2>Willkommen zur Berechnung des größten gemeinsamen Teilers!</h2>
+        <p>In diesem Projekt kannst du den größten gemeinsamen Teiler (ggT) zweier Zahlen berechnen. Gib einfach zwei Zahlen ein und drücke auf "Berechnen".</p>
+        <p>Das Tool zeigt dir den ggT der beiden Zahlen an. Viel Erfolg!</p>
+    </div>
+    <div class="projektarea">
+        <div id="showChallenge">Zum Berechnen drücke auf <b>"Berechnen"</b></div>
+        <div id="getResultOfChallenge">
+            <div id="showCallbackOfChallenge" style="visibility: hidden;"></div>
+            <form name="userInputForm">
+                <label for="firstNumber">Erste Zahl:</label>
+                <input type="number" id="firstNumber" name="firstNumber" min="1" step="1" pattern="\d+" required />
+                <label for="secondNumber">Zweite Zahl:</label>
+                <input type="number" id="secondNumber" name="secondNumber" min="1" step="1" pattern="\d+" required />
+            </form>
         </div>
-    </body>
+        <div id="listOfButtons">
+            <form name="listOfButtons">
+                <input type="button" id="sozStartButton" value="Berechnen"/>
+                <input type="button" id="sozReloadButton" value="Seite neu laden" onclick="location.reload(true)"/>
+            </form>
+        </div>
+    </div>
+</body>
 </html>

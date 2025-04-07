@@ -11,116 +11,26 @@
 */
 
 /*
- * Für die Darstellung der Webseite
- * #######################################
-*/
-body {
-    height: 1024px;
-    font-size: 12pt;
-    background: #469FAA;
-    font-family: 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
-  }
-  
-td, tr {
-    font-size: 12px;
-}
-
-.row_text {
-    text-align: center;
-    writing-mode: vertical-rl; 
-    transform:rotate(180deg);
-}
-
-.col_text {
-    text-align: center;
-}
-
-.doubleCube {
-    border: 1px solid #817a92;
-}
-
-.createCanvasTable {
-    border: 1px solid #817a92;
-    text-align: center;
-    font-size: 20pt;
-    height: 75px;
-    width: 75px;
-    border-radius: 25px;
-}
-
-.createCanvasTableWhole {
-    border: 1px solid #817a92;
-    border-radius: 25px;
-    vertical-align: middle;
-}
-
-#sozcenter {
-    height: 100%;
-    background-color: #a3cfd5;
-    width: 73.9%;
-    float: left;
-    border: 2px solid #c78829;
-}
-
-.sozmain {
-    height: 1200px;
-    border: none;
-}
-
-.sozmiddle {
-    display: flex;
-    align-items: center;
-    margin: auto;
-    height: 80%;
-    width: 100%;
-    border: none;
-}
-
-#sozDoubleCubeHead {
-    height: 100px;
-    background-color: #b8e419;
-}
-
-#sozhead {
-    height: 100px;
-    border-radius: 25px;
-    background: #469FAA;
-    box-shadow: inset 10px 10px 20px #387f88,
-            inset -10px -10px 20px #90c5cc;
-}
-
-#sozleftside {
-    font-size: 20px;
-    height: 100%;
-    background-color: #316f77;
-    float: left;
-    width: 9.8%;
-    border: none;
-}
-
-#sozrightside {
-    height: 100%;
-    background-color: #316f77;
-    float: right;
-    width: 9.8%;
-    border: none;
-}
-
-#sozfoot {
-    height: 40px;
-    background-color: #234f55;
-}
-
-#sozhead, #sozDoubleCubeHead, #sozleftside, #sozcenter, #sozrightside,  #sozfoot {
-    border-radius: 25px;
-    padding-inline-start: 1%;
-    padding-inline-end: 1%;
-}
-
-/*
  * Für die Darstellung der Elemente
  * #######################################
 */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+h1 {
+    border: #0056b3 solid 1px;
+    background-color: #007BFF;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 20px;
+    color: #333;
+    margin-top: 50px;
+}
 
 #getResultOfChallenge {
     padding-top: 1%;
@@ -138,11 +48,10 @@ td, tr {
 
 #firstNumber {
     font-size: 14px;
-    padding-top: 1%;
+    padding: 10px;
     padding-inline-start: 1%;
-    padding-bottom: 1%;
     border-radius: 25px;
-    margin-top: 1%;
+    margin: 20px;
 }
 
 #secondNumber {
@@ -162,119 +71,21 @@ td, tr {
     border-radius: 25px;
     margin-top: 1%;
 }
-#userChoice {
-    font-size: 14px;
-    padding-top: 1%;
-    padding-inline-start: 1%;
-    padding-bottom: 1%;
-    border-radius: 25px;
-    margin-top: 1%;
-}
-#secondValueFromUser {
-    font-size: 14px;
-    padding-top: 1%;
-    padding-inline-start: 1%;
-    padding-bottom: 1%;
-    border-radius: 25px;
-    margin-top: 1%;
-}
-
-#showReloadButton {
-    font-size: 20px;
-    visibility: visible;
-    cursor: pointer;
-    outline: none;
-    border: none;
-}
-
-#showTheDoubleCubeTable {
-    margin-top: 2%;
-    padding-inline-start: 1%;
-    background-color: #2b72c2;
-    border-radius: 25px;
-    width: 99%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-
-#showCanvasTable {
-    margin-top: 2%;
-    padding-inline-start: 1%;
-    background-color: #2b72c2;
-    border-radius: 25px;
-    width: 99%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-
-#showResultOfProbability {
-    margin-top: 2%;
-    padding-inline-start: 1%;
-    background-color: #2b72c2;
-    border-radius: 25px;
-    width: 99%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    visibility: hidden;
-}
-
-#showTheDoubleCube {
-    margin-top: 2%;
-    padding-inline-start: 1%;
-    background-color: #2bc283;
-    border-radius: 25px;
-    width: 99%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-
-#showTableOfProbability {
-    margin-top: 2%;
-    padding-inline-start: 1%;
-    background-color: #2bc283;
-    border-radius: 25px;
-    width: 99%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-#showCallbackOfChallenge {
-    border-radius: 25px;
-    float: right;
-    width: 50%;
-    height: 18px;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    padding-left: 1em;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    font-size: 18px;
-}
 
 #showChallenge {
-    margin-top: 2%;
+    margin: 20px;
     padding-inline-start: 1%;
-    background-color: #c29a2b;
+    background-color: #c85629;
     border-radius: 25px;
-    width: 100%;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding: 10px;
 }
 
-#showProbabilityRange {
+#showCallbackOfChallenge {
+    margin: 20px;
     padding-inline-start: 1%;
-    background-color: white;
+    background-color: #c85629;
     border-radius: 25px;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    margin-top: 2%;
-}
-#showCalcRange {
-    padding-inline-start: 1%;
-    background-color: white;
-    border-radius: 25px;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    margin-top: 2%;
+    padding: 10px;
 }
 
 /*
@@ -282,53 +93,7 @@ td, tr {
  * -------------------------------------
 */
 
-#calcGgT {
-    font-size: 14px;
-    background-color: #c29a2b;
-    border-radius: 25px;
-    visibility: visible;
-    float: left;
-    width: 30%;
-    margin-top: 1em;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    cursor: pointer;
-    outline: none;
-    border: none;
-}
-
-#playGame {
-    font-size: 14px;
-    background-color: #c29a2b;
-    border-radius: 25px;
-    visibility: visible;
-    float: left;
-    width: 30%;
-    margin-top: 1em;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    cursor: pointer;
-    outline: none;
-    border: none;
-}
-
-#startmulti {
-    font-size: 14px;
-    background-color: #c29a2b;
-    border-radius: 25px;
-    visibility: visible;
-    float: left;
-    width: 30%;
-    margin-top: 1em;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    cursor: pointer;
-    outline: none;
-    border: none;
-}
-
-
-#calcDurchschnitt {
+#sozStartButton {
     font-size: 14px;
     background-color: #c29a2b;
     border-radius: 25px;
@@ -357,213 +122,27 @@ td, tr {
     border: none;
 }
 
-.main {
-    height: 1024px;
+.projektarea {
+    border-radius: 25px;    
+    margin: 20px;
+    padding: 10px;
+    background-color: #5d6661;
+    color: azure;
 }
 
-.mitte {
-    display: flex;
-    align-items: center;
-    margin: auto;
-    height: 80%;
-    width: 100%;
+.content {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+    border: #032140 solid 1px;
+    background-color: #3c7b96;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: justify;
+    color: #f3eeee;
 }
-
-
-#head {
-    height: 100px;
-    background-color: #27A3CE;
-}
-
-h1#Titel {
-    font-size: 42px;
-}
-
-#leftside {
-    font-size: 20px;
-    height: 100%;
-    background-color: #A8A8A8;
-    float: left;
-    width: 9.8%;
-}
-
-#center {
-    height: 100%;
-    background-color: white;
-    width: 73.9%;
-    float: left;
-    border: 2px solid #27A3CE;
-}
-
-#rightside {
-    height: 100%;
-    background-color: #A8A8A8;
-    float: right;
-    width: 9.8%;
-}
-
-#foot {
-    height: 40px;
-    background-color: #525052;
-}
-
-#head, #leftside, #center, #rightside, #foot {
-    border-radius: 25px;
-    padding-inline-start: 1%;
-    padding-inline-end: 1%;
-}
-
-#CatOfArc {
-    border-radius: 25px;
-    font-size: 14pt;
-    padding-inline-start: 1%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    width: 99%;
-    margin-top: 2%;
-}
-
-#aenderung {
-    border-radius: 25px;
-    background-color: #A8A8A8;
-    font-size: 14pt;
-    padding-inline-start: 1%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    width: 99%;
-    margin-top: 2%;
-}
-
-#rButtonEingabe {
-    font-size: 12px;
-    background-color: #27A3CE;
-    border-radius: 25px;
-    float: right;
-    width: 20%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    cursor: pointer;
-    outline: none;
-    border: none;
-}
-
-/*
- * Die Menüs
- *
-*/
-
-/*
-.menue (allgemeine Definitionen für das Menü)
-======================================
-display:                definiert der Art der Anzeige. flex ist aktuell die übliche Angabe, um fließende
-                        Übergänge verschiedener Displaygrößen zu ermöglichen.
-                        Hinweise: https://wiki.selfhtml.org/wiki/CSS/Tutorials/Ausrichtung/display und
-                        https://wiki.selfhtml.org/wiki/CSS/Tutorials/Flexbox 
-*/
-.menue {
-	display: flex;
-    float: right;
-    text-align: center;
-}
-
-.menue a {
-    text-decoration: none;
-    color: black;
-}
-
-.mathmenue {
-    display:flex;
-    flex-direction: column;
-    text-align: center;	
-}
-
-.mathmenue a {
-    font-style: italic;
-    text-decoration: none;
-    color: black;
-}
-
-/*
-.menue-row (Anordnung der Menü-Elemente)
-======================================
-flex-direction:         definiert die Anordnung der Elemente. row steht für nebeneinander.
-                        Hinweise: https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/flex-direction
-*/
-
-.menue > div {
-	flex-direction: row;
-}
-
-.mathmenue > div {
-    flex-direction: column;
-}
-
-
-/*
-.menue-item_off (Gestaltung der einzelnen Elemente - inaktiv)
-======================================
-background-color:       definiert in diesem Fall die Hintergrundfarbe des Menüelementes.
-                        Neben den englischen Begriffen können die Farben in Form von RGB (Rot Grün Blau),
-                        CMYK (Cyan, Magenta, Yellow und den Schwarzanteil Key) oder HEX (Hexidezimal)
-                        angegeben werden.
-                        Hinweis unter https://wiki.selfhtml.org/wiki/Grafik/Farbe#Farbangaben und
-                        https://wiki.selfhtml.org/wiki/Grafik/Farbe/Farbpaletten
-*/
-.menue-item_off {
-	background-color: #aa8d46;
-    width: 10em;
-}
-
-.mathmenue-item_off {
-	background-color: #aa8d46;
-}
-
-/*
-.menue-item_on (Gestaltung der einzelnen Elemente - aktiv)
-======================================
-background-color:       definiert in diesem Fall die Hintergrundfarbe des Menüelementes.
-                        Neben den englischen Begriffen können die Farben in Form von RGB (Rot Grün Blau),
-                        CMYK (Cyan, Magenta, Yellow und den Schwarzanteil Key) oder HEX (Hexidezimal)
-                        angegeben werden.
-                        Hinweis unter https://wiki.selfhtml.org/wiki/Grafik/Farbe#Farbangaben und
-                        https://wiki.selfhtml.org/wiki/Grafik/Farbe/Farbpaletten
-*/
-.menue-item_on {
-	background-color: #aa5146;
-    width: 10em;
-}
-
-.mathmenue-item_on {
-	background-color: #aa5146;
-}
-
-/*
-.menue-item_off (Veränderung der Hintergrundfarbe beim "überfliegen" der Menüpunkte - inaktiv)
-======================================
-hover:                  definiert wie der Selektor manipuliert werden soll, wenn man mit dem Cursor (Maus)
-                        dieses "überfliegt" (berührt).
-                        Hinweise: https://wiki.selfhtml.org/wiki/CSS/Selektoren/Pseudoklasse/hover,_active,_focus
-
-background-color:       definiert in diesem Fall die Hintergrundfarbe des Menüelementes.
-                        Neben den englischen Begriffen können die Farben in Form von RGB (Rot Grün Blau),
-                        CMYK (Cyan, Magenta, Yellow und den Schwarzanteil Key) oder HEX (Hexidezimal)
-                        angegeben werden.
-                        Hinweis unter https://wiki.selfhtml.org/wiki/Grafik/Farbe#Farbangaben und
-                        https://wiki.selfhtml.org/wiki/Grafik/Farbe/Farbpaletten
-*/
-.mathmenue-item_off:hover {
-    background-color:#c8e2e6;
-    color:#817a92;
-}
-
-.menue-item_off:hover {
-    background-color: #316f77;
-    color:#817a92;
-}
-
-.mathmenue-item_off, .mathmenue-item_on, .menue-item_off, .menue-item_on {
-    border: 1px solid black;
-	border-radius: 0 1em 1em;
-	margin: .5em;
-	padding: .5em;
+.content p a{
+    margin: 0;
+    padding: 5px;
+    color: #f3eeee;
 }

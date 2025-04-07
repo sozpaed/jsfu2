@@ -15,9 +15,9 @@
 */
 
 $(document).ready(function () {
-    $('#calcGgT').click(function () {
-        let firstValueforGgT = $('#firstValueFromUser').val();
-        let secoundValueforGgT = $('#secondValueFromUser').val();
+    $('#sozStartButton').click(function () {
+        let firstValueforGgT = $('#firstNumber').val();
+        let secoundValueforGgT = $('#secondNumber').val();
 
         let resultOfGgT = calculateGgTOfTwoValues(firstValueforGgT,secoundValueforGgT);
 

@@ -20,7 +20,7 @@ $(document).ready(function () {
     let sum = 0;
 
     function getInputAndCalculate() {
-        let getValueForCalc = $('#valueForCalc').val();
+        let getValueForCalc = $('#firstNumber').val();
         getValueForCalc = parseInt(getValueForCalc);
 
         // Überprüfen, ob die Eingabe eine ganze Zahl zwischen 1 und 6 ist
@@ -41,7 +41,7 @@ $(document).ready(function () {
         $('#showCallbackOfChallenge').html('Durchschnitt: ' + getCalcDurchschnitt + '. Anzahl Noten:' + count);
     }
 
-    $('#calcDurchschnitt').click(function () {
+    $('#sozStartButton').click(function () {
         getInputAndCalculate();
     });
 });
