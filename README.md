@@ -26,6 +26,7 @@ Dieses Projekt wurde entwickelt, um Schülerinnen und Schüler der Klasse 9 schr
 2. Öffne die Datei start.html in deinem Browser, um das Projekt zu starten.
 
 ## Projektstruktur
+```
 jsfu2-1/
 ├── css/                # CSS-Dateien für das Styling
 ├── html_module/        # HTML-Dateien für die Module
@@ -33,6 +34,7 @@ jsfu2-1/
 ├── script/             # JavaScript-Dateien für die Logik
 ├── [README.md](http://_vscodecontentref_/1)           # Projektbeschreibung
 └── [start.html](http://_vscodecontentref_/2)          # Startseite des Projekts
+```
 
 ## Nutzung
 1. Öffne die start.html, um die Übersicht der Module und Projekte zu sehen.
