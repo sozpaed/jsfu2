@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+    <script>hljs.highlightAll();</script>
+    <link rel="stylesheet" href="./css/jp_module.css">
+    <title>JS :: Modul 1</title>
+</head>
+<body>
+    <h1>JS :: Modul 1</h1>
+    <div>
+        <div class="aufgabenr mindeststandard">Aufgabe 4.1 🟢</div>
+        <div class="aufgabentext">Schreibe Code, um eine Variable namens alter zu deklarieren und ihr den Wert 15 zuzuweisen. Gib den Wert der Variablen in der Konsole aus.</div>
+        <pre class="aufgabenloesung">Lösungsvorschlag:
+            <code class="language-js">
+                let alter = 15;
+                console.log(alter);
+            </code>
+        </pre>
+        <script>
+            let alter = 15;
+            console.log("Aufgabe 4.1: " + alter);
+        </script>
+    </div>
+    
+    <div>
+        <div class="aufgabenr mindeststandard">Aufgabe 4.2 🟢</div>
+        <div class="aufgabentext">Schreibe Code, um eine Variable namens name zu deklarieren und ihr den Wert "Max" zuzuweisen. Gib den Wert der Variablen in der Konsole aus.</div>
+        <pre class="aufgabenloesung">Lösungsvorschlag:
+            <code class="language-js">
+                let name = "Max";
+                console.log(name);
+            </code>
+        </pre>
+        <script>
+            let name = "Max";
+            console.log("Aufgabe 4.2: " + name);
+        </script>
+    </div>
+    <div>
+        <div class="aufgabenr regelstandard">Aufgabe 4.3 🔵</div>
+        <div class="aufgabentext">Schreibe Code, um eine Variable vorname mit deinem Namen und eine Variable namens begruessung mit dem Text "Hallo", zu deklarieren. Verwende den Verkettungsoperator, um eine vollständige Begrüßung zu erstellen und in der Konsole auszugeben.</div>
+        <pre class="aufgabenloesung">Lösungsvorschlag:
+            <code class="language-js">
+                let vorname = "Max";
+                let begruessung = "Hallo";
+                console.log(begruessung + " " + vorname);
+            </code>
+        </pre>
+        <script>
+            let vorname = "Max";
+            let begruessung = "Hallo";
+            console.log("Aufgabe 4.3: " + begruessung + " " + vorname);
+        </script>
+    </div>
+    <div>
+        <div class="aufgabenr regelstandard">Aufgabe 4.4 🔵</div>
+        <div class="aufgabentext">Schreibe Code, um drei Variablen a = 10, b = 5 und c = 2 zu deklarieren. Berechne das Ergebnis von (a + b) * c und gib es in der Konsole aus.</div>
+        <pre class="aufgabenloesung">Lösungsvorschlag:
+            <code class="language-js">
+                let a = 10;
+                let b = 5;
+                let c = 2;
+                let ergebnis = (a + b) * c;
+                console.log(ergebnis);
+            </code>
+        </pre>
+        <script>
+            let a = 10;
+            let b = 5;
+            let c = 2;
+            let ergebnis = (a + b) * c;
+            console.log("Aufgabe 4.4: " + ergebnis);
+        </script>
+    </div>
+    <div>
+        <div class="aufgabenr expertenstandard">Aufgabe 4.5 🔴</div>
+        <div class="aufgabentext">Schreibe Code, um eine Variable namens radius mit dem Wert 5 zu deklarieren. Berechne den Umfang eines Kreises (Umfang = 2 * π * Radius) und gib das Ergebnis in der Konsole aus. Verwende Math.PI für den Wert von π.</div>
+        <pre class="aufgabenloesung">Lösungsvorschlag:
+            <code class="language-js">
+                let radius = 5;
+                let umfang = 2 * Math.PI * radius;
+                console.log(umfang);
+            </code>
+        </pre>
+        <script>
+            let radius = 5;
+            let umfang = 2 * Math.PI * radius;
+            console.log("Aufgabe 4.5: " + umfang);
+        </script>
+    </div>
+    <div>
+        <div class="aufgabenr expertenstandard">Aufgabe 4.6 🔴</div>
+        <div class="aufgabentext">Schreibe Code, um eine Variable namens punktzahl mit dem Wert 75 zu deklarieren. Erhöhe die Punktzahl um 20 und gib die neue Punktzahl in der Konsole aus. Subtrahiere dann 10 von der Punktzahl und gib das erneute Ergebnis aus.</div>
+        <pre class="aufgabenloesung">Lösungsvorschlag:
+            <code class="language-js">
+                let punktzahl = 75;
+                punktzahl += 20;
+                console.log(punktzahl);
+                punktzahl -= 10;
+                console.log(punktzahl);
+            </code>
+        </pre>
+        <script>
+            let punktzahl = 75;
+            punktzahl += 20;
+            console.log("Aufgabe 4.6: " + punktzahl);
+            punktzahl -= 10;
+            console.log("Aufgabe 4.6: " + punktzahl);
+        </script>
+    </div>
+</body>
+</html>

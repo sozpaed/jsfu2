@@ -1,0 +1,80 @@
+h1 {
+    border: #000 solid 1px;
+    background-color: #9d26c5;
+    padding: 10px;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    color: #000;
+    font-size: 2em;
+    text-align: center;
+}
+
+.aufgabenr {
+    border: #000 solid 1px;
+    background-color: #19b8bb;
+    padding: 10px;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    color: #000;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.aufgabentext {
+    border: #000 solid 1px;
+    background-color: #f0f0f0;
+    border-radius: 25px;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: Arial, sans-serif;
+    color: #000;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.aufgabenhinweis {
+    padding: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: Arial, sans-serif;
+    color: #000;
+    font-size: 1.2em;
+}
+.aufgabenloesung {
+    border: #000 solid 1px;
+    background-color: #f0f0f0;
+    border-radius: 25px;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: Arial, sans-serif;
+    color: #000;
+    font-size: 1.2em;
+}
+
+/* Mindeststandard (Hauptschulniveau) */
+.mindeststandard {
+    background-color: #d4edda; /* Hellgrün */
+    color: #155724; /* Dunkelgrün */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Regelstandard (Realschulniveau) */
+.regelstandard {
+    background-color: #cce5ff; /* Hellblau */
+    color: #004085; /* Dunkelblau */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Expertenstandard (Gymnasialniveau) */
+.expertenstandard {
+    background-color: #f8d7da; /* Hellrot */
+    color: #721c24; /* Dunkelrot */
+    padding: 5px;
+    border-radius: 5px;
+}
