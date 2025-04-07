@@ -27,7 +27,9 @@ Dieses Projekt wurde entwickelt, um Schülerinnen und Schüler der Klasse 9 schr
 
 ## Projektstruktur
 jsfu2-1/
+
 ├── css/                # CSS-Dateien für das Styling
+
 ├── html_module/        # HTML-Dateien für die Module
 ├── html_projekte/      # HTML-Dateien für die Projekte
 ├── script/             # JavaScript-Dateien für die Logik
