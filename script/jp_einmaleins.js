@@ -1,32 +1,35 @@
 /*
  * JavaScript zum 1x1 (Einmaleins)
- * =============================
- * by Christian Leeser (camber.leaflet_0z@icloud.com)
- * Version 0.1 (Stand: 08.03.2025)
+ * ================================
+ * Autor: Christian Leeser (camber.leaflet_0z@icloud.com)
+ * Version: 0.1 (Stand: 08.03.2025)
  * 
- * Inhalt
- * +++++++++++++++++++++++++++++
- * - getValueForMulti -> Holt die Eingabe, validiert sie und erstellt die Multiplikationsreihe
+ * Inhalt:
+ * ----------------------------------------------------------------
+ * - getValueForMulti: Holt die Eingaben, validiert sie und erstellt die Multiplikationsreihe.
+ * - createMultiplicationRow: Erstellt die Multiplikationsreihe basierend auf den Eingaben.
+ * - updateResultDisplay: Zeigt das Ergebnis oder eine Fehlermeldung im HTML an.
  * 
- * Lizenz
- * ++++++++++++++++++++++++++++
+ * Lizenz:
+ * ----------------------------------------------------------------
  * Creative-Commons CC BY-SA 4.0 by Christian Leeser (08.03.2025)
  * https://creativecommons.org/licenses/by-sa/4.0/
-*/
+ */
 
 $(document).ready(function () {
-    // Event-Listener: Führt die Funktion getValueForMulti aus, wenn der Button mit der ID 'startmulti' geklickt wird.
+    // Event-Listener: Führt die Funktion getValueForMulti aus, wenn der Button mit der ID 'sozStartButton' geklickt wird.
     $('#sozStartButton').click(function () {
         getValueForMulti();
     });
 
     /**
      * Holt die Eingabewerte aus den HTML-Input-Feldern, validiert sie und erstellt die Multiplikationsreihe.
+     * Wenn die Eingaben ungültig sind, wird eine Fehlermeldung angezeigt.
      */
     function getValueForMulti() {
         // Holt die Werte aus den Input-Feldern mit den IDs 'firstNumber' und 'secondNumber'.
-        let valueOfRow = $('#firstNumber').val(); // Erste Zahl (Multiplikator)
-        let numberOfRow = $('#secondNumber').val(); // Anzahl der Reihen (Multiplikanden)
+        let valueOfRow = $('#firstNumber').val(); // Erste Zahl (Multiplikator).
+        let numberOfRow = $('#secondNumber').val(); // Anzahl der Reihen (Multiplikanden).
 
         // Konvertiert die Eingaben von Strings zu Ganzzahlen.
         valueOfRow = parseInt(valueOfRow);
@@ -46,6 +49,7 @@ $(document).ready(function () {
 
     /**
      * Erstellt eine Multiplikationsreihe basierend auf den übergebenen Werten.
+     * 
      * @param {number} valueOfRow - Die Basiszahl (Multiplikator).
      * @param {number} numberOfRow - Die Anzahl der Multiplikanden.
      * @returns {string} - Die HTML-formatierte Multiplikationsreihe.
@@ -65,6 +69,7 @@ $(document).ready(function () {
 
     /**
      * Aktualisiert die Anzeige des Ergebnisses oder einer Fehlermeldung.
+     * 
      * @param {string} message - Die anzuzeigende Nachricht (HTML-Format erlaubt).
      * @param {string} type - Der Typ der Nachricht ('error' oder 'success').
      */
