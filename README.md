@@ -46,7 +46,7 @@ Dieses Projekt steht unter der Creative Commons CC BY-SA 4.0-Lizenz. Du darfst e
 
 ## Autor
 Christian Leeser
-Kontakt: camber.leaflet_0z@icloud.com
+Kontakt: camber.leaflet_0z [at] icloud [dot] com
 
 ## Hinweis
 Die Quelltexte wurden teilweise mit Unterstützung von Microsoft Copilot erstellt.
