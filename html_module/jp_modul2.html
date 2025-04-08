@@ -44,7 +44,45 @@
                 &lt;script src="script.js"&gt;&lt;/script&gt;
             </code>
         </pre>
-        <p>Die JavaScript-Datei wird dann in die HTML-Datei eingebunden und kann verwendet werden.</p>
+        <p>Das <code>src</code>-Attribut gibt den Pfad zur JavaScript-Datei an. Du kannst das <code>&lt;script&gt;</code>-Tag im <code>&lt;head&gt;</code>- oder im <code>&lt;body&gt;</code>-Bereich deiner HTML-Datei platzieren.</p>
+        <p>Hier ist ein Beispiel für eine einfache HTML-Datei mit einer verknüpften JavaScript-Datei:</p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="de"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title>Mein Projekt&lt;/title&gt;
+                    &lt;script src="script.js"&gt;&lt;/script&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1&gt;Willkommen zu meinem Projekt&lt;/h1&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+        <p>In diesem Beispiel wird die JavaScript-Datei <code>script.js</code> in die HTML-Datei eingebunden.</p>
+        <p>Du kannst auch Inline-JavaScript verwenden, indem du den JavaScript-Code direkt im <code>&lt;script&gt;</code>-Tag schreibst:</p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;script&gt;
+                    console.log("Hallo Welt!");
+                &lt;/script&gt;
+            </code>
+        </pre>
+        <p>Dieser Code gibt "Hallo Welt!" in der Konsole aus, wenn die Seite geladen wird.</p>
+        <p>Es ist jedoch empfehlenswert, JavaScript in separaten Dateien zu organisieren, um den Code übersichtlicher zu gestalten.</p>
+        <p>Hier ist ein Beispiel für eine einfache JavaScript-Datei:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                // script.js
+                console.log("Hallo Welt!");
+            </code>
+        </pre>
+        <p>Diese Datei enthält den gleichen Code wie das Inline-JavaScript-Beispiel, aber in einer separaten Datei.</p>
+        <p>Zusammenfassend kannst du JavaScript in HTML-Dateien einbinden, indem du das <code>&lt;script&gt;</code>-Tag verwendest. Du kannst entweder Inline-JavaScript verwenden oder den Code in separaten Dateien organisieren.</p>
+        <p>Es ist wichtig, den JavaScript-Code am Ende des <code>&lt;body&gt;</code>-Tags zu platzieren, um sicherzustellen, dass die HTML-Elemente bereits geladen sind, bevor der JavaScript-Code ausgeführt wird. Alternativ kannst du das Attribut <code>defer</code> verwenden, um sicherzustellen, dass der JavaScript-Code erst nach dem Laden der Seite ausgeführt wird:</p>
     </div>
     <h3>📖 3.2 Auswahl von HTML-Elementen</h3>
     <div class="definition">
@@ -55,6 +93,44 @@
             </code>
         </pre>
         <p>Das ausgewählte Element kann dann manipuliert werden.</p>
+        <p>Hier ist ein Beispiel, wie du den Text eines HTML-Elements ändern kannst:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let element = document.getElementById("meinText");
+                element.innerHTML = "Neuer Text!";
+            </code>
+        </pre>
+        <p>In diesem Beispiel wird der Text des Elements mit der ID <code>meinText</code> auf "Neuer Text!" geändert.</p>
+        <p>Du kannst auch andere Eigenschaften des Elements ändern, z.B. die Farbe:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let element = document.getElementById("meinText");
+                element.style.color = "red";
+            </code>
+        </pre>
+        <p>Hier wird die Textfarbe des Elements mit der ID <code>meinText</code> auf rot geändert.</p>
+        <p>Zusammenfassend kannst du HTML-Elemente mit JavaScript auswählen, indem du die Methode <code>document.getElementById()</code> verwendest. Du kannst dann den Text und andere Eigenschaften des Elements ändern.</p>
+        <p>Hier ist ein vollständiges Beispiel für eine HTML-Datei mit einem JavaScript-Skript, das den Text eines Elements ändert:</p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="de"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title>Mein Projekt&lt;/title&gt;
+                    &lt;script src="script.js"&gt;&lt;/script&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;p id="meinText"&gt;Ursprünglicher Text&lt;/p&gt;
+                    &lt;script&gt;
+                        let element = document.getElementById("meinText");
+                        element.innerHTML = "Neuer Text!";
+                    &lt;/script&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
     </div>
     <h3>📖 3.3 Ereignisse und Ereignis-Listener</h3>
     <div class="definition">
@@ -68,6 +144,92 @@
             </code>
         </pre>
         <p>Hier wird ein Ereignis-Listener hinzugefügt, der auf einen Klick auf den Button reagiert.</p>
+        <p>Du kannst auch andere Ereignisse verwenden, z.B. <code>mouseover</code>, <code>mouseout</code>, <code>keydown</code>, usw.</p>
+        <p>Hier ist ein Beispiel, wie du auf das <code>mouseover</code>-Ereignis reagieren kannst:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let element = document.getElementById("meinText");
+                element.addEventListener("mouseover", function() {
+                    element.style.color = "blue";
+                });
+            </code>
+        </pre>
+        <p>In diesem Beispiel wird die Textfarbe des Elements mit der ID <code>meinText</code> auf blau geändert, wenn der Mauszeiger darüber fährt.</p>
+        <p>Zusammenfassend kannst du mit JavaScript auf Ereignisse reagieren, indem du Ereignis-Listener hinzufügst. Du kannst verschiedene Ereignisse verwenden, um auf Benutzerinteraktionen zu reagieren.</p>
+        <p>Hier ist ein vollständiges Beispiel für eine HTML-Datei mit einem JavaScript-Skript, das auf ein Klick-Ereignis reagiert:</p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="de"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title>Mein Projekt&lt;/title&gt;
+                    &lt;script src="script.js"&gt;&lt;/script&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;button id="meinButton"&gt;Klick mich!&lt;/button&gt;
+                    &lt;p id="meinText"&gt;Ursprünglicher Text&lt;/p&gt;
+                    &lt;script&gt;
+                        let button = document.getElementById("meinButton");
+                        button.addEventListener("click", function() {
+                            alert("Button wurde geklickt!");
+                        });
+                    &lt;/script&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+    </div>
+    <h3>📖 3.4 jQuery</h3>
+    <div class="definition">
+        <p>jQuery ist eine JavaScript-Bibliothek, die es einfacher macht, mit HTML-Dokumenten, Ereignissen und Animationen zu arbeiten. Sie bietet eine einfache Syntax, um Aufgaben wie das Auswählen von Elementen, das Hinzufügen von Ereignis-Listenern und das Manipulieren von DOM-Elementen durchzuführen.</p>
+        <p>Um jQuery zu verwenden, musst du die jQuery-Bibliothek in dein Projekt einbinden. Du kannst dies tun, indem du das folgende <code>&lt;script&gt;</code>-Tag in den <code>&lt;head&gt;</code>- oder <code>&lt;body&gt;</code>-Bereich deiner HTML-Datei einfügst:</p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+            </code>
+        </pre>
+        <p>Hier sind einige Beispiele, wie du jQuery verwenden kannst:</p>
+        <h4>🔹 Auswahl von HTML-Elementen</h4>
+        <p>Mit jQuery kannst du HTML-Elemente einfach auswählen und manipulieren. Beispiel:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                // Ändere den Text eines Elements mit der ID "meinText"
+                $("#meinText").text("Neuer Text mit jQuery!");
+            </code>
+        </pre>
+        <h4>🔹 Ereignis-Listener hinzufügen</h4>
+        <p>Das Hinzufügen von Ereignis-Listenern ist mit jQuery sehr einfach. Beispiel:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                // Füge einen Klick-Listener zu einem Button hinzu
+                $("#meinButton").click(function() {
+                    alert("Button wurde geklickt!");
+                });
+            </code>
+        </pre>
+        <h4>🔹 CSS-Eigenschaften ändern</h4>
+        <p>Du kannst mit jQuery auch die CSS-Eigenschaften von Elementen ändern. Beispiel:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                // Ändere die Hintergrundfarbe eines Elements
+                $("#meinText").css("background-color", "yellow");
+            </code>
+        </pre>
+        <h4>🔹 Elemente ein- und ausblenden</h4>
+        <p>Mit jQuery kannst du Elemente einfach ein- oder ausblenden. Beispiel:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                // Blende ein Element aus
+                $("#meinText").hide();
+
+                // Blende ein Element ein
+                $("#meinText").show();
+            </code>
+        </pre>
+        <p>jQuery erleichtert viele Aufgaben, die mit reinem JavaScript komplexer wären. Es ist besonders nützlich, wenn du mit älteren Browsern arbeiten musst, da es viele Kompatibilitätsprobleme löst.</p>
+        <p>Weitere Informationen findest du in der offiziellen <a href="https://jquery.com/" target="_blank">jQuery-Dokumentation</a>.</p>
     </div>
     <h2>📝 4 Übungsaufgaben - Theorie</h2>
     <div>
@@ -75,11 +237,37 @@
         <div class="aufgabentext">
             <p>Beschreibe, wie du eine JavaScript-Datei mit einer HTML-Datei verknüpfen kannst.</p>
         </div>
+        <div class="code-container">
+            <span class="toggle-button">Lösung anzeigen</span>
+            <div class="code-content">
+                <pre class="aufgabenloesung">
+                    <code class="language-html">
+                        &lt;script&gt;
+                            // Verknüpfung einer JavaScript-Datei mit einer HTML-Datei
+                            // Beispiel: Einbindung einer externen Datei
+                            &lt;script src="script.js"&gt;&lt;/script&gt;
+                        &lt;/script&gt;
+                    </code>
+                </pre>
+            </div>
+        </div>
     </div>
     <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 4.2</div>
         <div class="aufgabentext">
             <p>Erkläre, wie du HTML-Elemente anhand ihrer IDs auswählen kannst.</p>
+        </div>
+        <div class="code-container">
+            <span class="toggle-button">Lösung anzeigen</span>
+            <div class="code-content">
+                <pre class="aufgabenloesung">
+                    <code class="language-js">
+                        // Auswahl eines HTML-Elements anhand seiner ID
+                        let element = document.getElementById("meineID");
+                        console.log(element); // Gibt das ausgewählte Element in der Konsole aus
+                    </code>
+                </pre>
+            </div>
         </div>
     </div>
     <div>
@@ -87,11 +275,40 @@
             <div class="aufgabentext">
             <p>Was sind Ereignisse in der Webentwicklung? Nenne ein Beispiel.</p>
         </div>
+        <div class="code-container">
+            <span class="toggle-button">Lösung anzeigen</span>
+            <div class="code-content">
+                <pre class="aufgabenloesung">
+                    <code class="language-js">
+                        // Ereignisse sind Aktionen, die auf einer Webseite stattfinden, z.B. ein Klick auf einen Button.
+                        // Beispiel:
+                        let button = document.getElementById("meinButton");
+                        button.addEventListener("click", function() {
+                            alert("Button wurde geklickt!");
+                        });
+                    </code>
+                </pre>
+            </div>
+        </div>
     </div>
     <div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 4.4</div>
-            <div class="aufgabentext">
-            <p>Erkläre, wie du einen Ereignis-Listener zu einem HTML-Element hinzufügen kannst. Nenne ein Beispiel.</p>
+        <div class="aufgabentext">
+            <p>Erkläre, wie du mit jQuery einen Ereignis-Listener zu einem HTML-Element hinzufügen kannst. Nenne ein Beispiel.</p>
+        </div>
+        <div class="code-container">
+            <span class="toggle-button">Lösung anzeigen</span>
+            <div class="code-content">
+                <pre class="aufgabenloesung">
+                    <code class="language-js">
+                        // Mit jQuery kannst du Ereignis-Listener einfach hinzufügen.
+                        // Beispiel: Füge einen Klick-Listener zu einem Button hinzu.
+                        $("#meinButton").click(function() {
+                            alert("Button wurde geklickt!");
+                        });
+                    </code>
+                </pre>
+            </div>
         </div>
     </div>
     <div>
@@ -99,14 +316,52 @@
         <div class="aufgabentext">
             <p>Beschreibe, wie du mehrere Ereignis-Listener zu einem HTML-Element hinzufügen kannst. Warum könnte dies nützlich sein?</p>
         </div>
+        <div class="code-container">
+            <span class="toggle-button">Lösung anzeigen</span>
+            <div class="code-content">
+                <pre class="aufgabenloesung">
+                    <code class="language-js">
+                        // Mehrere Ereignis-Listener zu einem HTML-Element hinzufügen
+                        let button = document.getElementById("meinButton");
+                        
+                        // Listener 1: Ändert den Text des Buttons
+                        button.addEventListener("click", function() {
+                            button.innerHTML = "Text geändert!";
+                        });
+
+                        // Listener 2: Gibt eine Nachricht in der Konsole aus
+                        button.addEventListener("click", function() {
+                            console.log("Button wurde geklickt!");
+                        });
+
+                        // Nutzen: Ermöglicht die Trennung von Logik, z.B. für verschiedene Funktionen
+                    </code>
+                </pre>
+            </div>
+        </div>
     </div>
     <div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 4.6</div>
         <div class="aufgabentext">
-            <p>Erkläre, wie du ein Ereignis-Objekt in einem Ereignis-Listener verwenden kannst. Gib ein Beispiel.</p>
+            <p>Erkläre, wie du mit jQuery ein Ereignis-Objekt in einem Ereignis-Listener verwenden kannst. Gib ein Beispiel.</p>
+        </div>
+        <div class="code-container">
+            <span class="toggle-button">Lösung anzeigen</span>
+            <div class="code-content">
+                <pre class="aufgabenloesung">
+                    <code class="language-js">
+                        // Mit jQuery kannst du ein Ereignis-Objekt verwenden, um Informationen über das Ereignis zu erhalten.
+                        // Beispiel: Verwende das Ereignis-Objekt, um die Position des Mauszeigers zu ermitteln.
+                        $("#meinButton").click(function(event) {
+                            console.log("Button wurde geklickt!");
+                            console.log("Ereignis-Objekt:", event);
+                            console.log("Mausposition - X:", event.pageX, "Y:", event.pageY);
+                        });
+                    </code>
+                </pre>
+            </div>
         </div>
     </div>
-
     <h2>🛠️ 5 Übungsaufgaben - Praxis</h2>
     <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 5.1</div>
@@ -131,6 +386,24 @@
     <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 5.2</div>
         <div class="aufgabentext">Erstelle ein HTML-Dokument mit einem Textfeld und einem Button. Schreibe ein Skript, das den Inhalt des Textfelds in der Konsole ausgibt, wenn der Button geklickt wird.</div>
+        <div class="code-container">
+            <span class="toggle-button">Lösung anzeigen</span>
+            <div class="code-content">
+                <pre class="aufgabenloesung">
+                    <code class="language-html">
+                        &lt;input type="text" id="meinTextfeld" placeholder="Gib etwas ein"&gt;
+                        &lt;button id="meinButton"&gt;Zeige Inhalt&lt;/button&gt;
+                        &lt;script&gt;
+                            let button = document.getElementById("meinButton");
+                            let textfeld = document.getElementById("meinTextfeld");
+                            button.addEventListener("click", function() {
+                                console.log(textfeld.value);
+                            });
+                        &lt;/script&gt;
+                    </code>
+                </pre>
+            </div>
+        </div>
     </div>
     <div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 5.3</div>
@@ -156,7 +429,9 @@
     </div>
     <div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 5.4</div>
-        <div class="aufgabentext">Erstelle ein HTML-Dokument mit zwei Buttons. Schreibe ein Skript, das unterschiedliche Nachrichten in der Konsole ausgibt, je nachdem, welcher Button geklickt wird.</div>
+        <div class="aufgabentext">
+            <p>Erstelle ein HTML-Dokument mit zwei Buttons. Schreibe ein Skript mit jQuery, das unterschiedliche Nachrichten in der Konsole ausgibt, je nachdem, welcher Button geklickt wird.</p>
+        </div>
         <div class="code-container">
             <span class="toggle-button">Lösung anzeigen</span>
             <div class="code-content">
@@ -164,13 +439,14 @@
                     <code class="language-html">
                         &lt;button id="button1"&gt;Button 1&lt;/button&gt;
                         &lt;button id="button2"&gt;Button 2&lt;/button&gt;
+                        &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
                         &lt;script&gt;
-                            let button1 = document.getElementById("button1");
-                            let button2 = document.getElementById("button2");
-                            button1.addEventListener("click", function() {
+                            // Füge Klick-Listener mit jQuery hinzu
+                            $("#button1").click(function() {
                                 console.log("Button 1 wurde geklickt!");
                             });
-                            button2.addEventListener("click", function() {
+
+                            $("#button2").click(function() {
                                 console.log("Button 2 wurde geklickt!");
                             });
                         &lt;/script&gt;
@@ -201,7 +477,9 @@
     </div>
     <div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 5.6</div>
-        <div class="aufgabentext">Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das den Text eines HTML-Elements ändert und eine Nachricht in der Konsole ausgibt, wenn der Button geklickt wird.</div>
+        <div class="aufgabentext">
+            <p>Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript mit jQuery, das den Text eines HTML-Elements ändert und eine Nachricht in der Konsole ausgibt, wenn der Button geklickt wird.</p>
+        </div>
         <div class="code-container">
             <span class="toggle-button">Lösung anzeigen</span>
             <div class="code-content">
@@ -209,11 +487,11 @@
                     <code class="language-html">
                         &lt;button id="meinButton"&gt;Ändere Text und gebe Nachricht aus&lt;/button&gt;
                         &lt;p id="meinText"&gt;Ursprünglicher Text&lt;/p&gt;
+                        &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
                         &lt;script&gt;
-                            let button = document.getElementById("meinButton");
-                            let text = document.getElementById("meinText");
-                            button.addEventListener("click", function() {
-                                text.innerHTML = "Text wurde geändert!";
+                            // Füge einen Klick-Listener mit jQuery hinzu
+                            $("#meinButton").click(function() {
+                                $("#meinText").text("Text wurde geändert!");
                                 console.log("Button wurde geklickt und Text geändert!");
                             });
                         &lt;/script&gt;
@@ -222,18 +500,33 @@
             </div>
         </div>
     </div>
-
     <h2>📌 6 Pflichtaufgaben</h2>
     <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 6.1</div>
         <div class="aufgabentext">Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das eine Nachricht in der Konsole ausgibt, wenn der Button geklickt wird.</div>
+        <div class="code-container">
+            <span class="toggle-button-help">Hilfe anzeigen</span>
+            <div class="code-content">
+                <pre class="aufgabenloesung">
+                    <code class="language-html">
+                        &lt;button id="meinButton"&gt;Klick mich!&lt;/button&gt;
+                        &lt;script&gt;
+                            let button = document.getElementById("meinButton");
+                            button.addEventListener("click", function() {
+                                console.log("Button wurde geklickt!");
+                            });
+                        &lt;/script&gt;
+                    </code>
+                </pre>
+            </div>
+        </div>
     </div>
     <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 6.2</div>
         <div class="aufgabentext">Erstelle ein HTML-Dokument mit einem Textfeld und einem Button. Schreibe ein Skript, das den Inhalt des Textfelds in der Konsole ausgibt, wenn der Button geklickt wird.</div>
     </div>
     <div>
-        <div class="aufgabenr mregelstandard">🔵 Aufgabe 6.3</div>
+        <div class="aufgabenr regelstandard">🔵 Aufgabe 6.3</div>
         <div class="aufgabentext">Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das den Text eines HTML-Elements ändert, wenn der Button geklickt wird.</div>
     </div>
     <div>
