@@ -42,7 +42,7 @@ h4 {
     text-align: left;
 }
 
-.teaser, .lernziele, .definition,.links, .zusammenfassung,.ende {
+.teaser, .lernziele, .definition,.links, .zusammenfassung,.ende,.projekt {
     border: #000 dotted 1px;
     background-color: #f0f0f0;
     padding: 10px;
@@ -151,6 +151,40 @@ h4 {
     margin: 20px;
     cursor: pointer;
     color: rgb(198, 198, 212);
+}
+
+.toggle-button-help {
+    border: #000 solid 1px;
+    background-color: #3b4f32;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;
+    color: rgb(198, 198, 212);
+}
+.toggle-button-help:hover {
+    background-color: #2a3d2b;
+}
+.toggle-button:hover {
+    background-color: #2a3d2b;
+}
+.toggle-button:active {
+    background-color: #1a2b1b;
+}
+.toggle-button-help:active {
+    background-color: #1a2b1b;
+}
+.toggle-button:focus {
+    outline: none;
+}
+.toggle-button-help:focus {
+    outline: none;
+}
+.toggle-button:focus-visible {
+    outline: 2px solid #007BFF;
+}
+.toggle-button-help:focus-visible {
+    outline: 2px solid #007BFF;
 }
 
 textarea {

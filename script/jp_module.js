@@ -33,6 +33,23 @@ document.querySelectorAll('.toggle-button').forEach(button => {
     });
 });
 
+document.querySelectorAll('.toggle-button-help').forEach(button => {
+    button.addEventListener('click', () => {
+        const codeContent = button.nextElementSibling;
+        if (codeContent && codeContent.classList.contains('code-content')) {
+            if (codeContent.style.display === 'none' || codeContent.style.display === '') {
+                codeContent.style.display = 'block'; // Code-Bereich anzeigen
+                button.textContent = 'Hilfe ausblenden'; // Button-Text ändern
+            } else {
+                codeContent.style.display = 'none'; // Code-Bereich ausblenden
+                button.textContent = 'Hilfe anzeigen'; // Button-Text ändern
+            }
+        } else {
+            console.error('Fehler: Kein gültiges Element zum Aufklappen gefunden.');
+        }
+    });
+});
+
 // Funktion zur Code-Prüfung mit Script-ID
 // ---------------------------------------
 // Vergleicht den vom Benutzer eingegebenen Code mit der Musterlösung aus einem Script-Tag.
@@ -42,39 +59,35 @@ document.querySelectorAll('.toggle-button').forEach(button => {
 // - inputId: Die ID des Eingabefelds, in dem der Benutzer seinen Code eingegeben hat.
 // - scriptId: Die ID des Script-Tags, das die Musterlösung enthält.
 function checkCodeWithScript(inputId, scriptId) {
-    const userCode = document.getElementById(inputId).value.trim(); // Benutzer-Code abrufen und trimmen
-    const solutionScript = document.getElementById(scriptId); // Musterlösung abrufen
+    const inputField = document.getElementById(inputId);
+    const feedback = document.getElementById(`feedback-${inputId}`);
+    const userCode = inputField.value.trim(); // Entfernt Leerzeichen am Anfang und Ende
 
-    if (!solutionScript) {
-        console.error(`Script mit der ID "${scriptId}" wurde nicht gefunden.`);
+    if (!userCode) {
+        feedback.innerText = "Bitte gib einen Code ein, bevor du ihn prüfst.";
+        feedback.style.color = "red";
         return;
     }
 
-    // Musterlösung aus dem Script-Tag extrahieren
-    const solution = solutionScript.textContent.trim();
-
-    // Feedback-Element finden (z. B. "feedback-aufgabe-4-1")
-    const feedbackElement = document.getElementById(`feedback-${inputId.split('-').slice(1).join('-')}`);
-
     try {
-        // Beide Codes ausführen und die Ergebnisse vergleichen
-        const userResult = eval(userCode); // Benutzer-Code ausführen
-        const solutionResult = eval(solution); // Musterlösung ausführen
+        // Führt den Benutzer-Code aus
+        const script = document.getElementById(scriptId).innerText.trim();
 
-        if (userResult === solutionResult) {
-            // Feedback bei korrektem Code
-            feedbackElement.textContent = "✅ Der Code ist korrekt!";
-            feedbackElement.style.color = "green";
+        // Normalisiert den Benutzer-Code und die Musterlösung
+        const normalizedUserCode = normalizeCode(userCode);
+        const normalizedExpectedCode = normalizeCode(script);
+
+        // Vergleicht den normalisierten Code
+        if (normalizedUserCode === normalizedExpectedCode) {
+            feedback.innerText = "Richtig! Dein Code funktioniert wie erwartet.";
+            feedback.style.color = "green";
         } else {
-            // Feedback bei falschem Code
-            feedbackElement.textContent = "❌ Der Code ist nicht korrekt. Versuche es erneut.";
-            feedbackElement.style.color = "red";
+            feedback.innerText = "Falsch! Dein Code stimmt nicht mit der Musterlösung überein.";
+            feedback.style.color = "red";
         }
     } catch (error) {
-        // Feedback bei einem Fehler im Benutzer-Code
-        feedbackElement.textContent = "❌ Es gab einen Fehler beim Ausführen deines Codes. Überprüfe ihn bitte.";
-        feedbackElement.style.color = "red";
-        console.error("Fehler beim Ausführen des Codes:", error);
+        feedback.innerText = `Fehler im Code: ${error.message}`;
+        feedback.style.color = "red";
     }
 }
 
@@ -92,6 +105,10 @@ function normalizeCode(code) {
     return code
         .replace(/\s+/g, ' ') // Mehrere Leerzeichen durch ein einzelnes ersetzen
         .replace(/\s*;\s*/g, ';') // Leerzeichen um Semikolons entfernen
+        .replace(/\s*{\s*/g, '{') // Leerzeichen um geschweifte Klammern entfernen
+        .replace(/\s*}\s*/g, '}') // Leerzeichen um geschweifte Klammern entfernen
+        .replace(/\s*\(\s*/g, '(') // Leerzeichen um runde Klammern entfernen
+        .replace(/\s*\)\s*/g, ')') // Leerzeichen um runde Klammern entfernen
         .trim(); // Anfangs- und Endleerzeichen entfernen
 }
 
