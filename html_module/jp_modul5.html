@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <link rel="stylesheet" href="../css/jp_module.css">
+    <link rel="stylesheet" href="../css/jp_menue.css">
+    <title>JS :: Modul 5</title>
+</head>
+<body>
+    <div class="link-container">
+        <a id="start" href="../start.html">🏠 Start</a>
+        <a href="./jp_modul1.html">📘 Modul 1</a>
+        <a href="./jp_modul2.html">📗 Modul 2</a>
+        <a href="./jp_modul3.html">📙 Modul 3</a>
+        <a href="./jp_modul4.html">📕 Modul 4</a>
+        <a href="./jp_modul5.html">🎮 Modul 5</a>
+    </div>
+    <h1>🎮 JS :: Modul 5</h1>
+    <h2>🎬 1 Teaser</h2>
+    <div class="teaser">
+        <p>In diesem Modul lernst du, wie du interaktive Elemente wie Spiele und Quizfragen mit JavaScript entwickeln kannst. Du wirst verstehen, wie du Zufallszahlen generierst, Spielregeln implementierst und Benutzerinteraktionen verarbeitest.</p>
+    </div>
+    <h2>🎯 2 Lernziele</h2>
+    <div class="lernziele">
+        <ul>
+            <li>✅ Die grundlegende Logik hinter einfachen Spielen und Quizzen verstehen.</li>
+            <li>✅ JavaScript verwenden, um Zufallszahlen zu generieren.</li>
+            <li>✅ Grundlegende Spielregeln und Scoring implementieren können.</li>
+            <li>✅ Einfache interaktive Quizfragen erstellen können.</li>
+        </ul>
+    </div>
+    <h2>ℹ️ 3 Informationen</h2>
+    <h3>📖 3.1 Zufallszahlen generieren</h3>
+    <div class="definition">
+        <p>Mit JavaScript kannst du Zufallszahlen generieren, um interaktive Spiele zu erstellen. Beispiel:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let zufallszahl = Math.floor(Math.random() * 10) + 1;
+                console.log("Zufallszahl:", zufallszahl);
+            </code>
+        </pre>
+        <p>Hier wird eine Zufallszahl zwischen 1 und 10 generiert.</p>
+    </div>
+    <h3>📖 3.2 Spielregeln und Scoring</h3>
+    <div class="definition">
+        <p>Du kannst Spielregeln und Punktesysteme mit JavaScript implementieren. Beispiel:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let punkte = 0;
+                let antwort = prompt("Wie viel ist 2 + 2?");
+                if (antwort == 4) {
+                    punkte += 1;
+                    console.log("Richtig! Punkte:", punkte);
+                } else {
+                    console.log("Falsch! Punkte:", punkte);
+                }
+            </code>
+        </pre>
+        <p>Hier wird überprüft, ob die Antwort korrekt ist, und die Punkte werden entsprechend angepasst.</p>
+    </div>
+    <h3>📖 3.3 Interaktive Quizfragen</h3>
+    <div class="definition">
+        <p>Mit JavaScript kannst du interaktive Quizfragen erstellen. Beispiel:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let frage = "Was ist die Hauptstadt von Deutschland?";
+                let antwort = prompt(frage);
+                if (antwort.toLowerCase() === "berlin") {
+                    console.log("Richtig!");
+                } else {
+                    console.log("Falsch! Die richtige Antwort ist Berlin.");
+                }
+            </code>
+        </pre>
+        <p>Hier wird die Benutzereingabe überprüft und eine Rückmeldung gegeben.</p>
+    </div>
+    <h2>📝 4 Übungsaufgaben - Theorie</h2>
+    <div>
+        <div class="aufgabenr mindeststandard">🟢 Aufgabe 4.1</div>
+        <div class="aufgabentext">
+            <p>Beschreibe, wie du mit JavaScript eine Zufallszahl zwischen 1 und 100 generieren kannst.</p>
+        </div>
+        <div class="aufgabenr mindeststandard">🟢 Aufgabe 4.2</div>
+        <div class="aufgabentext">
+            <p>Erkläre, wie du mit JavaScript eine Benutzerantwort überprüfen kannst.</p>
+        </div>
+        <div class="aufgabenr regelstandard">🔵 Aufgabe 4.3</div>
+        <div class="aufgabentext">
+            <p>Beschreibe, wie du ein Punktesystem für ein Spiel implementieren kannst.</p>
+        </div>
+        <div class="aufgabenr regelstandard">🔵 Aufgabe 4.4</div>
+        <div class="aufgabentext">
+            <p>Erkläre, wie du mehrere Quizfragen in einem Spiel umsetzen kannst.</p>
+        </div>
+        <div class="aufgabenr expertenstandard">🔴 Aufgabe 4.5</div>
+        <div class="aufgabentext">
+            <p>Beschreibe, wie du ein Spiel mit mehreren Runden und einem Endergebnis implementieren kannst.</p>
+        </div>
+        <div class="aufgabenr expertenstandard">🔴 Aufgabe 4.6</div>
+        <div class="aufgabentext">
+            <p>Erkläre, wie du ein Spiel so gestalten kannst, dass es auf Benutzeraktionen wie Klicks reagiert.</p>
+        </div>
+    </div>
+    <h2>🛠️ 5 Übungsaufgaben - Praxis</h2>
+    <div>
+        <div class="aufgabenr mindeststandard">🟢 Aufgabe 5.1</div>
+        <div class="aufgabentext">Schreibe ein Skript, das eine Zufallszahl zwischen 1 und 10 generiert und in der Konsole ausgibt.</div>
+        <div class="aufgabenr mindeststandard">🟢 Aufgabe 5.2</div>
+        <div class="aufgabentext">Schreibe ein Skript, das den Benutzer nach seinem Namen fragt und eine Begrüßung in der Konsole ausgibt.</div>
+        <div class="aufgabenr regelstandard">🔵 Aufgabe 5.3</div>
+        <div class="aufgabentext">Schreibe ein Skript, das den Benutzer nach einer Zahl fragt und überprüft, ob die Zahl gerade oder ungerade ist. Gib das Ergebnis in der Konsole aus.</div>
+        <div class="aufgabenr regelstandard">🔵 Aufgabe 5.4</div>
+        <div class="aufgabentext">Schreibe ein Skript, das ein einfaches Quiz mit drei Fragen erstellt. Gib die Ergebnisse in der Konsole aus.</div>
+        <div class="aufgabenr expertenstandard">🔴 Aufgabe 5.5</div>
+        <div class="aufgabentext">Schreibe ein Skript, das ein Spiel erstellt, bei dem der Benutzer eine Zufallszahl zwischen 1 und 10 erraten muss. Gib Rückmeldungen in der Konsole aus.</div>
+        <div class="aufgabenr expertenstandard">🔴 Aufgabe 5.6</div>
+        <div class="aufgabentext">Schreibe ein Skript, das ein Punktesystem für ein Quiz mit drei Fragen implementiert. Gib die Gesamtpunktzahl in der Konsole aus.</div>
+    </div>
+    <h2>📌 6 Pflichtaufgaben</h2>
+    <div>
+        <div class="aufgabenr mindeststandard">🟢 Aufgabe 6.1</div>
+        <div class="aufgabentext">Schreibe ein Skript, das eine Zufallszahl zwischen 1 und 10 generiert und in der Konsole ausgibt.</div>
+        <div class="aufgabenr mindeststandard">🟢 Aufgabe 6.2</div>
+        <div class="aufgabentext">Schreibe ein Skript, das den Benutzer nach seinem Namen fragt und eine Begrüßung in der Konsole ausgibt.</div>
+        <div class="aufgabenr regelstandard">🔵 Aufgabe 6.3</div>
+        <div class="aufgabentext">Schreibe ein Skript, das den Benutzer nach einer Zahl fragt und überprüft, ob die Zahl gerade oder ungerade ist. Gib das Ergebnis in der Konsole aus.</div>
+        <div class="aufgabenr regelstandard">🔵 Aufgabe 6.4</div>
+        <div class="aufgabentext">Schreibe ein Skript, das ein einfaches Quiz mit drei Fragen erstellt. Gib die Ergebnisse in der Konsole aus.</div>
+        <div class="aufgabenr expertenstandard">🔴 Aufgabe 6.5</div>
+        <div class="aufgabentext">Schreibe ein Skript, das ein Spiel erstellt, bei dem der Benutzer eine Zufallszahl zwischen 1 und 10 erraten muss. Gib Rückmeldungen in der Konsole aus.</div>
+        <div class="aufgabenr expertenstandard">🔴 Aufgabe 6.6</div>
+        <div class="aufgabentext">Schreibe ein Skript, das ein Punktesystem für ein Quiz mit drei Fragen implementiert. Gib die Gesamtpunktzahl in der Konsole aus.</div>
+    </div>
+    <h2>🚀 7 Umsetzung des eigenen Projektes</h2>
+    <div class="projekt">
+        <p>In diesem Modul hast du die Grundlagen von JavaScript kennengelernt. Du kannst nun dein eigenes Projekt umsetzen. Überlege dir, was du mit JavaScript erstellen möchtest und beginne mit der Umsetzung.</p>
+        <p>Hier sind einige Ideen für dein Projekt:</p>
+        <ul>
+            <li><a href="../html_projekte/jp_einmaleins.html">Einmaleins</a></li>
+            <li><a href="../html_projekte/jp_ggt.html">Größter gemeinsamer Teiler</a></li>
+            <li><a href="../html_projekte/jp_notenschnitt.html">Notenschnitt berechnen</a></li>
+            <li><a href="../html_projekte/jp_steinscherepapier.html">Stein, Schere, Papier</a></li>
+            <li><a href="../html_projekte/jp_zahlenraten.html">Zahlenraten</a></li>
+        </ul>
+        <p><b>Wichtig:</b></p>
+        <p>Wenn Du eines der Projekt-Beispiele wählst, dann beginne dort mit dem Abschnitt "Modul 5".<br>
+        Wenn Du ein eigenes Projekt umsetzen möchtest, dann beginne für Dein Projekt mit der Umsetzung von interaktiven Elememnten.</p>
+        <p>Viel Erfolg bei deinem Projekt!</p>
+    </div>
+
+    <h2>📚 8 Weiterführende Links</h2>
+    <div class="links">
+        <ul>
+            <li><a href="https://www.jshero.net/home.html" target="_blank">JS Hero - JavaScript-Übungen</a></li>
+            <li><a href="https://silentteacher.toxicode.fr/" target="_blank">Silent Teacher - JavaScript-Übungen</a></li>
+            <li><a href="https://developer.mozilla.org/de/docs/Web/JavaScript" target="_blank">MDN Web Docs - JavaScript</a></li>
+            <li><a href="https://www.w3schools.com/js/" target="_blank">W3Schools - JavaScript Tutorial</a></li>
+            <li><a href="https://www.codecademy.com/learn/introduction-to-javascript" target="_blank">Codecademy - Introduction to JavaScript</a></li>
+            <li><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/" target="_blank">freeCodeCamp - Basic JavaScript</a></li>
+            <li><a href="https://www.javascript.info/" target="_blank">JavaScript.info - The Modern JavaScript Tutorial</a></li>
+            <li><a href="https://www.learn-js.org/" target="_blank">Learn JavaScript - Interactive Tutorial</a></li>
+            <li><a href="https://www.javascripttutorial.net/" target="_blank">JavaScript Tutorial - Learn JavaScript from Scratch</a></li>
+            <li><a href="https://www.udemy.com/course/the-complete-javascript-course/" target="_blank">Udemy - The Complete JavaScript Course</a></li>
+        </ul>
+    </div>
+    <h2>🛠️ 8 Lösungen</h2>
+    <div class="code-container">
+        <span class="toggle-button">Lösung anzeigen</span>
+        <div class="code-content">
+            <p>Die Lösungen zu den Aufgaben findest du in den Kommentaren im Code.</p>
+        </div>
+    </div>
+    <h2>📝 9 Zusammenfassung</h2>
+    <div class="zusammenfassung">
+        <p>In diesem Modul hast du gelernt, wie du interaktive Elemente wie Spiele und Quizfragen mit JavaScript entwickeln kannst. Du weißt jetzt, wie du Zufallszahlen generierst, Spielregeln implementierst und Benutzerinteraktionen verarbeitest.</p>
+    </div>
+    <h2>🔚 10 Ende</h2>
+    <div class="ende">
+        <p>Das Modul ist nun abgeschlossen. Du kannst die anderen Module besuchen, um dein Wissen zu vertiefen.</p>
+        <p>Viel Erfolg beim Programmieren!</p>
+    </div>
+    <script src="../script/jp_module.js"></script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <link rel="stylesheet" href="../css/jp_module.css">
+    <link rel="stylesheet" href="../css/jp_menue.css">
+    <title>JS :: Modul 2</title>
+</head>
+<body>
+    <div class="link-container">
+        <a id="start" href="../start.html">🏠 Start</a>
+        <a href="./jp_modul1.html">📘 Modul 1</a>
+        <a href="./jp_modul2.html">📗 Modul 2</a>
+        <a href="./jp_modul3.html">📙 Modul 3</a>
+        <a href="./jp_modul4.html">📕 Modul 4</a>
+        <a href="./jp_modul5.html">🎮 Modul 5</a>
+    </div>
+    <h1>📗 JS :: Modul 2</h1>
+    <h2>🎬 1 Teaser</h2>
+    <div class="teaser">
+        <p>In diesem Modul lernst du, wie du mit JavaScript auf HTML-Elemente zugreifen und auf Benutzerinteraktionen reagieren kannst. Du wirst verstehen, wie Ereignisse funktionieren und wie du sie in deinen Projekten nutzen kannst.</p>
+    </div>
+    <h2>🎯 2 Lernziele</h2>
+    <div class="lernziele">
+        <ul>
+            <li>✅ Verstehen, wie man eine JavaScript-Datei mit einer HTML-Datei verknüpft.</li>
+            <li>✅ HTML-Elemente anhand ihrer IDs auswählen können.</li>
+            <li>✅ Den Textinhalt von HTML-Elementen mit JavaScript ändern können.</li>
+            <li>✅ Das Konzept von Ereignissen in der Webentwicklung verstehen.</li>
+            <li>✅ Ereignis-Listener zu HTML-Elementen hinzufügen können.</li>
+            <li>✅ Auf grundlegende Benutzerinteraktionen reagieren können.</li>
+        </ul>
+    </div>
+    <h2>ℹ️ 3 Informationen</h2>
+    <h3>📖 3.1 Verknüpfung von JavaScript und HTML</h3>
+    <div class="definition">
+        <p>Um eine JavaScript-Datei mit einer HTML-Datei zu verknüpfen, kannst du das <code>&lt;script&gt;</code>-Tag verwenden. Beispiel:</p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;script src="script.js"&gt;&lt;/script&gt;
+            </code>
+        </pre>
+        <p>Die JavaScript-Datei wird dann in die HTML-Datei eingebunden und kann verwendet werden.</p>
+    </div>
+    <h3>📖 3.2 Auswahl von HTML-Elementen</h3>
+    <div class="definition">
+        <p>Mit JavaScript kannst du HTML-Elemente anhand ihrer IDs auswählen. Beispiel:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let element = document.getElementById("meineID");
+            </code>
+        </pre>
+        <p>Das ausgewählte Element kann dann manipuliert werden.</p>
+    </div>
+    <h3>📖 3.3 Ereignisse und Ereignis-Listener</h3>
+    <div class="definition">
+        <p>Ereignisse sind Aktionen, die auf einer Webseite stattfinden, z.B. ein Klick auf einen Button. Mit JavaScript kannst du auf diese Ereignisse reagieren. Beispiel:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let button = document.getElementById("meinButton");
+                button.addEventListener("click", function() {
+                    alert("Button wurde geklickt!");
+                });
+            </code>
+        </pre>
+        <p>Hier wird ein Ereignis-Listener hinzugefügt, der auf einen Klick auf den Button reagiert.</p>
+    </div>
+    <h2>📝 4 Übungsaufgaben - Theorie</h2>
+    <div>
+        <div class="aufgabenr mindeststandard">🟢 Aufgabe 4.1</div>
+        <div class="aufgabentext">
+            <p>Beschreibe, wie du eine JavaScript-Datei mit einer HTML-Datei verknüpfen kannst.</p>
+        </div>
+    </div>
+    <div>
+        <div class="aufgabenr mindeststandard">🟢 Aufgabe 4.2</div>
+        <div class="aufgabentext">
+            <p>Erkläre, wie du HTML-Elemente anhand ihrer IDs auswählen kannst.</p>
+        </div>
+    </div>
+    <div>
+        <div class="aufgabenr regelstandard">🔵 Aufgabe 4.3</div>
+            <div class="aufgabentext">
+            <p>Was sind Ereignisse in der Webentwicklung? Nenne ein Beispiel.</p>
+        </div>
+    </div>
+    <div>
+        <div class="aufgabenr regelstandard">🔵 Aufgabe 4.4</div>
+            <div class="aufgabentext">
+            <p>Erkläre, wie du einen Ereignis-Listener zu einem HTML-Element hinzufügen kannst. Nenne ein Beispiel.</p>
+        </div>
+    </div>
+    <div>
+        <div class="aufgabenr expertenstandard">🔴 Aufgabe 4.5</div>
+        <div class="aufgabentext">
+            <p>Beschreibe, wie du mehrere Ereignis-Listener zu einem HTML-Element hinzufügen kannst. Warum könnte dies nützlich sein?</p>
+        </div>
+    </div>
+    <div>
+        <div class="aufgabenr expertenstandard">🔴 Aufgabe 4.6</div>
+        <div class="aufgabentext">
+            <p>Erkläre, wie du ein Ereignis-Objekt in einem Ereignis-Listener verwenden kannst. Gib ein Beispiel.</p>
+        </div>
+    </div>
+
+    <h2>🛠️ 5 Übungsaufgaben - Praxis</h2>
+    <div>
+        <div class="aufgabenr mindeststandard">🟢 Aufgabe 5.1</div>
+        <div class="aufgabentext">Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das eine Nachricht in der Konsole ausgibt, wenn der Button geklickt wird.</div>
+        <div class="code-container">
+            <span class="toggle-button">Lösung anzeigen</span>
+            <div class="code-content">
+                <pre class="aufgabenloesung">
+                    <code class="language-html">
+                        &lt;button id="meinButton"&gt;Klick mich!&lt;/button&gt;
+                        &lt;script&gt;
+                            let button = document.getElementById("meinButton");
+                            button.addEventListener("click", function() {
+                                console.log("Button wurde geklickt!");
+                            });
+                        &lt;/script&gt;
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="aufgabenr mindeststandard">🟢 Aufgabe 5.2</div>
+        <div class="aufgabentext">Erstelle ein HTML-Dokument mit einem Textfeld und einem Button. Schreibe ein Skript, das den Inhalt des Textfelds in der Konsole ausgibt, wenn der Button geklickt wird.</div>
+    </div>
+    <div>
+        <div class="aufgabenr regelstandard">🔵 Aufgabe 5.3</div>
+        <div class="aufgabentext">Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das den Text eines HTML-Elements ändert, wenn der Button geklickt wird.</div>
+        <div class="code-container">
+            <span class="toggle-button">Lösung anzeigen</span>
+            <div class="code-content">
+                <pre class="aufgabenloesung">
+                    <code class="language-html">
+                        &lt;button id="meinButton"&gt;Ändere Text&lt;/button&gt;
+                        &lt;p id="meinText"&gt;Ursprünglicher Text&lt;/p&gt;
+                        &lt;script&gt;
+                            let button = document.getElementById("meinButton");
+                            let text = document.getElementById("meinText");
+                            button.addEventListener("click", function() {
+                                text.innerHTML = "Text wurde geändert!";
+                            });
+                        &lt;/script&gt;
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="aufgabenr regelstandard">🔵 Aufgabe 5.4</div>
+        <div class="aufgabentext">Erstelle ein HTML-Dokument mit zwei Buttons. Schreibe ein Skript, das unterschiedliche Nachrichten in der Konsole ausgibt, je nachdem, welcher Button geklickt wird.</div>
+        <div class="code-container">
+            <span class="toggle-button">Lösung anzeigen</span>
+            <div class="code-content">
+                <pre class="aufgabenloesung">
+                    <code class="language-html">
+                        &lt;button id="button1"&gt;Button 1&lt;/button&gt;
+                        &lt;button id="button2"&gt;Button 2&lt;/button&gt;
+                        &lt;script&gt;
+                            let button1 = document.getElementById("button1");
+                            let button2 = document.getElementById("button2");
+                            button1.addEventListener("click", function() {
+                                console.log("Button 1 wurde geklickt!");
+                            });
+                            button2.addEventListener("click", function() {
+                                console.log("Button 2 wurde geklickt!");
+                            });
+                        &lt;/script&gt;
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="aufgabenr expertenstandard">🔴 Aufgabe 5.5</div>
+        <div class="aufgabentext">Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das den Hintergrund der Seite ändert, wenn der Button geklickt wird.</div>
+        <div class="code-container">
+            <span class="toggle-button">Lösung anzeigen</span>
+            <div class="code-content">
+                <pre class="aufgabenloesung">
+                    <code class="language-html">
+                        &lt;button id="meinButton"&gt;Ändere Hintergrund&lt;/button&gt;
+                        &lt;script&gt;
+                            let button = document.getElementById("meinButton");
+                            button.addEventListener("click", function() {
+                                document.body.style.backgroundColor = "lightblue";
+                            });
+                        &lt;/script&gt;
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="aufgabenr expertenstandard">🔴 Aufgabe 5.6</div>
+        <div class="aufgabentext">Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das den Text eines HTML-Elements ändert und eine Nachricht in der Konsole ausgibt, wenn der Button geklickt wird.</div>
+        <div class="code-container">
+            <span class="toggle-button">Lösung anzeigen</span>
+            <div class="code-content">
+                <pre class="aufgabenloesung">
+                    <code class="language-html">
+                        &lt;button id="meinButton"&gt;Ändere Text und gebe Nachricht aus&lt;/button&gt;
+                        &lt;p id="meinText"&gt;Ursprünglicher Text&lt;/p&gt;
+                        &lt;script&gt;
+                            let button = document.getElementById("meinButton");
+                            let text = document.getElementById("meinText");
+                            button.addEventListener("click", function() {
+                                text.innerHTML = "Text wurde geändert!";
+                                console.log("Button wurde geklickt und Text geändert!");
+                            });
+                        &lt;/script&gt;
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+
+    <h2>📌 6 Pflichtaufgaben</h2>
+    <div>
+        <div class="aufgabenr mindeststandard">🟢 Aufgabe 6.1</div>
+        <div class="aufgabentext">Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das eine Nachricht in der Konsole ausgibt, wenn der Button geklickt wird.</div>
+    </div>
+    <div>
+        <div class="aufgabenr mindeststandard">🟢 Aufgabe 6.2</div>
+        <div class="aufgabentext">Erstelle ein HTML-Dokument mit einem Textfeld und einem Button. Schreibe ein Skript, das den Inhalt des Textfelds in der Konsole ausgibt, wenn der Button geklickt wird.</div>
+    </div>
+    <div>
+        <div class="aufgabenr mregelstandard">🔵 Aufgabe 6.3</div>
+        <div class="aufgabentext">Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das den Text eines HTML-Elements ändert, wenn der Button geklickt wird.</div>
+    </div>
+    <div>
+        <div class="aufgabenr regelstandard">🔵 Aufgabe 6.4</div>
+        <div class="aufgabentext">Erstelle ein HTML-Dokument mit zwei Buttons. Schreibe ein Skript, das unterschiedliche Nachrichten in der Konsole ausgibt, je nachdem, welcher Button geklickt wird.</div>
+    </div>
+    <div>
+        <div class="aufgabenr expertenstandard">🔴 Aufgabe 6.5</div>
+        <div class="aufgabentext">Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das den Hintergrund der Seite ändert, wenn der Button geklickt wird.</div>
+    </div>
+    <div>
+        <div class="aufgabenr expertenstandard">🔴 Aufgabe 6.6</div>
+        <div class="aufgabentext">Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das den Text eines HTML-Elements ändert und eine Nachricht in der Konsole ausgibt, wenn der Button geklickt wird.</div>
+    </div>
+    <h2>🚀 7 Umsetzung des eigenen Projektes</h2>
+    <div class="projekt">
+        <p>In diesem Modul hast du die Grundlagen von JavaScript kennengelernt. Du kannst nun dein eigenes Projekt umsetzen. Überlege dir, was du mit JavaScript erstellen möchtest und beginne mit der Umsetzung.</p>
+        <p>Hier sind einige Ideen für dein Projekt:</p>
+        <ul>
+            <li><a href="../html_projekte/jp_einmaleins.html">Einmaleins</a></li>
+            <li><a href="../html_projekte/jp_ggt.html">Größter gemeinsamer Teiler</a></li>
+            <li><a href="../html_projekte/jp_notenschnitt.html">Notenschnitt berechnen</a></li>
+            <li><a href="../html_projekte/jp_steinscherepapier.html">Stein, Schere, Papier</a></li>
+            <li><a href="../html_projekte/jp_zahlenraten.html">Zahlenraten</a></li>
+        </ul>
+        <p><b>Wichtig:</b></p>
+        <p>Wenn Du eines der Projekt-Beispiele wählst, dann beginne dort mit dem Abschnitt "Modul 2".<br>
+        Wenn Du ein eigenes Projekt umsetzen möchtest, dann beginne für Dein Projekt mit der Verknüpfung mit HTML-Elementen.</p>
+        <p>Viel Erfolg bei deinem Projekt!</p>
+    </div>
+    <h2>📚 8 Weiterführende Links</h2>
+    <div class="links">
+        <ul>
+            <li><a href="https://www.jshero.net/home.html" target="_blank">JS Hero - JavaScript-Übungen</a></li>
+            <li><a href="https://silentteacher.toxicode.fr/" target="_blank">Silent Teacher - JavaScript-Übungen</a></li>
+            <li><a href="https://developer.mozilla.org/de/docs/Web/JavaScript" target="_blank">MDN Web Docs - JavaScript</a></li>
+            <li><a href="https://www.w3schools.com/js/" target="_blank">W3Schools - JavaScript Tutorial</a></li>
+            <li><a href="https://www.codecademy.com/learn/introduction-to-javascript" target="_blank">Codecademy - Introduction to JavaScript</a></li>
+            <li><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/" target="_blank">freeCodeCamp - Basic JavaScript</a></li>
+            <li><a href="https://www.javascript.info/" target="_blank">JavaScript.info - The Modern JavaScript Tutorial</a></li>
+            <li><a href="https://www.learn-js.org/" target="_blank">Learn JavaScript - Interactive Tutorial</a></li>
+            <li><a href="https://www.javascripttutorial.net/" target="_blank">JavaScript Tutorial - Learn JavaScript from Scratch</a></li>
+            <li><a href="https://www.udemy.com/course/the-complete-javascript-course/" target="_blank">Udemy - The Complete JavaScript Course</a></li>
+        </ul>
+    </div>
+    <h2>🛠️ 9 Lösungen</h2>
+    <div class="code-container">
+        <span class="toggle-button">Lösung anzeigen</span>
+        <div class="code-content">
+            <p>Die Lösungen zu den Aufgaben findest du in den Kommentaren im Code.</p>
+        </div>
+    </div>
+    <h2>📝 10 Zusammenfassung</h2>
+    <div class="zusammenfassung">
+        <p>In diesem Modul hast du gelernt, wie du mit JavaScript auf HTML-Elemente zugreifen und auf Benutzerinteraktionen reagieren kannst. Du weißt jetzt, wie du Ereignisse nutzen kannst, um deine Webseite interaktiver zu gestalten.</p>
+    </div>
+    <h2>🔚 11 Ende</h2>
+    <div class="ende">
+        <p>Das Modul ist nun abgeschlossen. Du kannst die anderen Module besuchen, um dein Wissen zu vertiefen.</p>
+        <p>Viel Erfolg beim Programmieren!</p>
+    </div>
+    <script src="../script/jp_module.js"></script>
+</body>
+</html>

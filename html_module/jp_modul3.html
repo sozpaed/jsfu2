@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <link rel="stylesheet" href="../css/jp_module.css">
+    <link rel="stylesheet" href="../css/jp_menue.css">
+    <title>JS :: Modul 3</title>
+</head>
+<body>
+    <div class="link-container">
+        <a id="start" href="../start.html">🏠 Start</a>
+        <a href="./jp_modul1.html">📘 Modul 1</a>
+        <a href="./jp_modul2.html">📗 Modul 2</a>
+        <a href="./jp_modul3.html">📙 Modul 3</a>
+        <a href="./jp_modul4.html">📕 Modul 4</a>
+        <a href="./jp_modul5.html">🎮 Modul 5</a>
+    </div>
+    <h1>📙 JS :: Modul 3</h1>
+    <h2>🎬 1 Teaser</h2>
+    <div class="teaser">
+        <p>In diesem Modul lernst du, wie du mit JavaScript die Gestaltung von HTML-Elementen dynamisch ändern und einfache Berechnungen durchführen kannst. Du wirst verstehen, wie du CSS-Klassen manipulierst und Berechnungsergebnisse auf der Webseite anzeigst.</p>
+    </div>
+    <h2>🎯 2 Lernziele</h2>
+    <div class="lernziele">
+        <ul>
+            <li>✅ Die Inline-Stile von HTML-Elementen ändern können.</li>
+            <li>✅ CSS-Klassen mit JavaScript hinzufügen, entfernen und umschalten können.</li>
+            <li>✅ Numerische Eingaben aus HTML-Elementen abrufen können.</li>
+            <li>✅ Grundlegende arithmetische Berechnungen mit JavaScript durchführen können.</li>
+            <li>✅ Die Ergebnisse von Berechnungen auf der Webseite anzeigen können.</li>
+        </ul>
+    </div>
+    <h2>ℹ️ 3 Informationen</h2>
+    <h3>📖 3.1 Inline-Stile ändern</h3>
+    <div class="definition">
+        <p>Mit JavaScript kannst du die Inline-Stile eines HTML-Elements ändern. Beispiel:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let element = document.getElementById("meinElement");
+                element.style.color = "red";
+                element.style.backgroundColor = "yellow";
+            </code>
+        </pre>
+        <p>Hier wird die Textfarbe auf Rot und der Hintergrund auf Gelb gesetzt.</p>
+    </div>
+    <h3>📖 3.2 CSS-Klassen manipulieren</h3>
+    <div class="definition">
+        <p>Mit JavaScript kannst du CSS-Klassen zu HTML-Elementen hinzufügen, entfernen oder umschalten. Beispiel:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let element = document.getElementById("meinElement");
+                element.classList.add("meineKlasse"); // Klasse hinzufügen
+                element.classList.remove("meineKlasse"); // Klasse entfernen
+                element.classList.toggle("meineKlasse"); // Klasse umschalten
+            </code>
+        </pre>
+        <p>Dies ermöglicht dir, die Gestaltung eines Elements dynamisch zu ändern.</p>
+    </div>
+    <h3>📖 3.3 Numerische Eingaben und Berechnungen</h3>
+    <div class="definition">
+        <p>Du kannst numerische Eingaben aus HTML-Elementen abrufen und Berechnungen durchführen. Beispiel:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let zahl1 = parseFloat(document.getElementById("zahl1").value);
+                let zahl2 = parseFloat(document.getElementById("zahl2").value);
+                let summe = zahl1 + zahl2;
+                document.getElementById("ergebnis").innerText = "Summe: " + summe;
+            </code>
+        </pre>
+        <p>Hier werden zwei Zahlen aus Eingabefeldern abgerufen, addiert und das Ergebnis angezeigt.</p>
+    </div>
+    <h2>📝 4 Übungsaufgaben - Theorie</h2>
+    <div>
+        <div class="aufgabenr mindeststandard">🟢 Aufgabe 4.1</div>
+        <div class="aufgabentext">
+            <p>Beschreibe, wie du die Inline-Stile eines HTML-Elements mit JavaScript ändern kannst.</p>
+        </div>
+        <div class="aufgabenr mindeststandard">🟢 Aufgabe 4.2</div>
+        <div class="aufgabentext">
+            <p>Erkläre, wie du eine CSS-Klasse mit JavaScript zu einem HTML-Element hinzufügen kannst.</p>
+        </div>
+        <div class="aufgabenr regelstandard">🔵 Aufgabe 4.3</div>
+        <div class="aufgabentext">
+            <p>Beschreibe, wie du numerische Eingaben aus einem HTML-Element abrufen kannst. Nenne ein Beispiel.</p>
+        </div>
+        <div class="aufgabenr regelstandard">🔵 Aufgabe 4.4</div>
+        <div class="aufgabentext">
+            <p>Erkläre, wie du das Ergebnis einer Berechnung auf einer Webseite anzeigen kannst.</p>
+        </div>
+        <div class="aufgabenr expertenstandard">🔴 Aufgabe 4.5</div>
+        <div class="aufgabentext">
+            <p>Beschreibe, wie du CSS-Klassen dynamisch umschalten kannst. Warum ist dies nützlich?</p>
+        </div>
+        <div class="aufgabenr expertenstandard">🔴 Aufgabe 4.6</div>
+        <div class="aufgabentext">
+            <p>Erkläre, wie du mehrere Berechnungen durchführen und die Ergebnisse auf der Webseite anzeigen kannst.</p>
+        </div>
+    </div>
+    <h2>🛠️ 5 Übungsaufgaben - Praxis</h2>
+    <div>
+        <div class="aufgabenr mindeststandard">🟢 Aufgabe 5.1</div>
+        <div class="aufgabentext">Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das die Hintergrundfarbe eines HTML-Elements ändert, wenn der Button geklickt wird.</div>
+        <div class="aufgabenr mindeststandard">🟢 Aufgabe 5.2</div>
+        <div class="aufgabentext">Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das eine CSS-Klasse zu einem HTML-Element hinzufügt, wenn der Button geklickt wird.</div>
+        <div class="aufgabenr regelstandard">🔵 Aufgabe 5.3</div>
+        <div class="aufgabentext">Erstelle ein HTML-Dokument mit zwei Eingabefeldern und einem Button. Schreibe ein Skript, das die Summe der beiden Eingaben berechnet und auf der Webseite anzeigt.</div>
+        <div class="aufgabenr regelstandard">🔵 Aufgabe 5.4</div>
+        <div class="aufgabentext">Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das eine CSS-Klasse zu einem HTML-Element umschaltet, wenn der Button geklickt wird.</div>
+        <div class="aufgabenr expertenstandard">🔴 Aufgabe 5.5</div>
+        <div class="aufgabentext">Erstelle ein HTML-Dokument mit drei Eingabefeldern und einem Button. Schreibe ein Skript, das die Durchschnittswerte der Eingaben berechnet und auf der Webseite anzeigt.</div>
+        <div class="aufgabenr expertenstandard">🔴 Aufgabe 5.6</div>
+        <div class="aufgabentext">Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das die Hintergrundfarbe eines HTML-Elements zwischen zwei Farben umschaltet, wenn der Button geklickt wird.</div>
+    </div>
+    <h2>📌 6 Pflichtaufgaben</h2>
+    <div>
+        <div class="aufgabenr mindeststandard">🟢 Aufgabe 6.1</div>
+        <div class="aufgabentext">Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das die Hintergrundfarbe eines HTML-Elements ändert, wenn der Button geklickt wird.</div>
+        <div class="aufgabenr mindeststandard">🟢 Aufgabe 6.2</div>
+        <div class="aufgabentext">Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das eine CSS-Klasse zu einem HTML-Element hinzufügt, wenn der Button geklickt wird.</div>
+        <div class="aufgabenr regelstandard">🔵 Aufgabe 6.3</div>
+        <div class="aufgabentext">Erstelle ein HTML-Dokument mit zwei Eingabefeldern und einem Button. Schreibe ein Skript, das die Summe der beiden Eingaben berechnet und auf der Webseite anzeigt.</div>
+        <div class="aufgabenr regelstandard">🔵 Aufgabe 6.4</div>
+        <div class="aufgabentext">Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das eine CSS-Klasse zu einem HTML-Element umschaltet, wenn der Button geklickt wird.</div>
+        <div class="aufgabenr expertenstandard">🔴 Aufgabe 6.5</div>
+        <div class="aufgabentext">Erstelle ein HTML-Dokument mit drei Eingabefeldern und einem Button. Schreibe ein Skript, das die Durchschnittswerte der Eingaben berechnet und auf der Webseite anzeigt.</div>
+        <div class="aufgabenr expertenstandard">🔴 Aufgabe 6.6</div>
+        <div class="aufgabentext">Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das die Hintergrundfarbe eines HTML-Elements zwischen zwei Farben umschaltet.</div>
+    </div>
+    <h2>🚀 7 Umsetzung des eigenen Projektes</h2>
+    <div class="projekt">
+        <p>In diesem Modul hast du die Grundlagen von JavaScript kennengelernt. Du kannst nun dein eigenes Projekt umsetzen. Überlege dir, was du mit JavaScript erstellen möchtest und beginne mit der Umsetzung.</p>
+        <p>Hier sind einige Ideen für dein Projekt:</p>
+        <ul>
+            <li><a href="../html_projekte/jp_einmaleins.html">Einmaleins</a></li>
+            <li><a href="../html_projekte/jp_ggt.html">Größter gemeinsamer Teiler</a></li>
+            <li><a href="../html_projekte/jp_notenschnitt.html">Notenschnitt berechnen</a></li>
+            <li><a href="../html_projekte/jp_steinscherepapier.html">Stein, Schere, Papier</a></li>
+            <li><a href="../html_projekte/jp_zahlenraten.html">Zahlenraten</a></li>
+        </ul>
+        <p><b>Wichtig:</b></p>
+        <p>Wenn Du eines der Projekt-Beispiele wählst, dann beginne dort mit dem Abschnitt "Modul 3".<br>
+        Wenn Du ein eigenes Projekt umsetzen möchtest, dann beginne für Dein Projekt mit der Manipilation von CSS-Elementen und HTML-Elementen und von Berechnungen.</p>
+        <p>Viel Erfolg bei deinem Projekt!</p>
+    </div>
+    <h2>📚 8 Weiterführende Links</h2>
+    <div class="links">
+        <ul>
+            <li><a href="https://www.jshero.net/home.html" target="_blank">JS Hero - JavaScript-Übungen</a></li>
+            <li><a href="https://silentteacher.toxicode.fr/" target="_blank">Silent Teacher - JavaScript-Übungen</a></li>
+            <li><a href="https://developer.mozilla.org/de/docs/Web/JavaScript" target="_blank">MDN Web Docs - JavaScript</a></li>
+            <li><a href="https://www.w3schools.com/js/" target="_blank">W3Schools - JavaScript Tutorial</a></li>
+            <li><a href="https://www.codecademy.com/learn/introduction-to-javascript" target="_blank">Codecademy - Introduction to JavaScript</a></li>
+            <li><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/" target="_blank">freeCodeCamp - Basic JavaScript</a></li>
+            <li><a href="https://www.javascript.info/" target="_blank">JavaScript.info - The Modern JavaScript Tutorial</a></li>
+            <li><a href="https://www.learn-js.org/" target="_blank">Learn JavaScript - Interactive Tutorial</a></li>
+            <li><a href="https://www.javascripttutorial.net/" target="_blank">JavaScript Tutorial - Learn JavaScript from Scratch</a></li>
+            <li><a href="https://www.udemy.com/course/the-complete-javascript-course/" target="_blank">Udemy - The Complete JavaScript Course</a></li>
+        </ul>
+    </div>
+    <h2>🛠️ 9 Lösungen</h2>
+    <div class="code-container">
+        <span class="toggle-button">Lösung anzeigen</span>
+        <div class="code-content">
+            <p>Die Lösungen zu den Aufgaben findest du in den Kommentaren im Code.</p>
+        </div>
+    </div>
+    <h2>📝 10 Zusammenfassung</h2>
+    <div class="zusammenfassung">
+        <p>In diesem Modul hast du gelernt, wie du die Gestaltung von HTML-Elementen dynamisch ändern und Berechnungen durchführen kannst. Du weißt jetzt, wie du CSS-Klassen manipulierst und Berechnungsergebnisse auf der Webseite anzeigst.</p>
+    </div>
+    <h2>🔚 11 Ende</h2>
+    <div class="ende">
+        <p>Das Modul ist nun abgeschlossen. Du kannst die anderen Module besuchen, um dein Wissen zu vertiefen.</p>
+        <p>Viel Erfolg beim Programmieren!</p>
+    </div>
+    <script src="../script/jp_module.js"></script>
+</body>
+</html>
