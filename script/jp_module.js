@@ -94,3 +94,48 @@ function normalizeCode(code) {
         .replace(/\s*;\s*/g, ';') // Leerzeichen um Semikolons entfernen
         .trim(); // Anfangs- und Endleerzeichen entfernen
 }
+
+function checkAnswers41() {
+    const feedback = document.getElementById('feedback-aufgabe-4-1');
+    const option1 = document.getElementById('option4-1-1').checked; // 123variable
+    const option2 = document.getElementById('option4-1-2').checked; // meine-variable
+    const option3 = document.getElementById('option4-1-3').checked; // meineVariable
+    const option4 = document.getElementById('option4-1-4').checked; // var
+
+    // Richtige Antworten: meineVariable (option3)
+    if (option1 || option2 || option4 || !option3) {
+        feedback.innerText = "Falsch! Nur 'meineVariable' ist ein gültiger Variablenname.";
+    } else {
+        feedback.innerText = "Richtig! 'meineVariable' ist der einzige gültige Variablenname.";
+    }
+}
+
+function checkAnswers42() {
+    const feedback = document.getElementById('feedback-aufgabe-4-2');
+    const option1 = document.getElementById('option4-2-1').checked; // Number
+    const option2 = document.getElementById('option4-2-2').checked; // String
+    const option3 = document.getElementById('option4-2-3').checked; // Boolean
+    const option4 = document.getElementById('option4-2-4').checked; // undefined
+
+    // Richtige Antwort: Nur option2 (String) darf ausgewählt sein
+    if (option2 && !option1 && !option3 && !option4) {
+        feedback.innerText = "Richtig! Es handelt sich um einen String.";
+    } else {
+        feedback.innerText = "Falsch! Es handelt sich um einen String.";
+    }
+}
+
+function checkAnswers43() {
+    const feedback = document.getElementById('feedback-aufgabe-4-3');
+    const option1 = document.getElementById('option4-3-1').checked; // -
+    const option2 = document.getElementById('option4-3-2').checked; // *
+    const option3 = document.getElementById('option4-3-3').checked; // +
+    const option4 = document.getElementById('option4-3-4').checked; // /
+
+    // Richtige Antwort: Nur option3 (+) darf ausgewählt sein
+    if (option3 && !option1 && !option2 && !option4) {
+        feedback.innerText = "Richtig! Es handelt sich um das +.";
+    } else {
+        feedback.innerText = "Falsch! Es handelt sich um das +.";
+    }
+}

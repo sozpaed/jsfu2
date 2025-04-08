@@ -9,6 +9,50 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    border: #000 solid 1px;
+    border-radius: 25px;
+    background-color: #c5265b;
+    padding: 10px;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    color: #000;
+    font-size: 1.5em;
+    text-align: left;
+}
+h3 {
+    border: #000 solid 1px;
+    border-radius: 10px;
+    background-color: #26c590;
+    padding: 10px;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    color: #000;
+    font-size: 1.2em;
+    text-align: left;
+}
+h4 {
+    border: #000 solid 1px;
+    background-color: #bec55c;
+    padding: 10px;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    color: #000;
+    font-size: 1.0em;
+    text-align: left;
+}
+
+.teaser, .lernziele, .definition,.links, .zusammenfassung,.ende {
+    border: #000 dotted 1px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    color: #000;
+    font-size: 1.2em;
+    text-align: left;
+}
+
 .aufgabenr {
     border: #000 solid 1px;
     background-color: #19b8bb;
@@ -55,7 +99,7 @@ h1 {
     font-size: 1.2em;
 }
 
-/* Mindeststandard (Hauptschulniveau) */
+/* Mindeststandard */
 .mindeststandard {
     background-color: #d4edda; /* Hellgrün */
     color: #155724; /* Dunkelgrün */
@@ -63,7 +107,7 @@ h1 {
     border-radius: 5px;
 }
 
-/* Regelstandard (Realschulniveau) */
+/* Regelstandard */
 .regelstandard {
     background-color: #cce5ff; /* Hellblau */
     color: #004085; /* Dunkelblau */
@@ -71,7 +115,7 @@ h1 {
     border-radius: 5px;
 }
 
-/* Expertenstandard (Gymnasialniveau) */
+/* Expertenstandard */
 .expertenstandard {
     background-color: #f8d7da; /* Hellrot */
     color: #721c24; /* Dunkelrot */
@@ -80,6 +124,9 @@ h1 {
 }
 
 .code-container {
+    border-radius: 25px;
+    border: #000 solid 1px;
+    background-color: darkslateblue;
     padding: 10px;
     margin: 10px;
 }
@@ -93,6 +140,7 @@ h1 {
 .code-container .code-content {
     display: none;
     margin-top: 5px;
+    color: rgb(255, 255, 255);
 }
 
 .toggle-button{
