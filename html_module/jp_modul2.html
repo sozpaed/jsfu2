@@ -723,16 +723,60 @@
             <li><a href="https://www.udemy.com/course/the-complete-javascript-course/" target="_blank">Udemy - The Complete JavaScript Course</a></li>
         </ul>
     </div>
-    <h2>🛠️ 9 Lösungen</h2>
-    <div class="code-container">
-        <span class="toggle-button">Lösung anzeigen</span>
+    <h2>🛠️ 9 Beispiel</h2>
+    <div class="loesungshinweis">
+        <p>Hier ist ein vollständiges Beispiel, das zeigt, wie du HTML und JavaScript kombinieren kannst, um eine interaktive Webseite zu erstellen. In diesem Beispiel wird ein Button verwendet, um den Text eines HTML-Elements zu ändern und eine Nachricht in der Konsole auszugeben.</p>
         <div class="code-content">
-            <p>Die Lösungen zu den Aufgaben findest du in den Kommentaren im Code.</p>
+            <p><b>HTML-Code:</b></p>
+            <pre class="code-container">
+                <code class="language-html">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                        &lt;title&gt;Interaktive Webseite&lt;/title&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;h1&gt;Interaktive Webseite&lt;/h1&gt;
+                        &lt;p id="textElement"&gt;Ursprünglicher Text&lt;/p&gt;
+                        &lt;button id="changeTextButton"&gt;Text ändern&lt;/button&gt;
+                        &lt;script src="script.js"&gt;&lt;/script&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </code>
+            </pre>
+            <p><b>JavaScript-Code (script.js):</b></p>
+            <pre class="code-container">
+                <code class="language-js">
+                    // JavaScript-Code, um den Text zu ändern und eine Nachricht auszugeben
+                    document.getElementById("changeTextButton").addEventListener("click", function() {
+                        const textElement = document.getElementById("textElement");
+                        textElement.innerHTML = "Text wurde geändert!";
+                        console.log("Button wurde geklickt und der Text wurde geändert.");
+                    });
+                </code>
+            </pre>
         </div>
     </div>
     <h2>📝 10 Zusammenfassung</h2>
     <div class="zusammenfassung">
-        <p>In diesem Modul hast du gelernt, wie du mit JavaScript auf HTML-Elemente zugreifen und auf Benutzerinteraktionen reagieren kannst. Du weißt jetzt, wie du Ereignisse nutzen kannst, um deine Webseite interaktiver zu gestalten.</p>
+        <p>In diesem Modul hast du die Grundlagen von JavaScript und jQuery kennengelernt. Du weißt jetzt:</p>
+        <ul>
+            <li>✅ Wie du <b>JavaScript</b> mit einer HTML-Datei verknüpfst und den Code in separaten Dateien organisierst.</li>
+            <li>✅ Wie du <b>HTML-Elemente</b> anhand ihrer IDs auswählst und deren Eigenschaften wie Text und Stil änderst.</li>
+            <li>✅ Wie du <b>Ereignis-Listener</b> hinzufügst, um auf Benutzerinteraktionen wie Klicks oder Mausbewegungen zu reagieren.</li>
+            <li>✅ Wie du mit <b>jQuery</b> Aufgaben wie das Ändern von CSS-Klassen, das Umschalten von Eigenschaften und das Arbeiten mit Ereignis-Objekten vereinfachst.</li>
+            <li>✅ Wie du <b>Berechnungen</b> durchführst und die Ergebnisse dynamisch auf einer Webseite anzeigst.</li>
+            <li>✅ Wie du <b>Animationen</b> und Sichtbarkeitsänderungen mit jQuery umsetzt.</li>
+        </ul>
+        <p>Du hast außerdem praktische Aufgaben gelöst, um dein Wissen zu festigen:</p>
+        <ul>
+            <li>🟢 Aufgaben zu den Grundlagen wie der Verknüpfung von JavaScript mit HTML und der Auswahl von HTML-Elementen.</li>
+            <li>🔵 Aufgaben zur Manipulation von HTML-Elementen, dem Hinzufügen von Ereignis-Listenern und der Reaktion auf Benutzerinteraktionen.</li>
+            <li>🔴 Expertenaufgaben, bei denen du fortgeschrittene Szenarien mit jQuery und JavaScript umgesetzt hast.</li>
+        </ul>
+        <p>Mit diesem Wissen bist du nun bereit, die nächsten Module zu erkunden und dein Wissen weiter auszubauen!</p>
     </div>
     <h2>🔚 11 Ende</h2>
     <div class="ende">
