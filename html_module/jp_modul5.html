@@ -44,6 +44,136 @@
             </code>
         </pre>
         <p>Hier wird eine Zufallszahl zwischen 1 und 10 generiert.</p>
+        <p>Du kannst die Zufallszahl auch in einem Spiel verwenden, um den Benutzer herauszufordern, sie zu erraten.</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let benutzerZahl = prompt("Rate die Zufallszahl zwischen 1 und 10:");
+                if (benutzerZahl == zufallszahl) {
+                    console.log("Richtig!");
+                } else {
+                    console.log("Falsch! Die richtige Zahl war:", zufallszahl);
+                }
+            </code>
+        </pre>
+        <p>Hier wird die Benutzereingabe überprüft und eine Rückmeldung gegeben.</p>
+        <p>Du kannst auch eine Schleife verwenden, um dem Benutzer mehrere Versuche zu geben:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let versuche = 3;
+                while (versuche > 0) {
+                    let benutzerZahl = prompt("Rate die Zufallszahl zwischen 1 und 10. Du hast noch " + versuche + " Versuche.");
+                    if (benutzerZahl == zufallszahl) {
+                        console.log("Richtig!");
+                        break;
+                    } else {
+                        console.log("Falsch! Versuche es erneut.");
+                        versuche--;
+                    }
+                }
+                if (versuche === 0) {
+                    console.log("Leider keine Versuche mehr. Die richtige Zahl war:", zufallszahl);
+                }
+            </code>
+        </pre>
+        <p>Hier wird eine Schleife verwendet, um dem Benutzer mehrere Versuche zu geben, die Zufallszahl zu erraten.</p>
+        <p>Du kannst auch die Funktion <code>Math.random()</code> verwenden, um Zufallszahlen in einem bestimmten Bereich zu generieren. Beispiel:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                function generiereZufallszahl(min, max) {
+                    return Math.floor(Math.random() * (max - min + 1)) + min;
+                }
+                let zufallszahl = generiereZufallszahl(1, 100);
+                console.log("Zufallszahl zwischen 1 und 100:", zufallszahl);
+            </code>
+        </pre>
+        <p>Hier wird eine Funktion definiert, die eine Zufallszahl zwischen einem minimalen und maximalen Wert generiert.</p>
+        <p>Du kannst diese Funktion verwenden, um Zufallszahlen in verschiedenen Bereichen zu generieren.</p>
+        <p>Zusätzlich kannst du auch die Funktion <code>Math.floor()</code> verwenden, um eine Zufallszahl auf eine bestimmte Anzahl von Dezimalstellen zu runden. Beispiel:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let zufallszahl = Math.floor(Math.random() * 100) / 10;
+                console.log("Zufallszahl mit einer Dezimalstelle:", zufallszahl);
+            </code>
+        </pre>
+        <p>Hier wird eine Zufallszahl zwischen 0 und 10 mit einer Dezimalstelle generiert.</p>
+        <p>Du kannst auch die Funktion <code>Math.ceil()</code> verwenden, um eine Zufallszahl auf die nächste ganze Zahl zu runden. Beispiel:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let zufallszahl = Math.ceil(Math.random() * 100);
+                console.log("Zufallszahl aufgerundet:", zufallszahl);
+            </code>
+        </pre>
+        <p>Hier wird eine Zufallszahl zwischen 1 und 100 aufgerundet.</p>
+        <p>Du kannst auch die Funktion <code>Math.round()</code> verwenden, um eine Zufallszahl auf die nächste ganze Zahl zu runden. Beispiel:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let zufallszahl = Math.round(Math.random() * 100);
+                console.log("Zufallszahl gerundet:", zufallszahl);
+            </code>
+        </pre>
+        <p>Hier wird eine Zufallszahl zwischen 0 und 100 gerundet.</p>
+        <p>Hier ist ein Beispiel für ein interaktives Farbwechsel-Tool mit HTML, CSS und JavaScript:</p>
+        <div class="code-container">
+            <pre>
+                <code class="language-html">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                        &lt;title&gt;Farbwechsel-Tool&lt;/title&gt;
+                        &lt;style&gt;
+                            /* CSS */
+                            body {
+                                font-family: Arial, sans-serif;
+                                text-align: center;
+                                background-color: #f0f8ff;
+                                color: #333;
+                                margin: 0;
+                                padding: 0;
+                            }
+                            .container {
+                                margin: 50px auto;
+                                padding: 20px;
+                                max-width: 400px;
+                                background: #fff;
+                                border-radius: 8px;
+                                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                            }
+                            button {
+                                padding: 10px 20px;
+                                font-size: 1em;
+                                margin: 10px;
+                                background-color: #4caf50;
+                                color: white;
+                                border: none;
+                                border-radius: 4px;
+                                cursor: pointer;
+                            }
+                            button:hover {
+                                background-color: #45a049;
+                            }
+                        &lt;/style&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;div class="container"&gt;
+                            &lt;h1&gt;Farbwechsel-Tool&lt;/h1&gt;
+                            &lt;p&gt;Klicke auf den Button, um die Hintergrundfarbe zu ändern:&lt;/p&gt;
+                            &lt;button onclick="changeColor()"&gt;Farbe ändern&lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;script&gt;
+                            // JavaScript
+                            function changeColor() {
+                                const colors = ['#FF5733', '#33FF57', '#3357FF', '#F3FF33', '#FF33F3'];
+                                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                                document.body.style.backgroundColor = randomColor;
+                            }
+                        &lt;/script&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </code>
+            </pre>
+        </div>
     </div>
     <h3>📖 3.2 Spielregeln und Scoring</h3>
     <div class="definition">
@@ -61,6 +191,143 @@
             </code>
         </pre>
         <p>Hier wird überprüft, ob die Antwort korrekt ist, und die Punkte werden entsprechend angepasst.</p>
+        <p>Du kannst auch mehrere Fragen stellen und die Punkte zusammenzählen:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let punkte = 0;
+                let fragen = [
+                    { frage: "Wie viel ist 2 + 2?", antwort: 4 },
+                    { frage: "Wie viel ist 3 + 5?", antwort: 8 },
+                    { frage: "Wie viel ist 10 - 4?", antwort: 6 }
+                ];
+                for (let i = 0; i < fragen.length; i++) {
+                    let benutzerAntwort = prompt(fragen[i].frage);
+                    if (benutzerAntwort == fragen[i].antwort) {
+                        punkte += 1;
+                        console.log("Richtig! Punkte:", punkte);
+                    } else {
+                        console.log("Falsch! Punkte:", punkte);
+                    }
+                }
+            </code>
+        </pre>
+        <p>Hier wird eine Schleife verwendet, um mehrere Fragen zu stellen und die Punkte zu zählen.</p>
+        <p>Du kannst auch eine Funktion erstellen, um die Punkte zu zählen:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                function frageStellen(frage, antwort) {
+                    let benutzerAntwort = prompt(frage);
+                    if (benutzerAntwort == antwort) {
+                        return 1;
+                    } else {
+                        return 0;
+                    }
+                }
+                let punkte = 0;
+                punkte += frageStellen("Wie viel ist 2 + 2?", 4);
+                punkte += frageStellen("Wie viel ist 3 + 5?", 8);
+                punkte += frageStellen("Wie viel ist 10 - 4?", 6);
+                console.log("Gesamtpunkte:", punkte);
+            </code>
+        </pre>
+        <p>Hier wird eine Funktion definiert, die eine Frage stellt und die Punkte zurückgibt.</p>
+        <p>Du kannst auch eine Funktion erstellen, die die Punktzahl in Prozent berechnet:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                function berechneProzent(punkte, gesamt) {
+                    return (punkte / gesamt) * 100;
+                }
+                let punkte = 2;
+                let gesamt = 3;
+                let prozent = berechneProzent(punkte, gesamt);
+                console.log("Punktzahl in Prozent:", prozent + "%");
+            </code>
+        </pre>
+        <p>Hier wird eine Funktion definiert, die die Punktzahl in Prozent berechnet.</p>
+        <p>Du kannst auch eine Funktion erstellen, die die Punktzahl in einem bestimmten Bereich anzeigt:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                function zeigePunktzahl(punkte, gesamt) {
+                    console.log("Du hast " + punkte + " von " + gesamt + " Punkten erreicht.");
+                }
+                let punkte = 2;
+                let gesamt = 3;
+                zeigePunktzahl(punkte, gesamt);
+            </code>
+        </pre>
+        <p>Hier wird eine Funktion definiert, die die Punktzahl anzeigt.</p>
+        <p>Hier der komplette Code zu dem Beispiel.</p>
+        <pre class="code-container">
+            <code class="language-html">
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="en"&gt;
+            &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &lt;title&gt;Spiel mit mehreren Runden&lt;/title&gt;
+                &lt;style&gt;
+                body {
+                    font-family: Arial, sans-serif;
+                    text-align: center;
+                    background-color: #f9f9f9;
+                    color: #333;
+                    margin: 0;
+                    padding: 0;
+                }
+                .container {
+                    margin: 50px auto;
+                    padding: 20px;
+                    max-width: 500px;
+                    background: #fff;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                }
+                button {
+                    padding: 10px 20px;
+                    font-size: 1em;
+                    margin: 10px;
+                    background-color: #007BFF;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+                button:hover {
+                    background-color: #0056b3;
+                }
+                &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;div class="container"&gt;
+                &lt;h1&gt;Spiel mit mehreren Runden&lt;/h1&gt;
+                &lt;p&gt;Klicke auf den Button, um das Spiel zu starten:&lt;/p&gt;
+                &lt;button onclick="startGame()"&gt;Spiel starten&lt;/button&gt;
+                &lt;p id="output"&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;script&gt;
+                function startGame() {
+                    let punkte = 0;
+                    const runden = 3;
+
+                    for (let i = 1; i &lt;= runden; i++) {
+                    const zufallszahl = Math.floor(Math.random() * 10) + 1;
+                    const benutzerZahl = parseInt(prompt(`Runde ${i}: Rate die Zufallszahl zwischen 1 und 10:`), 10);
+
+                    if (benutzerZahl === zufallszahl) {
+                        punkte++;
+                        alert("Richtig! Du hast einen Punkt erhalten.");
+                    } else {
+                        alert(`Falsch! Die richtige Zahl war ${zufallszahl}.`);
+                    }
+                    }
+
+                    document.getElementById("output").textContent = `Spiel beendet! Du hast ${punkte} von ${runden} Punkten erreicht.`;
+                }
+                &lt;/script&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+            </code>
+        </pre>
     </div>
     <h3>📖 3.3 Interaktive Quizfragen</h3>
     <div class="definition">
@@ -77,63 +344,733 @@
             </code>
         </pre>
         <p>Hier wird die Benutzereingabe überprüft und eine Rückmeldung gegeben.</p>
+        <p>Du kannst auch mehrere Quizfragen stellen und die Antworten speichern:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let fragen = [
+                    { frage: "Was ist die Hauptstadt von Deutschland?", antwort: "berlin" },
+                    { frage: "Was ist die Hauptstadt von Frankreich?", antwort: "paris" },
+                    { frage: "Was ist die Hauptstadt von Italien?", antwort: "rom" }
+                ];
+                for (let i = 0; i < fragen.length; i++) {
+                    let benutzerAntwort = prompt(fragen[i].frage);
+                    if (benutzerAntwort.toLowerCase() === fragen[i].antwort) {
+                        console.log("Richtig!");
+                    } else {
+                        console.log("Falsch! Die richtige Antwort ist:", fragen[i].antwort);
+                    }
+                }
+            </code>
+        </pre>
+        <p>Hier wird eine Schleife verwendet, um mehrere Quizfragen zu stellen und die Antworten zu überprüfen.</p>
+        <p>Du kannst auch eine Funktion erstellen, die eine Quizfrage stellt und die Antwort überprüft:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                function stelleFrage(frage, antwort) {
+                    let benutzerAntwort = prompt(frage);
+                    if (benutzerAntwort.toLowerCase() === antwort) {
+                        console.log("Richtig!");
+                        return true;
+                    } else {
+                        console.log("Falsch! Die richtige Antwort ist:", antwort);
+                        return false;
+                    }
+                }
+                let punkte = 0;
+                punkte += stelleFrage("Was ist die Hauptstadt von Deutschland?", "berlin") ? 1 : 0;
+                punkte += stelleFrage("Was ist die Hauptstadt von Frankreich?", "paris") ? 1 : 0;
+                punkte += stelleFrage("Was ist die Hauptstadt von Italien?", "rom") ? 1 : 0;
+                console.log("Gesamtpunkte:", punkte);
+            </code>
+        </pre>
+        <p>Hier wird eine Funktion definiert, die eine Quizfrage stellt und die Punkte zurückgibt.</p>
+        <p>Hier ein vollständiger Code zum obigen Beispiel.</p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="en"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;Quiz mit Punktesystem&lt;/title&gt;
+                    &lt;style&gt;
+                        body {
+                            font-family: Arial, sans-serif;
+                            text-align: center;
+                            background-color: #f9f9f9;
+                            color: #333;
+                            margin: 0;
+                            padding: 0;
+                        }
+                        .container {
+                            margin: 50px auto;
+                            padding: 20px;
+                            max-width: 500px;
+                            background: #fff;
+                            border-radius: 8px;
+                            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                        }
+                        button {
+                            padding: 10px 20px;
+                            font-size: 1em;
+                            margin: 10px;
+                            background-color: #007BFF;
+                            color: white;
+                            border: none;
+                            border-radius: 4px;
+                            cursor: pointer;
+                        }
+                        button:hover {
+                            background-color: #0056b3;
+                        }
+                    &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;div class="container"&gt;
+                        &lt;h1&gt;Quiz mit Punktesystem&lt;/h1&gt;
+                        &lt;p&gt;Klicke auf den Button, um das Quiz zu starten:&lt;/p&gt;
+                        &lt;button onclick="startQuiz()"&gt;Quiz starten&lt;/button&gt;
+                        &lt;p id="output"&gt;&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;script&gt;
+                        function startQuiz() {
+                            let punkte = 0;
+                            const fragen = [
+                                { frage: "Was ist die Hauptstadt von Deutschland?", antwort: "berlin" },
+                                { frage: "Was ist die Hauptstadt von Frankreich?", antwort: "paris" },
+                                { frage: "Was ist die Hauptstadt von Italien?", antwort: "rom" }
+                            ];
+
+                            for (let i = 0; i &lt; fragen.length; i++) {
+                                let benutzerAntwort = prompt(fragen[i].frage);
+                                if (benutzerAntwort.toLowerCase() === fragen[i].antwort) {
+                                    punkte++;
+                                    alert("Richtig!");
+                                } else {
+                                    alert("Falsch! Die richtige Antwort ist: " + fragen[i].antwort);
+                                }
+                            }
+
+                            document.getElementById("output").textContent = `Quiz beendet! Du hast ${punkte} von ${fragen.length} Punkten erreicht.`;
+                        }
+                    &lt;/script&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+    </div>
+    <h3>📖 3.4 jQuery</h3>
+    <div class="definition">
+        <p>jQuery ist eine JavaScript-Bibliothek, die es einfacher macht, HTML-Elemente zu manipulieren, Ereignisse zu behandeln und Animationen zu erstellen. In den vorherigen Kapiteln hast du gelernt, wie du mit reinem JavaScript:</p>
+        <ul>
+            <li>Zufallszahlen generierst,</li>
+            <li>Spielregeln und Punktesysteme implementierst,</li>
+            <li>und interaktive Quizfragen erstellst.</li>
+        </ul>
+        <p>Mit jQuery kannst du diese Aufgaben mit weniger Code und auf eine intuitivere Weise umsetzen.</p>
+
+        <h4>🔹 Verknüpfung von jQuery</h4>
+        <p>Um jQuery zu verwenden, musst du die jQuery-Bibliothek in dein Projekt einbinden. Dies kannst du tun, indem du das folgende <code>&lt;script&gt;</code>-Tag in den <code>&lt;head&gt;</code>- oder <code>&lt;body&gt;</code>-Bereich deiner HTML-Datei einfügst:</p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+            </code>
+        </pre>
+
+        <h4>🔹 Zufallszahlen generieren</h4>
+        <p>In Kapitel 3.1 hast du gelernt, wie du Zufallszahlen mit <code>Math.random()</code> generierst. Mit jQuery kannst du dies ebenfalls verwenden, aber die Integration in interaktive Elemente wird einfacher:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                $("#generateButton").click(function() {
+                    let zufallszahl = Math.floor(Math.random() * 10) + 1;
+                    $("#output").text("Zufallszahl: " + zufallszahl);
+                });
+            </code>
+        </pre>
+        <p>Hier wird eine Zufallszahl generiert und direkt in einem HTML-Element angezeigt.</p>
+
+        <h4>🔹 Spielregeln und Punktesysteme</h4>
+        <p>In Kapitel 3.2 hast du gelernt, wie du Spielregeln und Punktesysteme implementierst. Mit jQuery kannst du die Benutzerinteraktionen einfacher gestalten:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                $("#submitButton").click(function() {
+                    let antwort = $("#inputField").val();
+                    if (antwort == "4") {
+                        $("#output").text("Richtig!").css("color", "green");
+                    } else {
+                        $("#output").text("Falsch!").css("color", "red");
+                    }
+                });
+            </code>
+        </pre>
+        <p>Hier wird die Benutzerantwort überprüft und eine Rückmeldung direkt im HTML-Dokument angezeigt.</p>
+
+        <h4>🔹 Interaktive Quizfragen</h4>
+        <p>In Kapitel 3.3 hast du gelernt, wie du interaktive Quizfragen erstellst. Mit jQuery kannst du die Fragen dynamisch anzeigen und die Antworten überprüfen:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let fragen = [
+                    { frage: "Was ist die Hauptstadt von Deutschland?", antwort: "berlin" },
+                    { frage: "Was ist die Hauptstadt von Frankreich?", antwort: "paris" }
+                ];
+                let index = 0;
+                $("#nextButton").click(function() {
+                    if (index < fragen.length) {
+                        $("#frage").text(fragen[index].frage);
+                        $("#submitButton").off("click").on("click", function() {
+                            let antwort = $("#inputField").val().toLowerCase();
+                            if (antwort === fragen[index].antwort) {
+                                $("#output").text("Richtig!").css("color", "green");
+                            } else {
+                                $("#output").text("Falsch! Die richtige Antwort ist: " + fragen[index].antwort).css("color", "red");
+                            }
+                            index++;
+                        });
+                    } else {
+                        $("#output").text("Quiz beendet!");
+                    }
+                });
+            </code>
+        </pre>
+
+        <h4>🔹 Beispiel: Interaktives Quiz mit jQuery</h4>
+        <p>Hier ist ein vollständiges Beispiel, das zeigt, wie du mit jQuery ein interaktives Quiz erstellen kannst.</p>
+
+        <p><b>HTML-Code:</b></p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="en"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;jQuery Quiz&lt;/title&gt;
+                    &lt;link rel="stylesheet" href="styles.css"&gt;
+                    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+                    &lt;script src="script.js"&gt;&lt;/script&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;div class="container"&gt;
+                        &lt;h1&gt;jQuery Quiz&lt;/h1&gt;
+                        &lt;p id="frage"&gt;Klicke auf "Nächste Frage", um zu starten.&lt;/p&gt;
+                        &lt;input type="text" id="inputField" placeholder="Deine Antwort"&gt;
+                        &lt;button id="submitButton"&gt;Antwort prüfen&lt;/button&gt;
+                        &lt;button id="nextButton"&gt;Nächste Frage&lt;/button&gt;
+                        &lt;p id="output"&gt;&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+
+        <p><b>CSS-Code (styles.css):</b></p>
+        <pre class="code-container">
+            <code class="language-css">
+                body {
+                    font-family: Arial, sans-serif;
+                    text-align: center;
+                    margin-top: 50px;
+                }
+
+                .container {
+                    margin: 20px auto;
+                    padding: 20px;
+                    max-width: 400px;
+                    background: #f9f9f9;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                }
+
+                input, button {
+                    display: block;
+                    width: 100%;
+                    margin: 10px 0;
+                    padding: 10px;
+                    font-size: 16px;
+                }
+
+                #output {
+                    margin-top: 20px;
+                    font-size: 18px;
+                }
+            </code>
+        </pre>
+
+        <p><b>JavaScript-Code (script.js):</b></p>
+        <pre class="code-container">
+            <code class="language-js">
+                $(document).ready(function() {
+                    let fragen = [
+                        { frage: "Was ist die Hauptstadt von Deutschland?", antwort: "berlin" },
+                        { frage: "Was ist die Hauptstadt von Frankreich?", antwort: "paris" }
+                    ];
+                    let index = 0;
+
+                    $("#nextButton").click(function() {
+                        if (index < fragen.length) {
+                            $("#frage").text(fragen[index].frage);
+                            $("#submitButton").off("click").on("click", function() {
+                                let antwort = $("#inputField").val().toLowerCase();
+                                if (antwort === fragen[index].antwort) {
+                                    $("#output").text("Richtig!").css("color", "green");
+                                } else {
+                                    $("#output").text("Falsch! Die richtige Antwort ist: " + fragen[index].antwort).css("color", "red");
+                                }
+                                index++;
+                            });
+                        } else {
+                            $("#output").text("Quiz beendet!");
+                        }
+                    });
+                });
+            </code>
+        </pre>
     </div>
     <h2>📝 4 Übungsaufgaben - Theorie</h2>
     <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 4.1</div>
         <div class="aufgabentext">
             <p>Beschreibe, wie du mit JavaScript eine Zufallszahl zwischen 1 und 100 generieren kannst.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Zufallszahl zwischen 1 und 100 generieren
+                            let zufallszahl = Math.floor(Math.random() * 100) + 1;
+                            console.log("Zufallszahl:", zufallszahl);
+                        </code>
+                    </pre>
+                </div>
+            </div>
         </div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 4.2</div>
         <div class="aufgabentext">
             <p>Erkläre, wie du mit JavaScript eine Benutzerantwort überprüfen kannst.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Benutzerantwort überprüfen
+                            let richtigeAntwort = "Berlin";
+                            let benutzerAntwort = prompt("Was ist die Hauptstadt von Deutschland?");
+                            if (benutzerAntwort.toLowerCase() === richtigeAntwort.toLowerCase()) {
+                                console.log("Richtig!");
+                            } else {
+                                console.log("Falsch! Die richtige Antwort ist:", richtigeAntwort);
+                            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
         </div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 4.3</div>
         <div class="aufgabentext">
             <p>Beschreibe, wie du ein Punktesystem für ein Spiel implementieren kannst.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Punktesystem implementieren
+                            let punkte = 0;
+                            let antwort = prompt("Wie viel ist 2 + 2?");
+                            if (antwort == 4) {
+                                punkte += 1;
+                                console.log("Richtig! Punkte:", punkte);
+                            } else {
+                                console.log("Falsch! Punkte:", punkte);
+                            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
         </div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 4.4</div>
         <div class="aufgabentext">
-            <p>Erkläre, wie du mehrere Quizfragen in einem Spiel umsetzen kannst.</p>
+            <p>Erkläre, wie du mehrere Quizfragen in einem Spiel mit jQuery umsetzen kannst. Schreibe ein Beispiel.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Quizfragen mit jQuery umsetzen
+                            let fragen = [
+                                { frage: "Was ist die Hauptstadt von Deutschland?", antwort: "berlin" },
+                                { frage: "Was ist die Hauptstadt von Frankreich?", antwort: "paris" }
+                            ];
+                            let index = 0;
+                            $("#nextButton").click(function() {
+                                if (index < fragen.length) {
+                                    $("#frage").text(fragen[index].frage);
+                                    $("#submitButton").off("click").on("click", function() {
+                                        let antwort = $("#inputField").val().toLowerCase();
+                                        if (antwort === fragen[index].antwort) {
+                                            $("#output").text("Richtig!").css("color", "green");
+                                        } else {
+                                            $("#output").text("Falsch! Die richtige Antwort ist: " + fragen[index].antwort).css("color", "red");
+                                        }
+                                        index++;
+                                    });
+                                } else {
+                                    $("#output").text("Quiz beendet!");
+                                }
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
         </div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 4.5</div>
         <div class="aufgabentext">
             <p>Beschreibe, wie du ein Spiel mit mehreren Runden und einem Endergebnis implementieren kannst.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Spiel mit mehreren Runden
+                            let punkte = 0;
+                            const runden = 3;
+                            for (let i = 1; i <= runden; i++) {
+                                let zufallszahl = Math.floor(Math.random() * 10) + 1;
+                                let benutzerZahl = parseInt(prompt(`Runde ${i}: Rate die Zufallszahl zwischen 1 und 10:`), 10);
+                                if (benutzerZahl === zufallszahl) {
+                                    punkte++;
+                                    alert("Richtig! Du hast einen Punkt erhalten.");
+                                } else {
+                                    alert(`Falsch! Die richtige Zahl war ${zufallszahl}.`);
+                                }
+                            }
+                            console.log(`Spiel beendet! Du hast ${punkte} von ${runden} Punkten erreicht.`);
+                        </code>
+                    </pre>
+                </div>
+            </div>
         </div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 4.6</div>
         <div class="aufgabentext">
-            <p>Erkläre, wie du ein Spiel so gestalten kannst, dass es auf Benutzeraktionen wie Klicks reagiert.</p>
+            <p>Erkläre, wie du ein Spiel so gestalten kannst, dass es auf Benutzeraktionen wie Klicks mit jQuery reagiert. Schreibe ein Beispiel.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Spiel mit Klick-Interaktionen
+                            $("#startButton").click(function() {
+                                let zufallszahl = Math.floor(Math.random() * 10) + 1;
+                                $("#output").text("Rate die Zufallszahl zwischen 1 und 10!");
+                                $("#submitButton").off("click").on("click", function() {
+                                    let benutzerZahl = parseInt($("#inputField").val(), 10);
+                                    if (benutzerZahl === zufallszahl) {
+                                        $("#output").text("Richtig!").css("color", "green");
+                                    } else {
+                                        $("#output").text("Falsch! Die richtige Zahl war " + zufallszahl).css("color", "red");
+                                    }
+                                });
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
         </div>
     </div>
     <h2>🛠️ 5 Übungsaufgaben - Praxis</h2>
     <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 5.1</div>
-        <div class="aufgabentext">Schreibe ein Skript, das eine Zufallszahl zwischen 1 und 10 generiert und in der Konsole ausgibt.</div>
+        <div class="aufgabentext">
+            <p>Schreibe ein Skript, das eine Zufallszahl zwischen 1 und 10 generiert und in der Konsole ausgibt.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Zufallszahl generieren
+                            let zufallszahl = Math.floor(Math.random() * 10) + 1;
+                            console.log("Zufallszahl:", zufallszahl);
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 5.2</div>
-        <div class="aufgabentext">Schreibe ein Skript, das den Benutzer nach seinem Namen fragt und eine Begrüßung in der Konsole ausgibt.</div>
+        <div class="aufgabentext">
+            <p>Schreibe ein Skript, das den Benutzer nach seinem Namen fragt und eine Begrüßung in der Konsole ausgibt.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Benutzer nach Namen fragen
+                            let name = prompt("Wie heißt du?");
+                            console.log("Hallo, " + name + "!");
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 5.3</div>
-        <div class="aufgabentext">Schreibe ein Skript, das den Benutzer nach einer Zahl fragt und überprüft, ob die Zahl gerade oder ungerade ist. Gib das Ergebnis in der Konsole aus.</div>
+        <div class="aufgabentext">
+            <p>Schreibe ein Skript, das den Benutzer nach einer Zahl fragt und überprüft, ob die Zahl gerade oder ungerade ist. Gib das Ergebnis in der Konsole aus.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Gerade oder ungerade überprüfen
+                            let zahl = parseInt(prompt("Gib eine Zahl ein:"));
+                            if (zahl % 2 === 0) {
+                                console.log("Die Zahl " + zahl + " ist gerade.");
+                            } else {
+                                console.log("Die Zahl " + zahl + " ist ungerade.");
+                            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 5.4</div>
-        <div class="aufgabentext">Schreibe ein Skript, das ein einfaches Quiz mit drei Fragen erstellt. Gib die Ergebnisse in der Konsole aus.</div>
+        <div class="aufgabentext">
+            <p>Schreibe ein Skript mit jQuery, das ein einfaches Quiz mit drei Fragen erstellt. Gib die Ergebnisse in der Konsole aus.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Quiz mit jQuery
+                            let fragen = [
+                                { frage: "Was ist die Hauptstadt von Deutschland?", antwort: "berlin" },
+                                { frage: "Was ist die Hauptstadt von Frankreich?", antwort: "paris" },
+                                { frage: "Was ist die Hauptstadt von Italien?", antwort: "rom" }
+                            ];
+                            let punkte = 0;
+                            let index = 0;
+
+                            $("#nextButton").click(function() {
+                                if (index < fragen.length) {
+                                    $("#frage").text(fragen[index].frage);
+                                    $("#submitButton").off("click").on("click", function() {
+                                        let antwort = $("#inputField").val().toLowerCase();
+                                        if (antwort === fragen[index].antwort) {
+                                            console.log("Richtig!");
+                                            punkte++;
+                                        } else {
+                                            console.log("Falsch! Die richtige Antwort ist: " + fragen[index].antwort);
+                                        }
+                                        index++;
+                                    });
+                                } else {
+                                    console.log("Quiz beendet! Du hast " + punkte + " von " + fragen.length + " Punkten erreicht.");
+                                }
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 5.5</div>
-        <div class="aufgabentext">Schreibe ein Skript, das ein Spiel erstellt, bei dem der Benutzer eine Zufallszahl zwischen 1 und 10 erraten muss. Gib Rückmeldungen in der Konsole aus.</div>
+        <div class="aufgabentext">
+            <p>Schreibe ein Skript, das ein Spiel erstellt, bei dem der Benutzer eine Zufallszahl zwischen 1 und 10 erraten muss. Gib Rückmeldungen in der Konsole aus.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Zufallszahl-Spiel
+                            let zufallszahl = Math.floor(Math.random() * 10) + 1;
+                            let benutzerZahl = parseInt(prompt("Rate die Zufallszahl zwischen 1 und 10:"));
+                            if (benutzerZahl === zufallszahl) {
+                                console.log("Richtig! Die Zahl war " + zufallszahl + ".");
+                            } else {
+                                console.log("Falsch! Die richtige Zahl war " + zufallszahl + ".");
+                            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 5.6</div>
-        <div class="aufgabentext">Schreibe ein Skript, das ein Punktesystem für ein Quiz mit drei Fragen implementiert. Gib die Gesamtpunktzahl in der Konsole aus.</div>
+        <div class="aufgabentext">
+            <p>Schreibe ein Skript mit jQuery, das ein Punktesystem für ein Quiz mit drei Fragen implementiert. Gib die Gesamtpunktzahl in der Konsole aus.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Punktesystem für ein Quiz mit jQuery
+                            let fragen = [
+                                { frage: "Was ist die Hauptstadt von Deutschland?", antwort: "berlin" },
+                                { frage: "Was ist die Hauptstadt von Frankreich?", antwort: "paris" },
+                                { frage: "Was ist die Hauptstadt von Italien?", antwort: "rom" }
+                            ];
+                            let punkte = 0;
+
+                            $("#startQuiz").click(function() {
+                                fragen.forEach((frageObj, index) => {
+                                    let antwort = prompt(frageObj.frage).toLowerCase();
+                                    if (antwort === frageObj.antwort) {
+                                        punkte++;
+                                        console.log("Frage " + (index + 1) + ": Richtig!");
+                                    } else {
+                                        console.log("Frage " + (index + 1) + ": Falsch! Die richtige Antwort ist: " + frageObj.antwort);
+                                    }
+                                });
+                                console.log("Quiz beendet! Du hast " + punkte + " von " + fragen.length + " Punkten erreicht.");
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
     </div>
     <h2>📌 6 Pflichtaufgaben</h2>
     <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 6.1</div>
-        <div class="aufgabentext">Schreibe ein Skript, das eine Zufallszahl zwischen 1 und 10 generiert und in der Konsole ausgibt.</div>
+        <div class="aufgabentext">
+            <p>Schreibe ein Skript, das eine Zufallszahl zwischen 1 und 10 generiert und in der Konsole ausgibt.</p>
+            <div class="code-container">
+                <span class="toggle-button-help">Hilfe anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Zufallszahl generieren
+                            let zufallszahl = Math.floor(Math.random() * 10) + 1;
+                            console.log("Zufallszahl:", zufallszahl);
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 6.2</div>
-        <div class="aufgabentext">Schreibe ein Skript, das den Benutzer nach seinem Namen fragt und eine Begrüßung in der Konsole ausgibt.</div>
+        <div class="aufgabentext">
+            <p>Schreibe ein Skript, das den Benutzer nach seinem Namen fragt und eine Begrüßung in der Konsole ausgibt.</p>
+            <div class="code-container">
+                <span class="toggle-button-help">Hilfe anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Benutzer nach Namen fragen
+                            let name = prompt("Wie heißt du?");
+                            console.log("Hallo, " + name + "!");
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 6.3</div>
-        <div class="aufgabentext">Schreibe ein Skript, das den Benutzer nach einer Zahl fragt und überprüft, ob die Zahl gerade oder ungerade ist. Gib das Ergebnis in der Konsole aus.</div>
+        <div class="aufgabentext">
+            <p>Schreibe ein Skript, das den Benutzer nach einer Zahl fragt und überprüft, ob die Zahl gerade oder ungerade ist. Gib das Ergebnis in der Konsole aus.</p>
+            <div class="code-container">
+                <span class="toggle-button-help">Hilfe anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Gerade oder ungerade überprüfen
+                            let zahl = parseInt(prompt("Gib eine Zahl ein:"));
+                            if (zahl % 2 === 0) {
+                                console.log("Die Zahl " + zahl + " ist gerade.");
+                            } else {
+                                console.log("Die Zahl " + zahl + " ist ungerade.");
+                            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 6.4</div>
-        <div class="aufgabentext">Schreibe ein Skript, das ein einfaches Quiz mit drei Fragen erstellt. Gib die Ergebnisse in der Konsole aus.</div>
+        <div class="aufgabentext">
+            <p>Schreibe ein Skript mit jQuery, das ein einfaches Quiz mit drei Fragen erstellt. Gib die Ergebnisse in der Konsole aus.</p>
+            <div class="code-container">
+                <span class="toggle-button-help">Hilfe anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Quiz mit jQuery
+                            let fragen = [
+                                { frage: "Was ist die Hauptstadt von Deutschland?", antwort: "berlin" },
+                                { frage: "Was ist die Hauptstadt von Frankreich?", antwort: "paris" },
+                                { frage: "Was ist die Hauptstadt von Italien?", antwort: "rom" }
+                            ];
+                            let punkte = 0;
+                            let index = 0;
+
+                            $("#nextButton").click(function() {
+                                if (index < fragen.length) {
+                                    $("#frage").text(fragen[index].frage);
+                                    $("#submitButton").off("click").on("click", function() {
+                                        let antwort = $("#inputField").val().toLowerCase();
+                                        if (antwort === fragen[index].antwort) {
+                                            console.log("Richtig!");
+                                            punkte++;
+                                        } else {
+                                            console.log("Falsch! Die richtige Antwort ist: " + fragen[index].antwort);
+                                        }
+                                        index++;
+                                    });
+                                } else {
+                                    console.log("Quiz beendet! Du hast " + punkte + " von " + fragen.length + " Punkten erreicht.");
+                                }
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 6.5</div>
-        <div class="aufgabentext">Schreibe ein Skript, das ein Spiel erstellt, bei dem der Benutzer eine Zufallszahl zwischen 1 und 10 erraten muss. Gib Rückmeldungen in der Konsole aus.</div>
+        <div class="aufgabentext">
+            <p>Schreibe ein Skript, das ein Spiel erstellt, bei dem der Benutzer eine Zufallszahl zwischen 1 und 10 erraten muss. Gib Rückmeldungen in der Konsole aus.</p>
+            <div class="code-container">
+                <span class="toggle-button-help">Hilfe anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Zufallszahl-Spiel
+                            let zufallszahl = Math.floor(Math.random() * 10) + 1;
+                            let benutzerZahl = parseInt(prompt("Rate die Zufallszahl zwischen 1 und 10:"));
+                            if (benutzerZahl === zufallszahl) {
+                                console.log("Richtig! Die Zahl war " + zufallszahl + ".");
+                            } else {
+                                console.log("Falsch! Die richtige Zahl war " + zufallszahl + ".");
+                            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 6.6</div>
-        <div class="aufgabentext">Schreibe ein Skript, das ein Punktesystem für ein Quiz mit drei Fragen implementiert. Gib die Gesamtpunktzahl in der Konsole aus.</div>
+        <div class="aufgabentext">
+            <p>Schreibe ein Skript mit jQuery, das ein Punktesystem für ein Quiz mit drei Fragen implementiert. Gib die Gesamtpunktzahl in der Konsole aus.</p>
+            <div class="code-container">
+                <span class="toggle-button-help">Hilfe anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Punktesystem für ein Quiz mit jQuery
+                            let fragen = [
+                                { frage: "Was ist die Hauptstadt von Deutschland?", antwort: "berlin" },
+                                { frage: "Was ist die Hauptstadt von Frankreich?", antwort: "paris" },
+                                { frage: "Was ist die Hauptstadt von Italien?", antwort: "rom" }
+                            ];
+                            let punkte = 0;
+
+                            $("#startQuiz").click(function() {
+                                fragen.forEach((frageObj, index) => {
+                                    let antwort = prompt(frageObj.frage).toLowerCase();
+                                    if (antwort === frageObj.antwort) {
+                                        punkte++;
+                                        console.log("Frage " + (index + 1) + ": Richtig!");
+                                    } else {
+                                        console.log("Frage " + (index + 1) + ": Falsch! Die richtige Antwort ist: " + frageObj.antwort);
+                                    }
+                                });
+                                console.log("Quiz beendet! Du hast " + punkte + " von " + fragen.length + " Punkten erreicht.");
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
     </div>
     <h2>🚀 7 Umsetzung des eigenen Projektes</h2>
     <div class="projekt">
@@ -167,16 +1104,109 @@
             <li><a href="https://www.udemy.com/course/the-complete-javascript-course/" target="_blank">Udemy - The Complete JavaScript Course</a></li>
         </ul>
     </div>
-    <h2>🛠️ 9 Lösungen</h2>
-    <div class="code-container">
-        <span class="toggle-button">Lösung anzeigen</span>
+    <h2>🛠️ 9 Beispiel</h2>
+    <div class="loesungshinweis">
+        <p>Hier ist ein vollständiges Beispiel, das zeigt, wie du mit HTML, CSS und JavaScript ein interaktives Spiel erstellen kannst. In diesem Beispiel wird ein Spiel implementiert, bei dem der Benutzer eine Zufallszahl erraten muss.</p>
         <div class="code-content">
-            <p>Die Lösungen zu den Aufgaben findest du in den Kommentaren im Code.</p>
+            <p><b>HTML-Code:</b></p>
+            <pre class="code-container">
+                <code class="language-html">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                        &lt;title&gt;Zahlenraten-Spiel&lt;/title&gt;
+                        &lt;link rel="stylesheet" href="styles.css"&gt;
+                        &lt;script src="script.js"&gt;&lt;/script&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;div class="container"&gt;
+                            &lt;h1&gt;Zahlenraten-Spiel&lt;/h1&gt;
+                            &lt;p&gt;Rate die Zufallszahl zwischen 1 und 10:&lt;/p&gt;
+                            &lt;input type="number" id="inputField" placeholder="Deine Zahl" min="1" max="10"&gt;
+                            &lt;button id="submitButton"&gt;Prüfen&lt;/button&gt;
+                            &lt;p id="output"&gt;&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </code>
+            </pre>
+            <p><b>CSS-Code (styles.css):</b></p>
+            <pre class="code-container">
+                <code class="language-css">
+                    body {
+                        font-family: Arial, sans-serif;
+                        text-align: center;
+                        margin-top: 50px;
+                        background-color: #f9f9f9;
+                    }
+    
+                    .container {
+                        margin: 20px auto;
+                        padding: 20px;
+                        max-width: 400px;
+                        background: #fff;
+                        border-radius: 8px;
+                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    }
+    
+                    input, button {
+                        display: block;
+                        width: 100%;
+                        margin: 10px 0;
+                        padding: 10px;
+                        font-size: 16px;
+                    }
+    
+                    #output {
+                        margin-top: 20px;
+                        font-size: 18px;
+                        color: #333;
+                    }
+                </code>
+            </pre>
+            <p><b>JavaScript-Code (script.js):</b></p>
+            <pre class="code-container">
+                <code class="language-js">
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const zufallszahl = Math.floor(Math.random() * 10) + 1;
+                        const submitButton = document.getElementById("submitButton");
+                        const inputField = document.getElementById("inputField");
+                        const output = document.getElementById("output");
+    
+                        submitButton.addEventListener("click", function() {
+                            const benutzerZahl = parseInt(inputField.value, 10);
+                            if (benutzerZahl === zufallszahl) {
+                                output.textContent = "Richtig! Die Zahl war " + zufallszahl + ".";
+                                output.style.color = "green";
+                            } else {
+                                output.textContent = "Falsch! Versuche es erneut.";
+                                output.style.color = "red";
+                            }
+                        });
+                    });
+                </code>
+            </pre>
         </div>
     </div>
     <h2>📝 10 Zusammenfassung</h2>
     <div class="zusammenfassung">
-        <p>In diesem Modul hast du gelernt, wie du interaktive Elemente wie Spiele und Quizfragen mit JavaScript entwickeln kannst. Du weißt jetzt, wie du Zufallszahlen generierst, Spielregeln implementierst und Benutzerinteraktionen verarbeitest.</p>
+        <p>In diesem Modul hast du gelernt, wie du interaktive Elemente wie Spiele und Quizfragen mit JavaScript und jQuery entwickeln kannst. Du weißt jetzt:</p>
+        <ul>
+            <li>✅ Wie du <b>Zufallszahlen</b> generierst und in Spielen verwendest.</li>
+            <li>✅ Wie du <b>Spielregeln und Punktesysteme</b> implementierst.</li>
+            <li>✅ Wie du <b>interaktive Quizfragen</b> erstellst und Benutzerantworten überprüfst.</li>
+            <li>✅ Wie du mit jQuery komplexe Aufgaben wie die Verarbeitung von Benutzerinteraktionen vereinfachst.</li>
+            <li>✅ Wie du Spiele und Quizfragen mit mehreren Runden und einem Endergebnis umsetzt.</li>
+        </ul>
+        <p>Du hast außerdem praktische Aufgaben gelöst, um dein Wissen zu festigen:</p>
+        <ul>
+            <li>🟢 Aufgaben zu den Grundlagen wie der Generierung von Zufallszahlen und der Verarbeitung von Benutzereingaben.</li>
+            <li>🔵 Aufgaben zur Erstellung von Punktesystemen und der Validierung von Benutzerantworten.</li>
+            <li>🔴 Expertenaufgaben, bei denen du komplexe Szenarien mit jQuery und JavaScript umgesetzt hast.</li>
+        </ul>
+        <p>Mit diesem Wissen bist du nun bereit, dein eigenes interaktives Projekt zu starten oder die nächsten Module zu erkunden!</p>
     </div>
     <h2>🔚 11 Ende</h2>
     <div class="ende">
