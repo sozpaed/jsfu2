@@ -47,6 +47,180 @@
             </code>
         </pre>
         <p>Das Formular enthält ein Textfeld für den Namen und einen Absende-Button.</p>
+        <p>Hier ist eine kurze Erklärung der wichtigsten Attribute:</p>
+        <ul>
+            <li><code>id</code>: Eindeutige Kennung des Formulars, die in JavaScript verwendet wird.</li>
+            <li><code>name</code>: Name des Eingabefelds, das beim Absenden des Formulars gesendet wird.</li>
+            <li><code>type</code>: Typ des Eingabefelds (z.B. <code>text</code>, <code>email</code>, <code>password</code>, etc.).</li>
+            <li><code>value</code>: Der Standardwert des Eingabefelds.</li>
+            <li><code>placeholder</code>: Ein Platzhaltertext, der im Eingabefeld angezeigt wird, wenn es leer ist.</li>
+            <li><code>required</code>: Gibt an, dass das Eingabefeld ausgefüllt werden muss, bevor das Formular gesendet werden kann.</li>
+            <li><code>disabled</code>: Deaktiviert das Eingabefeld, sodass der Benutzer keine Eingaben vornehmen kann.</li>
+            <li><code>readonly</code>: Das Eingabefeld ist schreibgeschützt, der Benutzer kann den Wert nicht ändern.</li>
+            <li><code>maxlength</code>: Gibt die maximale Anzahl von Zeichen an, die in das Eingabefeld eingegeben werden können.</li>
+            <li><code>min</code>: Gibt den minimalen Wert für numerische Eingaben an.</li>
+            <li><code>max</code>: Gibt den maximalen Wert für numerische Eingaben an.</li>
+            <li><code>pattern</code>: Ein regulärer Ausdruck, der angibt, welches Format die Eingabe haben muss.</li>
+            <li><code>autocomplete</code>: Gibt an, ob der Browser Vorschläge für die Eingabe machen soll.</li>
+            <li><code>autofocus</code>: Das Eingabefeld erhält automatisch den Fokus, wenn die Seite geladen wird.</li>
+            <li><code>multiple</code>: Erlaubt die Auswahl mehrerer Dateien in einem Datei-Upload-Feld.</li>
+            <li><code>accept</code>: Gibt an, welche Dateitypen in einem Datei-Upload-Feld akzeptiert werden.</li>
+            <li><code>action</code>: Die URL, an die das Formular gesendet wird.</li>
+            <li><code>method</code>: Die HTTP-Methode, die beim Senden des Formulars verwendet wird (z.B. <code>GET</code>, <code>POST</code>).</li>
+            <li><code>enctype</code>: Der Kodierungsstil, der beim Senden des Formulars verwendet wird (z.B. <code>application/x-www-form-urlencoded</code>, <code>multipart/form-data</code>, <code>text/plain</code>).</li>
+            <li><code>target</code>: Gibt an, wo die Antwort des Servers angezeigt werden soll (z.B. <code>_self</code>, <code>_blank</code>, <code>_parent</code>, <code>_top</code>).</li>
+            <li><code>novalidate</code>: Verhindert die Standardvalidierung des Browsers beim Absenden des Formulars.</li>
+            <li><code>onsubmit</code>: Ein JavaScript-Ereignis, das ausgelöst wird, wenn das Formular übermittelt wird.</li>
+            <li><code>onreset</code>: Ein JavaScript-Ereignis, das ausgelöst wird, wenn das Formular zurückgesetzt wird.</li>
+            <li><code>onsubmit</code>: Ein JavaScript-Ereignis, das ausgelöst wird, wenn das Formular übermittelt wird.</li>
+            <li><code>onreset</code>: Ein JavaScript-Ereignis, das ausgelöst wird, wenn das Formular zurückgesetzt wird.</li>
+        </ul>
+        <p>Hier ist ein Beispiel für ein Formular mit verschiedenen Eingabetypen:</p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;form id="meinFormular"&gt;
+                    &lt;label for="name"&gt;Name:&lt;/label&gt;
+                    &lt;input type="text" id="name" name="name" required&gt;
+                    &lt;br&gt;
+                    &lt;label for="email"&gt;E-Mail:&lt;/label&gt;
+                    &lt;input type="email" id="email" name="email" required&gt;
+                    &lt;br&gt;
+                    &lt;label for="alter"&gt;Alter:&lt;/label&gt;
+                    &lt;input type="number" id="alter" name="alter" min="0" max="120"&gt;
+                    &lt;br&gt;
+                    &lt;button type="submit"&gt;Absenden&lt;/button&gt;
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <p>In diesem Beispiel gibt es Eingabefelder für den Namen, die E-Mail-Adresse und das Alter. Das Alter ist auf einen Bereich von 0 bis 120 Jahren beschränkt.</p>
+        <p>Hier ist ein Beispiel für ein Formular mit einem Dropdown-Menü:</p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;form id="meinFormular"&gt;
+                    &lt;label for="land"&gt;Land:&lt;/label&gt;
+                    &lt;select id="land" name="land"&gt;
+                        &lt;option value="de"&gt;Deutschland&lt;/option&gt;
+                        &lt;option value="at"&gt;Österreich&lt;/option&gt;
+                        &lt;option value="ch"&gt;Schweiz&lt;/option&gt;
+                    &lt;/select&gt;
+                    &lt;br&gt;
+                    &lt;button type="submit"&gt;Absenden&lt;/button&gt;
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <p>In diesem Beispiel gibt es ein Dropdown-Menü zur Auswahl eines Landes. Der Benutzer kann aus den Optionen Deutschland, Österreich und Schweiz wählen.</p>
+        <p>Hier ist ein Beispiel für ein Formular mit einem Datei-Upload-Feld:</p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;form id="meinFormular"&gt;
+                    &lt;label for="datei"&gt;Datei auswählen:&lt;/label&gt;
+                    &lt;input type="file" id="datei" name="datei" accept=".jpg, .png, .pdf"&gt;
+                    &lt;br&gt;
+                    &lt;button type="submit"&gt;Absenden&lt;/button&gt;
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <p>In diesem Beispiel gibt es ein Datei-Upload-Feld, in dem der Benutzer eine Datei auswählen kann. Das Feld akzeptiert nur Dateien mit den Endungen .jpg, .png und .pdf.</p>
+        <p>Hier ist ein Beispiel für ein Formular mit einem Textbereich:</p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;form id="meinFormular"&gt;
+                    &lt;label for="kommentar"&gt;Kommentar:&lt;/label&gt;
+                    &lt;textarea id="kommentar" name="kommentar" rows="4" cols="50"&gt;&lt;/textarea&gt;
+                    &lt;br&gt;
+                    &lt;button type="submit"&gt;Absenden&lt;/button&gt;
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <p>In diesem Beispiel gibt es ein Textbereich, in dem der Benutzer einen Kommentar eingeben kann. Der Textbereich hat eine Höhe von 4 Zeilen und eine Breite von 50 Zeichen.</p>
+        <p>Hier ist ein Beispiel für ein Formular mit einem Kontrollkästchen:</p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;form id="meinFormular"&gt;
+                    &lt;label for="newsletter"&gt;Newsletter abonnieren:&lt;/label&gt;
+                    &lt;input type="checkbox" id="newsletter" name="newsletter"&gt;
+                    &lt;br&gt;
+                    &lt;button type="submit"&gt;Absenden&lt;/button&gt;
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <p>In diesem Beispiel gibt es ein Kontrollkästchen, mit dem der Benutzer den Newsletter abonnieren kann. Wenn das Kontrollkästchen aktiviert ist, wird der Benutzer für den Newsletter angemeldet.</p>
+        <p>Hier ist ein Beispiel für ein Formular mit einem Optionsfeld:</p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;form id="meinFormular"&gt;
+                    &lt;label&gt;Geschlecht:&lt;/label&gt;
+                    &lt;input type="radio" id="maennlich" name="geschlecht" value="maennlich"&gt;
+                    &lt;label for="maennlich"&gt;Männlich&lt;/label&gt;
+                    &lt;br&gt;
+                    &lt;input type="radio" id="weiblich" name="geschlecht" value="weiblich"&gt;
+                    &lt;label for="weiblich"&gt;Weiblich&lt;/label&gt;
+                    &lt;br&gt;
+                    &lt;button type="submit"&gt;Absenden&lt;/button&gt;
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <p>In diesem Beispiel gibt es zwei Optionsfelder, mit denen der Benutzer sein Geschlecht auswählen kann. Der Benutzer kann entweder "Männlich" oder "Weiblich" auswählen.</p>
+        <p>Hier ist ein Beispiel für ein Formular mit einem Farbauswahlfeld:</p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;form id="meinFormular"&gt;
+                    &lt;label for="farbe"&gt;Farbe auswählen:&lt;/label&gt;
+                    &lt;input type="color" id="farbe" name="farbe"&gt;
+                    &lt;br&gt;
+                    &lt;button type="submit"&gt;Absenden&lt;/button&gt;
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <p>In diesem Beispiel gibt es ein Farbauswahlfeld, in dem der Benutzer eine Farbe auswählen kann. Der Benutzer kann eine Farbe aus einer Farbpalette auswählen.</p>
+        <p>Hier ist ein Beispiel für ein Formular mit einem Datumsauswahlfeld:</p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;form id="meinFormular"&gt;
+                    &lt;label for="datum"&gt;Datum auswählen:&lt;/label&gt;
+                    &lt;input type="date" id="datum" name="datum"&gt;
+                    &lt;br&gt;
+                    &lt;button type="submit"&gt;Absenden&lt;/button&gt;
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <p>In diesem Beispiel gibt es ein Datumsauswahlfeld, in dem der Benutzer ein Datum auswählen kann. Der Benutzer kann ein Datum aus einem Kalender auswählen.</p>
+        <p>Hier ist ein Beispiel für ein Formular mit einem Zeit-Auswahlfeld:</p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;form id="meinFormular"&gt;
+                    &lt;label for="zeit"&gt;Zeit auswählen:&lt;/label&gt;
+                    &lt;input type="time" id="zeit" name="zeit"&gt;
+                    &lt;br&gt;
+                    &lt;button type="submit"&gt;Absenden&lt;/button&gt;
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <p>In diesem Beispiel gibt es ein Zeit-Auswahlfeld, in dem der Benutzer eine Uhrzeit auswählen kann. Der Benutzer kann eine Uhrzeit aus einem Zeit-Auswahlmenü auswählen.</p>
+        <p>Hier ist ein Beispiel für ein Formular mit einem Suchfeld:</p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;form id="meinFormular"&gt;
+                    &lt;label for="suche"&gt;Suche:&lt;/label&gt;
+                    &lt;input type="search" id="suche" name="suche"&gt;
+                    &lt;br&gt;
+                    &lt;button type="submit"&gt;Absenden&lt;/button&gt;
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <p>In diesem Beispiel gibt es ein Suchfeld, in dem der Benutzer nach etwas suchen kann. Der Benutzer kann einen Suchbegriff eingeben und das Formular absenden.</p>
+        <p>Hier ist ein Beispiel für ein Formular mit einem Passwortfeld:</p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;form id="meinFormular"&gt;
+                    &lt;label for="passwort"&gt;Passwort:&lt;/label&gt;
+                    &lt;input type="password" id="passwort" name="passwort"&gt;
+                    &lt;br&gt;
+                    &lt;button type="submit"&gt;Absenden&lt;/button&gt;
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <p>In diesem Beispiel gibt es ein Passwortfeld, in dem der Benutzer ein Passwort eingeben kann. Das Passwort wird als Sternchen angezeigt, während der Benutzer es eingibt.</p>
     </div>
     <h3>📖 3.2 Formularelemente mit JavaScript auswählen</h3>
     <div class="definition">
@@ -58,6 +232,144 @@
             </code>
         </pre>
         <p>Hier wird der Wert des Eingabefelds mit der ID <code>name</code> abgerufen.</p>
+        <p>Du kannst auch andere Methoden verwenden, um Formularelemente auszuwählen:</p>
+        <ul>
+            <li><code>document.querySelector("#meinFormular input[name='name']")</code>: Wählt das Eingabefeld mit dem Namen "name" im Formular mit der ID "meinFormular" aus.</li>
+            <li><code>document.querySelectorAll("input[type='text']")</code>: Wählt alle Text-Eingabefelder auf der Seite aus.</li>
+            <li><code>document.forms["meinFormular"].elements["name"]</code>: Wählt das Eingabefeld mit dem Namen "name" im Formular mit der ID "meinFormular" aus.</li>
+            <li><code>document.getElementsByName("name")</code>: Wählt alle Elemente mit dem Namen "name" aus.</li>
+            <li><code>document.getElementsByClassName("meinInput")</code>: Wählt alle Elemente mit der Klasse "meinInput" aus.</li>
+            <li><code>document.getElementsByTagName("input")</code>: Wählt alle Eingabefelder auf der Seite aus.</li>
+            <li><code>document.querySelector("#meinFormular")</code>: Wählt das gesamte Formular mit der ID "meinFormular" aus.</li>
+            <li><code>document.querySelectorAll("#meinFormular input")</code>: Wählt alle Eingabefelder im Formular mit der ID "meinFormular" aus.</li>
+            <li><code>document.querySelector("#meinFormular select")</code>: Wählt das Dropdown-Menü im Formular mit der ID "meinFormular" aus.</li>
+            <li><code>document.querySelector("#meinFormular textarea")</code>: Wählt das Textbereich im Formular mit der ID "meinFormular" aus.</li>
+            <li><code>document.querySelector("#meinFormular button")</code>: Wählt den Absende-Button im Formular mit der ID "meinFormular" aus.</li>
+            <li><code>document.querySelector("#meinFormular input[type='checkbox']")</code>: Wählt das Kontrollkästchen im Formular mit der ID "meinFormular" aus.</li>
+            <li><code>document.querySelector("#meinFormular input[type='radio']")</code>: Wählt das Optionsfeld im Formular mit der ID "meinFormular" aus.</li>
+            <li><code>document.querySelector("#meinFormular input[type='file']")</code>: Wählt das Datei-Upload-Feld im Formular mit der ID "meinFormular" aus.</li>
+            <li><code>document.querySelector("#meinFormular input[type='color']")</code>: Wählt das Farbauswahlfeld im Formular mit der ID "meinFormular" aus.</li>
+            <li><code>document.querySelector("#meinFormular input[type='date']")</code>: Wählt das Datumsauswahlfeld im Formular mit der ID "meinFormular" aus.</li>
+            <li><code>document.querySelector("#meinFormular input[type='time']")</code>: Wählt das Zeit-Auswahlfeld im Formular mit der ID "meinFormular" aus.</li>
+            <li><code>document.querySelector("#meinFormular input[type='search']")</code>: Wählt das Suchfeld im Formular mit der ID "meinFormular" aus.</li>
+            <li><code>document.querySelector("#meinFormular input[type='password']")</code>: Wählt das Passwortfeld im Formular mit der ID "meinFormular" aus.</li>
+            <li><code>document.querySelector("#meinFormular input[type='submit']")</code>: Wählt den Absende-Button im Formular mit der ID "meinFormular" aus.</li>
+            <li><code>document.querySelector("#meinFormular input[type='reset']")</code>: Wählt den Zurücksetzen-Button im Formular mit der ID "meinFormular" aus.</li>
+            <li><code>document.querySelector("#meinFormular input[type='button']")</code>: Wählt einen Button im Formular mit der ID "meinFormular" aus.</li>
+        </ul>
+        <p>Hier ist ein Beispiel, wie du den Wert eines Eingabefelds abrufen kannst:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let formular = document.getElementById("meinFormular");
+                let nameFeld = formular.elements["name"];
+                console.log(nameFeld.value); // Gibt den eingegebenen Namen aus
+            </code>
+        </pre>
+        <p>Hier wird der Wert des Eingabefelds mit dem Namen "name" im Formular mit der ID "meinFormular" abgerufen.</p>
+        <p>Du kannst auch den Wert eines Dropdown-Menüs abrufen:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let formular = document.getElementById("meinFormular");
+                let landFeld = formular.elements["land"];
+                console.log(landFeld.value); // Gibt das ausgewählte Land aus
+            </code>
+        </pre>
+        <p>Hier wird der Wert des Dropdown-Menüs mit dem Namen "land" im Formular mit der ID "meinFormular" abgerufen.</p>
+        <p>Du kannst auch den Wert eines Kontrollkästchens abrufen:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let formular = document.getElementById("meinFormular");
+                let newsletterFeld = formular.elements["newsletter"];
+                console.log(newsletterFeld.checked); // Gibt true oder false aus
+            </code>
+        </pre>
+        <p>Hier wird der Wert des Kontrollkästchens mit dem Namen "newsletter" im Formular mit der ID "meinFormular" abgerufen. Wenn das Kontrollkästchen aktiviert ist, gibt es <code>true</code> zurück, andernfalls <code>false</code>.</p>
+        <p>Du kannst auch den Wert eines Optionsfelds abrufen:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let formular = document.getElementById("meinFormular");
+                let geschlechtFeld = formular.elements["geschlecht"];
+                for (let i = 0; i < geschlechtFeld.length; i++) {
+                    if (geschlechtFeld[i].checked) {
+                        console.log(geschlechtFeld[i].value); // Gibt das ausgewählte Geschlecht aus
+                    }
+                }
+            </code>
+        </pre>
+        <p>Hier wird der Wert des Optionsfelds mit dem Namen "geschlecht" im Formular mit der ID "meinFormular" abgerufen. Wenn das Optionsfeld aktiviert ist, gibt es den Wert des ausgewählten Geschlechts aus.</p>
+        <p>Hier ist ein komplettes Beispiel, wie du mehrere Eingabefelder in einem Formular mit JavaScript verarbeiten kannst:</p>
+        <pre class="code-container">
+            <code class="language-html">
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="en"&gt;
+            &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &lt;title&gt;Formular mit mehreren Feldern&lt;/title&gt;
+                &lt;style&gt;
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 20px;
+                }
+                form {
+                    max-width: 400px;
+                    margin: 0 auto;
+                }
+                label, input, button {
+                    display: block;
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+                button {
+                    background-color: #007BFF;
+                    color: white;
+                    border: none;
+                    padding: 10px;
+                    cursor: pointer;
+                }
+                button:hover {
+                    background-color: #0056b3;
+                }
+                .message {
+                    margin-top: 20px;
+                    font-size: 16px;
+                    color: red;
+                }
+                &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;h1&gt;Formular mit mehreren Feldern&lt;/h1&gt;
+                &lt;form id="meinFormular"&gt;
+                &lt;label for="vorname"&gt;Vorname:&lt;/label&gt;
+                &lt;input type="text" id="vorname" name="vorname" required&gt;
+                &lt;label for="nachname"&gt;Nachname:&lt;/label&gt;
+                &lt;input type="text" id="nachname" name="nachname" required&gt;
+                &lt;label for="email"&gt;E-Mail:&lt;/label&gt;
+                &lt;input type="email" id="email" name="email" required&gt;
+                &lt;button type="submit"&gt;Absenden&lt;/button&gt;
+                &lt;/form&gt;
+                &lt;p class="message" id="meldung"&gt;&lt;/p&gt;
+                &lt;script&gt;
+                document.getElementById("meinFormular").addEventListener("submit", function(event) {
+                    event.preventDefault(); // Verhindert die Standardaktion
+                    let vorname = document.getElementById("vorname").value.trim();
+                    let nachname = document.getElementById("nachname").value.trim();
+                    let email = document.getElementById("email").value.trim();
+                    let meldung = document.getElementById("meldung");
+
+                    if (!vorname || !nachname || !email) {
+                    meldung.textContent = "Bitte füllen Sie alle Felder aus.";
+                    meldung.style.color = "red";
+                    } else {
+                    meldung.textContent = "Formular übermittelt mit: Vorname: " + vorname + ", Nachname: " + nachname + ", E-Mail: " + email;
+                    meldung.style.color = "green";
+                    }
+                });
+                &lt;/script&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+            </code>
+        </pre>
     </div>
     <h3>📖 3.3 Auf Formularübermittlungen reagieren</h3>
     <div class="definition">
@@ -72,63 +384,577 @@
             </code>
         </pre>
         <p>Hier wird die Standardaktion des Formulars verhindert und eine Nachricht in der Konsole ausgegeben.</p>
+        <p>Du kannst auch auf andere Ereignisse reagieren, z.B. wenn der Benutzer ein Eingabefeld verlässt:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let nameFeld = document.getElementById("name");
+                nameFeld.addEventListener("blur", function() {
+                    console.log("Eingabefeld wurde verlassen!");
+                });
+            </code>
+        </pre>
+        <p>Hier wird eine Nachricht in der Konsole ausgegeben, wenn der Benutzer das Eingabefeld mit der ID <code>name</code> verlässt.</p>
+        <p>Du kannst auch auf andere Ereignisse reagieren, z.B. wenn der Benutzer ein Eingabefeld ändert:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let nameFeld = document.getElementById("name");
+                nameFeld.addEventListener("input", function() {
+                    console.log("Eingabefeld wurde geändert!");
+                });
+            </code>
+        </pre>
+        <p>Hier wird eine Nachricht in der Konsole ausgegeben, wenn der Benutzer das Eingabefeld mit der ID <code>name</code> ändert.</p>
+        <p>Hier ist ein komplettes Beispiel, wie du auf die Übermittlung eines Formulars reagieren kannst:</p>
+        <pre class="code-container">
+            <code class="language-html">
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="en"&gt;
+            &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Formularübermittlung&lt;/title&gt;
+            &lt;style&gt;
+                body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                }
+                form {
+                max-width: 300px;
+                margin: 0 auto;
+                }
+                label, input, button {
+                display: block;
+                width: 100%;
+                margin-bottom: 10px;
+                }
+                button {
+                background-color: #007BFF;
+                color: white;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                }
+                button:hover {
+                background-color: #0056b3;
+                }
+                .message {
+                margin-top: 20px;
+                font-size: 16px;
+                color: red;
+                }
+            &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+            &lt;h1&gt;Formularübermittlung&lt;/h1&gt;
+            &lt;form id="meinFormular"&gt;
+                &lt;label for="name"&gt;Name:&lt;/label&gt;
+                &lt;input type="text" id="name" name="name" required&gt;
+                &lt;button type="submit"&gt;Absenden&lt;/button&gt;
+            &lt;/form&gt;
+            &lt;p class="message" id="meldung"&gt;&lt;/p&gt;
+            &lt;script&gt;
+                document.getElementById("meinFormular").addEventListener("submit", function(event) {
+                event.preventDefault(); // Verhindert die Standardaktion
+                let name = document.getElementById("name").value.trim();
+                let meldung = document.getElementById("meldung");
+                if (name === "") {
+                    meldung.textContent = "Bitte geben Sie einen Namen ein.";
+                    meldung.style.color = "red";
+                } else {
+                    meldung.textContent = "Formular übermittelt mit Name: " + name;
+                    meldung.style.color = "green";
+                }
+                });
+            &lt;/script&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+            </code>
+        </pre>
+    </div>
+    <h3>📖 3.4 jQuery</h3>
+    <div class="definition">
+        <p>jQuery ist eine JavaScript-Bibliothek, die es einfacher macht, HTML-Elemente zu manipulieren, Ereignisse zu behandeln und Animationen zu erstellen. In den vorherigen Kapiteln hast du gelernt, wie du mit reinem JavaScript:</p>
+        <ul>
+            <li>HTML-Formulare erstellst und deren Elemente auswählst,</li>
+            <li>Werte aus Formularelementen abrufst,</li>
+            <li>und auf Formularübermittlungen reagierst.</li>
+        </ul>
+        <p>Mit jQuery kannst du diese Aufgaben mit weniger Code und auf eine intuitivere Weise umsetzen.</p>
+
+        <h4>🔹 Verknüpfung von jQuery</h4>
+        <p>Um jQuery zu verwenden, musst du die jQuery-Bibliothek in dein Projekt einbinden. Dies kannst du tun, indem du das folgende <code>&lt;script&gt;</code>-Tag in den <code>&lt;head&gt;</code>- oder <code>&lt;body&gt;</code>-Bereich deiner HTML-Datei einfügst:</p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+            </code>
+        </pre>
+
+        <h4>🔹 Auswahl von Formularelementen</h4>
+        <p>In Kapitel 3.1 hast du gelernt, wie du Formularelemente mit <code>document.getElementById()</code> auswählst. Mit jQuery kannst du dies einfacher umsetzen:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                // Auswahl eines Eingabefelds mit der ID "name"
+                let nameFeld = $("#name");
+            </code>
+        </pre>
+        <p>Hier wird das Eingabefeld mit der ID <code>name</code> ausgewählt. Du kannst direkt mit dem ausgewählten Element arbeiten.</p>
+
+        <h4>🔹 Werte aus Formularelementen abrufen</h4>
+        <p>In Kapitel 3.2 hast du gelernt, wie du Werte aus Formularelementen abrufst. Mit jQuery kannst du dies einfacher umsetzen:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                // Wert eines Eingabefelds abrufen
+                let name = $("#name").val();
+                console.log("Eingegebener Name:", name);
+            </code>
+        </pre>
+
+        <h4>🔹 Auf Formularübermittlungen reagieren</h4>
+        <p>In Kapitel 3.3 hast du gelernt, wie du auf die Übermittlung eines Formulars reagierst. Mit jQuery kannst du dies einfacher umsetzen:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                // Formularübermittlung behandeln
+                $("#meinFormular").submit(function(event) {
+                    event.preventDefault(); // Verhindert die Standardaktion
+                    let name = $("#name").val();
+                    if (name.trim() === "") {
+                        console.log("Bitte geben Sie einen Namen ein.");
+                    } else {
+                        console.log("Formular übermittelt mit Name:", name);
+                    }
+                });
+            </code>
+        </pre>
+
+        <h4>🔹 Beispiel: Formular mit jQuery</h4>
+        <p>Hier ist ein vollständiges Beispiel, das zeigt, wie du mit jQuery ein Formular verarbeiten kannst. In diesem Beispiel wird ein Formular verwendet, um den Namen des Benutzers abzurufen und eine Nachricht anzuzeigen.</p>
+
+        <p><b>HTML-Code:</b></p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="en"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;jQuery Formular&lt;/title&gt;
+                    &lt;link rel="stylesheet" href="styles.css"&gt;
+                    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+                    &lt;script src="script.js"&gt;&lt;/script&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1&gt;jQuery Formular&lt;/h1&gt;
+                    &lt;form id="meinFormular"&gt;
+                        &lt;label for="name"&gt;Name:&lt;/label&gt;
+                        &lt;input type="text" id="name" name="name" required&gt;
+                        &lt;button type="submit"&gt;Absenden&lt;/button&gt;
+                    &lt;/form&gt;
+                    &lt;p id="meldung"&gt;&lt;/p&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+
+        <p><b>CSS-Code (styles.css):</b></p>
+        <pre class="code-container">
+            <code class="language-css">
+                body {
+                    font-family: Arial, sans-serif;
+                    text-align: center;
+                    margin-top: 50px;
+                }
+
+                form {
+                    margin: 20px auto;
+                    width: 300px;
+                }
+
+                input, button {
+                    display: block;
+                    width: 100%;
+                    margin: 10px 0;
+                    padding: 10px;
+                    font-size: 16px;
+                }
+
+                #meldung {
+                    margin-top: 20px;
+                    font-size: 18px;
+                    color: green;
+                }
+            </code>
+        </pre>
+
+        <p><b>JavaScript-Code (script.js):</b></p>
+        <pre class="code-container">
+            <code class="language-js">
+                $(document).ready(function() {
+                    $("#meinFormular").submit(function(event) {
+                        event.preventDefault(); // Verhindert die Standardaktion
+                        let name = $("#name").val();
+                        if (name.trim() === "") {
+                            $("#meldung").text("Bitte geben Sie einen Namen ein.").css("color", "red");
+                        } else {
+                            $("#meldung").text("Hallo, " + name + "!").css("color", "green");
+                        }
+                    });
+                });
+            </code>
+        </pre>
     </div>
     <h2>📝 4 Übungsaufgaben - Theorie</h2>
     <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 4.1</div>
         <div class="aufgabentext">
             <p>Beschreibe, wie du ein einfaches HTML-Formular mit einem Textfeld und einem Button erstellst.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-html">
+                            &lt;form id="meinFormular"&gt;
+                                &lt;label for="name"&gt;Name:&lt;/label&gt;
+                                &lt;input type="text" id="name" name="name" required&gt;
+                                &lt;button type="submit"&gt;Absenden&lt;/button&gt;
+                            &lt;/form&gt;
+                        </code>
+                    </pre>
+                </div>
+            </div>
         </div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 4.2</div>
         <div class="aufgabentext">
             <p>Erkläre, wie du mit JavaScript den Wert eines Eingabefelds abrufen kannst.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Wert eines Eingabefelds abrufen
+                            let name = document.getElementById("name").value;
+                            console.log("Eingegebener Name:", name);
+                        </code>
+                    </pre>
+                </div>
+            </div>
         </div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 4.3</div>
         <div class="aufgabentext">
             <p>Beschreibe, wie du auf die Übermittlung eines Formulars reagieren kannst. Warum ist es wichtig, die Standardaktion zu verhindern?</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Auf die Übermittlung eines Formulars reagieren
+                            document.getElementById("meinFormular").addEventListener("submit", function(event) {
+                                event.preventDefault(); // Verhindert das Neuladen der Seite
+                                console.log("Formular wurde übermittelt!");
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
         </div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 4.4</div>
         <div class="aufgabentext">
-            <p>Erkläre, wie du mehrere Eingabefelder in einem Formular mit JavaScript verarbeiten kannst.</p>
+            <p>Erkläre, wie du mehrere Eingabefelder in einem Formular mit jQuery verarbeiten kannst. Schreibe ein Beispiel.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Formularübermittlung mit jQuery verarbeiten
+                            $("#meinFormular").submit(function(event) {
+                                event.preventDefault(); // Verhindert die Standardaktion
+                                let vorname = $("#vorname").val();
+                                let nachname = $("#nachname").val();
+                                console.log("Vorname:", vorname, "Nachname:", nachname);
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
         </div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 4.5</div>
         <div class="aufgabentext">
             <p>Beschreibe, wie du die Eingaben eines Formulars validieren kannst, bevor es übermittelt wird.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Formularvalidierung
+                            document.getElementById("meinFormular").addEventListener("submit", function(event) {
+                                event.preventDefault();
+                                let name = document.getElementById("name").value.trim();
+                                if (name === "") {
+                                    console.log("Bitte geben Sie einen Namen ein.");
+                                } else {
+                                    console.log("Formular ist gültig.");
+                                }
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
         </div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 4.6</div>
         <div class="aufgabentext">
-            <p>Erkläre, wie du dynamisch neue Eingabefelder zu einem Formular hinzufügen kannst.</p>
+            <p>Erkläre, wie du dynamisch neue Eingabefelder zu einem Formular mit jQuery hinzufügen kannst. Schreibe ein Beispiel.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Dynamisch ein neues Eingabefeld hinzufügen
+                            $("#addFieldButton").click(function() {
+                                $("#meinFormular").append('<input type="text" name="neuesFeld" placeholder="Neues Feld">');
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
         </div>
     </div>
     <h2>🛠️ 5 Übungsaufgaben - Praxis</h2>
+    <h2>🛠️ 5 Übungsaufgaben - Praxis</h2>
     <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 5.1</div>
-        <div class="aufgabentext">Erstelle ein HTML-Formular mit einem Textfeld für den Namen und einem Button. Schreibe ein Skript, das den eingegebenen Namen in der Konsole ausgibt, wenn der Button geklickt wird.</div>
+        <div class="aufgabentext">
+            <p>Erstelle ein HTML-Formular mit einem Textfeld für den Namen und einem Button. Schreibe ein Skript, das den eingegebenen Namen in der Konsole ausgibt, wenn der Button geklickt wird.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            document.getElementById("meinButton").addEventListener("click", function() {
+                                let name = document.getElementById("name").value;
+                                console.log("Eingegebener Name:", name);
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 5.2</div>
-        <div class="aufgabentext">Erstelle ein HTML-Formular mit zwei Eingabefeldern für Vorname und Nachname. Schreibe ein Skript, das den vollständigen Namen in der Konsole ausgibt, wenn das Formular übermittelt wird.</div>
+        <div class="aufgabentext">
+            <p>Erstelle ein HTML-Formular mit zwei Eingabefeldern für Vorname und Nachname. Schreibe ein Skript, das den vollständigen Namen in der Konsole ausgibt, wenn das Formular übermittelt wird.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            document.getElementById("meinFormular").addEventListener("submit", function(event) {
+                                event.preventDefault();
+                                let vorname = document.getElementById("vorname").value;
+                                let nachname = document.getElementById("nachname").value;
+                                console.log("Vollständiger Name:", vorname + " " + nachname);
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 5.3</div>
-        <div class="aufgabentext">Erstelle ein HTML-Formular mit einem Eingabefeld für das Alter. Schreibe ein Skript, das überprüft, ob das Alter größer als 18 ist, und eine entsprechende Nachricht in der Konsole ausgibt.</div>
+        <div class="aufgabentext">
+            <p>Erstelle ein HTML-Formular mit einem Eingabefeld für das Alter. Schreibe ein Skript, das überprüft, ob das Alter größer als 18 ist, und eine entsprechende Nachricht in der Konsole ausgibt.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            document.getElementById("meinFormular").addEventListener("submit", function(event) {
+                                event.preventDefault();
+                                let alter = parseInt(document.getElementById("alter").value);
+                                if (alter > 18) {
+                                    console.log("Alter ist größer als 18.");
+                                } else {
+                                    console.log("Alter ist 18 oder kleiner.");
+                                }
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 5.4</div>
-        <div class="aufgabentext">Erstelle ein HTML-Formular mit einem Dropdown-Menü für die Auswahl eines Landes. Schreibe ein Skript, das das ausgewählte Land in der Konsole ausgibt, wenn das Formular übermittelt wird.</div>
+        <div class="aufgabentext">
+            <p>Erstelle ein HTML-Formular mit einem Dropdown-Menü für die Auswahl eines Landes. Schreibe ein Skript mit jQuery, das das ausgewählte Land in der Konsole ausgibt, wenn das Formular übermittelt wird.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            $("#meinFormular").submit(function(event) {
+                                event.preventDefault();
+                                let land = $("#land").val();
+                                console.log("Ausgewähltes Land:", land);
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 5.5</div>
-        <div class="aufgabentext">Erstelle ein HTML-Formular mit mehreren Eingabefeldern für Name, Alter und E-Mail. Schreibe ein Skript, das die Eingaben validiert und eine Fehlermeldung ausgibt, wenn ein Feld leer ist.</div>
+        <div class="aufgabentext">
+            <p>Erstelle ein HTML-Formular mit mehreren Eingabefeldern für Name, Alter und E-Mail. Schreibe ein Skript, das die Eingaben validiert und eine Fehlermeldung ausgibt, wenn ein Feld leer ist.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            document.getElementById("meinFormular").addEventListener("submit", function(event) {
+                                event.preventDefault();
+                                let name = document.getElementById("name").value.trim();
+                                let alter = document.getElementById("alter").value.trim();
+                                let email = document.getElementById("email").value.trim();
+                                if (!name || !alter || !email) {
+                                    console.log("Bitte füllen Sie alle Felder aus.");
+                                } else {
+                                    console.log("Formular ist gültig.");
+                                }
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 5.6</div>
-        <div class="aufgabentext">Erstelle ein HTML-Formular mit einem Textfeld und einem Button. Schreibe ein Skript, das das Textfeld leert, nachdem der Button geklickt wurde.</div>
+        <div class="aufgabentext">
+            <p>Erstelle ein HTML-Formular mit einem Textfeld und einem Button. Schreibe ein Skript mit jQuery, das das Textfeld leert, nachdem der Button geklickt wurde.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            $("#meinButton").click(function() {
+                                $("#meinTextfeld").val("");
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
     </div>
     <h2>📌 6 Pflichtaufgaben</h2>
     <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 6.1</div>
-        <div class="aufgabentext">Erstelle ein HTML-Formular mit einem Textfeld für den Namen und einem Button. Schreibe ein Skript, das den eingegebenen Namen in der Konsole ausgibt, wenn der Button geklickt wird.</div>
+        <div class="aufgabentext">
+            <p>Erstelle ein HTML-Formular mit einem Textfeld für den Namen und einem Button. Schreibe ein Skript, das den eingegebenen Namen in der Konsole ausgibt, wenn der Button geklickt wird.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            document.getElementById("meinButton").addEventListener("click", function() {
+                                let name = document.getElementById("name").value;
+                                console.log("Eingegebener Name:", name);
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 6.2</div>
-        <div class="aufgabentext">Erstelle ein HTML-Formular mit zwei Eingabefeldern für Vorname und Nachname. Schreibe ein Skript, das den vollständigen Namen in der Konsole ausgibt, wenn das Formular übermittelt wird.</div>
+        <div class="aufgabentext">
+            <p>Erstelle ein HTML-Formular mit zwei Eingabefeldern für Vorname und Nachname. Schreibe ein Skript, das den vollständigen Namen in der Konsole ausgibt, wenn das Formular übermittelt wird.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            document.getElementById("meinFormular").addEventListener("submit", function(event) {
+                                event.preventDefault();
+                                let vorname = document.getElementById("vorname").value;
+                                let nachname = document.getElementById("nachname").value;
+                                console.log("Vollständiger Name:", vorname + " " + nachname);
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 6.3</div>
-        <div class="aufgabentext">Erstelle ein HTML-Formular mit einem Eingabefeld für das Alter. Schreibe ein Skript, das überprüft, ob das Alter größer als 18 ist, und eine entsprechende Nachricht in der Konsole ausgibt.</div>
+        <div class="aufgabentext">
+            <p>Erstelle ein HTML-Formular mit einem Eingabefeld für das Alter. Schreibe ein Skript, das überprüft, ob das Alter größer als 18 ist, und eine entsprechende Nachricht in der Konsole ausgibt.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            document.getElementById("meinFormular").addEventListener("submit", function(event) {
+                                event.preventDefault();
+                                let alter = parseInt(document.getElementById("alter").value);
+                                if (alter > 18) {
+                                    console.log("Alter ist größer als 18.");
+                                } else {
+                                    console.log("Alter ist 18 oder kleiner.");
+                                }
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 6.4</div>
-        <div class="aufgabentext">Erstelle ein HTML-Formular mit einem Dropdown-Menü für die Auswahl eines Landes. Schreibe ein Skript, das das ausgewählte Land in der Konsole ausgibt, wenn das Formular übermittelt wird.</div>
+        <div class="aufgabentext">
+            <p>Erstelle ein HTML-Formular mit einem Dropdown-Menü für die Auswahl eines Landes. Schreibe ein Skript mit jQuery, das das ausgewählte Land in der Konsole ausgibt, wenn das Formular übermittelt wird.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            $("#meinFormular").submit(function(event) {
+                                event.preventDefault();
+                                let land = $("#land").val();
+                                console.log("Ausgewähltes Land:", land);
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 6.5</div>
-        <div class="aufgabentext">Erstelle ein HTML-Formular mit mehreren Eingabefeldern für Name, Alter und E-Mail. Schreibe ein Skript, das die Eingaben validiert und eine Fehlermeldung ausgibt, wenn ein Feld leer ist.</div>
+        <div class="aufgabentext">
+            <p>Erstelle ein HTML-Formular mit mehreren Eingabefeldern für Name, Alter und E-Mail. Schreibe ein Skript, das die Eingaben validiert und eine Fehlermeldung ausgibt, wenn ein Feld leer ist.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            document.getElementById("meinFormular").addEventListener("submit", function(event) {
+                                event.preventDefault();
+                                let name = document.getElementById("name").value.trim();
+                                let alter = document.getElementById("alter").value.trim();
+                                let email = document.getElementById("email").value.trim();
+                                if (!name || !alter || !email) {
+                                    console.log("Bitte füllen Sie alle Felder aus.");
+                                } else {
+                                    console.log("Formular ist gültig.");
+                                }
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 6.6</div>
-        <div class="aufgabentext">Erstelle ein HTML-Formular mit einem Textfeld und einem Button. Schreibe ein Skript, das das Textfeld leert, nachdem der Button geklickt wurde.</div>
+        <div class="aufgabentext">
+            <p>Erstelle ein HTML-Formular mit einem Textfeld und einem Button. Schreibe ein Skript mit jQuery, das das Textfeld leert, nachdem der Button geklickt wurde.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            $("#meinButton").click(function() {
+                                $("#meinTextfeld").val("");
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
     </div>
     <h2>🚀 7 Umsetzung des eigenen Projektes</h2>
     <div class="projekt">
@@ -162,16 +988,100 @@
             <li><a href="https://www.udemy.com/course/the-complete-javascript-course/" target="_blank">Udemy - The Complete JavaScript Course</a></li>
         </ul>
     </div>
-    <h2>🛠️ 9 Lösungen</h2>
-    <div class="code-container">
-        <span class="toggle-button">Lösung anzeigen</span>
+    <h2>🛠️ 9 Beispiel</h2>
+    <div class="loesungshinweis">
+        <p>Hier ist ein vollständiges Beispiel, das zeigt, wie du mit HTML, CSS und JavaScript ein Formular erstellen und verarbeiten kannst. In diesem Beispiel wird ein Formular verwendet, um den Namen des Benutzers abzurufen und eine Nachricht anzuzeigen.</p>
         <div class="code-content">
-            <p>Die Lösungen zu den Aufgaben findest du in den Kommentaren im Code.</p>
+            <p><b>HTML-Code:</b></p>
+            <pre class="code-container">
+                <code class="language-html">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                        &lt;title&gt;Formular Beispiel&lt;/title&gt;
+                        &lt;link rel="stylesheet" href="styles.css"&gt;
+                        &lt;script src="script.js"&gt;&lt;/script&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;h1&gt;Formular Beispiel&lt;/h1&gt;
+                        &lt;form id="meinFormular"&gt;
+                            &lt;label for="name"&gt;Name:&lt;/label&gt;
+                            &lt;input type="text" id="name" name="name" required&gt;
+                            &lt;button type="submit"&gt;Absenden&lt;/button&gt;
+                        &lt;/form&gt;
+                        &lt;p id="meldung"&gt;&lt;/p&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </code>
+            </pre>
+            <p><b>CSS-Code (styles.css):</b></p>
+            <pre class="code-container">
+                <code class="language-css">
+                    body {
+                        font-family: Arial, sans-serif;
+                        text-align: center;
+                        margin-top: 50px;
+                    }
+    
+                    form {
+                        margin: 20px auto;
+                        width: 300px;
+                    }
+    
+                    input, button {
+                        display: block;
+                        width: 100%;
+                        margin: 10px 0;
+                        padding: 10px;
+                        font-size: 16px;
+                    }
+    
+                    #meldung {
+                        margin-top: 20px;
+                        font-size: 18px;
+                        color: green;
+                    }
+                </code>
+            </pre>
+            <p><b>JavaScript-Code (script.js):</b></p>
+            <pre class="code-container">
+                <code class="language-js">
+                    document.getElementById("meinFormular").addEventListener("submit", function(event) {
+                        event.preventDefault(); // Verhindert die Standardaktion
+                        let name = document.getElementById("name").value.trim();
+                        let meldung = document.getElementById("meldung");
+                        if (name === "") {
+                            meldung.textContent = "Bitte geben Sie einen Namen ein.";
+                            meldung.style.color = "red";
+                        } else {
+                            meldung.textContent = "Hallo, " + name + "!";
+                            meldung.style.color = "green";
+                        }
+                    });
+                </code>
+            </pre>
         </div>
     </div>
     <h2>📝 10 Zusammenfassung</h2>
     <div class="zusammenfassung">
-        <p>In diesem Modul hast du gelernt, wie du mit HTML-Formularen arbeitest und Benutzereingaben mit JavaScript verarbeitest. Du weißt jetzt, wie du Formularelemente auswählst, Werte abrufst und auf Formularübermittlungen reagierst.</p>
+        <p>In diesem Modul hast du gelernt, wie du mit HTML-Formularen arbeitest und Benutzereingaben mit JavaScript und jQuery verarbeitest. Du weißt jetzt:</p>
+        <ul>
+            <li>✅ Wie du <b>HTML-Formulare</b> mit verschiedenen Eingabetypen erstellst.</li>
+            <li>✅ Wie du <b>Formularelemente</b> mit JavaScript und jQuery auswählst.</li>
+            <li>✅ Wie du die von Benutzern eingegebenen Werte abrufst und verarbeitest.</li>
+            <li>✅ Wie du auf <b>Formularübermittlungen</b> reagierst und die Standardaktion verhinderst.</li>
+            <li>✅ Wie du <b>Formulare validierst</b>, um sicherzustellen, dass alle erforderlichen Felder ausgefüllt sind.</li>
+            <li>✅ Wie du mit jQuery dynamisch <b>neue Eingabefelder</b> zu einem Formular hinzufügst.</li>
+        </ul>
+        <p>Du hast außerdem praktische Aufgaben gelöst, um dein Wissen zu festigen:</p>
+        <ul>
+            <li>🟢 Aufgaben zu den Grundlagen wie dem Abrufen von Werten aus Eingabefeldern.</li>
+            <li>🔵 Aufgaben zur Verarbeitung von Formularen und der Validierung von Eingaben.</li>
+            <li>🔴 Expertenaufgaben, bei denen du komplexere Szenarien mit jQuery und JavaScript umgesetzt hast.</li>
+        </ul>
+        <p>Mit diesem Wissen bist du nun bereit, die nächsten Module zu erkunden und dein Wissen weiter auszubauen!</p>
     </div>
     <h2>🔚 11 Ende</h2>
     <div class="ende">

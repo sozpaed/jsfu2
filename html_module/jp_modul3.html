@@ -94,6 +94,44 @@
             </code>
         </pre>
         <p>Hier wird das Element ausgeblendet und dann wieder eingeblendet.</p>
+        <p>Hier ist ein vollständiges Beispiel, das zeigt, wie du die Inline-Stile eines HTML-Elements ändern kannst:</p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="en"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;Inline-Stile ändern&lt;/title&gt;
+                    &lt;style&gt;
+                        #meinElement {
+                            width: 200px;
+                            height: 100px;
+                            background-color: lightgray;
+                            text-align: center;
+                            line-height: 100px;
+                        }
+                    &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1&gt;Inline-Stile ändern&lt;/h1&gt;
+                    &lt;div id="meinElement"&gt;Beispiel-Element&lt;/div&gt;
+                    &lt;button id="changeStyleButton"&gt;Stil ändern&lt;/button&gt;
+
+                    &lt;script&gt;
+                        document.getElementById("changeStyleButton").addEventListener("click", function() {
+                            let element = document.getElementById("meinElement");
+                            element.style.color = "white";
+                            element.style.backgroundColor = "blue";
+                            element.style.fontSize = "20px";
+                            element.style.border = "2px solid black";
+                        });
+                    &lt;/script&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+        <p>In diesem Beispiel wird die Hintergrundfarbe, die Textfarbe, die Schriftgröße und der Rahmen des Elements geändert, wenn der Button geklickt wird.</p>
     </div>
     <h3>📖 3.2 CSS-Klassen manipulieren</h3>
     <div class="definition">
@@ -168,6 +206,38 @@
         </pre>
         <p>Hier werden die Klassen <code>meineKlasse1</code> und <code>meineKlasse2</code> zu dem Element umgeschaltet.</p>
         <p>Zusammenfassend kannst du mit JavaScript CSS-Klassen zu HTML-Elementen hinzufügen, entfernen oder umschalten, um deren Aussehen und Verhalten dynamisch zu steuern. Dies ist besonders nützlich, wenn du interaktive Webseiten erstellen möchtest.</p>
+        <p>Hier ist ein vollständiges Beispiel, das zeigt, wie du CSS-Klassen manipulieren kannst:</p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="en"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;CSS-Klassen manipulieren&lt;/title&gt;
+                    &lt;style&gt;
+                        .meineKlasse {
+                            color: white;
+                            background-color: blue;
+                            font-size: 20px;
+                        }
+                    &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1&gt;CSS-Klassen manipulieren&lt;/h1&gt;
+                    &lt;div id="meinElement"&gt;Beispiel-Element&lt;/div&gt;
+                    &lt;button id="toggleClassButton"&gt;Klasse umschalten&lt;/button&gt;
+
+                    &lt;script&gt;
+                        document.getElementById("toggleClassButton").addEventListener("click", function() {
+                            let element = document.getElementById("meinElement");
+                            element.classList.toggle("meineKlasse");
+                        });
+                    &lt;/script&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
     </div>
     <h3>📖 3.3 Numerische Eingaben und Berechnungen</h3>
     <div class="definition">
@@ -227,6 +297,51 @@
         </pre>
         <p>Hier wird die Operation, die der Benutzer auswählen kann, überprüft und die entsprechende Berechnung durchgeführt.</p>
         <p>Zusammenfassend kannst du mit JavaScript numerische Eingaben aus HTML-Elementen abrufen und Berechnungen durchführen. Dies ist besonders nützlich, wenn du interaktive Webseiten erstellen möchtest, die Berechnungen durchführen.</p>
+        <p>Hier ist ein vollständiges Beispiel, das zeigt, wie du numerische Eingaben und Berechnungen durchführen kannst:</p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="en"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;Numerische Eingaben und Berechnungen&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1&gt;Numerische Eingaben und Berechnungen&lt;/h1&gt;
+                    &lt;input type="number" id="zahl1" placeholder="Zahl 1"&gt;
+                    &lt;input type="number" id="zahl2" placeholder="Zahl 2"&gt;
+                    &lt;select id="operation"&gt;
+                        &lt;option value="+ "&gt;+&lt;/option&gt;
+                        &lt;option value="- "&gt;-&lt;/option&gt;
+                        &lt;option value="* "&gt;&ast;&lt;/option&gt;
+                        &lt;option value="/ "&gt;/&lt;/option&gt;
+                    &lt;/select&gt;
+                    &lt;button id="berechnenButton"&gt;Berechnen&lt;/button&gt;
+                    &lt;p id="ergebnis"&gt;&lt;/p&gt;
+
+                    &lt;script&gt;
+                        document.getElementById("berechnenButton").addEventListener("click", function() {
+                            let zahl1 = parseFloat(document.getElementById("zahl1").value);
+                            let zahl2 = parseFloat(document.getElementById("zahl2").value);
+                            let operation = document.getElementById("operation").value;
+                            let ergebnis;
+                            if (operation === "+") {
+                                ergebnis = zahl1 + zahl2;
+                            } else if (operation === "-") {
+                                ergebnis = zahl1 - zahl2;
+                            } else if (operation === "*") {
+                                ergebnis = zahl1 * zahl2;
+                            } else if (operation === "/") {
+                                ergebnis = zahl1 / zahl2;
+                            }
+                            document.getElementById("ergebnis").innerText = "Ergebnis: " + ergebnis;
+                        });
+                    &lt;/script&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
     </div>
     <h3>📖 3.4 jQuery</h3>
     <div class="definition">
@@ -297,6 +412,63 @@
 
         <p>Zusammenfassend kannst du mit jQuery viele der in den vorherigen Kapiteln behandelten Aufgaben einfacher und mit weniger Code umsetzen. jQuery ist besonders nützlich, wenn du dynamische Webseiten erstellen möchtest, die auf Benutzerinteraktionen reagieren.</p>
         <p>Weitere Informationen findest du in der offiziellen <a href="https://jquery.com/" target="_blank">jQuery-Dokumentation</a>.</p>
+        <h4>🔹 Beispiel: Dynamische Hintergrundfarbe und Berechnung</h4>
+        <p>Hier ist ein Beispiel, das zeigt, wie du mit jQuery die Hintergrundfarbe eines Elements ändern und eine Berechnung durchführen kannst:</p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="en"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;jQuery Beispiel&lt;/title&gt;
+                    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+                    &lt;style&gt;
+                        #meinElement {
+                            width: 200px;
+                            height: 100px;
+                            background-color: lightgray;
+                            text-align: center;
+                            line-height: 100px;
+                            margin-bottom: 20px;
+                        }
+                        .highlight {
+                            background-color: yellow;
+                            border: 2px solid red;
+                        }
+                    &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1&gt;jQuery Beispiel&lt;/h1&gt;
+
+                    &lt;div id="meinElement"&gt;Beispiel-Element&lt;/div&gt;
+                    &lt;button id="toggleColorButton"&gt;Hintergrundfarbe umschalten&lt;/button&gt;
+
+                    &lt;h2&gt;Berechnung&lt;/h2&gt;
+                    &lt;input type="number" id="zahl1" placeholder="Zahl 1"&gt;
+                    &lt;input type="number" id="zahl2" placeholder="Zahl 2"&gt;
+                    &lt;button id="berechnenButton"&gt;Berechnen&lt;/button&gt;
+                    &lt;p id="ergebnis"&gt;&lt;/p&gt;
+
+                    &lt;script&gt;
+                        // Hintergrundfarbe umschalten
+                        $("#toggleColorButton").click(function() {
+                            $("#meinElement").toggleClass("highlight");
+                        });
+
+                        // Berechnung durchführen
+                        $("#berechnenButton").click(function() {
+                            let zahl1 = parseFloat($("#zahl1").val());
+                            let zahl2 = parseFloat($("#zahl2").val());
+                            let summe = zahl1 + zahl2;
+                            $("#ergebnis").text("Summe: " + summe);
+                        });
+                    &lt;/script&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+        <p>In diesem Beispiel wird die Hintergrundfarbe des Elements umgeschaltet, wenn der Button geklickt wird. Außerdem wird die Summe von zwei Eingaben berechnet und angezeigt.</p>
     </div>
     <h2>📝 4 Übungsaufgaben - Theorie</h2>
     <div>
