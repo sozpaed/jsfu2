@@ -46,6 +46,54 @@
             </code>
         </pre>
         <p>Hier wird die Textfarbe auf Rot und der Hintergrund auf Gelb gesetzt.</p>
+        <p>Du kannst auch andere CSS-Eigenschaften ändern, wie z.B. <code>fontSize</code>, <code>border</code>, <code>margin</code> usw.</p>
+        <p>Beachte, dass Inline-Stile die CSS-Regeln überschreiben, die in externen Stylesheets definiert sind.</p>
+        <p>Hier ist ein Beispiel, wie du die Größe eines Elements ändern kannst:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let element = document.getElementById("meinElement");
+                element.style.width = "200px";
+                element.style.height = "100px";
+            </code>
+        </pre>
+        <p>Hier wird die Breite auf 200 Pixel und die Höhe auf 100 Pixel gesetzt.</p>
+        <p>Du kannst auch mehrere Eigenschaften gleichzeitig ändern:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let element = document.getElementById("meinElement");
+                element.style.cssText = "color: red; background-color: yellow; font-size: 20px;";
+            </code>
+        </pre>
+        <p>Hier werden die Textfarbe, der Hintergrund und die Schriftgröße in einer Zeile geändert.</p>
+        <p>Es ist wichtig zu beachten, dass Inline-Stile die Stylesheets überschreiben, die in externen CSS-Dateien definiert sind. Wenn du also Inline-Stile verwendest, werden diese immer Vorrang haben.</p>
+        <p>Hier ist ein Beispiel, wie du die Sichtbarkeit eines Elements ändern kannst:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let element = document.getElementById("meinElement");
+                element.style.display = "none"; // Element ausblenden
+                element.style.display = "block"; // Element einblenden
+            </code>
+        </pre>
+        <p>Hier wird das Element ausgeblendet und dann wieder eingeblendet.</p>
+        <p>Du kannst auch Animationen mit CSS-Übergängen erstellen, indem du die <code>transition</code>-Eigenschaft verwendest. Beispiel:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let element = document.getElementById("meinElement");
+                element.style.transition = "all 0.5s ease";
+                element.style.transform = "scale(1.5)";
+            </code>
+        </pre>
+        <p>Hier wird eine Animation erstellt, die das Element bei einer Änderung der Größe sanft vergrößert.</p>
+        <p>Zusammenfassend kannst du mit JavaScript die Inline-Stile von HTML-Elementen ändern, um deren Aussehen und Verhalten dynamisch zu steuern. Dies ist besonders nützlich, wenn du interaktive Webseiten erstellen möchtest.</p>
+        <p>Hier ist ein Beispiel, wie du die Sichtbarkeit eines Elements ändern kannst:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let element = document.getElementById("meinElement");
+                element.style.display = "none"; // Element ausblenden
+                element.style.display = "block"; // Element einblenden
+            </code>
+        </pre>
+        <p>Hier wird das Element ausgeblendet und dann wieder eingeblendet.</p>
     </div>
     <h3>📖 3.2 CSS-Klassen manipulieren</h3>
     <div class="definition">
@@ -59,6 +107,67 @@
             </code>
         </pre>
         <p>Dies ermöglicht dir, die Gestaltung eines Elements dynamisch zu ändern.</p>
+        <p>Hier ist ein Beispiel, wie du eine Klasse zu einem Element hinzufügen kannst:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let element = document.getElementById("meinElement");
+                element.classList.add("meineKlasse");
+            </code>
+        </pre>
+        <p>Hier wird die Klasse <code>meineKlasse</code> zu dem Element mit der ID <code>meinElement</code> hinzugefügt.</p>
+        <p>Du kannst auch mehrere Klassen gleichzeitig hinzufügen:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let element = document.getElementById("meinElement");
+                element.classList.add("meineKlasse1", "meineKlasse2");
+            </code>
+        </pre>
+        <p>Hier werden die Klassen <code>meineKlasse1</code> und <code>meineKlasse2</code> zu dem Element hinzugefügt.</p>
+        <p>Um eine Klasse zu entfernen, kannst du die Methode <code>remove</code> verwenden:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let element = document.getElementById("meinElement");
+                element.classList.remove("meineKlasse");
+            </code>
+        </pre>
+        <p>Hier wird die Klasse <code>meineKlasse</code> von dem Element entfernt.</p>
+        <p>Du kannst auch überprüfen, ob ein Element eine bestimmte Klasse hat, indem du die Methode <code>contains</code> verwendest:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let element = document.getElementById("meinElement");
+                if (element.classList.contains("meineKlasse")) {
+                    console.log("Das Element hat die Klasse meineKlasse.");
+                } else {
+                    console.log("Das Element hat die Klasse meineKlasse nicht.");
+                }
+            </code>
+        </pre>
+        <p>Hier wird überprüft, ob das Element mit der ID <code>meinElement</code> die Klasse <code>meineKlasse</code> hat.</p>
+        <p>Du kannst auch mehrere Klassen gleichzeitig entfernen:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let element = document.getElementById("meinElement");
+                element.classList.remove("meineKlasse1", "meineKlasse2");
+            </code>
+        </pre>
+        <p>Hier werden die Klassen <code>meineKlasse1</code> und <code>meineKlasse2</code> von dem Element entfernt.</p>
+        <p>Hier ist ein Beispiel, wie du eine Klasse zu einem Element umschalten kannst:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let element = document.getElementById("meinElement");
+                element.classList.toggle("meineKlasse");
+            </code>
+        </pre>
+        <p>Hier wird die Klasse <code>meineKlasse</code> zu dem Element mit der ID <code>meinElement</code> umgeschaltet. Wenn die Klasse bereits vorhanden ist, wird sie entfernt, andernfalls wird sie hinzugefügt.</p>
+        <p>Du kannst auch mehrere Klassen gleichzeitig umschalten:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let element = document.getElementById("meinElement");
+                element.classList.toggle("meineKlasse1", "meineKlasse2");
+            </code>
+        </pre>
+        <p>Hier werden die Klassen <code>meineKlasse1</code> und <code>meineKlasse2</code> zu dem Element umgeschaltet.</p>
+        <p>Zusammenfassend kannst du mit JavaScript CSS-Klassen zu HTML-Elementen hinzufügen, entfernen oder umschalten, um deren Aussehen und Verhalten dynamisch zu steuern. Dies ist besonders nützlich, wenn du interaktive Webseiten erstellen möchtest.</p>
     </div>
     <h3>📖 3.3 Numerische Eingaben und Berechnungen</h3>
     <div class="definition">
@@ -72,32 +181,229 @@
             </code>
         </pre>
         <p>Hier werden zwei Zahlen aus Eingabefeldern abgerufen, addiert und das Ergebnis angezeigt.</p>
+        <p>Du kannst auch andere arithmetische Operationen durchführen, wie z.B. Subtraktion, Multiplikation und Division:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let zahl1 = parseFloat(document.getElementById("zahl1").value);
+                let zahl2 = parseFloat(document.getElementById("zahl2").value);
+                let differenz = zahl1 - zahl2;
+                let produkt = zahl1 * zahl2;
+                let quotient = zahl1 / zahl2;
+                document.getElementById("ergebnis").innerText = "Differenz: " + differenz + ", Produkt: " + produkt + ", Quotient: " + quotient;
+            </code>
+        </pre>
+        <p>Hier werden die Differenz, das Produkt und der Quotient der beiden Zahlen berechnet und angezeigt.</p>
+        <p>Du kannst auch komplexere Berechnungen durchführen, indem du Funktionen verwendest:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                function berechneSumme(zahl1, zahl2) {
+                    return zahl1 + zahl2;
+                }
+                let zahl1 = parseFloat(document.getElementById("zahl1").value);
+                let zahl2 = parseFloat(document.getElementById("zahl2").value);
+                let summe = berechneSumme(zahl1, zahl2);
+                document.getElementById("ergebnis").innerText = "Summe: " + summe;
+            </code>
+        </pre>
+        <p>Hier wird eine Funktion <code>berechneSumme</code> definiert, die die Summe von zwei Zahlen berechnet. Diese Funktion wird dann aufgerufen, um die Summe der beiden Eingaben zu berechnen.</p>
+        <p>Du kannst auch Bedingungen verwenden, um verschiedene Berechnungen durchzuführen:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let zahl1 = parseFloat(document.getElementById("zahl1").value);
+                let zahl2 = parseFloat(document.getElementById("zahl2").value);
+                let operation = document.getElementById("operation").value;
+                let ergebnis;
+                if (operation === "+") {
+                    ergebnis = zahl1 + zahl2;
+                } else if (operation === "-") {
+                    ergebnis = zahl1 - zahl2;
+                } else if (operation === "*") {
+                    ergebnis = zahl1 * zahl2;
+                } else if (operation === "/") {
+                    ergebnis = zahl1 / zahl2;
+                }
+                document.getElementById("ergebnis").innerText = "Ergebnis: " + ergebnis;
+            </code>
+        </pre>
+        <p>Hier wird die Operation, die der Benutzer auswählen kann, überprüft und die entsprechende Berechnung durchgeführt.</p>
+        <p>Zusammenfassend kannst du mit JavaScript numerische Eingaben aus HTML-Elementen abrufen und Berechnungen durchführen. Dies ist besonders nützlich, wenn du interaktive Webseiten erstellen möchtest, die Berechnungen durchführen.</p>
+    </div>
+    <h3>📖 3.4 jQuery</h3>
+    <div class="definition">
+        <p>jQuery ist eine JavaScript-Bibliothek, die es einfacher macht, HTML-Elemente zu manipulieren, Ereignisse zu behandeln und Animationen zu erstellen. Mit jQuery kannst du viele Aufgaben, die du in den vorherigen Kapiteln mit reinem JavaScript gelernt hast, mit weniger Code umsetzen.</p>
+        
+        <h4>🔹 Inline-Stile mit jQuery ändern</h4>
+        <p>Mit jQuery kannst du Inline-Stile eines Elements ändern, ähnlich wie in Kapitel 3.1. Beispiel:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                // Ändere die Textfarbe und den Hintergrund eines Elements
+                $("#meinElement").css({
+                    "color": "red",
+                    "background-color": "yellow",
+                    "font-size": "20px"
+                });
+            </code>
+        </pre>
+        <p>Hier werden die Textfarbe, der Hintergrund und die Schriftgröße eines Elements mit der ID <code>meinElement</code> geändert.</p>
+
+        <h4>🔹 CSS-Klassen mit jQuery manipulieren</h4>
+        <p>Das Hinzufügen, Entfernen oder Umschalten von CSS-Klassen ist mit jQuery ebenfalls sehr einfach. Beispiel:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                // Füge eine Klasse hinzu
+                $("#meinElement").addClass("meineKlasse");
+
+                // Entferne eine Klasse
+                $("#meinElement").removeClass("meineKlasse");
+
+                // Schalte eine Klasse um
+                $("#meinElement").toggleClass("meineKlasse");
+            </code>
+        </pre>
+        <p>Dies entspricht den Funktionen aus Kapitel 3.2, jedoch mit der vereinfachten Syntax von jQuery.</p>
+
+        <h4>🔹 Numerische Eingaben und Berechnungen mit jQuery</h4>
+        <p>Auch numerische Eingaben und Berechnungen kannst du mit jQuery umsetzen. Beispiel:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                // Werte aus Eingabefeldern abrufen
+                let zahl1 = parseFloat($("#zahl1").val());
+                let zahl2 = parseFloat($("#zahl2").val());
+
+                // Berechnung durchführen
+                let summe = zahl1 + zahl2;
+
+                // Ergebnis anzeigen
+                $("#ergebnis").text("Summe: " + summe);
+            </code>
+        </pre>
+        <p>Hier werden die Werte aus zwei Eingabefeldern abgerufen, addiert und das Ergebnis in einem HTML-Element angezeigt.</p>
+
+        <h4>🔹 Sichtbarkeit und Animationen mit jQuery</h4>
+        <p>Mit jQuery kannst du Elemente einfach ein- oder ausblenden und Animationen erstellen. Beispiel:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                // Element ausblenden
+                $("#meinElement").hide();
+
+                // Element einblenden
+                $("#meinElement").show();
+
+                // Animation: Element langsam einblenden
+                $("#meinElement").fadeIn(1000);
+            </code>
+        </pre>
+        <p>Hier wird ein Element ausgeblendet, eingeblendet und mit einer Animation versehen.</p>
+
+        <p>Zusammenfassend kannst du mit jQuery viele der in den vorherigen Kapiteln behandelten Aufgaben einfacher und mit weniger Code umsetzen. jQuery ist besonders nützlich, wenn du dynamische Webseiten erstellen möchtest, die auf Benutzerinteraktionen reagieren.</p>
+        <p>Weitere Informationen findest du in der offiziellen <a href="https://jquery.com/" target="_blank">jQuery-Dokumentation</a>.</p>
     </div>
     <h2>📝 4 Übungsaufgaben - Theorie</h2>
     <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 4.1</div>
         <div class="aufgabentext">
             <p>Beschreibe, wie du die Inline-Stile eines HTML-Elements mit JavaScript ändern kannst.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Ändere die Textfarbe und den Hintergrund eines Elements
+                            let element = document.getElementById("meinElement");
+                            element.style.color = "red";
+                            element.style.backgroundColor = "yellow";
+                        </code>
+                    </pre>
+                </div>
+            </div>
         </div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 4.2</div>
         <div class="aufgabentext">
             <p>Erkläre, wie du eine CSS-Klasse mit JavaScript zu einem HTML-Element hinzufügen kannst.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Füge eine CSS-Klasse zu einem Element hinzu
+                            let element = document.getElementById("meinElement");
+                            element.classList.add("meineKlasse");
+                        </code>
+                    </pre>
+                </div>
+            </div>
         </div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 4.3</div>
         <div class="aufgabentext">
             <p>Beschreibe, wie du numerische Eingaben aus einem HTML-Element abrufen kannst. Nenne ein Beispiel.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Werte aus Eingabefeldern abrufen
+                            let zahl1 = parseFloat(document.getElementById("zahl1").value);
+                            let zahl2 = parseFloat(document.getElementById("zahl2").value);
+                            console.log("Zahl 1:", zahl1, "Zahl 2:", zahl2);
+                        </code>
+                    </pre>
+                </div>
+            </div>
         </div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 4.4</div>
         <div class="aufgabentext">
-            <p>Erkläre, wie du das Ergebnis einer Berechnung auf einer Webseite anzeigen kannst.</p>
+            <p>Erkläre, wie du mit jQuery das Ergebnis einer Berechnung auf einer Webseite anzeigen kannst. Nenne ein Beispiel.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Werte aus Eingabefeldern abrufen und Berechnung durchführen
+                            let zahl1 = parseFloat($("#zahl1").val());
+                            let zahl2 = parseFloat($("#zahl2").val());
+                            let summe = zahl1 + zahl2;
+
+                            // Ergebnis anzeigen
+                            $("#ergebnis").text("Summe: " + summe);
+                        </code>
+                    </pre>
+                </div>
+            </div>
         </div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 4.5</div>
         <div class="aufgabentext">
             <p>Beschreibe, wie du CSS-Klassen dynamisch umschalten kannst. Warum ist dies nützlich?</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Schalte eine CSS-Klasse um
+                            let element = document.getElementById("meinElement");
+                            element.classList.toggle("meineKlasse");
+                        </code>
+                    </pre>
+                </div>
+            </div>
         </div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 4.6</div>
         <div class="aufgabentext">
-            <p>Erkläre, wie du mehrere Berechnungen durchführen und die Ergebnisse auf der Webseite anzeigen kannst.</p>
+            <p>Erkläre, wie du mit jQuery ein Ereignis-Objekt in einem Ereignis-Listener verwenden kannst. Gib ein Beispiel.</p>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content">
+                    <pre class="aufgabenloesung">
+                        <code class="language-js">
+                            // Verwende ein Ereignis-Objekt, um Informationen über das Ereignis zu erhalten
+                            $("#meinButton").click(function(event) {
+                                console.log("Button wurde geklickt!");
+                                console.log("Ereignis-Objekt:", event);
+                                console.log("Mausposition - X:", event.pageX, "Y:", event.pageY);
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
         </div>
     </div>
     <h2>🛠️ 5 Übungsaufgaben - Praxis</h2>

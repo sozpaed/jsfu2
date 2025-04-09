@@ -188,52 +188,85 @@
     </div>
     <h3>📖 3.4 jQuery</h3>
     <div class="definition">
-        <p>jQuery ist eine JavaScript-Bibliothek, die es einfacher macht, mit HTML-Dokumenten, Ereignissen und Animationen zu arbeiten. Sie bietet eine einfache Syntax, um Aufgaben wie das Auswählen von Elementen, das Hinzufügen von Ereignis-Listenern und das Manipulieren von DOM-Elementen durchzuführen.</p>
-        <p>Um jQuery zu verwenden, musst du die jQuery-Bibliothek in dein Projekt einbinden. Du kannst dies tun, indem du das folgende <code>&lt;script&gt;</code>-Tag in den <code>&lt;head&gt;</code>- oder <code>&lt;body&gt;</code>-Bereich deiner HTML-Datei einfügst:</p>
+        <p>jQuery ist eine JavaScript-Bibliothek, die es einfacher macht, HTML-Elemente zu manipulieren, Ereignisse zu behandeln und Animationen zu erstellen. In den vorherigen Kapiteln hast du gelernt, wie du mit reinem JavaScript HTML-Elemente auswählst, deren Eigenschaften änderst und auf Ereignisse reagierst. Mit jQuery kannst du diese Aufgaben mit weniger Code umsetzen.</p>
+
+        <h4>🔹 Verknüpfung von jQuery</h4>
+        <p>Um jQuery zu verwenden, musst du die jQuery-Bibliothek in dein Projekt einbinden. Dies kannst du tun, indem du das folgende <code>&lt;script&gt;</code>-Tag in den <code>&lt;head&gt;</code>- oder <code>&lt;body&gt;</code>-Bereich deiner HTML-Datei einfügst:</p>
         <pre class="code-container">
             <code class="language-html">
                 &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
             </code>
         </pre>
-        <p>Hier sind einige Beispiele, wie du jQuery verwenden kannst:</p>
+
         <h4>🔹 Auswahl von HTML-Elementen</h4>
-        <p>Mit jQuery kannst du HTML-Elemente einfach auswählen und manipulieren. Beispiel:</p>
+        <p>In Kapitel 3.2 hast du gelernt, wie du HTML-Elemente mit <code>document.getElementById()</code> auswählst. Mit jQuery kannst du dies einfacher umsetzen:</p>
         <pre class="code-container">
             <code class="language-js">
-                // Ändere den Text eines Elements mit der ID "meinText"
-                $("#meinText").text("Neuer Text mit jQuery!");
+                // Auswahl eines Elements mit der ID "meinElement"
+                let element = $("#meinElement");
             </code>
         </pre>
-        <h4>🔹 Ereignis-Listener hinzufügen</h4>
-        <p>Das Hinzufügen von Ereignis-Listenern ist mit jQuery sehr einfach. Beispiel:</p>
+        <p>Hier wird das Element mit der ID <code>meinElement</code> ausgewählt. Du kannst direkt mit dem ausgewählten Element arbeiten.</p>
+
+        <h4>🔹 Text und Eigenschaften ändern</h4>
+        <p>In Kapitel 3.2 hast du gelernt, wie du den Text und die Eigenschaften eines Elements mit JavaScript änderst. Mit jQuery kannst du dies einfacher umsetzen:</p>
         <pre class="code-container">
             <code class="language-js">
-                // Füge einen Klick-Listener zu einem Button hinzu
+                // Text ändern
+                $("#meinElement").text("Neuer Text!");
+
+                // Farbe ändern
+                $("#meinElement").css("color", "red");
+            </code>
+        </pre>
+        <p>Hier wird der Text des Elements geändert und die Textfarbe auf Rot gesetzt.</p>
+
+        <h4>🔹 Ereignis-Listener hinzufügen</h4>
+        <p>In Kapitel 3.3 hast du gelernt, wie du Ereignis-Listener mit <code>addEventListener</code> hinzufügst. Mit jQuery kannst du dies einfacher umsetzen:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                // Klick-Listener hinzufügen
                 $("#meinButton").click(function() {
                     alert("Button wurde geklickt!");
                 });
             </code>
         </pre>
-        <h4>🔹 CSS-Eigenschaften ändern</h4>
-        <p>Du kannst mit jQuery auch die CSS-Eigenschaften von Elementen ändern. Beispiel:</p>
-        <pre class="code-container">
-            <code class="language-js">
-                // Ändere die Hintergrundfarbe eines Elements
-                $("#meinText").css("background-color", "yellow");
-            </code>
-        </pre>
-        <h4>🔹 Elemente ein- und ausblenden</h4>
-        <p>Mit jQuery kannst du Elemente einfach ein- oder ausblenden. Beispiel:</p>
-        <pre class="code-container">
-            <code class="language-js">
-                // Blende ein Element aus
-                $("#meinText").hide();
+        <p>Hier wird ein Klick-Listener zu einem Button hinzugefügt, der eine Nachricht anzeigt, wenn der Button geklickt wird.</p>
 
-                // Blende ein Element ein
-                $("#meinText").show();
+        <h4>🔹 Sichtbarkeit und Animationen</h4>
+        <p>In Kapitel 3.3 hast du gelernt, wie du die Sichtbarkeit eines Elements mit <code>style.display</code> änderst. Mit jQuery kannst du dies einfacher umsetzen und Animationen hinzufügen:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                // Element ausblenden
+                $("#meinElement").hide();
+
+                // Element einblenden
+                $("#meinElement").show();
+
+                // Element mit Animation einblenden
+                $("#meinElement").fadeIn(1000);
             </code>
         </pre>
-        <p>jQuery erleichtert viele Aufgaben, die mit reinem JavaScript komplexer wären. Es ist besonders nützlich, wenn du mit älteren Browsern arbeiten musst, da es viele Kompatibilitätsprobleme löst.</p>
+        <p>Hier wird ein Element ausgeblendet, eingeblendet und mit einer Animation versehen.</p>
+
+        <h4>🔹 Numerische Eingaben und Berechnungen</h4>
+        <p>In Kapitel 3.3 hast du gelernt, wie du numerische Eingaben aus HTML-Elementen abrufst und Berechnungen durchführst. Mit jQuery kannst du dies einfacher umsetzen:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                // Werte aus Eingabefeldern abrufen
+                let zahl1 = parseFloat($("#zahl1").val());
+                let zahl2 = parseFloat($("#zahl2").val());
+
+                // Berechnung durchführen
+                let summe = zahl1 + zahl2;
+
+                // Ergebnis anzeigen
+                $("#ergebnis").text("Summe: " + summe);
+            </code>
+        </pre>
+        <p>Hier werden die Werte aus zwei Eingabefeldern abgerufen, addiert und das Ergebnis in einem HTML-Element angezeigt.</p>
+
+        <p>Zusammenfassend kannst du mit jQuery viele der in den vorherigen Kapiteln behandelten Aufgaben einfacher und mit weniger Code umsetzen. jQuery ist besonders nützlich, wenn du dynamische Webseiten erstellen möchtest, die auf Benutzerinteraktionen reagieren.</p>
         <p>Weitere Informationen findest du in der offiziellen <a href="https://jquery.com/" target="_blank">jQuery-Dokumentation</a>.</p>
     </div>
     <h2>📝 4 Übungsaufgaben - Theorie</h2>

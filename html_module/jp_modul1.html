@@ -52,6 +52,15 @@
             </code>
         </pre>
         <p>Hier wird eine Variable <code>alter</code> mit dem Wert <code>15</code> und eine Konstante <code>name</code> mit dem Wert <code>"Max"</code> deklariert.</p>
+        <p>Variablen können auch mit dem Schlüsselwort <code>var</code> deklariert werden, aber es wird empfohlen, <code>let</code> oder <code>const</code> zu verwenden, da sie eine bessere Block-Sichtbarkeit bieten.</p>
+        <p>Beispiel für die Verwendung von <code>var</code>:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                var alter = 15; // Variable mit var
+                console.log(alter); // Ausgabe: 15
+            </code>
+        </pre>
+        <p>Hier wird eine Variable <code>alter</code> mit dem Wert <code>15</code> deklariert und in der Konsole ausgegeben.</p>
     </div>
     <h3>📖 3.2 Datentypen</h3>
     <div class="definition">
@@ -64,6 +73,50 @@
             <li><code>undefined</code>: Ein nicht definierter Wert</li>
             <li><code>object</code>: Komplexe Datenstrukturen, z.B. Arrays oder Objekte</li>
         </ul>
+        <p>Beispiel:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let name = "Max"; // string
+                let alter = 15; // number
+                let istErwachsen = false; // boolean
+                let leer = null; // null
+                let undefiniert; // undefined
+                let person = { vorname: "Max", nachname: "Mustermann" }; // object
+            </code>
+        </pre>
+        <p>Hier werden verschiedene Datentypen in JavaScript verwendet. <code>name</code> ist ein String, <code>alter</code> ist eine Zahl, <code>istErwachsen</code> ist ein Boolean, <code>leer</code> ist null, <code>undefiniert</code> ist undefined und <code>person</code> ist ein Objekt.</p>
+        <p>Du kannst den Datentyp einer Variablen mit dem Operator <code>typeof</code> überprüfen:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                console.log(typeof name); // Ausgabe: string
+                console.log(typeof alter); // Ausgabe: number
+                console.log(typeof istErwachsen); // Ausgabe: boolean
+                console.log(typeof leer); // Ausgabe: object
+                console.log(typeof undefiniert); // Ausgabe: undefined
+                console.log(typeof person); // Ausgabe: object
+            </code>
+        </pre>
+        <p>Hier wird der Datentyp jeder Variablen in der Konsole ausgegeben.</p>
+        <p>Beachte, dass <code>null</code> als <code>object</code> angezeigt wird, was ein bekanntes Problem in JavaScript ist.</p>
+        <p>Zusätzlich gibt es auch spezielle Datentypen wie <code>Symbol</code> und <code>BigInt</code>, die in bestimmten Situationen nützlich sein können.</p>
+        <p>Beispiel für <code>Symbol</code>:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                const symbol1 = Symbol("Beschreibung");
+                const symbol2 = Symbol("Beschreibung");
+                console.log(symbol1 === symbol2); // Ausgabe: false
+            </code>
+        </pre>
+        <p>Hier wird ein Symbol mit einer Beschreibung erstellt. Beachte, dass zwei Symbole mit derselben Beschreibung nicht gleich sind.</p>
+        <p>Beispiel für <code>BigInt</code>:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                const bigInt = 1234567890123456789012345678901234567890n;
+                console.log(bigInt); // Ausgabe: 1234567890123456789012345678901234567890n
+            </code>
+        </pre>
+        <p>Hier wird eine große Zahl mit <code>BigInt</code> erstellt. Beachte das Suffix <code>n</code>, das angibt, dass es sich um einen <code>BigInt</code>-Wert handelt.</p>
+        <p>Zusammenfassend ist es wichtig, die verschiedenen Datentypen in JavaScript zu verstehen, um effektiv mit Variablen und Werten arbeiten zu können. Du kannst den Datentyp einer Variablen mit dem Operator <code>typeof</code> überprüfen.</p>
     </div>
     
     <h3>📖 3.3 Operatoren</h3>
