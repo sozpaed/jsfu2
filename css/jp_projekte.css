@@ -179,7 +179,7 @@ h4 {
     color: #f3eeee;
 }
 
-.teaser, .lernziele, .definition,.links, .zusammenfassung,.ende,.projekt,.loesungshinweis,.module {
+.criteria, .teaser, .lernziele, .definition,.links, .zusammenfassung,.ende,.projekt,.loesungshinweis,.module {
     border: #000 dotted 1px;
     background-color: #f0f0f0;
     padding: 10px;
@@ -188,4 +188,18 @@ h4 {
     color: #000;
     font-size: 1.2em;
     text-align: left;
+}
+
+.code-container {
+    border-radius: 25px;
+    border: #000 solid 1px;
+    background-color: darkslateblue;
+    padding: 10px;
+    margin: 10px;
+}
+
+.code-container .toggle-button {
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    color: rgb(255, 255, 255);
 }
