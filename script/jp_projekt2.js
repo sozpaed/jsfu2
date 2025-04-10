@@ -51,13 +51,13 @@ $(document).ready(function () {
      * @param {number} b - Die zweite Zahl.
      * @returns {number} - Der größte gemeinsame Teiler (ggT).
      */
-    function calculateGCD(a, b) {
-        while (b !== 0) {
-            let temp = b;
-            b = a % b;
-            a = temp;
+    function calculateGCD(value1, value2) {
+        while (value2 !== 0) {
+            let temp = value2;
+            value2 = value1 % value2;
+            value1 = temp;
         }
-        return a;
+        return value1;
     }
 
     /**
