@@ -31,6 +31,8 @@
     <div class="teaser">
         <p>In diesem Projekt kannst du deinen Notendurchschnitt berechnen. Gib einfach deine Noten ein und drücke auf "Berechnen".</p>
         <p>Das Tool zeigt dir den Durchschnitt deiner Noten an. Du kannst beliebig viele Noten hinzufügen. Viel Erfolg!</p>
+        <p>Füge jeweils pro Modul den JavaScript-Code (jp_notenschnitt.js) und den HTML-Code (jp_notenschnitt.html) ein. Schritt für Schritt näherst du dich dann dem Programm.</p>
+        <p>Verwende den CSS-Code, der am Ende der Seite angegeben wird, und lege diesen in der Datei `jp_projekte.css` ab.</p>
     </div>
 
     <h2>🛠️ 2 Kriterien</h2>
@@ -92,7 +94,7 @@
     <!-- Kapitel 1: Modul 1 -->
     <h3>📘 Modul 1: Grundlagen von JavaScript</h3>
     <div class="module" id="module1">
-        <p>In diesem Kapitel lernst du die Grundlagen von JavaScript kennen. Der folgende Code zeigt, wie Variablen definiert und einfache Berechnungen durchgeführt werden.</p>
+        <p>Der folgende Code zeigt, wie Variablen definiert und einfache Berechnungen durchgeführt werden.</p>
         <p><b>JavaScript-Code (jp_notenschnitt.js)</b></p>
         <pre class="code-container">
             <code class="language-js">
@@ -101,17 +103,63 @@
                 console.log(sum, count);
             </code>
         </pre>
+        <p><b>HTML-Code (jp_notenschnitt.html)</b></p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="de"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;Notendurchschnitt berechnen&lt;/title&gt;
+                    &lt;link rel="stylesheet" href="./css/jp_projekte.css"&gt;
+                    &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"&gt;
+                    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+                    &lt;script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"&gt;&lt;/script&gt;
+                    &lt;script src="./script/jp_notenschnitt.js"&gt;&lt;/script&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
     </div>
 
     <!-- Kapitel 2: Modul 2 -->
     <h3>📗 Modul 2: Interaktion mit der Webseite</h3>
     <div class="module" id="module2">
-        <p>Hier lernst du, wie du mit JavaScript auf Benutzeraktionen reagierst. Der folgende Code zeigt, wie ein Event-Listener verwendet wird, um eine Funktion auszuführen, wenn ein Button geklickt wird.</p>
+        <p>Der folgende Code zeigt, wie ein Event-Listener verwendet wird, um eine Funktion auszuführen, wenn ein Button geklickt wird.</p>
+        <p><b>JavaScript-Code (jp_notenschnitt.js)</b></p>
         <pre class="code-container">
             <code class="language-js">
+                // Ergänze diesen Code-Teil zum Beispiel aus Modul 1
                 $('#sozStartButton').click(function () {
                     alert('Berechnung gestartet!');
                 });
+            </code>
+        </pre>
+        <p><b>HTML-Code (jp_notenschnitt.html)</b></p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="de"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;Notendurchschnitt berechnen&lt;/title&gt;
+                    &lt;link rel="stylesheet" href="./css/jp_projekte.css"&gt;
+                    &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"&gt;
+                    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+                    &lt;script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"&gt;&lt;/script&gt;
+                    &lt;script src="./script/jp_notenschnitt.js"&gt;&lt;/script&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;div id="getResultOfChallenge"&gt;
+                        &lt;input type="button" id="sozStartButton" value="Berechnen" /&gt;
+                    &lt;/div&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
             </code>
         </pre>
     </div>
@@ -119,12 +167,38 @@
     <!-- Kapitel 3: Modul 3 -->
     <h3>📙 Modul 3: Dynamische Gestaltung und Berechnungen</h3>
     <div class="module" id="module3">
-        <p>In diesem Kapitel lernst du, wie du dynamische Inhalte erstellst und Berechnungen durchführst. Der folgende Code zeigt, wie der Durchschnitt der Noten berechnet wird.</p>
+        <p>Der folgende Code zeigt, wie der Durchschnitt der Noten berechnet wird.</p>
+        <p><b>JavaScript-Code (jp_notenschnitt.js)</b></p>
         <pre class="code-container">
             <code class="language-js">
+                // Ergänze diesen Code-Teil zum Beispiel aus Modul 2
                 function calculateAverage(sum, count) {
                     return (sum / count).toFixed(2); // Durchschnitt berechnen und auf zwei Dezimalstellen runden
                 }
+            </code>
+        </pre>
+        <p>Hier wird die Funktion `calculateAverage` verwendet, um den Durchschnitt der Noten zu berechnen. Die Funktion nimmt die Summe und die Anzahl der Noten als Parameter und gibt den Durchschnitt zurück.</p>
+        <p><b>HTML-Code (jp_notenschnitt.html)</b></p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="de"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;Notendurchschnitt berechnen&lt;/title&gt;
+                    &lt;link rel="stylesheet" href="./css/jp_projekte.css"&gt;
+                    &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"&gt;
+                    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+                    &lt;script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"&gt;&lt;/script&gt;
+                    &lt;script src="./script/jp_notenschnitt.js"&gt;&lt;/script&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;div id="getResultOfChallenge"&gt;
+                        &lt;input type="button" id="sozStartButton" value="Berechnen" /&gt;
+                    &lt;/div&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
             </code>
         </pre>
     </div>
@@ -132,9 +206,11 @@
     <!-- Kapitel 4: Modul 4 -->
     <h3>📕 Modul 4: Benutzerinteraktion über Formulare</h3>
     <div class="module" id="module4">
-        <p>Hier lernst du, wie du Benutzereingaben aus Formularen verarbeitest. Der folgende Code liest die Werte aus den Eingabefeldern aus und überprüft, ob sie gültig sind.</p>
+        <p>Der folgende Code liest die Werte aus den Eingabefeldern aus und überprüft, ob sie gültig sind.</p>
+        <p><b>JavaScript-Code (jp_notenschnitt.js)</b></p>
         <pre class="code-container">
             <code class="language-js">
+                // Ergänze diesen Code-Teil zum Beispiel aus Modul 3
                 function getInputAndCalculate() {
                     const inputValue = parseInt($('#firstNumber').val(), 10);
 
@@ -149,14 +225,41 @@
                 }
             </code>
         </pre>
+        <p>Hier wird die Funktion `getInputAndCalculate` verwendet, um die Eingaben des Benutzers zu verarbeiten. Die Funktion überprüft, ob die Eingabe gültig ist und aktualisiert das Ergebnis entsprechend.</p>
+        <p><b>HTML-Code (jp_notenschnitt.html)</b></p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="de"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;Notendurchschnitt berechnen&lt;/title&gt;
+                    &lt;link rel="stylesheet" href="./css/jp_projekte.css"&gt;
+                    &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"&gt;
+                    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+                    &lt;script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"&gt;&lt;/script&gt;
+                    &lt;script src="./script/jp_notenschnitt.js"&gt;&lt;/script&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;div id="getResultOfChallenge"&gt;
+                        &lt;input type="text" id="firstNumber" name="firstNumber" placeholder="1" required /&gt;
+                        &lt;input type="button" id="sozStartButton" value="Berechnen" /&gt;
+                    &lt;/div&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
     </div>
 
     <!-- Kapitel 5: Modul 5 -->
     <h3>🎮 Modul 5: Entwicklung interaktiver Elemente</h3>
     <div class="module" id="module5">
-        <p>In diesem Kapitel lernst du, wie du interaktive Elemente wie Spiele oder Tools erstellst. Der folgende Code zeigt, wie das Ergebnis der Berechnung auf der Webseite angezeigt wird.</p>
+        <p>Der folgende Code zeigt, wie das Ergebnis der Berechnung auf der Webseite angezeigt wird.</p>
+        <p><b>JavaScript-Code (jp_notenschnitt.js)</b></p>
         <pre class="code-container">
             <code class="language-js">
+                // Ergänze diesen Code-Teil zum Beispiel aus Modul 4
                 function updateResultDisplay(message, type) {
                     const resultElement = $('#showCallbackOfChallenge');
                     resultElement.css('visibility', 'visible');
@@ -171,10 +274,251 @@
                 }
             </code>
         </pre>
+        <p>Hier wird die Funktion `updateResultDisplay` verwendet, um das Ergebnis der Berechnung anzuzeigen. Die Funktion ändert die Hintergrundfarbe des Ergebniselements je nach Erfolg oder Fehler.</p>
+        <p><b>HTML-Code (jp_notenschnitt.html)</b></p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="de"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;Notendurchschnitt berechnen&lt;/title&gt;
+                    &lt;link rel="stylesheet" href="./css/jp_projekte.css"&gt;
+                    &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"&gt;
+                    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+                    &lt;script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"&gt;&lt;/script&gt;
+                    &lt;script src="./script/jp_notenschnitt.js"&gt;&lt;/script&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;div id="getResultOfChallenge"&gt;
+                        &lt;input type="text" id="firstNumber" name="firstNumber" placeholder="1" required /&gt;
+                        &lt;input type="button" id="sozStartButton" value="Berechnen" /&gt;
+                        &lt;div id="showCallbackOfChallenge" style="visibility: hidden;"&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+    </div>
+
+    <!-- Kapitel 6: Kompletter Code -->
+    <h2>&#128196; 4 Kompletter Code</h2>
+    <div class="module" id="completeCode">
+        <p>Hier ist der komplette Code für das Projekt:</p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="de"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;Notendurchschnitt berechnen&lt;/title&gt;
+                    &lt;link rel="stylesheet" href="./css/jp_projekte.css"&gt;
+                    &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"&gt;
+                    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+                    &lt;script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"&gt;&lt;/script&gt;
+                    &lt;script src="./script/jp_notenschnitt.js"&gt;&lt;/script&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;div id="getResultOfChallenge"&gt;
+                        &lt;input type="text" id="firstNumber" name="firstNumber" placeholder="1" required /&gt;
+                        &lt;input type="button" id="sozStartButton" value="Berechnen" /&gt;
+                        &lt;div id="showCallbackOfChallenge" style="visibility: hidden;"&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+        <p>Hier ist der komplette JavaScript-Code:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let sum = 0;
+                let count = 0;
+
+                function addGrade(grade) {
+                    sum += grade;
+                    count++;
+                }
+
+                function calculateAverage(sum, count) {
+                    return (sum / count).toFixed(2);
+                }
+
+                function getInputAndCalculate() {
+                    const inputValue = parseInt($('#firstNumber').val(), 10);
+
+                    if (isNaN(inputValue) || inputValue < 1 || inputValue > 6) {
+                        updateResultDisplay('Bitte nur Zahlen zwischen 1 und 6 eintragen.', 'error');
+                        return;
+                    }
+
+                    addGrade(inputValue);
+                    const average = calculateAverage(sum, count);
+                    updateResultDisplay(`Durchschnitt: ${average}. Anzahl Noten: ${count}`, 'success');
+                }
+
+                function updateResultDisplay(message, type) {
+                    const resultElement = $('#showCallbackOfChallenge');
+                    resultElement.css('visibility', 'visible');
+
+                    if (type === 'error') {
+                        resultElement.css('background-color', '#c22b67');
+                    } else if (type === 'success') {
+                        resultElement.css('background-color', '#28a745');
+                    }
+
+                    resultElement.html(message);
+                }
+
+                $(document).ready(function () {
+                    $('#sozStartButton').click(getInputAndCalculate);
+                });
+            </code>
+        </pre>
+        <p>Hier ist der komplette CSS-Code:</p>
+        <pre class="code-container">
+            <code class="language-css">
+                /* Beispiel für jp_projekte.css */
+                body {
+                    font-family: Arial, sans-serif;
+                    text-align: center;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #f4f4f9;
+                }
+                
+                h1 {
+                    border: #000 solid 1px;
+                    background-color: #9d26c5;
+                    padding: 10px;
+                    margin: 20px;
+                    font-family: Arial, sans-serif;
+                    color: #000;
+                    font-size: 2em;
+                    text-align: center;
+                }
+                h2 {
+                    border: #000 solid 1px;
+                    border-radius: 25px;
+                    background-color: #c5265b;
+                    padding: 10px;
+                    margin: 20px;
+                    font-family: Arial, sans-serif;
+                    color: #000;
+                    font-size: 1.5em;
+                    text-align: left;
+                }
+                h3 {
+                    border: #000 solid 1px;
+                    border-radius: 10px;
+                    background-color: #26c590;
+                    padding: 10px;
+                    margin: 20px;
+                    font-family: Arial, sans-serif;
+                    color: #000;
+                    font-size: 1.2em;
+                    text-align: left;
+                }
+                h4 {
+                    border: #000 solid 1px;
+                    background-color: #bec55c;
+                    padding: 10px;
+                    margin: 20px;
+                    font-family: Arial, sans-serif;
+                    color: #000;
+                    font-size: 1.0em;
+                    text-align: left;
+                }
+                #getResultOfChallenge {
+                    padding-top: 1%;
+                    padding-bottom: 1%;
+                }
+                
+                #firstNumber {
+                    font-size: 14px;
+                    padding: 10px;
+                    padding-inline-start: 1%;
+                    border-radius: 25px;
+                    margin: 20px;
+                }
+                
+                #secondNumber {
+                    font-size: 14px;
+                    padding-top: 1%;
+                    padding-inline-start: 1%;
+                    padding-bottom: 1%;
+                    border-radius: 25px;
+                    margin-top: 1%;
+                }   
+                
+                #valueForCalc {
+                    font-size: 14px;
+                    padding-top: 1%;
+                    padding-inline-start: 1%;
+                    padding-bottom: 1%;
+                    border-radius: 25px;
+                    margin-top: 1%;
+                }
+                
+                #showChallenge {
+                    margin: 20px;
+                    padding-inline-start: 1%;
+                    background-color: #c85629;
+                    border-radius: 25px;
+                    padding: 10px;
+                }
+                
+                #showCallbackOfChallenge {
+                    margin: 20px;
+                    padding-inline-start: 1%;
+                    background-color: #c85629;
+                    border-radius: 25px;
+                    padding: 10px;
+                }
+                
+                #sozStartButton {
+                    font-size: 14px;
+                    background-color: #c29a2b;
+                    border-radius: 25px;
+                    visibility: visible;
+                    float: left;
+                    width: 30%;
+                    margin-top: 1em;
+                    padding-top: 1%;
+                    padding-bottom: 1%;
+                    cursor: pointer;
+                    outline: none;
+                    border: none;
+                }
+                
+                #sozReloadButton {
+                    font-size: 14px;
+                    background-color: #2bc265;
+                    border-radius: 25px;
+                    float: right;
+                    width: 30%;
+                    padding-top: 1%;
+                    padding-bottom: 1%;
+                    margin-top: 1em;
+                    cursor: pointer;
+                    outline: none;
+                    border: none;
+                }
+                
+                .projektarea {
+                    border-radius: 25px;    
+                    margin: 20px;
+                    padding: 10px;
+                    background-color: #5d6661;
+                    color: azure;
+                }
+            </code>
+        </pre>
     </div>
 
     <!-- Projektbereich -->
-    <h2>🎮 6 Probiere das Tool aus!</h2>
+    <h2>🎮 5 Probiere das Tool aus!</h2>
     <div class="projektarea">
         <div id="showChallenge">Zum Berechnen drücke auf <b>"Berechnen"</b></div>
         <div id="getResultOfChallenge">
