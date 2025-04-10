@@ -15,58 +15,72 @@
  */
 
 $(document).ready(function () {
-    // Event-Listener für den "Berechnen"-Button
+    // Event-Listener: Führt die Funktion `calculateGGT` aus, wenn der Button mit der ID 'sozStartButton' geklickt wird.
     $('#sozStartButton').click(function () {
-        // Werte aus den Eingabefeldern abrufen
-        let firstValueforGgT = $('#firstNumber').val();
-        let secoundValueforGgT = $('#secondNumber').val();
-
-        // Berechnung des ggT
-        let resultOfGgT = calculateGgTOfTwoValues(firstValueforGgT, secoundValueforGgT);
-
-        // Ergebnis anzeigen
-        $('#showCallbackOfChallenge').css('background-color', '#c22b67'); // Hintergrundfarbe setzen
-        $('#showCallbackOfChallenge').css('visibility', 'visible'); // Sichtbarkeit aktivieren
-        $('#showCallbackOfChallenge').html('ggT(' + firstValueforGgT + ', ' + secoundValueforGgT + ') = ' + resultOfGgT); // Ergebnis einfügen
+        calculateGGT();
     });
-});
 
-/*
- * Funktion: calculateGgTOfTwoValues
- * ----------------------------------------------------------------
- * Berechnet den größten gemeinsamen Teiler (ggT) zweier positiver Ganzzahlen
- * mithilfe des Euklidischen Algorithmus.
- * 
- * Parameter:
- * - value1: Erste Zahl (int)
- * - value2: Zweite Zahl (int)
- * 
- * Rückgabewert:
- * - Der größte gemeinsame Teiler (ggT) der beiden Zahlen (int)
- * - Gibt 1 zurück, wenn einer der Werte ungültig ist (z. B. nicht positiv oder keine Zahl)
- * 
- * Hinweis:
- * - Es wird die SozCalc-Bibliothek aus der SozLib verwendet.
- */
-function calculateGgTOfTwoValues(value1, value2) {
-    // Eingabewerte in Ganzzahlen umwandeln
-    value1 = parseInt(value1, 10);
-    value2 = parseInt(value2, 10);
+    /**
+     * Holt die Eingabewerte aus den HTML-Input-Feldern, validiert sie und berechnet den ggT.
+     * Wenn die Eingaben ungültig sind, wird eine Fehlermeldung angezeigt.
+     */
+    function calculateGGT() {
+        // Holt die Werte aus den Input-Feldern mit den IDs 'firstNumber' und 'secondNumber'.
+        let firstNumber = $('#firstNumber').val();
+        let secondNumber = $('#secondNumber').val();
 
-    // Überprüfung auf ungültige Eingaben
-    if (isNaN(value1) || isNaN(value2) || value1 <= 0 || value2 <= 0) {
-        return 1; // Rückgabe 1, wenn einer der Werte ungültig ist
-    }
+        // Konvertiert die Eingaben von Strings zu Ganzzahlen.
+        firstNumber = parseInt(firstNumber);
+        secondNumber = parseInt(secondNumber);
 
-    // Euklidischer Algorithmus zur Berechnung des ggT
-    while (value1 != value2) {
-        if (value1 > value2) {
-            value1 = value1 - value2; // Größere Zahl wird reduziert
-        } else {
-            value2 = value2 - value1; // Kleinere Zahl wird reduziert
+        // Überprüft, ob die Eingaben gültige Zahlen sind (größer oder gleich 1).
+        if (isNaN(firstNumber) || firstNumber < 1 || isNaN(secondNumber) || secondNumber < 1) {
+            updateResultDisplay('Bitte gültige Zahlen eintragen.', 'error');
+            return;
         }
+
+        // Berechnet den ggT und zeigt das Ergebnis an.
+        let ggtResult = calculateGCD(firstNumber, secondNumber);
+        updateResultDisplay(`Der größte gemeinsame Teiler von ${firstNumber} und ${secondNumber} ist: ${ggtResult}`, 'success');
     }
 
-    // Rückgabe des ggT
-    return value1;
-}
+    /**
+     * Berechnet den größten gemeinsamen Teiler (ggT) zweier Zahlen mit dem Euklidischen Algorithmus.
+     * 
+     * @param {number} a - Die erste Zahl.
+     * @param {number} b - Die zweite Zahl.
+     * @returns {number} - Der größte gemeinsame Teiler (ggT).
+     */
+    function calculateGCD(a, b) {
+        while (b !== 0) {
+            let temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+
+    /**
+     * Aktualisiert die Anzeige des Ergebnisses oder einer Fehlermeldung.
+     * 
+     * @param {string} message - Die anzuzeigende Nachricht (HTML-Format erlaubt).
+     * @param {string} type - Der Typ der Nachricht ('error' oder 'success').
+     */
+    function updateResultDisplay(message, type) {
+        // Wählt das HTML-Element mit der ID 'showCallbackOfChallenge' aus.
+        const resultElement = $('#showCallbackOfChallenge');
+        
+        // Macht das Element sichtbar.
+        resultElement.css('visibility', 'visible');
+        
+        // Setzt die Hintergrundfarbe basierend auf dem Typ der Nachricht.
+        if (type === 'error') {
+            resultElement.css('background-color', '#c22b67'); // Rot für Fehler.
+        } else if (type === 'success') {
+            resultElement.css('background-color', '#28a745'); // Grün für Erfolg.
+        }
+        
+        // Setzt den Inhalt des Elements auf die übergebene Nachricht.
+        resultElement.html(message);
+    }
+});

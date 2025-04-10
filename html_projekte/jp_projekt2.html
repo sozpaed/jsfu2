@@ -12,20 +12,137 @@
     <script src="../script/jp_projekt2.js"></script>
 </head>
 <body>
+    <!-- Navigation -->
     <div class="link-container">
         <a id="start" href="../start.html">Start</a>
-        <a href="./jp_einmaleins.html">Einmaleins</a>
-        <a href="./jp_ggt.html">Größter gemeinsamer Teiler</a>
+        <a href="./jp_projekt1.html">🧮 Einmaleins</a>
+        <a href="./jp_projekt2.html">📐 Größter gemeinsamer Teiler</a>
         <a href="./jp_notenschnitt.html">Notenschnitt berechnen</a>
         <a href="./jp_steinscherepapier.html">Stein, Schere, Papier</a>
         <a href="./jp_zahlenraten.html">Zahlenraten</a>
     </div>
-    <h1>Größter gemeinsamer Teiler</h1>
-    <div class="content">
-        <h2>Willkommen zur Berechnung des größten gemeinsamen Teilers!</h2>
+
+    <!-- Teaser -->
+    <h1>📐 JS :: Projekt 2 :: Größter gemeinsamer Teiler</h1>
+    <div class="teaser">
         <p>In diesem Projekt kannst du den größten gemeinsamen Teiler (ggT) zweier Zahlen berechnen. Gib einfach zwei Zahlen ein und drücke auf "Berechnen".</p>
         <p>Das Tool zeigt dir den ggT der beiden Zahlen an. Viel Erfolg!</p>
     </div>
+
+    <!-- Kapitel 1: Modul 1 -->
+    <h3>📘 Modul 1: Grundlagen von JavaScript</h3>
+    <div class="module" id="module1">
+        <p>In diesem Kapitel lernst du die Grundlagen von JavaScript kennen. Der folgende Code zeigt, wie Variablen definiert und einfache Berechnungen durchgeführt werden.</p>
+        <pre class="code-container">
+            <code class="language-js">
+                let a = 56; // Erste Zahl
+                let b = 98; // Zweite Zahl
+                console.log(a, b); // Ausgabe der Zahlen
+            </code>
+        </pre>
+    </div>
+
+    <!-- Kapitel 2: Modul 2 -->
+    <h3>📗 Modul 2: Interaktion mit der Webseite</h3>
+    <div class="module" id="module2">
+        <p>Hier lernst du, wie du mit JavaScript auf Benutzeraktionen reagierst. Der folgende Code zeigt, wie ein Event-Listener verwendet wird, um eine Funktion auszuführen, wenn ein Button geklickt wird.</p>
+        <pre class="code-container">
+            <code class="language-js">
+                $('#sozStartButton').click(function () {
+                    alert('Berechnung gestartet!');
+                });
+            </code>
+        </pre>
+    </div>
+
+    <!-- Kapitel 3: Modul 3 -->
+    <h3>📙 Modul 3: Dynamische Gestaltung und Berechnungen</h3>
+    <div class="module" id="module3">
+        <p>In diesem Kapitel lernst du, wie du dynamische Inhalte erstellst und Berechnungen durchführst. Der folgende Code zeigt, wie der größte gemeinsame Teiler (ggT) berechnet wird.</p>
+        <pre class="code-container">
+            <code class="language-js">
+                function calculateGCD(a, b) {
+                    while (b !== 0) {
+                        let temp = b;
+                        b = a % b;
+                        a = temp;
+                    }
+                    return a;
+                }
+            </code>
+        </pre>
+    </div>
+
+    <!-- Kapitel 4: Modul 4 -->
+    <h3>📕 Modul 4: Benutzerinteraktion über Formulare</h3>
+    <div class="module" id="module4">
+        <p>Hier lernst du, wie du Benutzereingaben aus Formularen verarbeitest. Der folgende Code liest die Werte aus den Eingabefeldern aus und überprüft, ob sie gültig sind.</p>
+        <pre class="code-container">
+            <code class="language-js">
+                function getInputValues() {
+                    let firstNumber = $('#firstNumber').val();
+                    let secondNumber = $('#secondNumber').val();
+                    firstNumber = parseInt(firstNumber);
+                    secondNumber = parseInt(secondNumber);
+
+                    if (isNaN(firstNumber) || isNaN(secondNumber)) {
+                        alert('Bitte gültige Zahlen eingeben.');
+                        return null;
+                    }
+                    return { firstNumber, secondNumber };
+                }
+            </code>
+        </pre>
+    </div>
+
+    <!-- Kapitel 5: Modul 5 -->
+    <h3>🎮 Modul 5: Entwicklung interaktiver Elemente</h3>
+    <div class="module" id="module5">
+        <p>In diesem Kapitel lernst du, wie du interaktive Elemente wie Spiele oder Tools erstellst. Der folgende Code zeigt, wie das Ergebnis der Berechnung auf der Webseite angezeigt wird.</p>
+        <pre class="code-container">
+            <code class="language-js">
+                function updateResultDisplay(message, type) {
+                    const resultElement = $('#showCallbackOfChallenge');
+                    resultElement.css('visibility', 'visible');
+
+                    if (type === 'error') {
+                        resultElement.css('background-color', '#c22b67');
+                    } else if (type === 'success') {
+                        resultElement.css('background-color', '#28a745');
+                    }
+
+                    resultElement.html(message);
+                }
+            </code>
+        </pre>
+    </div>
+
+    <!-- Kapitel 6: Kompletter Code -->
+    <h3>&#128196; Kompletter Code</h3>
+    <div class="module" id="completeCode">
+        <p>Hier findest du den vollständigen HTML- und JavaScript-Code des Projekts.</p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="de"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;Größter gemeinsamer Teiler&lt;/title&gt;
+                    &lt;link rel="stylesheet" href="../css/jp_projekte.css"&gt;
+                    &lt;link rel="stylesheet" href="../css/jp_menue.css"&gt;
+                    &lt;script src="../script/jp_projekt2.js"&gt;&lt;/script&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    ... (HTML-Struktur aus der Projektdatei) ...
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+    </div>
+
+    <!-- Projektbereich -->
+    <h2>🎮 Probiere das Tool aus!</h2>
     <div class="projektarea">
         <div id="showChallenge">Zum Berechnen drücke auf <b>"Berechnen"</b></div>
         <div id="getResultOfChallenge">
