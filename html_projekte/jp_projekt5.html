@@ -147,6 +147,33 @@
                 });
             </code>
         </pre>
+        <p>Hier wird jQuery verwendet, um einen Klick-Event-Listener für den Button "Spielen" zu erstellen. Wenn der Button geklickt wird, wird eine Alert-Box angezeigt.</p>
+        <p><b>HTML-Code (jp_steinscherepapier.html)</b></p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="de"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;Stein, Schere, Papier&lt;/title&gt;
+                    &lt;link rel="stylesheet" href="./css/jp_projekte.css"&gt;
+                    &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"&gt;
+                    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+                    &lt;script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"&gt;&lt;/script&gt;
+                    &lt;script src="./script/jp_steinscherepapier.js"&gt;&lt;/script&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1&gt;Stein, Schere, Papier&lt;/h1&gt;
+                    &lt;form name="listOfButtons"&gt;
+                        &lt;input type="button" id="sozStartButton" value="Spielen"/&gt;
+                    &lt;/form&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+        <p>Hier wird der Button "Spielen" in der HTML-Datei definiert. Wenn dieser Button geklickt wird, wird die Funktion aus dem JavaScript-Code aufgerufen.</p>
+        <p>Die jQuery-Bibliothek wird verwendet, um den DOM zu manipulieren und Event-Listener hinzuzufügen. Dies erleichtert die Interaktion mit der Webseite.</p>
     </div>
 
     <!-- Modul 3 -->
@@ -156,12 +183,46 @@
         <p><b>JavaScript-Code (jp_steinscherepapier.js)</b></p>
         <pre class="code-container">
             <code class="language-js">
+                // Ergänze den Code aus Modul 2
+                
                 function getComputerChoice() {
                     return Math.floor(Math.random() * 3) + 1;
                 }
                 console.log(getComputerChoice());
             </code>
         </pre>
+        <p>Hier wird eine Funktion definiert, die eine Zufallszahl zwischen 1 und 3 generiert, um die Wahl des Computers zu simulieren. Diese Zahl wird später verwendet, um den Gewinner zu bestimmen.</p>
+        <p>Die Funktion <code>getComputerChoice()</code> wird aufgerufen, wenn der Button "Spielen" geklickt wird. Dadurch wird die Wahl des Computers generiert.</p>
+        <p>Die Funktion verwendet die <code>Math.random()</code>-Methode, um eine Zufallszahl zu generieren. Diese Zahl wird dann mit 3 multipliziert und aufgerundet, um sicherzustellen, dass sie zwischen 1 und 3 liegt.</p>
+        <p>Die Funktion gibt die generierte Zufallszahl zurück, die dann in der Konsole angezeigt wird.</p>
+        <p>Hier wird die Wahl des Computers in der Konsole angezeigt, um zu überprüfen, ob die Funktion korrekt funktioniert.</p>
+        <p>Die Wahl des Computers wird später im Spiel verwendet, um den Gewinner zu bestimmen.</p> 
+        <p><b>HTML-Code (jp_steinscherepapier.html)</b></p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="de"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;Stein, Schere, Papier&lt;/title&gt;
+                    &lt;link rel="stylesheet" href="./css/jp_projekte.css"&gt;
+                    &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"&gt;
+                    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+                    &lt;script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"&gt;&lt;/script&gt;
+                    &lt;script src="./script/jp_steinscherepapier.js"&gt;&lt;/script&gt;
+                &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;h1&gt;Stein, Schere, Papier&lt;/h1&gt;
+                        &lt;form name="listOfButtons"&gt;
+                            &lt;input type="button" id="sozStartButton" value="Spielen"/&gt;
+                        &lt;/form&gt;
+                    &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+        <p>Hier wird die Struktur der HTML-Datei gezeigt. Die Datei enthält Links zu den CSS- und JavaScript-Dateien sowie die jQuery-Bibliothek.</p>
+        <p>Die HTML-Datei enthält den Button "Spielen", der die Funktion <code>getComputerChoice()</code> aufruft, wenn er geklickt wird.</p>
     </div>
 
     <!-- Modul 4 -->
@@ -171,12 +232,91 @@
         <p><b>JavaScript-Code (jp_steinscherepapier.js)</b></p>
         <pre class="code-container">
             <code class="language-js">
+                // Ergänze den Code aus Modul 3
+                function playGame() {
+                    const userChoice = parseInt($('#firstNumber').val());
+                    if (!isValidChoice(userChoice)) {
+                        alert('Bitte nur Zahlen zwischen 1 und 3 eingeben.');
+                        return;
+                    }
+
+                    const computerChoice = getComputerChoice();
+                    alert(`Spieler: ${userChoice}. Computer: ${computerChoice}.`);
+                }
+                
+                function determineWinner(userChoice, computerChoice) {
+                    if (userChoice === computerChoice) {
+                        return 'Unentschieden!';
+                    } else if (
+                        (userChoice === STEIN && computerChoice === SCHERE) ||
+                        (userChoice === SCHERE && computerChoice === PAPIER) ||
+                        (userChoice === PAPIER && computerChoice === STEIN)
+                    ) {
+                        return 'Gewonnen!';
+                    } else {
+                        return 'Verloren!';
+                    }
+                }
                 function isValidChoice(choice) {
                     return !isNaN(choice) && choice >= 1 && choice <= 3;
                 }
+                
                 console.log(isValidChoice(2)); // Beispiel: true
+
             </code>
         </pre>
+        <p>Hier wird die Funktion <code>playGame()</code> definiert, die die Eingabe des Benutzers überprüft und das Ergebnis des Spiels anzeigt.</p>
+        <p>Die Funktion <code>isValidChoice()</code> überprüft, ob die Eingabe des Benutzers eine gültige Zahl zwischen 1 und 3 ist. Wenn die Eingabe ungültig ist, wird eine Alert-Box angezeigt.</p>
+        <p>Die Funktion <code>determineWinner()</code> bestimmt den Gewinner des Spiels, indem sie die Wahl des Benutzers und die Wahl des Computers vergleicht. Das Ergebnis wird in einer Alert-Box angezeigt.</p>
+        <p><b>HTML-Code (jp_steinscherepapier.html)</b></p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="de"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;Stein, Schere, Papier&lt;/title&gt;
+                    &lt;link rel="stylesheet" href="../css/jp_projekte.css"&gt;
+                    &lt;link rel="stylesheet" href="../css/jp_menue.css"&gt;
+                    &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"&gt;
+                    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+                    &lt;script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"&gt;&lt;/script&gt;
+                    &lt;script src="../script/jp_steinscherepapier.js"&gt;&lt;/script&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1&gt;Stein, Schere, Papier&lt;/h1&gt;
+                    &lt;div class="content"&gt;
+                        &lt;h2&gt;Willkommen zu Stein, Schere, Papier!&lt;/h2&gt;
+                        &lt;p&gt;Spiele gegen den Computer und finde heraus, wer gewinnt. Wähle Stein, Schere oder Papier und drücke auf "Spielen".&lt;/p&gt;
+                        &lt;p&gt;Viel Spaß!&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="projektarea"&gt;
+                        &lt;div id="showChallenge"&gt;Zum Spielen drücke auf &lt;b&gt;"Spielen"&lt;/b&gt;&lt;/div&gt;
+                        &lt;div id="getResultOfChallenge"&gt;
+                            &lt;div id="showCallbackOfChallenge" style="visibility: hidden;"&gt;&lt;/div&gt;
+                            &lt;form name="userInputForm"&gt;
+                                &lt;label for="firstNumber"&gt;Deine Wahl:&lt;/label&gt;
+                                &lt;select id="firstNumber" name="firstNumber" required&gt;
+                                    &lt;option value="" disabled selected&gt;Bitte wähle eine Option&lt;/option&gt;
+                                    &lt;option value=1&gt;Stein&lt;/option&gt;
+                                    &lt;option value=2&gt;Schere&lt;/option&gt;
+                                    &lt;option value=3&gt;Papier&lt;/option&gt;
+                                &lt;/select&gt;
+                            &lt;/form&gt;
+                        &lt;/div&gt;
+                        &lt;div id="listOfButtons"&gt;
+                            &lt;form name="listOfButtons"&gt;
+                                &lt;input type="button" id="sozStartButton" value="Spielen"/&gt;
+                            &lt;/form&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+        <p>Hier wird die Struktur der HTML-Datei gezeigt. Die Datei enthält Links zu den CSS- und JavaScript-Dateien sowie die jQuery-Bibliothek.</p>
+        <p>Die HTML-Datei enthält ein Dropdown-Menü, in dem der Benutzer seine Wahl treffen kann. Wenn der Button "Spielen" geklickt wird, wird die Funktion <code>playGame()</code> aufgerufen.</p>
     </div>
 
     <!-- Modul 5 -->
@@ -186,6 +326,39 @@
         <p><b>JavaScript-Code (jp_steinscherepapier.js)</b></p>
         <pre class="code-container">
             <code class="language-js">
+                // Tausche den Code aus Modul 4
+                function playGame() {
+                    let userChoice = parseInt($('#firstNumber').val());
+                
+                    if (!isValidChoice(userChoice)) {
+                        updateResultDisplay('Bitte nur Zahlen zwischen 1 und 3 eingeben.', 'error');
+                        return;
+                    }
+                
+                    let computerChoice = getComputerChoice();
+                
+                    let result = determineWinner(userChoice, computerChoice);
+                
+                    updateResultDisplay(
+                        `Spieler: ${choiceToString(userChoice)}. Computer: ${choiceToString(computerChoice)}. ${result}`,
+                        'success'
+                    );
+                }
+
+                // Ergänze den Code aus Modul 4
+                function choiceToString(choice) {
+                    switch (choice) {
+                        case STEIN:
+                            return 'Stein';
+                        case SCHERE:
+                            return 'Schere';
+                        case PAPIER:
+                            return 'Papier';
+                        default:
+                            return 'Unbekannt';
+                    }
+                }
+
                 function updateResultDisplay(message, type) {
                     const resultElement = $('#showCallbackOfChallenge');
                     resultElement.css('visibility', 'visible');
@@ -200,6 +373,59 @@
                 }
             </code>
         </pre>
+        <p>Hier wird die Funktion <code>updateResultDisplay()</code> definiert, die das Ergebnis des Spiels anzeigt. Die Funktion ändert den Hintergrund der Anzeige je nach Ergebnis.</p>
+        <p>Die Funktion <code>choiceToString()</code> konvertiert die Wahl des Benutzers und des Computers in lesbare Strings (Stein, Schere, Papier).</p>
+        <p><b>HTML-Code (jp_steinscherepapier.html)</b></p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="de"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;Stein, Schere, Papier&lt;/title&gt;
+                    &lt;link rel="stylesheet" href="../css/jp_projekte.css"&gt;
+                    &lt;link rel="stylesheet" href="../css/jp_menue.css"&gt;
+                    &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"&gt;
+                    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+                    &lt;script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"&gt;&lt;/script&gt;
+                    &lt;script src="../script/jp_steinscherepapier.js"&gt;&lt;/script&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1&gt;Stein, Schere, Papier&lt;/h1&gt;
+                    &lt;div class="content"&gt;
+                        &lt;h2&gt;Willkommen zu Stein, Schere, Papier!&lt;/h2&gt;
+                        &lt;p&gt;Spiele gegen den Computer und finde heraus, wer gewinnt. Wähle Stein, Schere oder Papier und drücke auf "Spielen".&lt;/p&gt;
+                        &lt;p&gt;Viel Spaß!&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="projektarea"&gt;
+                        &lt;div id="showChallenge"&gt;Zum Spielen drücke auf &lt;b&gt;"Spielen"&lt;/b&gt;&lt;/div&gt;
+                        &lt;div id="getResultOfChallenge"&gt;
+                            &lt;div id="showCallbackOfChallenge" style="visibility: hidden;"&gt;&lt;/div&gt;
+                            &lt;form name="userInputForm"&gt;
+                                &lt;label for="firstNumber"&gt;Deine Wahl:&lt;/label&gt;
+                                &lt;select id="firstNumber" name="firstNumber" required&gt;
+                                    &lt;option value="" disabled selected&gt;Bitte wähle eine Option&lt;/option&gt;
+                                    &lt;option value=1&gt;Stein&lt;/option&gt;
+                                    &lt;option value=2&gt;Schere&lt;/option&gt;
+                                    &lt;option value=3&gt;Papier&lt;/option&gt;
+                                &lt;/select&gt;
+                            &lt;/form&gt;
+                        &lt;/div&gt;
+                        &lt;div id="listOfButtons"&gt;
+                            &lt;form name="listOfButtons"&gt;
+                                &lt;input type="button" id="sozStartButton" value="Spielen"/&gt;
+                                &lt;input type="button" id="sozReloadButton" value="Seite neu laden" onclick="location.reload(true)"/&gt;
+                            &lt;/form&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+        <p>Hier wird die Struktur der HTML-Datei gezeigt. Die Datei enthält Links zu den CSS- und JavaScript-Dateien sowie die jQuery-Bibliothek.</p>
+        <p>Die HTML-Datei enthält ein Dropdown-Menü, in dem der Benutzer seine Wahl treffen kann. Wenn der Button "Spielen" geklickt wird, wird die Funktion <code>playGame()</code> aufgerufen.</p>
+        <p>Zusätzlich gibt es einen Button "Seite neu laden", der die Seite neu lädt, um das Spiel zurückzusetzen.</p>
     </div>
 
     <!-- Kompletter Code -->
