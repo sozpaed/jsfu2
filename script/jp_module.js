@@ -127,7 +127,7 @@ function checkM1Answers41() {
     }
 }
 
-// Funktion: Überprüft die Antworten für Aufgabe 4.1
+// Funktion: Überprüft die Antworten für Aufgabe 4.1 Modul 2
 function checkM2Answers41() {
     const feedback = document.getElementById("feedback-aufgabe-4-1");
     const correctAnswers = ["option4-1-3"];
@@ -156,19 +156,7 @@ function checkM1Answers42() {
         feedback.innerText = "Falsch! Es handelt sich um einen String.";
     }
 }
-function checkM2Answer42() {
-    const feedback = document.getElementById("feedback-aufgabe-4-2");
-    const answer = document.getElementById("answer-4-2").value.trim();
 
-    const correctAnswer = 'let element = document.getElementById("meineID");';
-    if (answer === correctAnswer) {
-        feedback.innerHTML = "✅ Richtig! Du hast den Code korrekt geschrieben.";
-        feedback.style.color = "green";
-    } else {
-        feedback.innerHTML = "❌ Falsch. Überprüfe deinen Code. Tipp: Verwende document.getElementById().";
-        feedback.style.color = "red";
-    }
-}
 
 function checkM1Answers43() {
     const feedback = document.getElementById('feedback-aufgabe-4-3');
@@ -214,43 +202,92 @@ function checkM2Answers53() {
     }
 }
 
-// Funktion: Überprüft die Antwort für Aufgabe 5.5 (Texteingabe)
-function checkM2Answer55() {
-    const feedback = document.getElementById("feedback-aufgabe-5-5");
-    const answer = document.getElementById("answer-5-5").value.trim();
+// Funktion: Überprüft die Antworten für Aufgabe 4.1 (Multiple-Choice)
+function checkM3Answers41() {
+    const feedback = document.getElementById("feedback-aufgabe-4-1");
+    const correctAnswers = ["option4-1-1", "option4-1-3"];
+    const selectedOptions = Array.from(document.querySelectorAll("#aufgabe-4-1 input:checked")).map(input => input.id);
 
-    const correctAnswer = `
-let button = document.getElementById("meinButton");
-button.addEventListener("click", function() {
-    document.body.style.backgroundColor = "lightblue";
-});`.trim();
-
-    if (answer === correctAnswer) {
-        feedback.innerHTML = "✅ Richtig! Du hast den Code korrekt geschrieben.";
+    if (selectedOptions.length === correctAnswers.length && selectedOptions.every(option => correctAnswers.includes(option))) {
+        feedback.innerHTML = "✅ Richtig! Die Inline-Stile können mit `style` geändert werden.";
         feedback.style.color = "green";
     } else {
-        feedback.innerHTML = "❌ Falsch. Überprüfe deinen Code. Tipp: Verwende addEventListener und style.backgroundColor.";
+        feedback.innerHTML = "❌ Falsch. Überprüfe deine Auswahl.";
         feedback.style.color = "red";
     }
 }
 
-// Funktion: Überprüft die Antwort für Aufgabe 6.2 (Texteingabe)
-function checkM2Answer62() {
-    const feedback = document.getElementById("feedback-aufgabe-6-2");
-    const answer = document.getElementById("answer-6-2").value.trim();
+// Funktion: Überprüft die Antworten für Aufgabe 5.3 (Multiple-Choice)
+function checkM3Answers53() {
+    const feedback = document.getElementById("feedback-aufgabe-5-3");
+    const correctAnswers = ["option5-3-2", "option5-3-3"];
+    const selectedOptions = Array.from(document.querySelectorAll("#aufgabe-5-3 input:checked")).map(input => input.id);
 
-    const correctAnswer = `
-let button = document.getElementById("meinButton");
-let textfeld = document.getElementById("meinTextfeld");
-button.addEventListener("click", function() {
-    console.log(textfeld.value);
-});`.trim();
-
-    if (answer === correctAnswer) {
-        feedback.innerHTML = "✅ Richtig! Du hast den Code korrekt geschrieben.";
+    if (selectedOptions.length === correctAnswers.length && selectedOptions.every(option => correctAnswers.includes(option))) {
+        feedback.innerHTML = "✅ Richtig! Die Summe kann mit `parseFloat` oder `parseInt` berechnet werden.";
         feedback.style.color = "green";
     } else {
-        feedback.innerHTML = "❌ Falsch. Überprüfe deinen Code. Tipp: Verwende value, um den Inhalt des Textfelds zu erhalten.";
+        feedback.innerHTML = "❌ Falsch. Überprüfe deine Auswahl.";
+        feedback.style.color = "red";
+    }
+}
+
+// Funktion: Überprüft die Antworten für Aufgabe 4.1 (Multiple-Choice)
+function checkM4Answers41() {
+    const feedback = document.getElementById("feedback-aufgabe-4-1");
+    const correctAnswers = ["option4-1-1", "option4-1-3", "option4-1-4"];
+    const selectedOptions = Array.from(document.querySelectorAll("#aufgabe-4-1 input:checked")).map(input => input.id);
+
+    if (selectedOptions.length === correctAnswers.length && selectedOptions.every(option => correctAnswers.includes(option))) {
+        feedback.innerHTML = "✅ Richtig! Ein Formular wird mit &lt;form&gt;, &lt;input&gt; und &lt;button&gt; erstellt.";
+        feedback.style.color = "green";
+    } else {
+        feedback.innerHTML = "❌ Falsch. Überprüfe deine Auswahl.";
+        feedback.style.color = "red";
+    }
+}
+
+// Funktion: Überprüft die Antworten für Aufgabe 4.3 (Multiple-Choice)
+function checkM4Answers43() {
+    const feedback = document.getElementById("feedback-aufgabe-4-3");
+    const correctAnswers = ["option4-3-1", "option4-3-3", "option4-3-4"];
+    const selectedOptions = Array.from(document.querySelectorAll("#aufgabe-4-3 input:checked")).map(input => input.id);
+
+    if (selectedOptions.length === correctAnswers.length && selectedOptions.every(option => correctAnswers.includes(option))) {
+        feedback.innerHTML = "✅ Richtig! Du kannst das submit-Ereignis verwenden und die Standardaktion verhindern.";
+        feedback.style.color = "green";
+    } else {
+        feedback.innerHTML = "❌ Falsch. Überprüfe deine Auswahl.";
+        feedback.style.color = "red";
+    }
+}
+
+// Funktion: Überprüft die Antworten für Aufgabe 4.1 (Multiple-Choice)
+function checkM5Answers41() {
+    const feedback = document.getElementById("feedback-aufgabe-4-1");
+    const correctAnswers = ["option4-1-2"];
+    const selectedOptions = Array.from(document.querySelectorAll("#aufgabe-4-1 input:checked")).map(input => input.id);
+
+    if (selectedOptions.length === correctAnswers.length && selectedOptions.every(option => correctAnswers.includes(option))) {
+        feedback.innerHTML = "✅ Richtig! Math.floor(Math.random() * 100) + 1 generiert eine Zufallszahl zwischen 1 und 100.";
+        feedback.style.color = "green";
+    } else {
+        feedback.innerHTML = "❌ Falsch. Überprüfe deine Auswahl.";
+        feedback.style.color = "red";
+    }
+}
+
+// Funktion: Überprüft die Antworten für Aufgabe 5.3 (Multiple-Choice)
+function checkM5Answers53() {
+    const feedback = document.getElementById("feedback-aufgabe-5-3");
+    const correctAnswers = ["option5-3-1", "option5-3-2"];
+    const selectedOptions = Array.from(document.querySelectorAll("#aufgabe-5-3 input:checked")).map(input => input.id);
+
+    if (selectedOptions.length === correctAnswers.length && selectedOptions.every(option => correctAnswers.includes(option))) {
+        feedback.innerHTML = "✅ Richtig! Du kannst den Modulo-Operator verwenden, um gerade und ungerade Zahlen zu überprüfen.";
+        feedback.style.color = "green";
+    } else {
+        feedback.innerHTML = "❌ Falsch. Überprüfe deine Auswahl.";
         feedback.style.color = "red";
     }
 }

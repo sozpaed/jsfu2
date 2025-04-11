@@ -630,41 +630,65 @@
     <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 4.1</div>
         <div class="aufgabentext">
-            <p>Beschreibe, wie du mit JavaScript eine Zufallszahl zwischen 1 und 100 generieren kannst.</p>
+            <p>Welche der folgenden Optionen beschreiben korrekt, wie du eine Zufallszahl zwischen 1 und 100 generierst?</p>
+            <form id="aufgabe-4-1">
+                <div>
+                    <input type="checkbox" id="option4-1-1" name="option4-1-1">
+                    <label for="option4-1-1">Math.random() * 100</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option4-1-2" name="option4-1-2">
+                    <label for="option4-1-2">Math.floor(Math.random() * 100) + 1</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option4-1-3" name="option4-1-3">
+                    <label for="option4-1-3">Math.ceil(Math.random() * 100)</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option4-1-4" name="option4-1-4">
+                    <label for="option4-1-4">Math.round(Math.random() * 100)</label>
+                </div>
+                <button type="button" onclick="checkM5Answers41()">Antwort prüfen</button>
+            </form>
+            <div id="feedback-aufgabe-4-1" class="feedback"></div>
             <div class="code-container">
                 <span class="toggle-button">Lösung anzeigen</span>
-                <div class="code-content">
+                <div class="code-content" style="display: none;">
                     <pre class="aufgabenloesung">
-                        <code class="language-js">
-                            // Zufallszahl zwischen 1 und 100 generieren
+                        <code id="solution-4-1" class="language-js">
+                            // Richtige Antworten:
+                            // 2. Math.floor(Math.random() * 100) + 1
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="aufgabenr mindeststandard">🟢 Aufgabe 4.2</div>
+        <div class="aufgabentext">
+            <p>Schreibe den JavaScript-Code, um eine Zufallszahl zwischen 1 und 100 zu generieren und in der Konsole auszugeben.</p>
+            <textarea id="input-aufgabe-4-2" placeholder="Schreibe deinen Code hier..."></textarea>
+            <button type="button" onclick="checkCodeWithScript('input-aufgabe-4-2', 'solution-4-2')">Antwort prüfen</button>
+            <div id="feedback-input-aufgabe-4-2" class="feedback"></div>
+            <div class="code-container">
+                <span class="toggle-button">Lösung anzeigen</span>
+                <div class="code-content" style="display: none;">
+                    <pre class="aufgabenloesung">
+                        <code id="solution-4-2" class="language-js">
                             let zufallszahl = Math.floor(Math.random() * 100) + 1;
                             console.log("Zufallszahl:", zufallszahl);
                         </code>
                     </pre>
                 </div>
             </div>
+            <script id="solution-4-2" type="text/plain">
+                let zufallszahl = Math.floor(Math.random() * 100) + 1;
+                console.log("Zufallszahl:", zufallszahl);
+            </script>
         </div>
-        <div class="aufgabenr mindeststandard">🟢 Aufgabe 4.2</div>
-        <div class="aufgabentext">
-            <p>Erkläre, wie du mit JavaScript eine Benutzerantwort überprüfen kannst.</p>
-            <div class="code-container">
-                <span class="toggle-button">Lösung anzeigen</span>
-                <div class="code-content">
-                    <pre class="aufgabenloesung">
-                        <code class="language-js">
-                            // Benutzerantwort überprüfen
-                            let richtigeAntwort = "Berlin";
-                            let benutzerAntwort = prompt("Was ist die Hauptstadt von Deutschland?");
-                            if (benutzerAntwort.toLowerCase() === richtigeAntwort.toLowerCase()) {
-                                console.log("Richtig!");
-                            } else {
-                                console.log("Falsch! Die richtige Antwort ist:", richtigeAntwort);
-                            }
-                        </code>
-                    </pre>
-                </div>
-            </div>
-        </div>
+    </div>
+    <div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 4.3</div>
         <div class="aufgabentext">
             <p>Beschreibe, wie du ein Punktesystem für ein Spiel implementieren kannst.</p>
@@ -687,6 +711,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 4.4</div>
         <div class="aufgabentext">
             <p>Erkläre, wie du mehrere Quizfragen in einem Spiel mit jQuery umsetzen kannst. Schreibe ein Beispiel.</p>
@@ -722,6 +748,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 4.5</div>
         <div class="aufgabentext">
             <p>Beschreibe, wie du ein Spiel mit mehreren Runden und einem Endergebnis implementieren kannst.</p>
@@ -749,6 +777,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 4.6</div>
         <div class="aufgabentext">
             <p>Erkläre, wie du ein Spiel so gestalten kannst, dass es auf Benutzeraktionen wie Klicks mit jQuery reagiert. Schreibe ein Beispiel.</p>
@@ -794,6 +824,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 5.2</div>
         <div class="aufgabentext">
             <p>Schreibe ein Skript, das den Benutzer nach seinem Namen fragt und eine Begrüßung in der Konsole ausgibt.</p>
@@ -810,26 +842,46 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 5.3</div>
         <div class="aufgabentext">
-            <p>Schreibe ein Skript, das den Benutzer nach einer Zahl fragt und überprüft, ob die Zahl gerade oder ungerade ist. Gib das Ergebnis in der Konsole aus.</p>
+            <p>Welche der folgenden Optionen beschreiben korrekt, wie du überprüfst, ob eine Zahl gerade oder ungerade ist?</p>
+            <form id="aufgabe-5-3">
+                <div>
+                    <input type="checkbox" id="option5-3-1" name="option5-3-1">
+                    <label for="option5-3-1">if (zahl % 2 === 0) { console.log("Gerade"); }</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option5-3-2" name="option5-3-2">
+                    <label for="option5-3-2">if (zahl % 2 !== 0) { console.log("Ungerade"); }</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option5-3-3" name="option5-3-3">
+                    <label for="option5-3-3">if (zahl / 2 === 0) { console.log("Gerade"); }</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option5-3-4" name="option5-3-4">
+                    <label for="option5-3-4">if (zahl % 2 === 1) { console.log("Ungerade"); }</label>
+                </div>
+                <button type="button" onclick="checkM5Answers53()">Antwort prüfen</button>
+            </form>
+            <div id="feedback-aufgabe-5-3" class="feedback"></div>
             <div class="code-container">
                 <span class="toggle-button">Lösung anzeigen</span>
-                <div class="code-content">
+                <div class="code-content" style="display: none;">
                     <pre class="aufgabenloesung">
-                        <code class="language-js">
-                            // Gerade oder ungerade überprüfen
-                            let zahl = parseInt(prompt("Gib eine Zahl ein:"));
-                            if (zahl % 2 === 0) {
-                                console.log("Die Zahl " + zahl + " ist gerade.");
-                            } else {
-                                console.log("Die Zahl " + zahl + " ist ungerade.");
-                            }
+                        <code id="solution-5-3" class="language-js">
+                            // Richtige Antworten:
+                            // 1. if (zahl % 2 === 0) { console.log("Gerade"); }
+                            // 2. if (zahl % 2 !== 0) { console.log("Ungerade"); }
                         </code>
                     </pre>
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 5.4</div>
         <div class="aufgabentext">
             <p>Schreibe ein Skript mit jQuery, das ein einfaches Quiz mit drei Fragen erstellt. Gib die Ergebnisse in der Konsole aus.</p>
@@ -869,6 +921,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 5.5</div>
         <div class="aufgabentext">
             <p>Schreibe ein Skript, das ein Spiel erstellt, bei dem der Benutzer eine Zufallszahl zwischen 1 und 10 erraten muss. Gib Rückmeldungen in der Konsole aus.</p>
@@ -890,6 +944,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 5.6</div>
         <div class="aufgabentext">
             <p>Schreibe ein Skript mit jQuery, das ein Punktesystem für ein Quiz mit drei Fragen implementiert. Gib die Gesamtpunktzahl in der Konsole aus.</p>
@@ -932,32 +988,26 @@
             <div class="code-container">
                 <span class="toggle-button-help">Hilfe anzeigen</span>
                 <div class="code-content">
-                    <pre class="aufgabenloesung">
-                        <code class="language-js">
-                            // Zufallszahl generieren
-                            let zufallszahl = Math.floor(Math.random() * 10) + 1;
-                            console.log("Zufallszahl:", zufallszahl);
-                        </code>
-                    </pre>
+                    <p>Schaue Dir Aufgabe 5.1 an.</p>
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 6.2</div>
         <div class="aufgabentext">
             <p>Schreibe ein Skript, das den Benutzer nach seinem Namen fragt und eine Begrüßung in der Konsole ausgibt.</p>
             <div class="code-container">
                 <span class="toggle-button-help">Hilfe anzeigen</span>
                 <div class="code-content">
-                    <pre class="aufgabenloesung">
-                        <code class="language-js">
-                            // Benutzer nach Namen fragen
-                            let name = prompt("Wie heißt du?");
-                            console.log("Hallo, " + name + "!");
-                        </code>
-                    </pre>
+                    <div class="code-content">
+                        <p>Schaue Dir Aufgabe 5.2 an.</p>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 6.3</div>
         <div class="aufgabentext">
             <p>Schreibe ein Skript, das den Benutzer nach einer Zahl fragt und überprüft, ob die Zahl gerade oder ungerade ist. Gib das Ergebnis in der Konsole aus.</p>
@@ -978,96 +1028,39 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 6.4</div>
         <div class="aufgabentext">
             <p>Schreibe ein Skript mit jQuery, das ein einfaches Quiz mit drei Fragen erstellt. Gib die Ergebnisse in der Konsole aus.</p>
             <div class="code-container">
                 <span class="toggle-button-help">Hilfe anzeigen</span>
                 <div class="code-content">
-                    <pre class="aufgabenloesung">
-                        <code class="language-js">
-                            // Quiz mit jQuery
-                            let fragen = [
-                                { frage: "Was ist die Hauptstadt von Deutschland?", antwort: "berlin" },
-                                { frage: "Was ist die Hauptstadt von Frankreich?", antwort: "paris" },
-                                { frage: "Was ist die Hauptstadt von Italien?", antwort: "rom" }
-                            ];
-                            let punkte = 0;
-                            let index = 0;
-
-                            $("#nextButton").click(function() {
-                                if (index < fragen.length) {
-                                    $("#frage").text(fragen[index].frage);
-                                    $("#submitButton").off("click").on("click", function() {
-                                        let antwort = $("#inputField").val().toLowerCase();
-                                        if (antwort === fragen[index].antwort) {
-                                            console.log("Richtig!");
-                                            punkte++;
-                                        } else {
-                                            console.log("Falsch! Die richtige Antwort ist: " + fragen[index].antwort);
-                                        }
-                                        index++;
-                                    });
-                                } else {
-                                    console.log("Quiz beendet! Du hast " + punkte + " von " + fragen.length + " Punkten erreicht.");
-                                }
-                            });
-                        </code>
-                    </pre>
+                    <p>Schaue Dir Aufgabe 4.4 und 5.4 an.</p>
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 6.5</div>
         <div class="aufgabentext">
             <p>Schreibe ein Skript, das ein Spiel erstellt, bei dem der Benutzer eine Zufallszahl zwischen 1 und 10 erraten muss. Gib Rückmeldungen in der Konsole aus.</p>
             <div class="code-container">
                 <span class="toggle-button-help">Hilfe anzeigen</span>
                 <div class="code-content">
-                    <pre class="aufgabenloesung">
-                        <code class="language-js">
-                            // Zufallszahl-Spiel
-                            let zufallszahl = Math.floor(Math.random() * 10) + 1;
-                            let benutzerZahl = parseInt(prompt("Rate die Zufallszahl zwischen 1 und 10:"));
-                            if (benutzerZahl === zufallszahl) {
-                                console.log("Richtig! Die Zahl war " + zufallszahl + ".");
-                            } else {
-                                console.log("Falsch! Die richtige Zahl war " + zufallszahl + ".");
-                            }
-                        </code>
-                    </pre>
+                    <p>Schaue Dir Aufgabe 5.5 an.</p>
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 6.6</div>
         <div class="aufgabentext">
             <p>Schreibe ein Skript mit jQuery, das ein Punktesystem für ein Quiz mit drei Fragen implementiert. Gib die Gesamtpunktzahl in der Konsole aus.</p>
             <div class="code-container">
                 <span class="toggle-button-help">Hilfe anzeigen</span>
                 <div class="code-content">
-                    <pre class="aufgabenloesung">
-                        <code class="language-js">
-                            // Punktesystem für ein Quiz mit jQuery
-                            let fragen = [
-                                { frage: "Was ist die Hauptstadt von Deutschland?", antwort: "berlin" },
-                                { frage: "Was ist die Hauptstadt von Frankreich?", antwort: "paris" },
-                                { frage: "Was ist die Hauptstadt von Italien?", antwort: "rom" }
-                            ];
-                            let punkte = 0;
-
-                            $("#startQuiz").click(function() {
-                                fragen.forEach((frageObj, index) => {
-                                    let antwort = prompt(frageObj.frage).toLowerCase();
-                                    if (antwort === frageObj.antwort) {
-                                        punkte++;
-                                        console.log("Frage " + (index + 1) + ": Richtig!");
-                                    } else {
-                                        console.log("Frage " + (index + 1) + ": Falsch! Die richtige Antwort ist: " + frageObj.antwort);
-                                    }
-                                });
-                                console.log("Quiz beendet! Du hast " + punkte + " von " + fragen.length + " Punkten erreicht.");
-                            });
-                        </code>
-                    </pre>
+                    <p>Schaue Dir Aufgabe 4.3 und 5.6 an.</p>
                 </div>
             </div>
         </div>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahlenraten</title>
+    <link rel="stylesheet" href="../css/jp_projekte.css">
+    <link rel="stylesheet" href="../css/jp_menue.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script src="../script/jp_projekt4.js"></script>
+</head>
+<body>
+    <div class="link-container">
+        <a id="start" href="../start.html">🏠 Start</a>
+        <a href="./jp_projekt1.html">🧮 Einmaleins</a>
+        <a href="./jp_projekt2.html">📐 GgT berechnen</a>
+        <a href="./jp_projekt3.html">📊 Notenschnitt berechnen</a>
+        <a href="./jp_projekt4.html">🔢 Zahlenraten</a>
+        <a href="./jp_projekt5.html">🎮 Stein, Schere, Papier</a>
+    </div>
+    <h1>Zahlenraten</h1>
+    <div class="content">
+        <h2>Willkommen zu Zahlenraten!</h2>
+        <p>Der Computer wählt eine Zahl, und du musst sie erraten. Gib deine Vermutung ein und drücke auf "Raten".</p>
+        <p>Viel Spaß beim Spielen!</p>
+    </div>
+    <div class="projektarea">
+        <div id="showChallenge">Zum Raten drücke auf <b>"Raten"</b></div>
+        <div id="getResultOfChallenge">
+            <div id="showCallbackOfChallenge" style="visibility: hidden;"></div>
+            <form name="userInputForm">
+                <label for="firstNumber">Deine Zahl:</label>
+                <input type="number" id="firstNumber" name="firstNumber" min="1" max="100" required />
+            </form>
+        </div>
+        <div id="listOfButtons">
+            <form name="listOfButtons">
+                <input type="button" id="sozStartButton" value="Raten"/>
+                <input type="button" id="sozReloadButton" value="Seite neu laden" onclick="location.reload(true)"/>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

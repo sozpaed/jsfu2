@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notenschnitt berechnen</title>
+    <title>Stein, Schere, Papier</title>
     <link rel="stylesheet" href="../css/jp_projekte.css">
     <link rel="stylesheet" href="../css/jp_menue.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
-    <script src="../script/jp_projekt3.js"></script>
+    <script src="../script/jp_projekt5.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
@@ -26,12 +26,12 @@
     </div>
 
     <!-- Teaser -->
-    <h1>📊 JS :: Projekt 3 :: Notenschnitt berechnen</h1>
+    <h1>🎮 JS :: Projekt 5 :: Stein, Schere, Papier</h1>
     <h2>🎬 1 Teaser</h2>
     <div class="teaser">
-        <p>In diesem Projekt kannst du deinen Notendurchschnitt berechnen. Gib einfach deine Noten ein und drücke auf "Berechnen".</p>
-        <p>Das Tool zeigt dir den Durchschnitt deiner Noten an. Du kannst beliebig viele Noten hinzufügen. Viel Erfolg!</p>
-        <p>Füge jeweils pro Modul den JavaScript-Code (jp_notenschnitt.js) und den HTML-Code (jp_notenschnitt.html) ein. Schritt für Schritt näherst du dich dann dem Programm.</p>
+        <p>In diesem Projekt lernst du, wie du das Spiel "Stein, Schere, Papier" mit JavaScript umsetzen kannst. Du wirst verstehen, wie du Benutzereingaben verarbeitest, Zufallszahlen generierst und Spielregeln implementierst.</p>
+        <p>Das Projekt ist in Module aufgeteilt, die du Schritt für Schritt bearbeiten kannst. Am Ende setzt du alle Teile zusammen, um das vollständige Spiel zu erstellen.</p>
+        <p>Füge jeweils pro Modul den JavaScript-Code (jp_steinscherepapier.js) und den HTML-Code (jp_steinscherepapier.html) ein. Schritt für Schritt näherst du dich dann dem Programm.</p>
         <p>Verwende den CSS-Code, der am Ende der Seite angegeben wird, und lege diesen in der Datei `jp_projekte.css` ab.</p>
     </div>
 
@@ -89,21 +89,26 @@
         </ul>
     </div>
 
+    <!-- Einteilung in die Module -->
     <h2>📚 3 Einteilung in die Module</h2>
 
-    <!-- Kapitel 1: Modul 1 -->
+    <!-- Modul 1 -->
     <h3>📘 Modul 1: Grundlagen von JavaScript</h3>
     <div class="module" id="module1">
         <p>Der folgende Code zeigt, wie Variablen definiert und einfache Berechnungen durchgeführt werden.</p>
-        <p><b>JavaScript-Code (jp_notenschnitt.js)</b></p>
+        <p><b>JavaScript-Code (jp_steinscherepapier.js)</b></p>
         <pre class="code-container">
             <code class="language-js">
-                let sum = 0;
-                let count = 0;
-                console.log(sum, count);
+                const STEIN = 1;
+                const SCHERE = 2;
+                const PAPIER = 3;
+                console.log(STEIN, SCHERE, PAPIER);
             </code>
         </pre>
-        <p><b>HTML-Code (jp_notenschnitt.html)</b></p>
+        <p>Hier wird die Konstante für Stein, Schere und Papier definiert. Diese Werte werden später im Spiel verwendet.</p>
+        <p>Die Variablen sind Konstanten, die den Werten 1, 2 und 3 zugewiesen werden. Diese Werte repräsentieren die Spielzüge Stein, Schere und Papier.</p>
+        <p>Die Konstante wird mit dem Schlüsselwort <code>const</code> deklariert, was bedeutet, dass ihr Wert nicht verändert werden kann.</p>
+        <p><b>HTML-Code (jp_steinscherepapier.html)</b></p>
         <pre class="code-container">
             <code class="language-html">
                 &lt;!DOCTYPE html&gt;
@@ -111,12 +116,12 @@
                 &lt;head&gt;
                     &lt;meta charset="UTF-8"&gt;
                     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-                    &lt;title&gt;Notendurchschnitt berechnen&lt;/title&gt;
+                    &lt;title&gt;Stein, Schere, Papier&lt;/title&gt;
                     &lt;link rel="stylesheet" href="./css/jp_projekte.css"&gt;
                     &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"&gt;
                     &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
                     &lt;script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"&gt;&lt;/script&gt;
-                    &lt;script src="./script/jp_notenschnitt.js"&gt;&lt;/script&gt;
+                    &lt;script src="./script/jp_steinscherepapier.js"&gt;&lt;/script&gt;
                 &lt;/head&gt;
                 &lt;body&gt;
                     
@@ -124,142 +129,63 @@
                 &lt;/html&gt;
             </code>
         </pre>
+        <p>Hier wird die Struktur der HTML-Datei gezeigt. Die Datei enthält Links zu den CSS- und JavaScript-Dateien sowie die jQuery-Bibliothek.</p>
     </div>
 
-    <!-- Kapitel 2: Modul 2 -->
+    <!-- Modul 2 -->
     <h3>📗 Modul 2: Interaktion mit der Webseite</h3>
     <div class="module" id="module2">
         <p>Der folgende Code zeigt, wie ein Event-Listener verwendet wird, um eine Funktion auszuführen, wenn ein Button geklickt wird.</p>
-        <p><b>JavaScript-Code (jp_notenschnitt.js)</b></p>
+        <p><b>JavaScript-Code (jp_steinscherepapier.js)</b></p>
         <pre class="code-container">
             <code class="language-js">
-                // Ergänze diesen Code-Teil zum Beispiel aus Modul 1
-                $('#sozStartButton').click(function () {
-                    alert('Berechnung gestartet!');
+                // Ergänze den Code aus Modul 1
+                $(document).ready(function () {
+                    $('#sozStartButton').click(function () {
+                        alert('Spiel gestartet!');
+                    });
                 });
-            </code>
-        </pre>
-        <p><b>HTML-Code (jp_notenschnitt.html)</b></p>
-        <pre class="code-container">
-            <code class="language-html">
-                &lt;!DOCTYPE html&gt;
-                &lt;html lang="de"&gt;
-                &lt;head&gt;
-                    &lt;meta charset="UTF-8"&gt;
-                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-                    &lt;title&gt;Notendurchschnitt berechnen&lt;/title&gt;
-                    &lt;link rel="stylesheet" href="./css/jp_projekte.css"&gt;
-                    &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"&gt;
-                    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
-                    &lt;script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"&gt;&lt;/script&gt;
-                    &lt;script src="./script/jp_notenschnitt.js"&gt;&lt;/script&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                    &lt;div id="getResultOfChallenge"&gt;
-                        &lt;input type="button" id="sozStartButton" value="Berechnen" /&gt;
-                    &lt;/div&gt;
-                &lt;/body&gt;
-                &lt;/html&gt;
             </code>
         </pre>
     </div>
 
-    <!-- Kapitel 3: Modul 3 -->
+    <!-- Modul 3 -->
     <h3>📙 Modul 3: Dynamische Gestaltung und Berechnungen</h3>
     <div class="module" id="module3">
-        <p>Der folgende Code zeigt, wie der Durchschnitt der Noten berechnet wird.</p>
-        <p><b>JavaScript-Code (jp_notenschnitt.js)</b></p>
+        <p>Der folgende Code zeigt, wie die Wahl des Computers generiert wird.</p>
+        <p><b>JavaScript-Code (jp_steinscherepapier.js)</b></p>
         <pre class="code-container">
             <code class="language-js">
-                // Ergänze diesen Code-Teil zum Beispiel aus Modul 2
-                function calculateAverage(sum, count) {
-                    return (sum / count).toFixed(2); // Durchschnitt berechnen und auf zwei Dezimalstellen runden
+                function getComputerChoice() {
+                    return Math.floor(Math.random() * 3) + 1;
                 }
-            </code>
-        </pre>
-        <p>Hier wird die Funktion `calculateAverage` verwendet, um den Durchschnitt der Noten zu berechnen. Die Funktion nimmt die Summe und die Anzahl der Noten als Parameter und gibt den Durchschnitt zurück.</p>
-        <p><b>HTML-Code (jp_notenschnitt.html)</b></p>
-        <pre class="code-container">
-            <code class="language-html">
-                &lt;!DOCTYPE html&gt;
-                &lt;html lang="de"&gt;
-                &lt;head&gt;
-                    &lt;meta charset="UTF-8"&gt;
-                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-                    &lt;title&gt;Notendurchschnitt berechnen&lt;/title&gt;
-                    &lt;link rel="stylesheet" href="./css/jp_projekte.css"&gt;
-                    &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"&gt;
-                    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
-                    &lt;script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"&gt;&lt;/script&gt;
-                    &lt;script src="./script/jp_notenschnitt.js"&gt;&lt;/script&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                    &lt;div id="getResultOfChallenge"&gt;
-                        &lt;input type="button" id="sozStartButton" value="Berechnen" /&gt;
-                    &lt;/div&gt;
-                &lt;/body&gt;
-                &lt;/html&gt;
+                console.log(getComputerChoice());
             </code>
         </pre>
     </div>
 
-    <!-- Kapitel 4: Modul 4 -->
+    <!-- Modul 4 -->
     <h3>📕 Modul 4: Benutzerinteraktion über Formulare</h3>
     <div class="module" id="module4">
-        <p>Der folgende Code liest die Werte aus den Eingabefeldern aus und überprüft, ob sie gültig sind.</p>
-        <p><b>JavaScript-Code (jp_notenschnitt.js)</b></p>
+        <p>Der folgende Code liest die Eingabe des Benutzers aus und überprüft, ob sie gültig ist.</p>
+        <p><b>JavaScript-Code (jp_steinscherepapier.js)</b></p>
         <pre class="code-container">
             <code class="language-js">
-                // Ergänze diesen Code-Teil zum Beispiel aus Modul 3
-                function getInputAndCalculate() {
-                    const inputValue = parseInt($('#firstNumber').val(), 10);
-
-                    if (isNaN(inputValue) || inputValue < 1 || inputValue > 6) {
-                        updateResultDisplay('Bitte nur Zahlen zwischen 1 und 6 eintragen.', 'error');
-                        return;
-                    }
-
-                    addGrade(inputValue);
-                    const average = calculateAverage(sum, count);
-                    updateResultDisplay(`Durchschnitt: ${average}. Anzahl Noten: ${count}`, 'success');
+                function isValidChoice(choice) {
+                    return !isNaN(choice) && choice >= 1 && choice <= 3;
                 }
-            </code>
-        </pre>
-        <p>Hier wird die Funktion `getInputAndCalculate` verwendet, um die Eingaben des Benutzers zu verarbeiten. Die Funktion überprüft, ob die Eingabe gültig ist und aktualisiert das Ergebnis entsprechend.</p>
-        <p><b>HTML-Code (jp_notenschnitt.html)</b></p>
-        <pre class="code-container">
-            <code class="language-html">
-                &lt;!DOCTYPE html&gt;
-                &lt;html lang="de"&gt;
-                &lt;head&gt;
-                    &lt;meta charset="UTF-8"&gt;
-                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-                    &lt;title&gt;Notendurchschnitt berechnen&lt;/title&gt;
-                    &lt;link rel="stylesheet" href="./css/jp_projekte.css"&gt;
-                    &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"&gt;
-                    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
-                    &lt;script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"&gt;&lt;/script&gt;
-                    &lt;script src="./script/jp_notenschnitt.js"&gt;&lt;/script&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                    &lt;div id="getResultOfChallenge"&gt;
-                        &lt;input type="text" id="firstNumber" name="firstNumber" placeholder="1" required /&gt;
-                        &lt;input type="button" id="sozStartButton" value="Berechnen" /&gt;
-                    &lt;/div&gt;
-                &lt;/body&gt;
-                &lt;/html&gt;
+                console.log(isValidChoice(2)); // Beispiel: true
             </code>
         </pre>
     </div>
 
-    <!-- Kapitel 5: Modul 5 -->
+    <!-- Modul 5 -->
     <h3>🎮 Modul 5: Entwicklung interaktiver Elemente</h3>
     <div class="module" id="module5">
-        <p>Der folgende Code zeigt, wie das Ergebnis der Berechnung auf der Webseite angezeigt wird.</p>
-        <p><b>JavaScript-Code (jp_notenschnitt.js)</b></p>
+        <p>Der folgende Code zeigt, wie das Ergebnis des Spiels angezeigt wird.</p>
+        <p><b>JavaScript-Code (jp_steinscherepapier.js)</b></p>
         <pre class="code-container">
             <code class="language-js">
-                // Ergänze diesen Code-Teil zum Beispiel aus Modul 4
                 function updateResultDisplay(message, type) {
                     const resultElement = $('#showCallbackOfChallenge');
                     resultElement.css('visibility', 'visible');
@@ -272,90 +198,76 @@
 
                     resultElement.html(message);
                 }
-            </code>
-        </pre>
-        <p>Hier wird die Funktion `updateResultDisplay` verwendet, um das Ergebnis der Berechnung anzuzeigen. Die Funktion ändert die Hintergrundfarbe des Ergebniselements je nach Erfolg oder Fehler.</p>
-        <p><b>HTML-Code (jp_notenschnitt.html)</b></p>
-        <pre class="code-container">
-            <code class="language-html">
-                &lt;!DOCTYPE html&gt;
-                &lt;html lang="de"&gt;
-                &lt;head&gt;
-                    &lt;meta charset="UTF-8"&gt;
-                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-                    &lt;title&gt;Notendurchschnitt berechnen&lt;/title&gt;
-                    &lt;link rel="stylesheet" href="./css/jp_projekte.css"&gt;
-                    &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"&gt;
-                    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
-                    &lt;script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"&gt;&lt;/script&gt;
-                    &lt;script src="./script/jp_notenschnitt.js"&gt;&lt;/script&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                    &lt;div id="getResultOfChallenge"&gt;
-                        &lt;input type="text" id="firstNumber" name="firstNumber" placeholder="1" required /&gt;
-                        &lt;input type="button" id="sozStartButton" value="Berechnen" /&gt;
-                        &lt;div id="showCallbackOfChallenge" style="visibility: hidden;"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/body&gt;
-                &lt;/html&gt;
             </code>
         </pre>
     </div>
 
-    <!-- Kapitel 6: Kompletter Code -->
-    <h2>&#128196; 4 Kompletter Code</h2>
+    <!-- Kompletter Code -->
+    <h2>📄 4 Kompletter Code</h2>
     <div class="module" id="completeCode">
         <p>Hier ist der komplette Code für das Projekt:</p>
-        <pre class="code-container">
-            <code class="language-html">
-                &lt;!DOCTYPE html&gt;
-                &lt;html lang="de"&gt;
-                &lt;head&gt;
-                    &lt;meta charset="UTF-8"&gt;
-                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-                    &lt;title&gt;Notendurchschnitt berechnen&lt;/title&gt;
-                    &lt;link rel="stylesheet" href="./css/jp_projekte.css"&gt;
-                    &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"&gt;
-                    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
-                    &lt;script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"&gt;&lt;/script&gt;
-                    &lt;script src="./script/jp_notenschnitt.js"&gt;&lt;/script&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                    &lt;div id="getResultOfChallenge"&gt;
-                        &lt;input type="text" id="firstNumber" name="firstNumber" placeholder="1" required /&gt;
-                        &lt;input type="button" id="sozStartButton" value="Berechnen" /&gt;
-                        &lt;div id="showCallbackOfChallenge" style="visibility: hidden;"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/body&gt;
-                &lt;/html&gt;
-            </code>
-        </pre>
-        <p>Hier ist der komplette JavaScript-Code:</p>
+        <p><b>JavaScript-Code (jp_steinscherepapier.js)</b></p>
         <pre class="code-container">
             <code class="language-js">
-                let sum = 0;
-                let count = 0;
+                // Kompletter JavaScript-Code
+                const STEIN = 1;
+                const SCHERE = 2;
+                const PAPIER = 3;
 
-                function addGrade(grade) {
-                    sum += grade;
-                    count++;
-                }
+                $(document).ready(function () {
+                    $('#sozStartButton').click(function () {
+                        playGame();
+                    });
+                });
 
-                function calculateAverage(sum, count) {
-                    return (sum / count).toFixed(2);
-                }
-
-                function getInputAndCalculate() {
-                    const inputValue = parseInt($('#firstNumber').val(), 10);
-
-                    if (isNaN(inputValue) || inputValue < 1 || inputValue > 6) {
-                        updateResultDisplay('Bitte nur Zahlen zwischen 1 und 6 eintragen.', 'error');
+                function playGame() {
+                    const userChoice = parseInt($('#firstNumber').val());
+                    if (!isValidChoice(userChoice)) {
+                        updateResultDisplay('Bitte nur Zahlen zwischen 1 und 3 eingeben.', 'error');
                         return;
                     }
 
-                    addGrade(inputValue);
-                    const average = calculateAverage(sum, count);
-                    updateResultDisplay(`Durchschnitt: ${average}. Anzahl Noten: ${count}`, 'success');
+                    const computerChoice = getComputerChoice();
+                    const result = determineWinner(userChoice, computerChoice);
+                    updateResultDisplay(
+                        `Spieler: ${choiceToString(userChoice)}. Computer: ${choiceToString(computerChoice)}. ${result}`,
+                        'success'
+                    );
+                }
+
+                function getComputerChoice() {
+                    return Math.floor(Math.random() * 3) + 1;
+                }
+
+                function isValidChoice(choice) {
+                    return !isNaN(choice) && choice >= 1 && choice <= 3;
+                }
+
+                function determineWinner(userChoice, computerChoice) {
+                    if (userChoice === computerChoice) {
+                        return 'Unentschieden!';
+                    } else if (
+                        (userChoice === STEIN && computerChoice === SCHERE) ||
+                        (userChoice === SCHERE && computerChoice === PAPIER) ||
+                        (userChoice === PAPIER && computerChoice === STEIN)
+                    ) {
+                        return 'Gewonnen!';
+                    } else {
+                        return 'Verloren!';
+                    }
+                }
+
+                function choiceToString(choice) {
+                    switch (choice) {
+                        case STEIN:
+                            return 'Stein';
+                        case SCHERE:
+                            return 'Schere';
+                        case PAPIER:
+                            return 'Papier';
+                        default:
+                            return 'Unbekannt';
+                    }
                 }
 
                 function updateResultDisplay(message, type) {
@@ -370,10 +282,54 @@
 
                     resultElement.html(message);
                 }
-
-                $(document).ready(function () {
-                    $('#sozStartButton').click(getInputAndCalculate);
-                });
+            </code>
+        </pre>
+        <p><b>HTML-Code (jp_steinscherepapier.html)</b></p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="de"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;Stein, Schere, Papier&lt;/title&gt;
+                    &lt;link rel="stylesheet" href="../css/jp_projekte.css"&gt;
+                    &lt;link rel="stylesheet" href="../css/jp_menue.css"&gt;
+                    &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"&gt;
+                    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+                    &lt;script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"&gt;&lt;/script&gt;
+                    &lt;script src="../script/jp_steinscherepapier.js"&gt;&lt;/script&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1&gt;Stein, Schere, Papier&lt;/h1&gt;
+                    &lt;div class="content"&gt;
+                        &lt;h2&gt;Willkommen zu Stein, Schere, Papier!&lt;/h2&gt;
+                        &lt;p&gt;Spiele gegen den Computer und finde heraus, wer gewinnt. Wähle Stein, Schere oder Papier und drücke auf "Spielen".&lt;/p&gt;
+                        &lt;p&gt;Viel Spaß!&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="projektarea"&gt;
+                        &lt;div id="showChallenge"&gt;Zum Spielen drücke auf &lt;b&gt;"Spielen"&lt;/b&gt;&lt;/div&gt;
+                        &lt;div id="getResultOfChallenge"&gt;
+                            &lt;div id="showCallbackOfChallenge" style="visibility: hidden;"&gt;&lt;/div&gt;
+                            &lt;form name="userInputForm"&gt;
+                                &lt;label for="firstNumber"&gt;Deine Wahl:&lt;/label&gt;
+                                &lt;select id="firstNumber" name="firstNumber" required&gt;
+                                    &lt;option value="" disabled selected&gt;Bitte wähle eine Option&lt;/option&gt;
+                                    &lt;option value=1&gt;Stein&lt;/option&gt;
+                                    &lt;option value=2&gt;Schere&lt;/option&gt;
+                                    &lt;option value=3&gt;Papier&lt;/option&gt;
+                                &lt;/select&gt;
+                            &lt;/form&gt;
+                        &lt;/div&gt;
+                        &lt;div id="listOfButtons"&gt;
+                            &lt;form name="listOfButtons"&gt;
+                                &lt;input type="button" id="sozStartButton" value="Spielen"/&gt;
+                                &lt;input type="button" id="sozReloadButton" value="Seite neu laden" onclick="location.reload(true)"/&gt;
+                            &lt;/form&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
             </code>
         </pre>
         <p>Hier ist der komplette CSS-Code:</p>
@@ -518,20 +474,25 @@
     </div>
 
     <!-- Projektbereich -->
-    <h2>🎮 5 Probiere das Tool aus!</h2>
+    <h2>🎮 5 Probiere das Spiel aus!</h2>
     <div class="projektarea">
-        <div id="showChallenge">Zum Berechnen drücke auf <b>"Berechnen"</b></div>
+        <div id="showChallenge">Zum Spielen drücke auf <b>"Spielen"</b></div>
         <div id="getResultOfChallenge">
             <div id="showCallbackOfChallenge" style="visibility: hidden;"></div>
             <form name="userInputForm">
-                <label for="firstNumber">Noten:</label>
-                <input type="text" id="firstNumber" name="firstNumber" placeholder="1" required />
+                <label for="firstNumber">Deine Wahl:</label>
+                <select id="firstNumber" name="firstNumber" required>
+                    <option value="" disabled selected>Bitte wähle eine Option</option>
+                    <option value="1">Stein</option>
+                    <option value="2">Schere</option>
+                    <option value="3">Papier</option>
+                </select>
             </form>
         </div>
         <div id="listOfButtons">
             <form name="listOfButtons">
-                <input type="button" id="sozStartButton" value="Berechnen"/>
-                <input type="button" id="sozReloadButton" value="Seite neu laden" onclick="location.reload(true)"/>
+                <input type="button" id="sozStartButton" value="Spielen" />
+                <input type="button" id="sozReloadButton" value="Seite neu laden" onclick="location.reload(true)" />
             </form>
         </div>
     </div>

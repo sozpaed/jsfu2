@@ -474,37 +474,66 @@
     <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 4.1</div>
         <div class="aufgabentext">
-            <p>Beschreibe, wie du die Inline-Stile eines HTML-Elements mit JavaScript ändern kannst.</p>
+            <p>Welche der folgenden Optionen ändern die Inline-Stile eines HTML-Elements korrekt?</p>
+            <form id="aufgabe-4-1">
+                <div>
+                    <input type="checkbox" id="option4-1-1" name="option4-1-1">
+                    <label for="option4-1-1">element.style.color = "red";</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option4-1-2" name="option4-1-2">
+                    <label for="option4-1-2">element.css("color", "red");</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option4-1-3" name="option4-1-3">
+                    <label for="option4-1-3">element.style.backgroundColor = "yellow";</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option4-1-4" name="option4-1-4">
+                    <label for="option4-1-4">element.setAttribute("color", "red");</label>
+                </div>
+                <button type="button" onclick="checkM3Answers41()">Antwort prüfen</button>
+            </form>
+            <div id="feedback-aufgabe-4-1" class="feedback"></div>
             <div class="code-container">
                 <span class="toggle-button">Lösung anzeigen</span>
-                <div class="code-content">
+                <div class="code-content" style="display: none;">
                     <pre class="aufgabenloesung">
-                        <code class="language-js">
-                            // Ändere die Textfarbe und den Hintergrund eines Elements
-                            let element = document.getElementById("meinElement");
-                            element.style.color = "red";
-                            element.style.backgroundColor = "yellow";
+                        <code id="solution-4-1" class="language-js">
+                            // Richtige Antworten:
+                            // 1. element.style.color = "red";
+                            // 3. element.style.backgroundColor = "yellow";
                         </code>
                     </pre>
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 4.2</div>
         <div class="aufgabentext">
-            <p>Erkläre, wie du eine CSS-Klasse mit JavaScript zu einem HTML-Element hinzufügen kannst.</p>
+            <p>Schreibe den JavaScript-Code, um eine CSS-Klasse "highlight" zu einem HTML-Element mit der ID "meinElement" hinzuzufügen.</p>
+            <textarea id="input-aufgabe-4-2" placeholder="Schreibe deinen Code hier..."></textarea>
+            <button type="button" onclick="checkCodeWithScript('input-aufgabe-4-2', 'solution-4-2')">Antwort prüfen</button>
+            <div id="feedback-input-aufgabe-4-2" class="feedback"></div>
             <div class="code-container">
                 <span class="toggle-button">Lösung anzeigen</span>
-                <div class="code-content">
+                <div class="code-content" style="display: none;">
                     <pre class="aufgabenloesung">
-                        <code class="language-js">
-                            // Füge eine CSS-Klasse zu einem Element hinzu
+                        <code id="solution-4-2" class="language-js">
                             let element = document.getElementById("meinElement");
-                            element.classList.add("meineKlasse");
+                            element.classList.add("highlight");
                         </code>
                     </pre>
                 </div>
             </div>
+            <script id="solution-4-2" type="text/plain">
+                let element = document.getElementById("meinElement");
+                element.classList.add("highlight");
+            </script>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 4.3</div>
         <div class="aufgabentext">
             <p>Beschreibe, wie du numerische Eingaben aus einem HTML-Element abrufen kannst. Nenne ein Beispiel.</p>
@@ -522,6 +551,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 4.4</div>
         <div class="aufgabentext">
             <p>Erkläre, wie du mit jQuery das Ergebnis einer Berechnung auf einer Webseite anzeigen kannst. Nenne ein Beispiel.</p>
@@ -542,6 +573,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 4.5</div>
         <div class="aufgabentext">
             <p>Beschreibe, wie du CSS-Klassen dynamisch umschalten kannst. Warum ist dies nützlich?</p>
@@ -558,6 +591,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 4.6</div>
         <div class="aufgabentext">
             <p>Erkläre, wie du mit jQuery ein Ereignis-Objekt in einem Ereignis-Listener verwenden kannst. Gib ein Beispiel.</p>
@@ -578,11 +613,12 @@
             </div>
         </div>
     </div>
+
     <h2>🛠️ 5 Übungsaufgaben - Praxis</h2>
     <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 5.1</div>
         <div class="aufgabentext">
-            <p>Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das die Hintergrundfarbe eines HTML-Elements ändert, wenn der Button geklickt wird.</p>
+            <p>Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das die Hintergrundfarbe eines HTML-Elements "meinElement" in "blue" ändert, wenn der Button "meinButton" geklickt wird.</p>
             <div class="code-container">
                 <span class="toggle-button">Lösung anzeigen</span>
                 <div class="code-content">
@@ -599,9 +635,11 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 5.2</div>
         <div class="aufgabentext">
-            <p>Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das eine CSS-Klasse zu einem HTML-Element hinzufügt, wenn der Button geklickt wird.</p>
+            <p>Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das eine CSS-Klasse "meineKlasse" zu einem HTML-Element "meinElement" hinzufügt, wenn der Button "meinButton" geklickt wird.</p>
             <div class="code-container">
                 <span class="toggle-button">Lösung anzeigen</span>
                 <div class="code-content">
@@ -618,30 +656,49 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 5.3</div>
         <div class="aufgabentext">
-            <p>Erstelle ein HTML-Dokument mit zwei Eingabefeldern und einem Button. Schreibe ein Skript, das die Summe der beiden Eingaben berechnet und auf der Webseite anzeigt.</p>
+            <p>Welche der folgenden Optionen berechnen die Summe von zwei Eingaben korrekt?</p>
+            <form id="aufgabe-5-3">
+                <div>
+                    <input type="checkbox" id="option5-3-1" name="option5-3-1">
+                    <label for="option5-3-1">let summe = zahl1 + zahl2;</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option5-3-2" name="option5-3-2">
+                    <label for="option5-3-2">let summe = parseFloat(zahl1) + parseFloat(zahl2);</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option5-3-3" name="option5-3-3">
+                    <label for="option5-3-3">let summe = parseInt(zahl1) + parseInt(zahl2);</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option5-3-4" name="option5-3-4">
+                    <label for="option5-3-4">let summe = zahl1.concat(zahl2);</label>
+                </div>
+                <button type="button" onclick="checkM3Answers53()">Antwort prüfen</button>
+            </form>
+            <div id="feedback-aufgabe-5-3" class="feedback"></div>
             <div class="code-container">
                 <span class="toggle-button">Lösung anzeigen</span>
-                <div class="code-content">
+                <div class="code-content" style="display: none;">
                     <pre class="aufgabenloesung">
-                        <code class="language-js">
-                            // Berechne die Summe von zwei Eingaben
-                            let button = document.getElementById("berechnenButton");
-                            button.addEventListener("click", function() {
-                                let zahl1 = parseFloat(document.getElementById("zahl1").value);
-                                let zahl2 = parseFloat(document.getElementById("zahl2").value);
-                                let summe = zahl1 + zahl2;
-                                document.getElementById("ergebnis").innerText = "Summe: " + summe;
-                            });
+                        <code id="solution-5-3" class="language-js">
+                            // Richtige Antworten:
+                            // 2. let summe = parseFloat(zahl1) + parseFloat(zahl2);
+                            // 3. let summe = parseInt(zahl1) + parseInt(zahl2);
                         </code>
                     </pre>
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 5.4</div>
         <div class="aufgabentext">
-            <p>Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript mit jQuery, das eine CSS-Klasse zu einem HTML-Element umschaltet, wenn der Button geklickt wird.</p>
+            <p>Erstelle ein HTML-Dokument mit einem Button "meinButton". Schreibe ein Skript mit jQuery, das eine CSS-Klasse "meineKlasse" zu einem HTML-Element "meinElement" umschaltet, wenn der Button geklickt wird.</p>
             <div class="code-container">
                 <span class="toggle-button">Lösung anzeigen</span>
                 <div class="code-content">
@@ -656,9 +713,11 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 5.5</div>
         <div class="aufgabentext">
-            <p>Erstelle ein HTML-Dokument mit drei Eingabefeldern und einem Button. Schreibe ein Skript, das die Durchschnittswerte der Eingaben berechnet und auf der Webseite anzeigt.</p>
+            <p>Erstelle ein HTML-Dokument mit drei Eingabefeldern (zahl1, zahl2, zahl3) und einem Button "berechnenButton". Schreibe ein Skript, das die Durchschnittswerte der Eingaben in "durchschnitt" berechnet und auf der Webseite "ergebnis" anzeigt.</p>
             <div class="code-container">
                 <span class="toggle-button">Lösung anzeigen</span>
                 <div class="code-content">
@@ -678,9 +737,11 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 5.6</div>
         <div class="aufgabentext">
-            <p>Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript mit jQuery, das die Hintergrundfarbe eines HTML-Elements zwischen zwei Farben umschaltet, wenn der Button geklickt wird.</p>
+            <p>Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript mit jQuery, das die Hintergrundfarbe eines HTML-Elements "meinElement" zwischen zwei Farben (blue -> red) umschaltet, wenn der Button "meinButton" geklickt wird.</p>
             <div class="code-container">
                 <span class="toggle-button">Lösung anzeigen</span>
                 <div class="code-content">
@@ -705,48 +766,36 @@
     <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 6.1</div>
         <div class="aufgabentext">
-            <p>Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das die Hintergrundfarbe eines HTML-Elements ändert, wenn der Button geklickt wird.</p>
+            <p>Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das die Hintergrundfarbe eines HTML-Elements "meinElement" in "blue" ändert, wenn der Button "meinButton" geklickt wird.</p>
             <div class="code-container">
                 <span class="toggle-button-help">Hilfe anzeigen</span>
                 <div class="code-content">
-                    <pre class="aufgabenloesung">
-                        <code class="language-js">
-                            // Ändere die Hintergrundfarbe eines Elements
-                            let button = document.getElementById("meinButton");
-                            let element = document.getElementById("meinElement");
-                            button.addEventListener("click", function() {
-                                element.style.backgroundColor = "blue";
-                            });
-                        </code>
-                    </pre>
+                    <p>Schaue Dir Aufgabe 4.1 und 5.1 an.</p>
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 6.2</div>
         <div class="aufgabentext">
-            <p>Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das eine CSS-Klasse zu einem HTML-Element hinzufügt, wenn der Button geklickt wird.</p>
+            <p>Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das eine CSS-Klasse "meineKlasse" zu einem HTML-Element "meinElement" hinzufügt, wenn der Button "meinButton" geklickt wird.</p>
             <div class="code-container">
                 <span class="toggle-button-help">Hilfe anzeigen</span>
                 <div class="code-content">
-                    <pre class="aufgabenloesung">
-                        <code class="language-js">
-                            // Füge eine CSS-Klasse zu einem Element hinzu
-                            let button = document.getElementById("meinButton");
-                            let element = document.getElementById("meinElement");
-                            button.addEventListener("click", function() {
-                                element.classList.add("meineKlasse");
-                            });
-                        </code>
-                    </pre>
+                    <p>Schaue Dir Aufgabe 4.2 und 5.2 an.</p>
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 6.3</div>
         <div class="aufgabentext">
-            <p>Erstelle ein HTML-Dokument mit zwei Eingabefeldern und einem Button. Schreibe ein Skript, das die Summe der beiden Eingaben berechnet und auf der Webseite anzeigt.</p>
+            <p>Erstelle ein HTML-Dokument mit zwei Eingabefeldern und einem Button "berechnenButton".</p>
+            <p>Schreibe ein Skript, das die Summe "summe" der beiden Eingaben (zahl1, zahl2) berechnet und auf der Webseite "ergebnis" anzeigt.</p>
             <div class="code-container">
                 <span class="toggle-button-help">Hilfe anzeigen</span>
                 <div class="code-content">
+                    <p>Schaue Dir ebenfalls die Aufgaben 4.3 und 5.3 an.</p>
                     <pre class="aufgabenloesung">
                         <code class="language-js">
                             // Berechne die Summe von zwei Eingaben
@@ -762,64 +811,39 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 6.4</div>
         <div class="aufgabentext">
-            <p>Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript mit jQuery, das eine CSS-Klasse zu einem HTML-Element umschaltet, wenn der Button geklickt wird.</p>
+            <p>Erstelle ein HTML-Dokument mit einem Button "meinButton". Schreibe ein Skript mit jQuery, das eine CSS-Klasse "meineKlasse" zu einem HTML-Element "meinElement" umschaltet, wenn der Button geklickt wird.</p>
             <div class="code-container">
                 <span class="toggle-button-help">Hilfe anzeigen</span>
                 <div class="code-content">
-                    <pre class="aufgabenloesung">
-                        <code class="language-js">
-                            // Schalte eine CSS-Klasse mit jQuery um
-                            $("#meinButton").click(function() {
-                                $("#meinElement").toggleClass("meineKlasse");
-                            });
-                        </code>
-                    </pre>
+                    <p>Schaue Dir Aufgabe 4.5 und 5.4 an.</p>
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 6.5</div>
         <div class="aufgabentext">
-            <p>Erstelle ein HTML-Dokument mit drei Eingabefeldern und einem Button. Schreibe ein Skript, das die Durchschnittswerte der Eingaben berechnet und auf der Webseite anzeigt.</p>
+            <p>Erstelle ein HTML-Dokument mit drei Eingabefeldern (zahl1, zahl2, zahl3) und einem Button "berechnenButton". Schreibe ein Skript, das die Durchschnittswerte der Eingaben in "durchschnitt" berechnet und auf der Webseite "ergebnis" anzeigt.</p>
             <div class="code-container">
                 <span class="toggle-button-help">Hilfe anzeigen</span>
                 <div class="code-content">
-                    <pre class="aufgabenloesung">
-                        <code class="language-js">
-                            // Berechne den Durchschnitt von drei Eingaben
-                            let button = document.getElementById("berechnenButton");
-                            button.addEventListener("click", function() {
-                                let zahl1 = parseFloat(document.getElementById("zahl1").value);
-                                let zahl2 = parseFloat(document.getElementById("zahl2").value);
-                                let zahl3 = parseFloat(document.getElementById("zahl3").value);
-                                let durchschnitt = (zahl1 + zahl2 + zahl3) / 3;
-                                document.getElementById("ergebnis").innerText = "Durchschnitt: " + durchschnitt.toFixed(2);
-                            });
-                        </code>
-                    </pre>
+                    <p>Schaue Dir Aufgabe 4.3 und 5.5 an.</p>
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 6.6</div>
         <div class="aufgabentext">
-            <p>Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript mit jQuery, das die Hintergrundfarbe eines HTML-Elements zwischen zwei Farben umschaltet, wenn der Button geklickt wird.</p>
+            <p>Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript mit jQuery, das die Hintergrundfarbe eines HTML-Elements "meinElement" zwischen zwei Farben (blue -> red) umschaltet, wenn der Button "meinButton" geklickt wird.</p>
             <div class="code-container">
                 <span class="toggle-button-help">Hilfe anzeigen</span>
                 <div class="code-content">
-                    <pre class="aufgabenloesung">
-                        <code class="language-js">
-                            // Schalte die Hintergrundfarbe mit jQuery um
-                            $("#meinButton").click(function() {
-                                let element = $("#meinElement");
-                                if (element.css("background-color") === "rgb(255, 0, 0)") { // Rot
-                                    element.css("background-color", "blue");
-                                } else {
-                                    element.css("background-color", "red");
-                                }
-                            });
-                        </code>
-                    </pre>
+                    <p>Schaue Dir Aufgabe 4.6 und 5.6 an.</p>
                 </div>
             </div>
         </div>

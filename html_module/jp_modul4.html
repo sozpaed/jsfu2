@@ -606,56 +606,106 @@
     <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 4.1</div>
         <div class="aufgabentext">
-            <p>Beschreibe, wie du ein einfaches HTML-Formular mit einem Textfeld und einem Button erstellst.</p>
+            <p>Welche der folgenden Optionen beschreiben korrekt, wie ein einfaches HTML-Formular mit einem Textfeld und einem Button erstellt wird?</p>
+            <form id="aufgabe-4-1">
+                <div>
+                    <input type="checkbox" id="option4-1-1" name="option4-1-1">
+                    <label for="option4-1-1">&lt;form&gt; mit &lt;input&gt; und &lt;button&gt; verwenden</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option4-1-2" name="option4-1-2">
+                    <label for="option4-1-2">&lt;div&gt; statt &lt;form&gt; verwenden</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option4-1-3" name="option4-1-3">
+                    <label for="option4-1-3">Das Attribut <code>type="submit"</code> für den Button verwenden</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option4-1-4" name="option4-1-4">
+                    <label for="option4-1-4">Das Attribut <code>required</code> für das Eingabefeld verwenden</label>
+                </div>
+                <button type="button" onclick="checkM4Answers41()">Antwort prüfen</button>
+            </form>
+            <div id="feedback-aufgabe-4-1" class="feedback"></div>
             <div class="code-container">
                 <span class="toggle-button">Lösung anzeigen</span>
-                <div class="code-content">
+                <div class="code-content" style="display: none;">
                     <pre class="aufgabenloesung">
-                        <code class="language-html">
-                            &lt;form id="meinFormular"&gt;
-                                &lt;label for="name"&gt;Name:&lt;/label&gt;
-                                &lt;input type="text" id="name" name="name" required&gt;
-                                &lt;button type="submit"&gt;Absenden&lt;/button&gt;
-                            &lt;/form&gt;
+                        <code id="solution-4-1" class="language-html">
+                            // Richtige Antworten:
+                            // 1. &lt;form&gt; mit &lt;input&gt; und &lt;button&gt; verwenden
+                            // 3. Das Attribut type="submit" für den Button verwenden
+                            // 4. Das Attribut required für das Eingabefeld verwenden
                         </code>
                     </pre>
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 4.2</div>
         <div class="aufgabentext">
-            <p>Erkläre, wie du mit JavaScript den Wert eines Eingabefelds abrufen kannst.</p>
+            <p>Schreibe den JavaScript-Code, um den Wert eines Eingabefelds mit der ID "name" abzurufen und in der Konsole auszugeben.</p>
+            <textarea id="input-aufgabe-4-2" placeholder="Schreibe deinen Code hier..."></textarea>
+            <button type="button" onclick="checkCodeWithScript('input-aufgabe-4-2', 'solution-4-2')">Antwort prüfen</button>
+            <div id="feedback-input-aufgabe-4-2" class="feedback"></div>
             <div class="code-container">
                 <span class="toggle-button">Lösung anzeigen</span>
-                <div class="code-content">
+                <div class="code-content" style="display: none;">
                     <pre class="aufgabenloesung">
-                        <code class="language-js">
-                            // Wert eines Eingabefelds abrufen
+                        <code id="solution-4-2" class="language-js">
                             let name = document.getElementById("name").value;
                             console.log("Eingegebener Name:", name);
                         </code>
                     </pre>
                 </div>
             </div>
+            <script id="solution-4-2" type="text/plain">
+                let name = document.getElementById("name").value;
+                console.log("Eingegebener Name:", name);
+            </script>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 4.3</div>
         <div class="aufgabentext">
-            <p>Beschreibe, wie du auf die Übermittlung eines Formulars reagieren kannst. Warum ist es wichtig, die Standardaktion zu verhindern?</p>
+            <p>Welche der folgenden Optionen beschreiben korrekt, wie du auf die Übermittlung eines Formulars reagieren kannst?</p>
+            <form id="aufgabe-4-3">
+                <div>
+                    <input type="checkbox" id="option4-3-1" name="option4-3-1">
+                    <label for="option4-3-1">Das <code>submit</code>-Ereignis des Formulars verwenden</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option4-3-2" name="option4-3-2">
+                    <label for="option4-3-2">Das <code>click</code>-Ereignis des Buttons verwenden</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option4-3-3" name="option4-3-3">
+                    <label for="option4-3-3">Die Standardaktion mit <code>event.preventDefault()</code> verhindern</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option4-3-4" name="option4-3-4">
+                    <label for="option4-3-4">Das Formular mit <code>document.getElementById()</code> auswählen</label>
+                </div>
+                <button type="button" onclick="checkM4Answers43()">Antwort prüfen</button>
+            </form>
+            <div id="feedback-aufgabe-4-3" class="feedback"></div>
             <div class="code-container">
                 <span class="toggle-button">Lösung anzeigen</span>
-                <div class="code-content">
+                <div class="code-content" style="display: none;">
                     <pre class="aufgabenloesung">
-                        <code class="language-js">
-                            // Auf die Übermittlung eines Formulars reagieren
-                            document.getElementById("meinFormular").addEventListener("submit", function(event) {
-                                event.preventDefault(); // Verhindert das Neuladen der Seite
-                                console.log("Formular wurde übermittelt!");
-                            });
+                        <code id="solution-4-3" class="language-js">
+                            // Richtige Antworten:
+                            // 1. Das submit-Ereignis des Formulars verwenden
+                            // 3. Die Standardaktion mit event.preventDefault() verhindern
+                            // 4. Das Formular mit document.getElementById() auswählen
                         </code>
                     </pre>
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 4.4</div>
         <div class="aufgabentext">
             <p>Erkläre, wie du mehrere Eingabefelder in einem Formular mit jQuery verarbeiten kannst. Schreibe ein Beispiel.</p>
@@ -676,6 +726,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 4.5</div>
         <div class="aufgabentext">
             <p>Beschreibe, wie du die Eingaben eines Formulars validieren kannst, bevor es übermittelt wird.</p>
@@ -699,6 +751,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 4.6</div>
         <div class="aufgabentext">
             <p>Erkläre, wie du dynamisch neue Eingabefelder zu einem Formular mit jQuery hinzufügen kannst. Schreibe ein Beispiel.</p>
@@ -718,7 +772,6 @@
         </div>
     </div>
     <h2>🛠️ 5 Übungsaufgaben - Praxis</h2>
-    <h2>🛠️ 5 Übungsaufgaben - Praxis</h2>
     <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 5.1</div>
         <div class="aufgabentext">
@@ -737,6 +790,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 5.2</div>
         <div class="aufgabentext">
             <p>Erstelle ein HTML-Formular mit zwei Eingabefeldern für Vorname und Nachname. Schreibe ein Skript, das den vollständigen Namen in der Konsole ausgibt, wenn das Formular übermittelt wird.</p>
@@ -756,6 +811,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 5.3</div>
         <div class="aufgabentext">
             <p>Erstelle ein HTML-Formular mit einem Eingabefeld für das Alter. Schreibe ein Skript, das überprüft, ob das Alter größer als 18 ist, und eine entsprechende Nachricht in der Konsole ausgibt.</p>
@@ -778,6 +835,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 5.4</div>
         <div class="aufgabentext">
             <p>Erstelle ein HTML-Formular mit einem Dropdown-Menü für die Auswahl eines Landes. Schreibe ein Skript mit jQuery, das das ausgewählte Land in der Konsole ausgibt, wenn das Formular übermittelt wird.</p>
@@ -796,6 +855,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 5.5</div>
         <div class="aufgabentext">
             <p>Erstelle ein HTML-Formular mit mehreren Eingabefeldern für Name, Alter und E-Mail. Schreibe ein Skript, das die Eingaben validiert und eine Fehlermeldung ausgibt, wenn ein Feld leer ist.</p>
@@ -820,9 +881,11 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 5.6</div>
         <div class="aufgabentext">
-            <p>Erstelle ein HTML-Formular mit einem Textfeld und einem Button. Schreibe ein Skript mit jQuery, das das Textfeld leert, nachdem der Button geklickt wurde.</p>
+            <p>Erstelle ein HTML-Formular mit einem Textfeld "meinTextfeld" und einem Button "meinButton". Schreibe ein Skript mit jQuery, das das Textfeld leert, nachdem der Button geklickt wurde.</p>
             <div class="code-container">
                 <span class="toggle-button">Lösung anzeigen</span>
                 <div class="code-content">
@@ -843,115 +906,69 @@
         <div class="aufgabentext">
             <p>Erstelle ein HTML-Formular mit einem Textfeld für den Namen und einem Button. Schreibe ein Skript, das den eingegebenen Namen in der Konsole ausgibt, wenn der Button geklickt wird.</p>
             <div class="code-container">
-                <span class="toggle-button">Lösung anzeigen</span>
+                <span class="toggle-button-help">Hilfe anzeigen</span>
                 <div class="code-content">
-                    <pre class="aufgabenloesung">
-                        <code class="language-js">
-                            document.getElementById("meinButton").addEventListener("click", function() {
-                                let name = document.getElementById("name").value;
-                                console.log("Eingegebener Name:", name);
-                            });
-                        </code>
-                    </pre>
+                    <p>Schaue Dir Aufgabe 4.1 und   5.1 an.</p>
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 6.2</div>
         <div class="aufgabentext">
             <p>Erstelle ein HTML-Formular mit zwei Eingabefeldern für Vorname und Nachname. Schreibe ein Skript, das den vollständigen Namen in der Konsole ausgibt, wenn das Formular übermittelt wird.</p>
             <div class="code-container">
-                <span class="toggle-button">Lösung anzeigen</span>
+                <span class="toggle-button-help">Hilfe anzeigen</span>
                 <div class="code-content">
-                    <pre class="aufgabenloesung">
-                        <code class="language-js">
-                            document.getElementById("meinFormular").addEventListener("submit", function(event) {
-                                event.preventDefault();
-                                let vorname = document.getElementById("vorname").value;
-                                let nachname = document.getElementById("nachname").value;
-                                console.log("Vollständiger Name:", vorname + " " + nachname);
-                            });
-                        </code>
-                    </pre>
+                    <p>Schaue Dir Aufgabe 4.2 und 5.2 an.</p>
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 6.3</div>
         <div class="aufgabentext">
             <p>Erstelle ein HTML-Formular mit einem Eingabefeld für das Alter. Schreibe ein Skript, das überprüft, ob das Alter größer als 18 ist, und eine entsprechende Nachricht in der Konsole ausgibt.</p>
             <div class="code-container">
-                <span class="toggle-button">Lösung anzeigen</span>
+                <span class="toggle-button-help">Hilfe anzeigen</span>
                 <div class="code-content">
-                    <pre class="aufgabenloesung">
-                        <code class="language-js">
-                            document.getElementById("meinFormular").addEventListener("submit", function(event) {
-                                event.preventDefault();
-                                let alter = parseInt(document.getElementById("alter").value);
-                                if (alter > 18) {
-                                    console.log("Alter ist größer als 18.");
-                                } else {
-                                    console.log("Alter ist 18 oder kleiner.");
-                                }
-                            });
-                        </code>
-                    </pre>
+                    <p>Schaue Dir Aufgabe 4.3 und 5.3 an.</p>
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 6.4</div>
         <div class="aufgabentext">
             <p>Erstelle ein HTML-Formular mit einem Dropdown-Menü für die Auswahl eines Landes. Schreibe ein Skript mit jQuery, das das ausgewählte Land in der Konsole ausgibt, wenn das Formular übermittelt wird.</p>
             <div class="code-container">
-                <span class="toggle-button">Lösung anzeigen</span>
+                <span class="toggle-button-help">Hilfe anzeigen</span>
                 <div class="code-content">
-                    <pre class="aufgabenloesung">
-                        <code class="language-js">
-                            $("#meinFormular").submit(function(event) {
-                                event.preventDefault();
-                                let land = $("#land").val();
-                                console.log("Ausgewähltes Land:", land);
-                            });
-                        </code>
-                    </pre>
+                    <p>Schaue Dir Aufgabe 4.4 und 5.4 an.</p>
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 6.5</div>
         <div class="aufgabentext">
             <p>Erstelle ein HTML-Formular mit mehreren Eingabefeldern für Name, Alter und E-Mail. Schreibe ein Skript, das die Eingaben validiert und eine Fehlermeldung ausgibt, wenn ein Feld leer ist.</p>
             <div class="code-container">
-                <span class="toggle-button">Lösung anzeigen</span>
+                <span class="toggle-button-help">Hilfe anzeigen</span>
                 <div class="code-content">
-                    <pre class="aufgabenloesung">
-                        <code class="language-js">
-                            document.getElementById("meinFormular").addEventListener("submit", function(event) {
-                                event.preventDefault();
-                                let name = document.getElementById("name").value.trim();
-                                let alter = document.getElementById("alter").value.trim();
-                                let email = document.getElementById("email").value.trim();
-                                if (!name || !alter || !email) {
-                                    console.log("Bitte füllen Sie alle Felder aus.");
-                                } else {
-                                    console.log("Formular ist gültig.");
-                                }
-                            });
-                        </code>
-                    </pre>
+                    <p>Schaue Dir Aufgabe 4.5 und 5.5 an.</p>
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 6.6</div>
         <div class="aufgabentext">
-            <p>Erstelle ein HTML-Formular mit einem Textfeld und einem Button. Schreibe ein Skript mit jQuery, das das Textfeld leert, nachdem der Button geklickt wurde.</p>
+            <p>Erstelle ein HTML-Formular mit einem Textfeld "meinTextfeld" und einem Button "meinButton". Schreibe ein Skript mit jQuery, das das Textfeld leert, nachdem der Button geklickt wurde.</p>
             <div class="code-container">
-                <span class="toggle-button">Lösung anzeigen</span>
+                <span class="toggle-button-help">Hilfe anzeigen</span>
                 <div class="code-content">
-                    <pre class="aufgabenloesung">
-                        <code class="language-js">
-                            $("#meinButton").click(function() {
-                                $("#meinTextfeld").val("");
-                            });
-                        </code>
-                    </pre>
+                    <p>Schaue Dir Aufgabe 4.6 und 5.6 an.</p>
                 </div>
             </div>
         </div>

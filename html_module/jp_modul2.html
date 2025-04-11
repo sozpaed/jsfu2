@@ -463,7 +463,7 @@
     <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 5.2</div>
         <div class="aufgabentext">
-            <p>Schreibe ein Skript, das den Inhalt eines Textfelds in der Konsole ausgibt, wenn ein Button geklickt wird.</p>
+            <p>Schreibe ein Skript, das den Inhalt eines Textfelds "meinTextfeld" in der Konsole ausgibt, wenn ein Button "meinButton" geklickt wird.</p>
             <textarea id="input-aufgabe-5-2" placeholder="Schreibe deinen Code hier..."></textarea>
             <button type="button" onclick="checkCodeWithScript('input-aufgabe-5-2', 'solution-5-2')">Antwort prüfen</button>
             <div id="feedback-input-aufgabe-5-2" class="feedback"></div>
@@ -525,7 +525,7 @@
     <div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 5.4</div>
         <div class="aufgabentext">
-            <p>Erstelle ein HTML-Dokument mit zwei Buttons. Schreibe ein Skript mit jQuery, das unterschiedliche Nachrichten in der Konsole ausgibt, je nachdem, welcher Button geklickt wird.</p>
+            <p>Erstelle ein HTML-Dokument mit zwei Buttons "button1" und "button2". Schreibe ein Skript mit jQuery, das unterschiedliche Nachrichten in der Konsole ausgibt, je nachdem, welcher Button geklickt wird.</p>
             <div class="code-container">
                 <span class="toggle-button">Lösung anzeigen</span>
                 <div class="code-content">
@@ -581,7 +581,7 @@
     <div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 5.6</div>
         <div class="aufgabentext">
-            <p>Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript mit jQuery, das den Text eines HTML-Elements ändert und eine Nachricht in der Konsole ausgibt, wenn der Button geklickt wird.</p>
+            <p>Erstelle ein HTML-Dokument mit einem Button "meinButton". Schreibe ein Skript mit jQuery, das den Text "meinText" eines HTML-Elements in "Text wurde geändert!" ändert und eine Nachricht in der Konsole "Button wurde geklickt und Text geändert!" ausgibt, wenn der Button geklickt wird.</p>
             <div class="code-container">
                 <span class="toggle-button">Lösung anzeigen</span>
                 <div class="code-content">
@@ -607,21 +607,11 @@
     <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 6.1</div>
         <div class="aufgabentext">
-            <p>Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das eine Nachricht in der Konsole ausgibt, wenn der Button geklickt wird.</p>
+            <p>Erstelle ein HTML-Dokument mit einem Button "meinButton". Schreibe ein Skript, das eine Nachricht in der Konsole ausgibt, wenn der Button geklickt wird.</p>
             <div class="code-container">
                 <span class="toggle-button-help">Hilfe anzeigen</span>
                 <div class="code-content">
-                    <pre class="aufgabenloesung">
-                        <code class="language-html">
-                            &lt;button id="meinButton"&gt;Klick mich!&lt;/button&gt;
-                            &lt;script&gt;
-                                let button = document.getElementById("meinButton");
-                                button.addEventListener("click", function() {
-                                    console.log("Button wurde geklickt!");
-                                });
-                            &lt;/script&gt;
-                        </code>
-                    </pre>
+                    <p>Schaue Dir Aufgabe 4.3 und 5.1 an.</p>
                 </div>
             </div>
         </div>
@@ -629,22 +619,14 @@
     <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 6.2</div>
         <div class="aufgabentext">
-            <p>Schreibe den JavaScript-Code, um den Inhalt eines Textfelds in der Konsole auszugeben, wenn ein Button geklickt wird.</p>
+            <p>Schreibe ein Skript, das den Inhalt eines Textfelds "meinTextfeld" in der Konsole ausgibt, wenn ein Button "meinButton" geklickt wird.</p>
             <textarea id="input-aufgabe-6-2" placeholder="Schreibe deinen Code hier..."></textarea>
             <button type="button" onclick="checkCodeWithScript('input-aufgabe-6-2', 'solution-6-2')">Antwort prüfen</button>
             <div id="feedback-input-aufgabe-6-2" class="feedback"></div>
             <div class="code-container">
                 <span class="toggle-button-help">Hilfe anzeigen</span>
                 <div class="code-content" style="display: none;">
-                    <pre class="aufgabenloesung">
-                        <code id="solution-6-2" class="language-js">
-                            let button = document.getElementById("meinButton");
-                            let textfeld = document.getElementById("meinTextfeld");
-                            button.addEventListener("click", function() {
-                                console.log(textfeld.value);
-                            });
-                        </code>
-                    </pre>
+                    <p>Schaue Dir die Aufgabe 4.2 und 5.2 an.</p>
                 </div>
             </div>
             <script id="solution-6-2" type="text/plain">
@@ -659,10 +641,11 @@
     <div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 6.3</div>
         <div class="aufgabentext">
-            <p>Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das den Text eines HTML-Elements ändert, wenn der Button geklickt wird.</p>
+            <p>Erstelle ein HTML-Dokument mit einem Button "meinButton". Schreibe ein Skript, das den Text "meinText" eines HTML-Elements ändert, wenn der Button "meinButton" geklickt wird.</p>
             <div class="code-container">
                 <span class="toggle-button-help">Hilfe anzeigen</span>
                 <div class="code-content">
+                    <p>Schaue Dir ebenfalls die Aufgaben 4.2 und 5.3 an.</p>
                     <pre class="aufgabenloesung">
                         <code class="language-html">
                             &lt;button id="meinButton"&gt;Ändere Text&lt;/button&gt;
@@ -683,27 +666,11 @@
     <div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 6.4</div>
         <div class="aufgabentext">
-            <p>Erstelle ein HTML-Dokument mit zwei Buttons. Schreibe ein Skript mit jQuery, das unterschiedliche Nachrichten in der Konsole ausgibt, je nachdem, welcher Button geklickt wird.</p>
+            <p>Erstelle ein HTML-Dokument mit zwei Buttons "button1" und "button2". Schreibe ein Skript mit jQuery, das unterschiedliche Nachrichten in der Konsole ausgibt, je nachdem, welcher Button geklickt wird.</p>
             <div class="code-container">
                 <span class="toggle-button-help">Hilfe anzeigen</span>
                 <div class="code-content">
-                    <pre class="aufgabenloesung">
-                        <code class="language-html">
-                            &lt;button id="button1"&gt;Button 1&lt;/button&gt;
-                            &lt;button id="button2"&gt;Button 2&lt;/button&gt;
-                            &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
-                            &lt;script&gt;
-                                // Füge Klick-Listener mit jQuery hinzu
-                                $("#button1").click(function() {
-                                    console.log("Button 1 wurde geklickt!");
-                                });
-    
-                                $("#button2").click(function() {
-                                    console.log("Button 2 wurde geklickt!");
-                                });
-                            &lt;/script&gt;
-                        </code>
-                    </pre>
+                    <p>Schaue Dir Aufgabe 4.3 und 5.4 an.</p>
                 </div>
             </div>
         </div>
@@ -711,21 +678,14 @@
     <div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 6.5</div>
         <div class="aufgabentext">
-            <p>Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das den Hintergrund der Seite ändert, wenn der Button geklickt wird.</p>
+            <p>Erstelle ein HTML-Dokument mit einem Button "meinButton". Schreibe ein Skript, das den Hintergrund der Seite in "lightblue" ändert, wenn der Button geklickt wird.</p>
             <textarea id="input-aufgabe-6-5" placeholder="Schreibe deinen Code hier..."></textarea>
             <button type="button" onclick="checkCodeWithScript('input-aufgabe-6-5', 'solution-6-5')">Antwort prüfen</button>
             <div id="feedback-input-aufgabe-6-5" class="feedback"></div>
             <div class="code-container">
                 <span class="toggle-button-help">Hilfe anzeigen</span>
                 <div class="code-content" style="display: none;">
-                    <pre class="aufgabenloesung">
-                        <code id="solution-6-5" class="language-js">
-                            let button = document.getElementById("meinButton");
-                            button.addEventListener("click", function() {
-                                document.body.style.backgroundColor = "lightblue";
-                            });
-                        </code>
-                    </pre>
+                    <p>Schaue Dir die Aufgabe 4.2 und 5.5 an.</p>
                 </div>
             </div>
             <script id="solution-6-5" type="text/plain">
@@ -739,24 +699,11 @@
     <div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 6.6</div>
         <div class="aufgabentext">
-            <p>Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript mit jQuery, das den Text eines HTML-Elements ändert und eine Nachricht in der Konsole ausgibt, wenn der Button geklickt wird.</p>
+            <p>Erstelle ein HTML-Dokument mit einem Button "meinButton". Schreibe ein Skript mit jQuery, das den Text "meinText" eines HTML-Elements in "Text wurde geändert!" ändert und eine Nachricht in der Konsole "Button wurde geklickt und Text geändert!" ausgibt, wenn der Button geklickt wird.</p>
             <div class="code-container">
                 <span class="toggle-button-help">Hilfe anzeigen</span>
                 <div class="code-content">
-                    <pre class="aufgabenloesung">
-                        <code class="language-html">
-                            &lt;button id="meinButton"&gt;Ändere Text und gebe Nachricht aus&lt;/button&gt;
-                            &lt;p id="meinText"&gt;Ursprünglicher Text&lt;/p&gt;
-                            &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
-                            &lt;script&gt;
-                                // Füge einen Klick-Listener mit jQuery hinzu
-                                $("#meinButton").click(function() {
-                                    $("#meinText").text("Text wurde geändert!");
-                                    console.log("Button wurde geklickt und Text geändert!");
-                                });
-                            &lt;/script&gt;
-                        </code>
-                    </pre>
+                    <p>Schaue Dir Aufgabe 4.3 und 5.6 an.</p>
                 </div>
             </div>
         </div>
