@@ -326,6 +326,13 @@
         <p><b>JavaScript-Code (jp_steinscherepapier.js)</b></p>
         <pre class="code-container">
             <code class="language-js">
+                // Tausche den Code aus Modul 2
+                $(document).ready(function () {
+                    $('#sozStartButton').click(function () {
+                        playGame();
+                    });
+                });
+
                 // Tausche den Code aus Modul 4
                 function playGame() {
                     let userChoice = parseInt($('#firstNumber').val());

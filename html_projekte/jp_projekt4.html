@@ -12,6 +12,7 @@
     <script src="../script/jp_projekt4.js"></script>
 </head>
 <body>
+    <!-- Navigation -->
     <div class="link-container">
         <a id="start" href="../start.html">🏠 Start</a>
         <a href="./jp_projekt1.html">🧮 Einmaleins</a>
@@ -20,25 +21,209 @@
         <a href="./jp_projekt4.html">🔢 Zahlenraten</a>
         <a href="./jp_projekt5.html">🎮 Stein, Schere, Papier</a>
     </div>
-    <h1>Zahlenraten</h1>
-    <div class="content">
-        <h2>Willkommen zu Zahlenraten!</h2>
-        <p>Der Computer wählt eine Zahl, und du musst sie erraten. Gib deine Vermutung ein und drücke auf "Raten".</p>
-        <p>Viel Spaß beim Spielen!</p>
+
+    <!-- Teaser -->
+    <h1>🔢 JS :: Projekt 4 :: Zahlenraten</h1>
+    <h2>🎬 1 Teaser</h2>
+    <div class="teaser">
+        <p>In diesem Projekt lernst du, wie du ein Zahlenratenspiel mit JavaScript umsetzen kannst. Der Computer wählt eine zufällige Zahl, und du musst sie erraten.</p>
+        <p>Das Projekt ist in Module aufgeteilt, die du Schritt für Schritt bearbeiten kannst. Am Ende setzt du alle Teile zusammen, um das vollständige Spiel zu erstellen.</p>
+        <p>Verwende den CSS-Code, der am Ende der Seite angegeben wird, und lege diesen in der Datei `jp_projekte.css` ab.</p>
     </div>
+
+    <!-- Kriterien -->
+    <h2>🛠️ 2 Kriterien</h2>
+    <div class="criteria">
+        <p>Die Aufteilung des Programms richtet sich nach den Modulen:</p>
+        <ul>
+            <li>Modul 1: Grundlagen von JavaScript</li>
+            <li>Modul 2: Interaktion mit der Webseite</li>
+            <li>Modul 3: Zufallszahlen generieren</li>
+            <li>Modul 4: Benutzerinteraktion über Formulare</li>
+            <li>Modul 5: Entwicklung interaktiver Elemente</li>
+        </ul>
+        <p>Dieses Projekt ist bestanden, wenn alle der folgenden Punkte erfüllt sind:</p>
+        <ul>
+            <li>Das Projekt ist vollständig und funktionsfähig.</li>
+            <li>Die Code-Teile sind entsprechend der Module in der richtigen Reihenfolge bearbeitet.</li>
+            <li>Das Projekt ist in einem eigenen Verzeichnis gespeichert.</li>
+            <li>Der HTML-, JavaScript- und CSS-Code ist ausführlich kommentiert.</li>
+        </ul>
+    </div>
+
+    <!-- Einteilung in die Module -->
+    <h2>📚 3 Einteilung in die Module</h2>
+
+    <!-- Modul 1 -->
+    <h3>📘 Modul 1: Grundlagen von JavaScript</h3>
+    <div class="module" id="module1">
+        <p>Der folgende Code zeigt, wie Variablen definiert und einfache Berechnungen durchgeführt werden.</p>
+        <p><b>JavaScript-Code (jp_projekt4.js)</b></p>
+        <pre class="code-container">
+            <code class="language-js">
+                let randomNumber = Math.floor(Math.random() * 10) + 1;
+                console.log(randomNumber);
+            </code>
+        </pre>
+    </div>
+
+    <!-- Modul 2 -->
+    <h3>📗 Modul 2: Interaktion mit der Webseite</h3>
+    <div class="module" id="module2">
+        <p>Der folgende Code zeigt, wie ein Event-Listener verwendet wird, um eine Funktion auszuführen, wenn ein Button geklickt wird.</p>
+        <p><b>JavaScript-Code (jp_projekt4.js)</b></p>
+        <pre class="code-container">
+            <code class="language-js">
+                $(document).ready(function () {
+                    $('#sozStartButton').click(function () {
+                        alert('Spiel gestartet!');
+                    });
+                });
+            </code>
+        </pre>
+    </div>
+
+    <!-- Modul 3 -->
+    <h3>📙 Modul 3: Zufallszahlen generieren</h3>
+    <div class="module" id="module3">
+        <p>Der folgende Code zeigt, wie der Computer eine zufällige Zahl generiert.</p>
+        <p><b>JavaScript-Code (jp_projekt4.js)</b></p>
+        <pre class="code-container">
+            <code class="language-js">
+                function getRandomNumber() {
+                    return Math.floor(Math.random() * 10) + 1;
+                }
+            </code>
+        </pre>
+    </div>
+
+    <!-- Modul 4 -->
+    <h3>📕 Modul 4: Benutzerinteraktion über Formulare</h3>
+    <div class="module" id="module4">
+        <p>Der folgende Code liest die Eingabe des Benutzers aus und überprüft, ob sie gültig ist.</p>
+        <p><b>JavaScript-Code (jp_projekt4.js)</b></p>
+        <pre class="code-container">
+            <code class="language-js">
+                function isValidGuess(guess) {
+                    return !isNaN(guess) && guess >= 1 und guess <= 10;
+                }
+
+                function checkGuess(userChoice, randomNumber) {
+                    if (userChoice === randomNumber) {
+                        return `Herzlichen Glückwunsch! Du hast gewonnen! Die Zahl war ${randomNumber}.`;
+                    } else if (userChoice < randomNumber) {
+                        return 'Deine Zahl ist zu niedrig. Versuche es erneut.';
+                    } else {
+                        return 'Deine Zahl ist zu hoch. Versuche es erneut.';
+                    }
+                }
+            </code>
+        </pre>
+    </div>
+
+    <!-- Modul 5 -->
+    <h3>🎮 Modul 5: Entwicklung interaktiver Elemente</h3>
+    <div class="module" id="module5">
+        <p>Der folgende Code zeigt, wie das Ergebnis des Spiels angezeigt wird.</p>
+        <p><b>JavaScript-Code (jp_projekt4.js)</b></p>
+        <pre class="code-container">
+            <code class="language-js">
+                function updateResultDisplay(message, type) {
+                    const resultElement = $('#showCallbackOfChallenge');
+                    resultElement.css('visibility', 'visible');
+
+                    if (type === 'error') {
+                        resultElement.css('background-color', '#c22b67');
+                    } else if (type === 'success') {
+                        resultElement.css('background-color', '#28a745');
+                    }
+
+                    resultElement.html(message);
+                }
+            </code>
+        </pre>
+    </div>
+
+    <!-- Kompletter Code -->
+    <h2>📄 4 Kompletter Code</h2>
+    <div class="module" id="completeCode">
+        <p>Hier ist der komplette Code für das Projekt:</p>
+        <pre class="code-container">
+            <code class="language-js">
+                // Kompletter JavaScript-Code
+                $(document).ready(function () {
+                    let randomNumber = getRandomNumber();
+                    let attempts = 0;
+
+                    $('#sozStartButton').click(function () {
+                        playGame();
+                    });
+
+                    function playGame() {
+                        let userChoice = parseInt($('#firstNumber').val());
+
+                        if (isNaN(userChoice) || userChoice < 1 || userChoice > 10) {
+                            updateResultDisplay('Bitte nur Zahlen zwischen 1 und 10 eingeben.', 'error');
+                            return;
+                        }
+
+                        attempts++;
+                        let result = checkGuess(userChoice, randomNumber);
+
+                        updateResultDisplay(result, result.includes('gewonnen') ? 'success' : 'error');
+
+                        if (result.includes('gewonnen')) {
+                            randomNumber = getRandomNumber();
+                            attempts = 0;
+                        }
+                    }
+
+                    function getRandomNumber() {
+                        return Math.floor(Math.random() * 10) + 1;
+                    }
+
+                    function checkGuess(userChoice, randomNumber) {
+                        if (userChoice === randomNumber) {
+                            return `Herzlichen Glückwunsch! Du hast gewonnen! Die Zahl war ${randomNumber}.`;
+                        } else if (userChoice < randomNumber) {
+                            return 'Deine Zahl ist zu niedrig. Versuche es erneut.';
+                        } else {
+                            return 'Deine Zahl ist zu hoch. Versuche es erneut.';
+                        }
+                    }
+
+                    function updateResultDisplay(message, type) {
+                        const resultElement = $('#showCallbackOfChallenge');
+                        resultElement.css('visibility', 'visible');
+
+                        if (type === 'error') {
+                            resultElement.css('background-color', '#c22b67');
+                        } else if (type === 'success') {
+                            resultElement.css('background-color', '#28a745');
+                        }
+
+                        resultElement.html(message);
+                    }
+                });
+            </code>
+        </pre>
+    </div>
+
+    <!-- Projektbereich -->
+    <h2>🔢 5 Probiere das Spiel aus!</h2>
     <div class="projektarea">
         <div id="showChallenge">Zum Raten drücke auf <b>"Raten"</b></div>
         <div id="getResultOfChallenge">
             <div id="showCallbackOfChallenge" style="visibility: hidden;"></div>
             <form name="userInputForm">
                 <label for="firstNumber">Deine Zahl:</label>
-                <input type="number" id="firstNumber" name="firstNumber" min="1" max="100" required />
+                <input type="number" id="firstNumber" name="firstNumber" min="1" max="10" required />
             </form>
         </div>
         <div id="listOfButtons">
             <form name="listOfButtons">
-                <input type="button" id="sozStartButton" value="Raten"/>
-                <input type="button" id="sozReloadButton" value="Seite neu laden" onclick="location.reload(true)"/>
+                <input type="button" id="sozStartButton" value="Raten" />
+                <input type="button" id="sozReloadButton" value="Seite neu laden" onclick="location.reload(true)" />
             </form>
         </div>
     </div>

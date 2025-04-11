@@ -211,6 +211,11 @@
         <p><b>JavaScript-Code (jp_notenschnitt.js)</b></p>
         <pre class="code-container">
             <code class="language-js">
+                // Tausche diesen Code-Teil mit dem aus Modul 2
+                $(document).ready(function () {
+                    $('#sozStartButton').click(getInputAndCalculate);
+                });
+                
                 // Ergänze diesen Code-Teil zum Beispiel aus Modul 3
                 function getInputAndCalculate() {
                     const inputValue = parseInt($('#firstNumber').val(), 10);

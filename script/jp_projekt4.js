@@ -1,27 +1,23 @@
 /*
  * JavaScript zum Zahlenraten
  * =============================
- * Autor: Christian Leeser (camber.leaflet_0z@icloud.com)
- * Version: 0.1 (Stand: 08.03.2025)
+ * Autor: Christian Leeser
+ * Version: 0.2 (Stand: 11.04.2025)
  * 
  * Inhalt:
  * ----------------------------------------------------------------
- * - playGame: Holt die Eingabe des Nutzers, validiert sie und führt das Spiel aus.
+ * - playGame: Führt das Spiel aus, validiert die Eingabe und zeigt das Ergebnis an.
  * - getRandomNumber: Generiert eine zufällige Zahl zwischen 1 und 10.
  * - checkGuess: Überprüft die Eingabe des Nutzers und gibt das Ergebnis zurück.
- * 
- * Lizenz:
- * ----------------------------------------------------------------
- * Creative-Commons CC BY-SA 4.0 by Christian Leeser (08.03.2025)
- * https://creativecommons.org/licenses/by-sa/4.0/
+ * - updateResultDisplay: Zeigt Nachrichten im Ergebnisbereich an.
  */
 
 $(document).ready(function () {
     // Initialisierung der Zufallszahl und der Anzahl der Versuche
-    let randomNumber = getRandomNumber(); // Generiert eine Zufallszahl zwischen 1 und 10
-    let attempts = 0; // Zählt die Anzahl der Versuche des Nutzers
+    let randomNumber = getRandomNumber(); // Zufallszahl zwischen 1 und 10
+    let attempts = 0; // Zählt die Versuche des Nutzers
 
-    // Event-Listener: Führt die Funktion playGame aus, wenn der Button mit der ID 'sozStartButton' geklickt wird
+    // Event-Listener: Startet das Spiel, wenn der Button geklickt wird
     $('#sozStartButton').click(function () {
         playGame();
     });
@@ -31,31 +27,25 @@ $(document).ready(function () {
      * Holt die Eingabe des Nutzers, validiert sie, überprüft die Eingabe und zeigt das Ergebnis an.
      */
     function playGame() {
-        // Holt die Eingabe des Nutzers aus dem Input-Feld mit der ID 'firstNumber'
-        let userChoice = $('#firstNumber').val();
-        userChoice = parseInt(userChoice); // Konvertiert die Eingabe in eine Ganzzahl
+        // Eingabe des Nutzers abrufen und in eine Zahl umwandeln
+        let userChoice = parseInt($('#firstNumber').val());
 
-        // Überprüft, ob die Eingabe eine gültige Zahl zwischen 1 und 10 ist
+        // Eingabe validieren
         if (isNaN(userChoice) || userChoice < 1 || userChoice > 10) {
-            // Zeigt eine Fehlermeldung an, wenn die Eingabe ungültig ist
-            $('#showCallbackOfChallenge').css('background-color', '#c22b67'); // Hintergrundfarbe für Fehler
-            $('#showCallbackOfChallenge').css('visibility', 'visible'); // Sichtbarkeit aktivieren
-            $('#showCallbackOfChallenge').html('Bitte nur Zahlen zwischen 1 und 10 eintragen.'); // Fehlermeldung
-            return; // Beendet die Funktion bei ungültiger Eingabe
+            updateResultDisplay('Bitte nur Zahlen zwischen 1 und 10 eingeben.', 'error');
+            return;
         }
 
-        // Erhöht die Anzahl der Versuche
+        // Anzahl der Versuche erhöhen
         attempts++;
 
-        // Überprüft die Eingabe des Nutzers und gibt das Ergebnis zurück
+        // Überprüfung der Eingabe
         let result = checkGuess(userChoice, randomNumber);
 
-        // Zeigt das Ergebnis des Spiels an
-        $('#showCallbackOfChallenge').css('background-color', '#28a745'); // Hintergrundfarbe für Erfolg
-        $('#showCallbackOfChallenge').css('visibility', 'visible'); // Sichtbarkeit aktivieren
-        $('#showCallbackOfChallenge').html(result);
+        // Ergebnis anzeigen
+        updateResultDisplay(result, result.includes('gewonnen') ? 'success' : 'error');
 
-        // Wenn der Nutzer die richtige Zahl errät, wird das Spiel zurückgesetzt
+        // Wenn die Zahl erraten wurde, Spiel zurücksetzen
         if (result.includes('gewonnen')) {
             randomNumber = getRandomNumber(); // Neue Zufallszahl generieren
             attempts = 0; // Versuche zurücksetzen
@@ -68,7 +58,7 @@ $(document).ready(function () {
      * @returns {number} - Eine Zufallszahl zwischen 1 und 10.
      */
     function getRandomNumber() {
-        return Math.floor(Math.random() * 10) + 1; // Zufällige Zahl zwischen 1 und 10
+        return Math.floor(Math.random() * 10) + 1;
     }
 
     /**
@@ -80,11 +70,34 @@ $(document).ready(function () {
      */
     function checkGuess(userChoice, randomNumber) {
         if (userChoice === randomNumber) {
-            return 'Herzlichen Glückwunsch! Sie haben gewonnen! Die Zahl war ' + randomNumber + '.';
+            return `Herzlichen Glückwunsch! Du hast gewonnen! Die Zahl war ${randomNumber}.`;
         } else if (userChoice < randomNumber) {
-            return 'Ihre Zahl ist zu niedrig. Versuchen Sie es erneut.';
+            return 'Deine Zahl ist zu niedrig. Versuche es erneut.';
         } else {
-            return 'Ihre Zahl ist zu hoch. Versuchen Sie es erneut.';
+            return 'Deine Zahl ist zu hoch. Versuche es erneut.';
         }
+    }
+
+    /**
+     * Zeigt eine Nachricht im Ergebnisbereich an und passt die Hintergrundfarbe an.
+     * 
+     * @param {string} message - Die anzuzeigende Nachricht.
+     * @param {string} type - Der Typ der Nachricht ('success' oder 'error').
+     */
+    function updateResultDisplay(message, type) {
+        const resultElement = $('#showCallbackOfChallenge');
+
+        // Sichtbarkeit aktivieren
+        resultElement.css('visibility', 'visible');
+
+        // Hintergrundfarbe basierend auf dem Typ setzen
+        if (type === 'error') {
+            resultElement.css('background-color', '#c22b67'); // Rot für Fehler
+        } else if (type === 'success') {
+            resultElement.css('background-color', '#28a745'); // Grün für Erfolg
+        }
+
+        // Nachricht anzeigen
+        resultElement.html(message);
     }
 });
