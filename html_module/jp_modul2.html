@@ -273,17 +273,57 @@
     <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 4.1</div>
         <div class="aufgabentext">
-            <p>Beschreibe, wie du eine JavaScript-Datei mit einer HTML-Datei verknüpfen kannst.</p>
+            <p>Bestimme, welche der folgenden Optionen eine JavaScript-Datei ordentlich mit einer HTML-Datei verknüpft.</p>
+            <form id="aufgabe-4-1">
+                <div>
+                    <input type="checkbox" id="option4-1-1" name="option4-1-1">
+                    <label for="option4-1-1">
+                        <pre class="aufgaben">
+                            <code class="language-html">
+                                    &lt;link src="script.js"&gt;&lt;/link&gt;
+                            </code>
+                        </pre>
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option4-1-2" name="option4-1-2">
+                    <label for="option4-1-2">
+                        <pre class="aufgaben">
+                            <code class="language-html">
+                                    &lt;a src="script.js"&gt;&lt;/a&gt;
+                            </code>
+                        </pre>
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option4-1-3" name="option4-1-3">
+                    <label for="option4-1-3">
+                        <pre class="aufgaben">
+                            <code class="language-html">
+                                &lt;script src="script.js"&gt;&lt;/script&gt;
+                            </code>
+                        </pre>
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option4-1-4" name="option4-1-4">
+                    <label for="option4-1-4">
+                        <pre class="aufgaben">
+                            <code class="language-html">
+                                    &lt;s src="script.js"&gt;&lt;/s&gt;
+                            </code>
+                        </pre>
+                    </label>
+                </div>
+                <button type="button" onclick="checkM2Answers41()">Antwort prüfen</button>
+            </form>
+            <div id="feedback-aufgabe-4-1" class="feedback"></div>
             <div class="code-container">
                 <span class="toggle-button">Lösung anzeigen</span>
                 <div class="code-content">
                     <pre class="aufgabenloesung">
                         <code class="language-html">
-                            &lt;script&gt;
-                                // Verknüpfung einer JavaScript-Datei mit einer HTML-Datei
-                                // Beispiel: Einbindung einer externen Datei
-                                &lt;script src="script.js"&gt;&lt;/script&gt;
-                            &lt;/script&gt;
+                            &lt;script src="script.js"&gt;&lt;/script&gt;
                         </code>
                     </pre>
                 </div>
@@ -310,21 +350,38 @@
     </div>
     <div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 4.3</div>
-            <div class="aufgabentext">
-            <p>Was sind Ereignisse in der Webentwicklung? Nenne ein Beispiel.</p>
+        <div class="aufgabentext">
+            <p>Was sind Ereignisse in der Webentwicklung? Wähle die richtigen Aussagen aus.</p>
+            <form id="aufgabe-4-3">
+                <div>
+                    <input type="checkbox" id="option4-3-1" name="option4-3-1">
+                    <label for="option4-3-1">Ereignisse sind Aktionen, die auf einer Webseite stattfinden, z.B. ein Klick auf einen Button.</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option4-3-2" name="option4-3-2">
+                    <label for="option4-3-2">Ereignisse sind nur für die Gestaltung von CSS zuständig.</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option4-3-3" name="option4-3-3">
+                    <label for="option4-3-3">Ereignisse können durch Benutzerinteraktionen wie Klicks oder Tastendrücke ausgelöst werden.</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option4-3-4" name="option4-3-4">
+                    <label for="option4-3-4">Ereignisse sind nur für die Serverkommunikation zuständig.</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option4-3-5" name="option4-3-5">
+                    <label for="option4-3-5">Ereignisse können nur durch JavaScript ausgelöst werden.</label>
+                </div>
+                <button type="button" onclick="checkM2Answers43()">Antwort prüfen</button>
+            </form>
+            <div id="feedback-aufgabe-4-3" class="feedback"></div>
             <div class="code-container">
                 <span class="toggle-button">Lösung anzeigen</span>
                 <div class="code-content">
-                    <pre class="aufgabenloesung">
-                        <code class="language-js">
-                            // Ereignisse sind Aktionen, die auf einer Webseite stattfinden, z.B. ein Klick auf einen Button.
-                            // Beispiel:
-                            let button = document.getElementById("meinButton");
-                            button.addEventListener("click", function() {
-                                alert("Button wurde geklickt!");
-                            });
-                        </code>
-                    </pre>
+                    <p>Korrekte Antworten:</p>
+                    <p>1. Ereignisse sind Aktionen, die auf einer Webseite stattfinden, z.B. ein Klick auf einen Button.</p>
+                    <p>3. Ereignisse können durch Benutzerinteraktionen wie Klicks oder Tastendrücke ausgelöst werden.</p>
                 </div>
             </div>
         </div>

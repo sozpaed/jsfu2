@@ -112,7 +112,7 @@ function normalizeCode(code) {
         .trim(); // Anfangs- und Endleerzeichen entfernen
 }
 
-function checkAnswers41() {
+function checkM1Answers41() {
     const feedback = document.getElementById('feedback-aufgabe-4-1');
     const option1 = document.getElementById('option4-1-1').checked; // 123variable
     const option2 = document.getElementById('option4-1-2').checked; // meine-variable
@@ -127,7 +127,22 @@ function checkAnswers41() {
     }
 }
 
-function checkAnswers42() {
+function checkM2Answers41() {
+    const feedback = document.getElementById('feedback-aufgabe-4-1');
+    const option1 = document.getElementById('option4-1-1').checked; // 123variable
+    const option2 = document.getElementById('option4-1-2').checked; // meine-variable
+    const option3 = document.getElementById('option4-1-3').checked; // meineVariable
+    const option4 = document.getElementById('option4-1-4').checked; // var
+
+    // Richtige Antworten: meineVariable (option3)
+    if (option1 || option2 || option4 || !option3) {
+        feedback.innerText = "Falsch! Nur <script src='script.js'></script> ist ein gültiger Variablenname.";
+    } else {
+        feedback.innerText = "Richtig! <script src='script.js'></script> ist der einzige gültige Variablenname.";
+    }
+}
+
+function checkM1Answers42() {
     const feedback = document.getElementById('feedback-aufgabe-4-2');
     const option1 = document.getElementById('option4-2-1').checked; // Number
     const option2 = document.getElementById('option4-2-2').checked; // String
@@ -142,7 +157,7 @@ function checkAnswers42() {
     }
 }
 
-function checkAnswers43() {
+function checkM1Answers43() {
     const feedback = document.getElementById('feedback-aufgabe-4-3');
     const option1 = document.getElementById('option4-3-1').checked; // -
     const option2 = document.getElementById('option4-3-2').checked; // *
@@ -154,5 +169,19 @@ function checkAnswers43() {
         feedback.innerText = "Richtig! Es handelt sich um das +.";
     } else {
         feedback.innerText = "Falsch! Es handelt sich um das +.";
+    }
+}
+
+function checkM2Answers43() {
+    const feedback = document.getElementById("feedback-aufgabe-4-3");
+    const correctAnswers = ["option4-3-1", "option4-3-3"];
+    const selectedOptions = Array.from(document.querySelectorAll("#aufgabe-4-3 input:checked")).map(input => input.id);
+
+    if (selectedOptions.length === correctAnswers.length && selectedOptions.every(option => correctAnswers.includes(option))) {
+        feedback.innerHTML = "✅ Richtig! Ereignisse sind Aktionen, die auf einer Webseite stattfinden, und können durch Benutzerinteraktionen ausgelöst werden.";
+        feedback.style.color = "green";
+    } else {
+        feedback.innerHTML = "❌ Falsch. Überprüfe deine Auswahl. Tipp: Es gibt zwei richtige Antworten.";
+        feedback.style.color = "red";
     }
 }
