@@ -127,18 +127,18 @@ function checkM1Answers41() {
     }
 }
 
+// Funktion: Überprüft die Antworten für Aufgabe 4.1
 function checkM2Answers41() {
-    const feedback = document.getElementById('feedback-aufgabe-4-1');
-    const option1 = document.getElementById('option4-1-1').checked; // 123variable
-    const option2 = document.getElementById('option4-1-2').checked; // meine-variable
-    const option3 = document.getElementById('option4-1-3').checked; // meineVariable
-    const option4 = document.getElementById('option4-1-4').checked; // var
+    const feedback = document.getElementById("feedback-aufgabe-4-1");
+    const correctAnswers = ["option4-1-3"];
+    const selectedOptions = Array.from(document.querySelectorAll("#aufgabe-4-1 input:checked")).map(input => input.id);
 
-    // Richtige Antworten: meineVariable (option3)
-    if (option1 || option2 || option4 || !option3) {
-        feedback.innerText = "Falsch! Nur <script src='script.js'></script> ist ein gültiger Variablenname.";
+    if (selectedOptions.length === correctAnswers.length && selectedOptions.every(option => correctAnswers.includes(option))) {
+        feedback.innerHTML = "✅ Richtig! Die korrekte Verknüpfung erfolgt mit dem &lt;script&gt;-Tag.";
+        feedback.style.color = "green";
     } else {
-        feedback.innerText = "Richtig! <script src='script.js'></script> ist der einzige gültige Variablenname.";
+        feedback.innerHTML = "❌ Falsch. Überprüfe deine Auswahl. Tipp: Nur eine Option ist korrekt.";
+        feedback.style.color = "red";
     }
 }
 
@@ -154,6 +154,19 @@ function checkM1Answers42() {
         feedback.innerText = "Richtig! Es handelt sich um einen String.";
     } else {
         feedback.innerText = "Falsch! Es handelt sich um einen String.";
+    }
+}
+function checkM2Answer42() {
+    const feedback = document.getElementById("feedback-aufgabe-4-2");
+    const answer = document.getElementById("answer-4-2").value.trim();
+
+    const correctAnswer = 'let element = document.getElementById("meineID");';
+    if (answer === correctAnswer) {
+        feedback.innerHTML = "✅ Richtig! Du hast den Code korrekt geschrieben.";
+        feedback.style.color = "green";
+    } else {
+        feedback.innerHTML = "❌ Falsch. Überprüfe deinen Code. Tipp: Verwende document.getElementById().";
+        feedback.style.color = "red";
     }
 }
 
@@ -182,6 +195,62 @@ function checkM2Answers43() {
         feedback.style.color = "green";
     } else {
         feedback.innerHTML = "❌ Falsch. Überprüfe deine Auswahl. Tipp: Es gibt zwei richtige Antworten.";
+        feedback.style.color = "red";
+    }
+}
+
+// Funktion: Überprüft die Antworten für Aufgabe 5.3 (Multiple-Choice)
+function checkM2Answers53() {
+    const feedback = document.getElementById("feedback-aufgabe-5-3");
+    const correctAnswers = ["option5-3-1"];
+    const selectedOptions = Array.from(document.querySelectorAll("#aufgabe-5-3 input:checked")).map(input => input.id);
+
+    if (selectedOptions.length === correctAnswers.length && selectedOptions.every(option => correctAnswers.includes(option))) {
+        feedback.innerHTML = "✅ Richtig! Die Methode innerHTML wird verwendet, um den Text eines Elements zu ändern.";
+        feedback.style.color = "green";
+    } else {
+        feedback.innerHTML = "❌ Falsch. Überprüfe deine Auswahl. Tipp: Verwende innerHTML.";
+        feedback.style.color = "red";
+    }
+}
+
+// Funktion: Überprüft die Antwort für Aufgabe 5.5 (Texteingabe)
+function checkM2Answer55() {
+    const feedback = document.getElementById("feedback-aufgabe-5-5");
+    const answer = document.getElementById("answer-5-5").value.trim();
+
+    const correctAnswer = `
+let button = document.getElementById("meinButton");
+button.addEventListener("click", function() {
+    document.body.style.backgroundColor = "lightblue";
+});`.trim();
+
+    if (answer === correctAnswer) {
+        feedback.innerHTML = "✅ Richtig! Du hast den Code korrekt geschrieben.";
+        feedback.style.color = "green";
+    } else {
+        feedback.innerHTML = "❌ Falsch. Überprüfe deinen Code. Tipp: Verwende addEventListener und style.backgroundColor.";
+        feedback.style.color = "red";
+    }
+}
+
+// Funktion: Überprüft die Antwort für Aufgabe 6.2 (Texteingabe)
+function checkM2Answer62() {
+    const feedback = document.getElementById("feedback-aufgabe-6-2");
+    const answer = document.getElementById("answer-6-2").value.trim();
+
+    const correctAnswer = `
+let button = document.getElementById("meinButton");
+let textfeld = document.getElementById("meinTextfeld");
+button.addEventListener("click", function() {
+    console.log(textfeld.value);
+});`.trim();
+
+    if (answer === correctAnswer) {
+        feedback.innerHTML = "✅ Richtig! Du hast den Code korrekt geschrieben.";
+        feedback.style.color = "green";
+    } else {
+        feedback.innerHTML = "❌ Falsch. Überprüfe deinen Code. Tipp: Verwende value, um den Inhalt des Textfelds zu erhalten.";
         feedback.style.color = "red";
     }
 }

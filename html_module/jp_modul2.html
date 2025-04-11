@@ -273,54 +273,30 @@
     <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 4.1</div>
         <div class="aufgabentext">
-            <p>Bestimme, welche der folgenden Optionen eine JavaScript-Datei ordentlich mit einer HTML-Datei verknüpft.</p>
+            <p>Welche der folgenden Optionen verknüpfen eine JavaScript-Datei korrekt mit einer HTML-Datei?</p>
             <form id="aufgabe-4-1">
                 <div>
                     <input type="checkbox" id="option4-1-1" name="option4-1-1">
-                    <label for="option4-1-1">
-                        <pre class="aufgaben">
-                            <code class="language-html">
-                                    &lt;link src="script.js"&gt;&lt;/link&gt;
-                            </code>
-                        </pre>
-                    </label>
+                    <label for="option4-1-1">&lt;link src="script.js"&gt;&lt;/link&gt;</label>
                 </div>
                 <div>
                     <input type="checkbox" id="option4-1-2" name="option4-1-2">
-                    <label for="option4-1-2">
-                        <pre class="aufgaben">
-                            <code class="language-html">
-                                    &lt;a src="script.js"&gt;&lt;/a&gt;
-                            </code>
-                        </pre>
-                    </label>
+                    <label for="option4-1-2">&lt;a src="script.js"&gt;&lt;/a&gt;</label>
                 </div>
                 <div>
                     <input type="checkbox" id="option4-1-3" name="option4-1-3">
-                    <label for="option4-1-3">
-                        <pre class="aufgaben">
-                            <code class="language-html">
-                                &lt;script src="script.js"&gt;&lt;/script&gt;
-                            </code>
-                        </pre>
-                    </label>
+                    <label for="option4-1-3">&lt;script src="script.js"&gt;&lt;/script&gt;</label>
                 </div>
                 <div>
                     <input type="checkbox" id="option4-1-4" name="option4-1-4">
-                    <label for="option4-1-4">
-                        <pre class="aufgaben">
-                            <code class="language-html">
-                                    &lt;s src="script.js"&gt;&lt;/s&gt;
-                            </code>
-                        </pre>
-                    </label>
+                    <label for="option4-1-4">&lt;s src="script.js"&gt;&lt;/s&gt;</label>
                 </div>
                 <button type="button" onclick="checkM2Answers41()">Antwort prüfen</button>
             </form>
             <div id="feedback-aufgabe-4-1" class="feedback"></div>
             <div class="code-container">
                 <span class="toggle-button">Lösung anzeigen</span>
-                <div class="code-content">
+                <div class="code-content" style="display: none;">
                     <pre class="aufgabenloesung">
                         <code class="language-html">
                             &lt;script src="script.js"&gt;&lt;/script&gt;
@@ -333,19 +309,23 @@
     <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 4.2</div>
         <div class="aufgabentext">
-            <p>Erkläre, wie du HTML-Elemente anhand ihrer IDs auswählen kannst.</p>
+            <p>Schreibe den JavaScript-Code, um ein HTML-Element anhand seiner ID "meineID" auszuwählen.</p>
+            <textarea id="input-aufgabe-4-2" placeholder="Schreibe deinen Code hier..."></textarea>
+            <button type="button" onclick="checkCodeWithScript('input-aufgabe-4-2', 'solution-4-2')">Antwort prüfen</button>
+            <div id="feedback-input-aufgabe-4-2" class="feedback"></div>
             <div class="code-container">
                 <span class="toggle-button">Lösung anzeigen</span>
-                <div class="code-content">
+                <div class="code-content" style="display: none;">
                     <pre class="aufgabenloesung">
-                        <code class="language-js">
-                            // Auswahl eines HTML-Elements anhand seiner ID
+                        <code id="solution-4-2" class="language-js">
                             let element = document.getElementById("meineID");
-                            console.log(element); // Gibt das ausgewählte Element in der Konsole aus
                         </code>
                     </pre>
                 </div>
             </div>
+            <script id="solution-4-2" type="text/plain">
+                let element = document.getElementById("meineID");
+            </script>
         </div>
     </div>
     <div>
@@ -483,45 +463,59 @@
     <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 5.2</div>
         <div class="aufgabentext">
-            <p>Erstelle ein HTML-Dokument mit einem Textfeld und einem Button. Schreibe ein Skript, das den Inhalt des Textfelds in der Konsole ausgibt, wenn der Button geklickt wird.</p>
+            <p>Schreibe ein Skript, das den Inhalt eines Textfelds in der Konsole ausgibt, wenn ein Button geklickt wird.</p>
+            <textarea id="input-aufgabe-5-2" placeholder="Schreibe deinen Code hier..."></textarea>
+            <button type="button" onclick="checkCodeWithScript('input-aufgabe-5-2', 'solution-5-2')">Antwort prüfen</button>
+            <div id="feedback-input-aufgabe-5-2" class="feedback"></div>
             <div class="code-container">
                 <span class="toggle-button">Lösung anzeigen</span>
-                <div class="code-content">
+                <div class="code-content" style="display: none;">
                     <pre class="aufgabenloesung">
-                        <code class="language-html">
-                            &lt;input type="text" id="meinTextfeld" placeholder="Gib etwas ein"&gt;
-                            &lt;button id="meinButton"&gt;Zeige Inhalt&lt;/button&gt;
-                            &lt;script&gt;
-                                let button = document.getElementById("meinButton");
-                                let textfeld = document.getElementById("meinTextfeld");
-                                button.addEventListener("click", function() {
-                                    console.log(textfeld.value);
-                                });
-                            &lt;/script&gt;
+                        <code id="solution-5-2" class="language-js">
+                            let button = document.getElementById("meinButton");
+                            let textfeld = document.getElementById("meinTextfeld");
+                            button.addEventListener("click", function() {
+                                console.log(textfeld.value);
+                            });
                         </code>
                     </pre>
                 </div>
             </div>
+            <script id="solution-5-2" type="text/plain">
+                let button = document.getElementById("meinButton");
+                let textfeld = document.getElementById("meinTextfeld");
+                button.addEventListener("click", function() {
+                    console.log(textfeld.value);
+                });
+            </script>
         </div>
     </div>
     <div>
         <div class="aufgabenr regelstandard">🔵 Aufgabe 5.3</div>
         <div class="aufgabentext">
-            <p>Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das den Text eines HTML-Elements ändert, wenn der Button geklickt wird.</p>
+            <p>Welcher Code ändert den Text eines HTML-Elements korrekt?</p>
+            <form id="aufgabe-5-3">
+                <div>
+                    <input type="checkbox" id="option5-3-1" name="option5-3-1">
+                    <label for="option5-3-1">document.getElementById("meinText").innerHTML = "Neuer Text!";</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option5-3-2" name="option5-3-2">
+                    <label for="option5-3-2">document.getElementById("meinText").text = "Neuer Text!";</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option5-3-3" name="option5-3-3">
+                    <label for="option5-3-3">document.getElementById("meinText").value = "Neuer Text!";</label>
+                </div>
+                <button type="button" onclick="checkM2Answers53()">Antwort prüfen</button>
+            </form>
+            <div id="feedback-aufgabe-5-3" class="feedback"></div>
             <div class="code-container">
                 <span class="toggle-button">Lösung anzeigen</span>
-                <div class="code-content">
+                <div class="code-content" style="display: none;">
                     <pre class="aufgabenloesung">
-                        <code class="language-html">
-                            &lt;button id="meinButton"&gt;Ändere Text&lt;/button&gt;
-                            &lt;p id="meinText"&gt;Ursprünglicher Text&lt;/p&gt;
-                            &lt;script&gt;
-                                let button = document.getElementById("meinButton");
-                                let text = document.getElementById("meinText");
-                                button.addEventListener("click", function() {
-                                    text.innerHTML = "Text wurde geändert!";
-                                });
-                            &lt;/script&gt;
+                        <code class="language-js">
+                            document.getElementById("meinText").innerHTML = "Neuer Text!";
                         </code>
                     </pre>
                 </div>
@@ -559,23 +553,29 @@
     <div>
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 5.5</div>
         <div class="aufgabentext">
-            <p>Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das den Hintergrund der Seite ändert, wenn der Button geklickt wird.</p>
+            <p>Schreibe den JavaScript-Code, um die Hintergrundfarbe der Seite in "lightblue" zu ändern, wenn ein Button "meinButton" geklickt wird.</p>
+            <textarea id="input-aufgabe-5-5" placeholder="Schreibe deinen Code hier..."></textarea>
+            <button type="button" onclick="checkCodeWithScript('input-aufgabe-5-5', 'solution-5-5')">Antwort prüfen</button>
+            <div id="feedback-input-aufgabe-5-5" class="feedback"></div>
             <div class="code-container">
                 <span class="toggle-button">Lösung anzeigen</span>
-                <div class="code-content">
+                <div class="code-content" style="display: none;">
                     <pre class="aufgabenloesung">
-                        <code class="language-html">
-                            &lt;button id="meinButton"&gt;Ändere Hintergrund&lt;/button&gt;
-                            &lt;script&gt;
-                                let button = document.getElementById("meinButton");
-                                button.addEventListener("click", function() {
-                                    document.body.style.backgroundColor = "lightblue";
-                                });
-                            &lt;/script&gt;
+                        <code id="solution-5-5" class="language-js">
+                            let button = document.getElementById("meinButton");
+                            button.addEventListener("click", function() {
+                                document.body.style.backgroundColor = "lightblue";
+                            });
                         </code>
                     </pre>
                 </div>
             </div>
+            <script id="solution-5-5" type="text/plain">
+                let button = document.getElementById("meinButton");
+                button.addEventListener("click", function() {
+                    document.body.style.backgroundColor = "lightblue";
+                });
+            </script>
         </div>
     </div>
     <div>
@@ -629,25 +629,31 @@
     <div>
         <div class="aufgabenr mindeststandard">🟢 Aufgabe 6.2</div>
         <div class="aufgabentext">
-            <p>Erstelle ein HTML-Dokument mit einem Textfeld und einem Button. Schreibe ein Skript, das den Inhalt des Textfelds in der Konsole ausgibt, wenn der Button geklickt wird.</p>
+            <p>Schreibe den JavaScript-Code, um den Inhalt eines Textfelds in der Konsole auszugeben, wenn ein Button geklickt wird.</p>
+            <textarea id="input-aufgabe-6-2" placeholder="Schreibe deinen Code hier..."></textarea>
+            <button type="button" onclick="checkCodeWithScript('input-aufgabe-6-2', 'solution-6-2')">Antwort prüfen</button>
+            <div id="feedback-input-aufgabe-6-2" class="feedback"></div>
             <div class="code-container">
                 <span class="toggle-button-help">Hilfe anzeigen</span>
-                <div class="code-content">
+                <div class="code-content" style="display: none;">
                     <pre class="aufgabenloesung">
-                        <code class="language-html">
-                            &lt;input type="text" id="meinTextfeld" placeholder="Gib etwas ein"&gt;
-                            &lt;button id="meinButton"&gt;Zeige Inhalt&lt;/button&gt;
-                            &lt;script&gt;
-                                let button = document.getElementById("meinButton");
-                                let textfeld = document.getElementById("meinTextfeld");
-                                button.addEventListener("click", function() {
-                                    console.log(textfeld.value);
-                                });
-                            &lt;/script&gt;
+                        <code id="solution-6-2" class="language-js">
+                            let button = document.getElementById("meinButton");
+                            let textfeld = document.getElementById("meinTextfeld");
+                            button.addEventListener("click", function() {
+                                console.log(textfeld.value);
+                            });
                         </code>
                     </pre>
                 </div>
             </div>
+            <script id="solution-6-2" type="text/plain">
+                let button = document.getElementById("meinButton");
+                let textfeld = document.getElementById("meinTextfeld");
+                button.addEventListener("click", function() {
+                    console.log(textfeld.value);
+                });
+            </script>
         </div>
     </div>
     <div>
@@ -706,22 +712,28 @@
         <div class="aufgabenr expertenstandard">🔴 Aufgabe 6.5</div>
         <div class="aufgabentext">
             <p>Erstelle ein HTML-Dokument mit einem Button. Schreibe ein Skript, das den Hintergrund der Seite ändert, wenn der Button geklickt wird.</p>
+            <textarea id="input-aufgabe-6-5" placeholder="Schreibe deinen Code hier..."></textarea>
+            <button type="button" onclick="checkCodeWithScript('input-aufgabe-6-5', 'solution-6-5')">Antwort prüfen</button>
+            <div id="feedback-input-aufgabe-6-5" class="feedback"></div>
             <div class="code-container">
                 <span class="toggle-button-help">Hilfe anzeigen</span>
-                <div class="code-content">
+                <div class="code-content" style="display: none;">
                     <pre class="aufgabenloesung">
-                        <code class="language-html">
-                            &lt;button id="meinButton"&gt;Ändere Hintergrund&lt;/button&gt;
-                            &lt;script&gt;
-                                let button = document.getElementById("meinButton");
-                                button.addEventListener("click", function() {
-                                    document.body.style.backgroundColor = "lightblue";
-                                });
-                            &lt;/script&gt;
+                        <code id="solution-6-5" class="language-js">
+                            let button = document.getElementById("meinButton");
+                            button.addEventListener("click", function() {
+                                document.body.style.backgroundColor = "lightblue";
+                            });
                         </code>
                     </pre>
                 </div>
             </div>
+            <script id="solution-6-5" type="text/plain">
+                let button = document.getElementById("meinButton");
+                button.addEventListener("click", function() {
+                    document.body.style.backgroundColor = "lightblue";
+                });
+            </script>
         </div>
     </div>
     <div>
