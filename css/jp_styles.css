@@ -1,448 +1,340 @@
+/* 
+ * CSS-Datei: jp_styles.css
+ * =========================
+ * Autoren: GitHub Copilot & Christian Leeser
+ * Version: 1.1
+ * Datum: 12. April 2025
+ * Beschreibung:
+ * Diese CSS-Datei enthält die Stile für das Projekt "Zahlenraten".
+ * Sie ist in logische Abschnitte unterteilt, um die Lesbarkeit und Wartbarkeit zu verbessern.
+ * 
+ * Struktur:
+ * - Allgemeine Stile
+ * - Navigation Styles (Menü)
+ * - Abschnitts-Stile (z. B. .criteria, .module, .teaser)
+ * - Projektbereich Styles
+ * - Button Styles
+ * - Input Styles
+ * - Content Styles
+ * - Aufgaben Styles
+ * - Standards Styles
+ * - Code Container Styles
+ * - Feedback Styles
+ * - Ende der CSS-Regeln
+ */
+
+/* ========================= */
+/* Allgemeine Stile          */
+/* ========================= */
+/* Globale Stile für die gesamte Webseite */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    text-align: center;
+    font-family: Arial, sans-serif; /* Schriftart für die gesamte Seite */
+    margin: 0; /* Entfernt Standardabstände des Browsers */
+    padding: 0; /* Entfernt Standardabstände des Browsers */
+    background-color: #f4f4f9; /* Heller Hintergrund für die Seite */
 }
 
-/* ========================= */
-/* Navigation Styles (Menü) */
-/* ========================= */
-.link-container {
-    margin-top: 30px;
-    font-family: Arial, sans-serif;
-}
-.link-container a {
-    display: inline-block;
-    margin: 10px;
-    padding: 15px 30px;
-    text-decoration: none;
-    color: white;
-    background-color: #007BFF;
-    border-radius: 5px;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
-}
-.link-container a:hover {
-    background-color: #0056b3;
-}
-
-#start {
-    display: inline-block;
-    margin: 10px;
-    padding: 15px 15px 15px 15px;
-    text-decoration: none;
-    color: white;
-    background-color: #bb0ab2;
-    border-radius: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
-}
-
-#start:hover {
-    background-color: #81047b;
-}
-
-#start:active {
-    background-color: #bb0ab2;
-}
-
-/* ========================= */
-/* Weitere CSS-Regeln hier hinzufügen */
-/* ========================= */
-
-/* Beispiel für Projektbereich */
-.projektarea {
-    border-radius: 25px;
-    margin: 20px;
-    padding: 10px;
-    background-color: #5d6661;
-    color: azure;
-}
-
-/* Beispiel für Buttons */
-#sozStartButton, #sozReloadButton {
-    font-size: 14px;
-    background-color: #2bc265;
-    border-radius: 25px;
-    float: right;
-    width: 30%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    margin-top: 1em;
-    cursor: pointer;
-    outline: none;
-    border: none;
-}
-
-#sozStartButton:hover, #sozReloadButton:hover {
-    background-color: #1e9e4a;
+/* Stile für Überschriften */
+h1, h2, h3, h4 {
+    font-family: Arial, sans-serif; /* Einheitliche Schriftart */
+    color: #000; /* Schwarze Schriftfarbe */
+    text-align: left; /* Linksbündige Ausrichtung */
+    margin: 20px; /* Außenabstand */
+    padding: 10px; /* Innenabstand */
+    border: #000 solid 1px; /* Schwarzer Rahmen */
 }
 
 h1 {
-    border: #000 solid 1px;
-    background-color: #9d26c5;
-    padding: 10px;
-    margin: 20px;
-    font-family: Arial, sans-serif;
-    color: #000;
-    font-size: 2em;
-    text-align: center;
+    background-color: #9d26c5; /* Lila Hintergrund */
+    font-size: 2em; /* Große Schriftgröße */
+    text-align: center; /* Zentrierte Ausrichtung */
 }
 
 h2 {
-    border: #000 solid 1px;
-    border-radius: 25px;
-    background-color: #c5265b;
-    padding: 10px;
-    margin: 20px;
-    font-family: Arial, sans-serif;
-    color: #000;
-    font-size: 1.5em;
-    text-align: left;
+    background-color: #c5265b; /* Roter Hintergrund */
+    font-size: 1.5em; /* Mittlere Schriftgröße */
+    border-radius: 25px; /* Abgerundete Ecken */
 }
+
 h3 {
-    border: #000 solid 1px;
-    border-radius: 10px;
-    background-color: #26c590;
-    padding: 10px;
-    margin: 20px;
-    font-family: Arial, sans-serif;
-    color: #000;
-    font-size: 1.2em;
-    text-align: left;
+    background-color: #26c590; /* Grüner Hintergrund */
+    font-size: 1.2em; /* Kleinere Schriftgröße */
+    border-radius: 10px; /* Leicht abgerundete Ecken */
 }
+
 h4 {
-    border: #000 solid 1px;
-    background-color: #bec55c;
-    padding: 10px;
-    margin: 20px;
-    font-family: Arial, sans-serif;
-    color: #000;
-    font-size: 1.0em;
-    text-align: left;
+    background-color: #bec55c; /* Gelber Hintergrund */
+    font-size: 1em; /* Standard-Schriftgröße */
 }
 
+/* ========================= */
+/* Navigation Styles (Menü)  */
+/* ========================= */
+/* Stile für die Navigationsleiste */
+.link-container {
+    margin-top: 30px; /* Abstand nach oben */
+    font-family: Arial, sans-serif; /* Schriftart */
+}
+
+.link-container a {
+    display: inline-block; /* Links nebeneinander anzeigen */
+    margin: 10px; /* Abstand zwischen den Links */
+    padding: 15px 30px; /* Innenabstand der Links */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+    color: white; /* Textfarbe */
+    background-color: #007BFF; /* Hintergrundfarbe */
+    border-radius: 5px; /* Abgerundete Ecken */
+    font-size: 18px; /* Schriftgröße */
+    transition: background-color 0.3s ease; /* Weicher Übergang bei Hover */
+}
+
+.link-container a:hover {
+    background-color: #0056b3; /* Dunklere Hintergrundfarbe beim Hover */
+}
+
+#start {
+    display: inline-block; /* Blockelement mit Inline-Verhalten */
+    margin: 10px; /* Außenabstand */
+    padding: 15px; /* Innenabstand */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+    color: white; /* Textfarbe */
+    background-color: #bb0ab2; /* Lila Hintergrund */
+    border-radius: 5px; /* Abgerundete Ecken */
+    font-size: 18px; /* Schriftgröße */
+    transition: background-color 0.3s ease; /* Weicher Übergang bei Hover */
+}
+
+#start:hover {
+    background-color: #81047b; /* Dunklerer Lila-Ton beim Hover */
+}
+
+#start:active {
+    background-color: #bb0ab2; /* Ursprüngliche Farbe beim Klicken */
+}
+
+/* ========================= */
+/* Abschnitts-Stile          */
+/* ========================= */
+/* Stile für verschiedene Abschnitte wie Kriterien, Module, Teaser usw. */
+.criteria, .module, .teaser, .lernziele, .definition, .links, .zusammenfassung, .ende, .projekt, .loesungshinweis {
+    border: #000 dotted 1px; /* Gepunkteter Rahmen */
+    background-color: #f0f0f0; /* Heller Hintergrund */
+    padding: 10px; /* Innenabstand */
+    margin: 20px; /* Außenabstand */
+    font-family: Arial, sans-serif; /* Schriftart */
+    color: #000; /* Textfarbe */
+    font-size: 1.2em; /* Schriftgröße */
+    text-align: left; /* Linksbündiger Text */
+}
+
+.criteria {
+    background-color: #e8f5e9; /* Hellgrüner Hintergrund */
+}
+
+.module {
+    background-color: #e3f2fd; /* Hellblauer Hintergrund */
+}
+
+.teaser {
+    background-color: #fff3e0; /* Hellorange Hintergrund */
+}
+
+.lernziele {
+    background-color: #ede7f6; /* Hellvioletter Hintergrund */
+}
+
+.definition {
+    background-color: #fce4ec; /* Hellrosa Hintergrund */
+}
+
+.links {
+    background-color: #f3e5f5; /* Helllila Hintergrund */
+}
+
+.zusammenfassung {
+    background-color: #e8eaf6; /* Hellblauer Hintergrund */
+}
+
+.ende {
+    background-color: #fbe9e7; /* Hellroter Hintergrund */
+}
+
+.projekt {
+    background-color: #e0f7fa; /* Hellcyan Hintergrund */
+}
+
+.loesungshinweis {
+    background-color: #fffde7; /* Hellgelber Hintergrund */
+}
+
+/* ========================= */
+/* Projektbereich Styles     */
+/* ========================= */
+/* Stile für den Bereich, in dem das Projekt angezeigt wird */
+.projektarea {
+    border-radius: 25px; /* Abgerundete Ecken */
+    margin: 20px; /* Außenabstand */
+    padding: 10px; /* Innenabstand */
+    background-color: #5d6661; /* Dunkler Hintergrund */
+    color: azure; /* Helle Schriftfarbe */
+    text-align: center; /* Text zentrieren */
+    font-size: 1.2em; /* Schriftgröße */
+    font-family: Arial, sans-serif; /* Schriftart */
+    border: #000 solid 1px; /* Dunkler Rahmen */
+}
+
+/* ========================= */
+/* Button Styles             */
+/* ========================= */
+/* Stile für Buttons wie "Raten" und "Seite neu laden" */
+#sozStartButton, #sozReloadButton {
+    font-size: 14px; /* Schriftgröße */
+    border-radius: 25px; /* Abgerundete Ecken */
+    width: 30%; /* Breite des Buttons */
+    padding: 1%; /* Innenabstand */
+    margin-top: 1em; /* Abstand nach oben */
+    cursor: pointer; /* Zeigt den Mauszeiger als Hand an */
+    outline: none; /* Entfernt den Standardrahmen */
+    border: none; /* Entfernt den Standardrahmen */
+}
+
+#sozStartButton {
+    background-color: #c29a2b; /* Goldene Hintergrundfarbe */
+    float: left; /* Links ausrichten */
+}
+
+#sozReloadButton {
+    background-color: #2bc265; /* Grüne Hintergrundfarbe */
+    float: right; /* Rechts ausrichten */
+}
+
+#sozStartButton:hover, #sozReloadButton:hover {
+    background-color: #1e9e4a; /* Dunklere Farbe beim Hover */
+}
+
+/* ========================= */
+/* Input Styles              */
+/* ========================= */
+/* Stile für Eingabefelder */
+textarea, input[type="number"] {
+    font-family: Arial, sans-serif; /* Schriftart */
+    font-size: 14px; /* Schriftgröße */
+    padding: 10px; /* Innenabstand */
+    border: 1px solid #ccc; /* Grauer Rahmen */
+    border-radius: 5px; /* Abgerundete Ecken */
+    margin: 10px; /* Außenabstand */
+    resize: vertical; /* Vertikales Vergrößern/Verkleinern erlauben */
+}
+
+textarea {
+    width: 100%; /* Volle Breite */
+    height: 100px; /* Höhe */
+}
+
+/* ========================= */
+/* Content Styles            */
+/* ========================= */
 .content {
-    display: inline-block;
-    margin: 20px;
-    padding: 10px;
-    border: #032140 solid 1px;
-    background-color: #3c7b96;
-    border-radius: 5px;
-    font-size: 16px;
-    text-align: justify;
-    color: #f3eeee;
-}
-.content p a{
-    margin: 0;
-    padding: 5px;
-    color: #f3eeee;
+    display: inline-block; /* Blockelement mit Inline-Verhalten */
+    margin: 20px; /* Außenabstand */
+    padding: 10px; /* Innenabstand */
+    border: #032140 solid 1px; /* Dunkelblauer Rahmen */
+    background-color: #3c7b96; /* Blauer Hintergrund */
+    border-radius: 5px; /* Abgerundete Ecken */
+    font-size: 16px; /* Schriftgröße */
+    text-align: justify; /* Text ausrichten */
+    color: #f3eeee; /* Helle Schriftfarbe */
 }
 
-.criteria,.module, .teaser, .lernziele, .definition,.links, .zusammenfassung,.ende,.projekt,.loesungshinweis {
-    border: #000 dotted 1px;
-    background-color: #f0f0f0;
-    padding: 10px;
-    margin: 20px;
-    font-family: Arial, sans-serif;
-    color: #000;
-    font-size: 1.2em;
-    text-align: left;
+.content p a {
+    color: #f3eeee; /* Linkfarbe */
 }
 
+/* ========================= */
+/* Aufgaben Styles           */
+/* ========================= */
 .aufgabenr {
     border: #000 solid 1px;
     background-color: #19b8bb;
     padding: 10px;
     margin: 20px;
-    font-family: Arial, sans-serif;
-    color: #000;
     font-size: 1.5em;
     font-weight: bold;
-    margin-bottom: 5px;
 }
 
-.aufgabentext {
+.aufgabentext, .aufgabenloesung {
     border: #000 solid 1px;
     background-color: #f0f0f0;
     border-radius: 25px;
     padding: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-family: Arial, sans-serif;
-    color: #000;
+    margin: 20px;
     font-size: 1.2em;
     text-align: left;
     font-weight: bold;
-    margin-bottom: 10px;
 }
+
 .aufgabenhinweis {
     padding: 5px;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-family: Arial, sans-serif;
-    color: #000;
+    margin: 20px;
     font-size: 1.2em;
 }
-.aufgabenloesung {
-    border: #000 solid 1px;
-    background-color: #f0f0f0;
-    border-radius: 25px;
-    padding: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-family: Arial, sans-serif;
-    color: #000;
-    font-size: 1.0em;
-}
 
-/* Mindeststandard */
+/* ========================= */
+/* Standards Styles          */
+/* ========================= */
 .mindeststandard {
-    background-color: #d4edda; /* Hellgrün */
-    color: #155724; /* Dunkelgrün */
+    background-color: #d4edda;
+    color: #155724;
     padding: 5px;
     border-radius: 5px;
 }
 
-/* Regelstandard */
 .regelstandard {
-    background-color: #cce5ff; /* Hellblau */
-    color: #004085; /* Dunkelblau */
+    background-color: #cce5ff;
+    color: #004085;
     padding: 5px;
     border-radius: 5px;
 }
 
-/* Expertenstandard */
 .expertenstandard {
-    background-color: #f8d7da; /* Hellrot */
-    color: #721c24; /* Dunkelrot */
+    background-color: #f8d7da;
+    color: #721c24;
     padding: 5px;
     border-radius: 5px;
 }
 
+/* ========================= */
+/* Code Container Styles     */
+/* ========================= */
 .code-container {
     border-radius: 25px;
     border: #000 solid 1px;
     background-color: darkslateblue;
     padding: 10px;
     margin: 10px;
+    color: white;
 }
 
 .code-container .toggle-button {
     cursor: pointer;
-    font-family: Arial, sans-serif;
-    color: rgb(255, 255, 255);
+    color: white;
 }
 
 .code-container .code-content {
     display: none;
     margin-top: 5px;
-    color: rgb(255, 255, 255);
 }
-
-.toggle-button{
-    border: #000 solid 1px;
-    background-color: #3b4f32;
-    border-radius: 25px;
-    padding: 10px;
-    margin: 20px;
-    cursor: pointer;
-    color: rgb(198, 198, 212);
-}
-
-.toggle-button-help {
-    border: #000 solid 1px;
-    background-color: #3b4f32;
-    border-radius: 25px;
-    padding: 10px;
-    margin: 20px;
-    cursor: pointer;
-    color: rgb(198, 198, 212);
-}
-.toggle-button-help:hover {
-    background-color: #2a3d2b;
-}
-.toggle-button:hover {
-    background-color: #2a3d2b;
-}
-.toggle-button:active {
-    background-color: #1a2b1b;
-}
-.toggle-button-help:active {
-    background-color: #1a2b1b;
-}
-.toggle-button:focus {
-    outline: none;
-}
-.toggle-button-help:focus {
-    outline: none;
-}
-.toggle-button:focus-visible {
-    outline: 2px solid #007BFF;
-}
-.toggle-button-help:focus-visible {
-    outline: 2px solid #007BFF;
-}
-
-textarea {
-    width: 100%;
-    height: 100px;
-    margin-bottom: 10px;
-    font-family: monospace;
-    font-size: 14px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    resize: vertical;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 14px;
-    color: white;
-    background-color: #007BFF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-.feedback {
-    margin-top: 10px;
-    font-size: 20px;
-    font-family: Arial, sans-serif;
-}
-
-.input-container {
-    margin: 20px;
-    padding: 10px;
-    border: #000 solid 1px;
-    background-color: #f0f0f0;
-    border-radius: 25px;
-    font-family: Arial, sans-serif;
-    color: #000;
-    font-size: 1.2em;
-}
-.input-container label {
-    display: block;
-    margin: 10px;
-    font-weight: bold;
-}
-
-.aufgaben {
-    border: #000 solid 1px;
-    background-color: #f0f0f0;
-    border-radius: 25px;
-    padding: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-family: Arial, sans-serif;
-    color: #000;
-    font-size: 1.0em;
-    text-align: left;
-}
-
-#getResultOfChallenge {
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-
-#firstValueFromUser {
-    font-size: 14px;
-    padding-top: 1%;
-    padding-inline-start: 1%;
-    padding-bottom: 1%;
-    border-radius: 25px;
-    margin-top: 1%;
-}
-
-#firstNumber {
-    font-size: 14px;
-    padding: 10px;
-    padding-inline-start: 1%;
-    border-radius: 25px;
-    margin: 20px;
-}
-
-#secondNumber {
-    font-size: 14px;
-    padding-top: 1%;
-    padding-inline-start: 1%;
-    padding-bottom: 1%;
-    border-radius: 25px;
-    margin-top: 1%;
-}   
-
-#valueForCalc {
-    font-size: 14px;
-    padding-top: 1%;
-    padding-inline-start: 1%;
-    padding-bottom: 1%;
-    border-radius: 25px;
-    margin-top: 1%;
-}
-
-#showChallenge {
-    margin: 20px;
-    padding-inline-start: 1%;
-    background-color: #c85629;
-    border-radius: 25px;
-    padding: 10px;
-}
-
-#showCallbackOfChallenge {
-    margin: 20px;
-    padding-inline-start: 1%;
-    background-color: #c85629;
-    border-radius: 25px;
-    padding: 10px;
-}
-
-#sozStartButton {
-    font-size: 14px;
-    background-color: #c29a2b;
-    border-radius: 25px;
-    visibility: visible;
-    float: left;
-    width: 30%;
-    margin-top: 1em;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    cursor: pointer;
-    outline: none;
-    border: none;
-}
-
-#sozReloadButton {
-    font-size: 14px;
-    background-color: #2bc265;
-    border-radius: 25px;
-    float: right;
-    width: 30%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    margin-top: 1em;
-    cursor: pointer;
-    outline: none;
-    border: none;
-}
-
-.projektarea {
-    border-radius: 25px;    
-    margin: 20px;
-    padding: 10px;
-    background-color: #5d6661;
-    color: azure;
-}
-
 
 /* ========================= */
-/* Ende der CSS-Regeln */
+/* Feedback Styles           */
+/* ========================= */
+/* Stile für Feedback-Nachrichten */
+.feedback {
+    margin-top: 10px; /* Abstand nach oben */
+    font-size: 20px; /* Schriftgröße */
+    font-family: Arial, sans-serif; /* Schriftart */
+}
+
+/* ========================= */
+/* Ende der CSS-Regeln       */
 /* ========================= */

@@ -1,18 +1,30 @@
 /*
  * JavaScript für die Interaktion mit der Benutzeroberfläche und die Code-Prüfung
  * ==============================================================================
- * Autor: Christian Leeser
- * Version: 0.1 (Stand: 08.03.2025)
+ * Autoren: GitHub Copilot & Christian Leeser
+ * Version: 1.1
+ * Datum: 12. April 2025
+ * 
+ * Beschreibung:
+ * Diese Datei enthält Funktionen zur Interaktion mit der Benutzeroberfläche und zur Überprüfung von Benutzerantworten.
+ * Sie umfasst Event-Listener für das Ein- und Ausklappen von Code-Bereichen, die Code-Prüfung und die Validierung von Antworten.
  * 
  * Inhalt:
  * ----------------------------------------------------------------
  * - Event-Listener für die Toggle-Buttons: Ermöglicht das Ein- und Ausklappen von Code-Lösungen.
  * - checkCodeWithScript: Vergleicht den vom Benutzer eingegebenen Code mit der Musterlösung.
  * - normalizeCode: Hilfsfunktion zur Normalisierung von Code für den Vergleich.
+ * - Funktionen zur Überprüfung von Multiple-Choice-Antworten für verschiedene Aufgaben.
+ * 
+ * Lizenz:
+ * ----------------------------------------------------------------
+ * Creative-Commons CC BY-SA 4.0 by Christian Leeser (12.04.2025)
+ * https://creativecommons.org/licenses/by-sa/4.0/
  */
 
+// =========================
 // Event-Listener für die Toggle-Buttons
-// -------------------------------------
+// =========================
 // Fügt jedem Button mit der Klasse "toggle-button" einen Klick-Event-Listener hinzu.
 // Beim Klick wird der zugehörige Code-Bereich (nächstes Geschwisterelement mit der Klasse "code-content")
 // ein- oder ausgeklappt.
@@ -50,8 +62,9 @@ document.querySelectorAll('.toggle-button-help').forEach(button => {
     });
 });
 
-// Funktion zur Code-Prüfung mit Script-ID
-// ---------------------------------------
+// =========================
+// Funktion: checkCodeWithScript
+// =========================
 // Vergleicht den vom Benutzer eingegebenen Code mit der Musterlösung aus einem Script-Tag.
 // Zeigt Feedback an, ob der Code korrekt ist oder nicht.
 //
@@ -91,8 +104,9 @@ function checkCodeWithScript(inputId, scriptId) {
     }
 }
 
-// Hilfsfunktion zur Normalisierung von Code
-// -----------------------------------------
+// =========================
+// Hilfsfunktion: normalizeCode
+// =========================
 // Entfernt überflüssige Leerzeichen und Zeilenumbrüche aus einem Code-String,
 // um ihn für den Vergleich zu normalisieren.
 //
@@ -112,6 +126,12 @@ function normalizeCode(code) {
         .trim(); // Anfangs- und Endleerzeichen entfernen
 }
 
+// =========================
+// Funktionen zur Überprüfung von Multiple-Choice-Antworten
+// =========================
+// Jede Funktion überprüft die Antworten für eine spezifische Aufgabe und gibt Feedback.
+
+// Beispiel: Überprüft die Antworten für Aufgabe 4.1
 function checkM1Answers41() {
     const feedback = document.getElementById('feedback-aufgabe-4-1');
     const option1 = document.getElementById('option4-1-1').checked; // 123variable
@@ -122,8 +142,10 @@ function checkM1Answers41() {
     // Richtige Antworten: meineVariable (option3)
     if (option1 || option2 || option4 || !option3) {
         feedback.innerText = "Falsch! Nur 'meineVariable' ist ein gültiger Variablenname.";
+        feedback.style.color = "red";
     } else {
         feedback.innerText = "Richtig! 'meineVariable' ist der einzige gültige Variablenname.";
+        feedback.style.color = "green";
     }
 }
 
