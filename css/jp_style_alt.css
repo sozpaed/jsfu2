@@ -1,0 +1,340 @@
+/* 
+ * CSS-Datei: jp_styles.css
+ * =========================
+ * Autoren: GitHub Copilot & Christian Leeser
+ * Version: 1.1
+ * Datum: 12. April 2025
+ * Beschreibung:
+ * Diese CSS-Datei enthält die Stile für das Projekt "Zahlenraten".
+ * Sie ist in logische Abschnitte unterteilt, um die Lesbarkeit und Wartbarkeit zu verbessern.
+ * 
+ * Struktur:
+ * - Allgemeine Stile
+ * - Navigation Styles (Menü)
+ * - Abschnitts-Stile (z. B. .criteria, .module, .teaser)
+ * - Projektbereich Styles
+ * - Button Styles
+ * - Input Styles
+ * - Content Styles
+ * - Aufgaben Styles
+ * - Standards Styles
+ * - Code Container Styles
+ * - Feedback Styles
+ * - Ende der CSS-Regeln
+ */
+
+/* ========================= */
+/* Allgemeine Stile          */
+/* ========================= */
+/* Globale Stile für die gesamte Webseite */
+body {
+    font-family: Arial, sans-serif; /* Schriftart für die gesamte Seite */
+    margin: 0; /* Entfernt Standardabstände des Browsers */
+    padding: 0; /* Entfernt Standardabstände des Browsers */
+    background-color: #f4f4f9; /* Heller Hintergrund für die Seite */
+}
+
+/* Stile für Überschriften */
+h1, h2, h3, h4 {
+    font-family: Arial, sans-serif; /* Einheitliche Schriftart */
+    color: #000; /* Schwarze Schriftfarbe */
+    text-align: left; /* Linksbündige Ausrichtung */
+    margin: 20px; /* Außenabstand */
+    padding: 10px; /* Innenabstand */
+    border: #000 solid 1px; /* Schwarzer Rahmen */
+}
+
+h1 {
+    background-color: #9d26c5; /* Lila Hintergrund */
+    font-size: 2em; /* Große Schriftgröße */
+    text-align: center; /* Zentrierte Ausrichtung */
+}
+
+h2 {
+    background-color: #c5265b; /* Roter Hintergrund */
+    font-size: 1.5em; /* Mittlere Schriftgröße */
+    border-radius: 25px; /* Abgerundete Ecken */
+}
+
+h3 {
+    background-color: #26c590; /* Grüner Hintergrund */
+    font-size: 1.2em; /* Kleinere Schriftgröße */
+    border-radius: 10px; /* Leicht abgerundete Ecken */
+}
+
+h4 {
+    background-color: #bec55c; /* Gelber Hintergrund */
+    font-size: 1em; /* Standard-Schriftgröße */
+}
+
+/* ========================= */
+/* Navigation Styles (Menü)  */
+/* ========================= */
+/* Stile für die Navigationsleiste */
+.link-container {
+    margin-top: 30px; /* Abstand nach oben */
+    font-family: Arial, sans-serif; /* Schriftart */
+}
+
+.link-container a {
+    display: inline-block; /* Links nebeneinander anzeigen */
+    margin: 10px; /* Abstand zwischen den Links */
+    padding: 15px 30px; /* Innenabstand der Links */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+    color: white; /* Textfarbe */
+    background-color: #007BFF; /* Hintergrundfarbe */
+    border-radius: 5px; /* Abgerundete Ecken */
+    font-size: 18px; /* Schriftgröße */
+    transition: background-color 0.3s ease; /* Weicher Übergang bei Hover */
+}
+
+.link-container a:hover {
+    background-color: #0056b3; /* Dunklere Hintergrundfarbe beim Hover */
+}
+
+#start {
+    display: inline-block; /* Blockelement mit Inline-Verhalten */
+    margin: 10px; /* Außenabstand */
+    padding: 15px; /* Innenabstand */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+    color: white; /* Textfarbe */
+    background-color: #bb0ab2; /* Lila Hintergrund */
+    border-radius: 5px; /* Abgerundete Ecken */
+    font-size: 18px; /* Schriftgröße */
+    transition: background-color 0.3s ease; /* Weicher Übergang bei Hover */
+}
+
+#start:hover {
+    background-color: #81047b; /* Dunklerer Lila-Ton beim Hover */
+}
+
+#start:active {
+    background-color: #bb0ab2; /* Ursprüngliche Farbe beim Klicken */
+}
+
+/* ========================= */
+/* Abschnitts-Stile          */
+/* ========================= */
+/* Stile für verschiedene Abschnitte wie Kriterien, Module, Teaser usw. */
+.criteria, .module, .teaser, .lernziele, .definition, .links, .zusammenfassung, .ende, .projekt, .loesungshinweis {
+    border: #000 dotted 1px; /* Gepunkteter Rahmen */
+    background-color: #f0f0f0; /* Heller Hintergrund */
+    padding: 10px; /* Innenabstand */
+    margin: 20px; /* Außenabstand */
+    font-family: Arial, sans-serif; /* Schriftart */
+    color: #000; /* Textfarbe */
+    font-size: 1.2em; /* Schriftgröße */
+    text-align: left; /* Linksbündiger Text */
+}
+
+.criteria {
+    background-color: #e8f5e9; /* Hellgrüner Hintergrund */
+}
+
+.module {
+    background-color: #e3f2fd; /* Hellblauer Hintergrund */
+}
+
+.teaser {
+    background-color: #fff3e0; /* Hellorange Hintergrund */
+}
+
+.lernziele {
+    background-color: #ede7f6; /* Hellvioletter Hintergrund */
+}
+
+.definition {
+    background-color: #fce4ec; /* Hellrosa Hintergrund */
+}
+
+.links {
+    background-color: #f3e5f5; /* Helllila Hintergrund */
+}
+
+.zusammenfassung {
+    background-color: #e8eaf6; /* Hellblauer Hintergrund */
+}
+
+.ende {
+    background-color: #fbe9e7; /* Hellroter Hintergrund */
+}
+
+.projekt {
+    background-color: #e0f7fa; /* Hellcyan Hintergrund */
+}
+
+.loesungshinweis {
+    background-color: #fffde7; /* Hellgelber Hintergrund */
+}
+
+/* ========================= */
+/* Projektbereich Styles     */
+/* ========================= */
+/* Stile für den Bereich, in dem das Projekt angezeigt wird */
+.projektarea {
+    border-radius: 25px; /* Abgerundete Ecken */
+    margin: 20px; /* Außenabstand */
+    padding: 10px; /* Innenabstand */
+    background-color: #5d6661; /* Dunkler Hintergrund */
+    color: azure; /* Helle Schriftfarbe */
+    text-align: center; /* Text zentrieren */
+    font-size: 1.2em; /* Schriftgröße */
+    font-family: Arial, sans-serif; /* Schriftart */
+    border: #000 solid 1px; /* Dunkler Rahmen */
+}
+
+/* ========================= */
+/* Button Styles             */
+/* ========================= */
+/* Stile für Buttons wie "Raten" und "Seite neu laden" */
+#sozStartButton, #sozReloadButton {
+    font-size: 14px; /* Schriftgröße */
+    border-radius: 25px; /* Abgerundete Ecken */
+    width: 30%; /* Breite des Buttons */
+    padding: 1%; /* Innenabstand */
+    margin-top: 1em; /* Abstand nach oben */
+    cursor: pointer; /* Zeigt den Mauszeiger als Hand an */
+    outline: none; /* Entfernt den Standardrahmen */
+    border: none; /* Entfernt den Standardrahmen */
+}
+
+#sozStartButton {
+    background-color: #c29a2b; /* Goldene Hintergrundfarbe */
+    float: left; /* Links ausrichten */
+}
+
+#sozReloadButton {
+    background-color: #2bc265; /* Grüne Hintergrundfarbe */
+    float: right; /* Rechts ausrichten */
+}
+
+#sozStartButton:hover, #sozReloadButton:hover {
+    background-color: #1e9e4a; /* Dunklere Farbe beim Hover */
+}
+
+/* ========================= */
+/* Input Styles              */
+/* ========================= */
+/* Stile für Eingabefelder */
+textarea, input[type="number"] {
+    font-family: Arial, sans-serif; /* Schriftart */
+    font-size: 14px; /* Schriftgröße */
+    padding: 10px; /* Innenabstand */
+    border: 1px solid #ccc; /* Grauer Rahmen */
+    border-radius: 5px; /* Abgerundete Ecken */
+    margin: 10px; /* Außenabstand */
+    resize: vertical; /* Vertikales Vergrößern/Verkleinern erlauben */
+}
+
+textarea {
+    width: 100%; /* Volle Breite */
+    height: 100px; /* Höhe */
+}
+
+/* ========================= */
+/* Content Styles            */
+/* ========================= */
+.content {
+    display: inline-block; /* Blockelement mit Inline-Verhalten */
+    margin: 20px; /* Außenabstand */
+    padding: 10px; /* Innenabstand */
+    border: #032140 solid 1px; /* Dunkelblauer Rahmen */
+    background-color: #3c7b96; /* Blauer Hintergrund */
+    border-radius: 5px; /* Abgerundete Ecken */
+    font-size: 16px; /* Schriftgröße */
+    text-align: justify; /* Text ausrichten */
+    color: #f3eeee; /* Helle Schriftfarbe */
+}
+
+.content p a {
+    color: #f3eeee; /* Linkfarbe */
+}
+
+/* ========================= */
+/* Aufgaben Styles           */
+/* ========================= */
+.aufgabenr {
+    border: #000 solid 1px;
+    background-color: #19b8bb;
+    padding: 10px;
+    margin: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.aufgabentext, .aufgabenloesung {
+    border: #000 solid 1px;
+    background-color: #f0f0f0;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 20px;
+    font-size: 1.2em;
+    text-align: left;
+    font-weight: bold;
+}
+
+.aufgabenhinweis {
+    padding: 5px;
+    margin: 20px;
+    font-size: 1.2em;
+}
+
+/* ========================= */
+/* Standards Styles          */
+/* ========================= */
+.mindeststandard {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.regelstandard {
+    background-color: #cce5ff;
+    color: #004085;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.expertenstandard {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* ========================= */
+/* Code Container Styles     */
+/* ========================= */
+.code-container {
+    border-radius: 25px;
+    border: #000 solid 1px;
+    background-color: darkslateblue;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+}
+
+.code-container .toggle-button {
+    cursor: pointer;
+    color: white;
+}
+
+.code-container .code-content {
+    display: none;
+    margin-top: 5px;
+}
+
+/* ========================= */
+/* Feedback Styles           */
+/* ========================= */
+/* Stile für Feedback-Nachrichten */
+.feedback {
+    margin-top: 10px; /* Abstand nach oben */
+    font-size: 20px; /* Schriftgröße */
+    font-family: Arial, sans-serif; /* Schriftart */
+}
+
+/* ========================= */
+/* Ende der CSS-Regeln       */
+/* ========================= */
