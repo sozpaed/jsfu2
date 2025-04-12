@@ -236,6 +236,13 @@
         <p><b>JavaScript-Code (jp_projekt4.js)</b></p>
         <pre class="code-container">
             <code class="language-js">
+                // Passe den Code aus Modul 3 an.
+                let randomNumber = getRandomNumber(); // Zufallszahl zwischen 1 und 10
+                let attempts = 0; // Zählt die Versuche des Nutzers
+
+                $('#sozStartButton').click(function () {
+                    playGame();
+                });
                 function isValidGuess(guess) {
                     return !isNaN(guess) && guess >= 1 && guess <= 10;
                 }
@@ -289,6 +296,11 @@
 
                     resultElement.html(message);
                 }
+
+                // Setze den Code komplett in diese Funktion
+                $(document).ready(function () {
+                    ... komplette Code ...
+                });
             </code>
         </pre>
     </div>
