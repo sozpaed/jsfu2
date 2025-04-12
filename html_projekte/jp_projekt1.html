@@ -1,21 +1,51 @@
+<!-- 
+ * HTML-Datei: jp_projekt1.html
+ * ============================
+ * Autoren: GitHub Copilot & Christian Leeser
+ * Version: 1.1
+ * Datum: 12. April 2025
+ * 
+ * Beschreibung:
+ * Diese HTML-Datei implementiert das Einmaleins-Spiel. Sie enthält die Struktur der Webseite, 
+ * die Navigation, die Module und den Projektbereich. Die Datei ist mit CSS- und JavaScript-Dateien 
+ * verknüpft, um das Design und die Funktionalität zu gewährleisten.
+ * 
+ * Inhalt:
+ * ----------------------------------------------------------------
+ * - Navigation: Links zu den verschiedenen Projekten.
+ * - Teaser: Einführung in das Projekt.
+ * - Kriterien: Anforderungen an das Projekt.
+ * - Module: Schrittweise Umsetzung des Projekts.
+ * - Projektbereich: Eingabe und Buttons zur Interaktion.
+ * - Kompletter Code: Zusammenfassung des vollständigen Codes.
+ -->
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Einmaleins Spiel</title>
+
+    <!-- Verknüpfung zur Haupt-CSS-Datei -->
     <link rel="stylesheet" href="../css/jp_styles.css">
+
+    <!-- Verknüpfung zu externen Bibliotheken -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+
+    <!-- Verknüpfung zu projektbezogenen Skripten -->
     <script src="../script/SozLib.js"></script>
     <script src="../script/jp_projekt1.js"></script>
+
+    <!-- Highlight.js für Code-Darstellung -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navigation: Links zu den verschiedenen Projekten -->
     <div class="link-container">
         <a id="start" href="../start.html">🏠 Start</a>
         <a href="./jp_projekt1.html">🧮 Einmaleins</a>
@@ -25,13 +55,13 @@
         <a href="./jp_projekt5.html">🎮 Stein, Schere, Papier</a>
     </div>
 
-    <!-- Teaser -->
+    <!-- Teaser-Bereich: Einführung in das Projekt -->
     <h1>🧮 JS :: Projekt 1 :: Einmaleins Spiel</h1>
     <h2>🎬 1 Teaser</h2>
     <div class="teaser">
         <p>In diesem Spiel kannst du Multiplikationsreihen erstellen und anzeigen lassen. Gib einfach die erste Zahl und die Anzahl der Reihen ein, und drücke auf "Berechnen". Viel Spaß!</p>
         <p>Das Tool hilft dir, die Einmaleins-Reihen zu verstehen und zu üben. Du kannst die Ergebnisse direkt auf der Seite sehen.</p>
-        <p>Füge jeweils pro Modul den JavaScript-Code (jp_einmaleins.js) und den HTML-Code (jp_einmaleins.html) ein. Schrit-für-Schritt näherst Du Dich dann dem Programm.</p>
+        <p>Füge jeweils pro Modul den JavaScript-Code (jp_einmaleins.js) und den HTML-Code (jp_einmaleins.html) ein. Schritt-für-Schritt näherst Du Dich dann dem Programm.</p>
         <p>Verwende den CSS-Code, der am Ende der Seite angegeben wird und lege diesen in der Datei jp_projekte.css ab.</p>
         
     </div>
@@ -53,38 +83,9 @@
                 <li>Das eigene Projekt ist funktionsfähig.</li>
                 <li>Das hier vorgestellte Programm dient nur als Grundlage.</li>
                 <li>Die Code-Teile sind entsprechend der Module in der richtigen Reihenfolge bearbeitet.</li>
-                <li>Aus dem hier vorgestellte Programm ist eigenes Programm entstanden, dass das "ursprüngliche" Programm signifikant in Form, Gestaltung und Umfang ergänzt und erweitert.</li>
+                <li>Aus dem hier vorgestellte Programm ist ein eigenes Programm entstanden, das das ursprüngliche Programm signifikant in Form, Gestaltung und Umfang ergänzt und erweitert.</li>
                 <li>Das Projekt ist in einem eigenen Verzeichnis gespeichert.</li>
-                <li>Das Projekt ist in einem eigenen Unterverzeichnis gespeichert.</li>
-                <li>Das Projekt ist in einem eigenen Unterverzeichnis gespeichert, das dem Namen des Projekts entspricht.</li>
-                <li>Der HTML-Code, der JavaScript-Code und der CSS-Code sind jeweils ausführlich kommentiert.</li>
-            </ul>
-            <li>HTML-Kriterien</li>
-            <ul>
-                <li>Die HTML-Datei ist funktionsfähig und regelkonform. (Prüfung mit <a href="https://validator.w3.org/detailed.html" target="_blank">W3C  Markup Validation Service</a>)</li>
-                <li>Die HTML-Datei ist in einem eigenen Verzeichnis gespeichert.</li>
-                <li>Die HTML-Datei ist in einem eigenen Unterverzeichnis gespeichert.</li>
-                <li>Die HTML-Datei ist in einem eigenen Unterverzeichnis gespeichert, das dem Namen des Projekts entspricht.</li>
-                <li>Die HTML-Datei ist mit dem JavaScript-Code verknüpft.</li>
-                <li>Die HTML-Datei ist mit dem CSS-Code verknüpft.</li>
-                <li>Die HTML-Datei ist mit der JQuery-Bibliothek verknüpft.</li>
-                <li>Die HTML-Datei ist mit der JQuery-UI-Bibliothek verknüpft.</li>
-            </ul>
-            <li>JavaScript-Kriterien</li>
-            <ul>
-                <li>Der JavaScript-Code ist funktionsfähig und regelkonform. (Prüfung mit <a href="https://jshint.com/" target="_blank">JSHint</a>)</li>
-                <li>Der JavaScript-Code ist in einem eigenen Verzeichnis gespeichert.</li>
-                <li>Der JavaScript-Code ist in einem eigenen Unterverzeichnis gespeichert.</li>
-                <li>Der JavaScript-Code ist in einem eigenen Unterverzeichnis gespeichert, das dem Namen des Projekts entspricht.</li>
-                <li>Der JavaScript-Code ist mit der HTML-Datei verknüpft.</li>
-            </ul>
-            <li>CSS-Kriterien</li>
-            <ul>
-                <li>Der CSS-Code ist funktionsfähig und regelkonform. (Prüfung mit <a href="https://jigsaw.w3.org/css-validator/" target="_blank">W3C CSS Validation Service</a>)</li>
-                <li>Der CSS-Code ist in einem eigenen Verzeichnis gespeichert.</li>
-                <li>Der CSS-Code ist in einem eigenen Unterverzeichnis gespeichert.</li>
-                <li>Der CSS-Code ist in einem eigenen Unterverzeichnis gespeichert, das dem Namen des Projekts entspricht.</li>
-                <li>Der CSS-Code ist mit der HTML-Datei verknüpft.</li>
+                <li>Der HTML-, JavaScript- und CSS-Code sind jeweils ausführlich kommentiert.</li>
             </ul>
         </ul>
     </div>

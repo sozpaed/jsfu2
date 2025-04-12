@@ -1,31 +1,59 @@
 /*
  * Spiel: Stein, Schere, Papier
  * ============================
- * Autor: Christian Leeser
- * Version: 0.3 (Stand: 11.04.2025)
+ * Autoren: GitHub Copilot & Christian Leeser
+ * Version: 1.0
+ * Datum: 12. April 2025
+ * 
+ * Beschreibung:
+ * Dieses Skript implementiert das Spiel "Stein, Schere, Papier". Der Benutzer gibt seine Wahl ein (1 = Stein, 2 = Schere, 3 = Papier),
+ * und der Computer generiert eine zufällige Wahl. Das Skript bestimmt den Gewinner basierend auf den Spielregeln und zeigt das Ergebnis an.
+ * 
+ * Inhalt:
+ * ----------------------------------------------------------------
+ * - playGame: Führt das Spiel aus, validiert die Eingabe und zeigt das Ergebnis an.
+ * - isValidChoice: Überprüft, ob die Eingabe des Benutzers gültig ist.
+ * - getComputerChoice: Generiert die Wahl des Computers.
+ * - determineWinner: Bestimmt den Gewinner basierend auf den Spielregeln.
+ * - choiceToString: Wandelt die Wahl (1, 2, 3) in einen lesbaren Text um.
+ * - updateResultDisplay: Zeigt Nachrichten im Ergebnisbereich an.
+ * 
+ * Lizenz:
+ * ----------------------------------------------------------------
+ * Creative-Commons CC BY-SA 4.0 by Christian Leeser (12.04.2025)
+ * https://creativecommons.org/licenses/by-sa/4.0/
  */
 
+// =========================
 // Spieloptionen als Konstanten
-const STEIN = 1;
-const SCHERE = 2;
-const PAPIER = 3;
+// =========================
+const STEIN = 1; // Repräsentiert die Wahl "Stein"
+const SCHERE = 2; // Repräsentiert die Wahl "Schere"
+const PAPIER = 3; // Repräsentiert die Wahl "Papier"
 
-// Startet das Spiel, wenn der Button geklickt wird
+// =========================
+// Event-Listener
+// =========================
+// Startet das Spiel, wenn der Button mit der ID 'sozStartButton' geklickt wird.
 $(document).ready(function () {
     $('#sozStartButton').click(function () {
         playGame();
     });
 });
 
-// Führt das Spiel aus
+// =========================
+// Funktion: playGame
+// =========================
+// Führt das Spiel aus. Holt die Eingabe des Benutzers, validiert sie, generiert die Wahl des Computers,
+// bestimmt den Gewinner und zeigt das Ergebnis an.
 function playGame() {
     // Eingabe des Spielers abrufen und in eine Zahl umwandeln
     let userChoice = parseInt($('#firstNumber').val());
 
     // Eingabe validieren
     if (!isValidChoice(userChoice)) {
-        updateResultDisplay('Bitte nur Zahlen zwischen 1 und 3 eingeben.', 'error');
-        return;
+        updateResultDisplay('Bitte nur Zahlen zwischen 1 und 3 eingeben.', 'error'); // Fehlermeldung anzeigen
+        return; // Beendet die Funktion, wenn die Eingabe ungültig ist
     }
 
     // Wahl des Computers generieren
@@ -41,32 +69,56 @@ function playGame() {
     );
 }
 
-// Überprüft, ob die Eingabe gültig ist
+// =========================
+// Funktion: isValidChoice
+// =========================
+// Überprüft, ob die Eingabe des Benutzers gültig ist (1 = Stein, 2 = Schere, 3 = Papier).
+//
+// @param {number} choice - Die Eingabe des Benutzers.
+// @returns {boolean} - True, wenn die Eingabe gültig ist, andernfalls False.
 function isValidChoice(choice) {
     return !isNaN(choice) && choice >= STEIN && choice <= PAPIER;
 }
 
-// Generiert die Wahl des Computers (1 = Stein, 2 = Schere, 3 = Papier)
+// =========================
+// Funktion: getComputerChoice
+// =========================
+// Generiert die Wahl des Computers (1 = Stein, 2 = Schere, 3 = Papier).
+//
+// @returns {number} - Die Wahl des Computers.
 function getComputerChoice() {
-    return Math.floor(Math.random() * 3) + 1;
+    return Math.floor(Math.random() * 3) + 1; // Zufällige Zahl zwischen 1 und 3
 }
 
-// Bestimmt den Gewinner basierend auf den Spielregeln
+// =========================
+// Funktion: determineWinner
+// =========================
+// Bestimmt den Gewinner basierend auf den Spielregeln.
+//
+// @param {number} userChoice - Die Wahl des Benutzers.
+// @param {number} computerChoice - Die Wahl des Computers.
+// @returns {string} - Das Ergebnis des Spiels ('Gewonnen!', 'Verloren!' oder 'Unentschieden!').
 function determineWinner(userChoice, computerChoice) {
     if (userChoice === computerChoice) {
-        return 'Unentschieden!';
+        return 'Unentschieden!'; // Beide haben die gleiche Wahl
     } else if (
         (userChoice === STEIN && computerChoice === SCHERE) || // Stein schlägt Schere
         (userChoice === SCHERE && computerChoice === PAPIER) || // Schere schlägt Papier
         (userChoice === PAPIER && computerChoice === STEIN) // Papier schlägt Stein
     ) {
-        return 'Gewonnen!';
+        return 'Gewonnen!'; // Benutzer gewinnt
     } else {
-        return 'Verloren!';
+        return 'Verloren!'; // Computer gewinnt
     }
 }
 
-// Wandelt die Wahl (1, 2, 3) in einen lesbaren Text um
+// =========================
+// Funktion: choiceToString
+// =========================
+// Wandelt die Wahl (1, 2, 3) in einen lesbaren Text um.
+//
+// @param {number} choice - Die Wahl (1 = Stein, 2 = Schere, 3 = Papier).
+// @returns {string} - Der lesbare Text der Wahl.
 function choiceToString(choice) {
     switch (choice) {
         case STEIN:
@@ -76,11 +128,17 @@ function choiceToString(choice) {
         case PAPIER:
             return 'Papier';
         default:
-            return 'Unbekannt';
+            return 'Unbekannt'; // Sollte nicht auftreten
     }
 }
 
-// Zeigt eine Nachricht (Ergebnis oder Fehlermeldung) im HTML an und passt die Hintergrundfarbe an
+// =========================
+// Funktion: updateResultDisplay
+// =========================
+// Zeigt eine Nachricht (Ergebnis oder Fehlermeldung) im HTML an und passt die Hintergrundfarbe an.
+//
+// @param {string} message - Die anzuzeigende Nachricht.
+// @param {string} type - Der Typ der Nachricht ('error' oder 'success').
 function updateResultDisplay(message, type) {
     // Wählt das HTML-Element mit der ID 'showCallbackOfChallenge' aus
     const resultElement = $('#showCallbackOfChallenge');

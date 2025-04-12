@@ -1,21 +1,32 @@
 /*
  * JavaScript zur Berechnung des größten gemeinsamen Teilers (ggT)
  * ===============================================================
- * Autor: Christian Leeser (camber.leaflet_0z@icloud.com)
- * Version: 0.1 (Stand: 08.03.2025)
+ * Autoren: GitHub Copilot & Christian Leeser
+ * Version: 1.0
+ * Datum: 12. April 2025
+ * 
+ * Beschreibung:
+ * Dieses Skript ermöglicht die Berechnung des größten gemeinsamen Teilers (ggT) zweier Zahlen
+ * mithilfe des Euklidischen Algorithmus. Es validiert die Benutzereingaben und zeigt das Ergebnis
+ * oder eine Fehlermeldung im HTML an.
  * 
  * Inhalt:
  * ----------------------------------------------------------------
- * - calculateGgTOfTwoValues: Berechnung des ggT nach dem Euklidischen Algorithmus
+ * - calculateGGT: Holt die Eingaben, validiert sie und berechnet den ggT.
+ * - calculateGCD: Implementiert den Euklidischen Algorithmus zur Berechnung des ggT.
+ * - updateResultDisplay: Zeigt das Ergebnis oder eine Fehlermeldung im HTML an.
  * 
  * Lizenz:
  * ----------------------------------------------------------------
- * Creative-Commons CC BY-SA 4.0 by Christian Leeser (08.03.2025)
+ * Creative-Commons CC BY-SA 4.0 by Christian Leeser (12.04.2025)
  * https://creativecommons.org/licenses/by-sa/4.0/
  */
 
 $(document).ready(function () {
-    // Event-Listener: Führt die Funktion `calculateGGT` aus, wenn der Button mit der ID 'sozStartButton' geklickt wird.
+    // =========================
+    // Event-Listener
+    // =========================
+    // Führt die Funktion `calculateGGT` aus, wenn der Button mit der ID 'sozStartButton' geklickt wird.
     $('#sozStartButton').click(function () {
         calculateGGT();
     });
@@ -26,8 +37,8 @@ $(document).ready(function () {
      */
     function calculateGGT() {
         // Holt die Werte aus den Input-Feldern mit den IDs 'firstNumber' und 'secondNumber'.
-        let firstNumber = $('#firstNumber').val();
-        let secondNumber = $('#secondNumber').val();
+        let firstNumber = $('#firstNumber').val(); // Erste Zahl
+        let secondNumber = $('#secondNumber').val(); // Zweite Zahl
 
         // Konvertiert die Eingaben von Strings zu Ganzzahlen.
         firstNumber = parseInt(firstNumber);
@@ -35,8 +46,9 @@ $(document).ready(function () {
 
         // Überprüft, ob die Eingaben gültige Zahlen sind (größer oder gleich 1).
         if (isNaN(firstNumber) || firstNumber < 1 || isNaN(secondNumber) || secondNumber < 1) {
+            // Zeigt eine Fehlermeldung an, wenn die Eingaben ungültig sind.
             updateResultDisplay('Bitte gültige Zahlen eintragen.', 'error');
-            return;
+            return; // Beendet die Funktion, wenn die Eingaben ungültig sind.
         }
 
         // Berechnet den ggT und zeigt das Ergebnis an.
@@ -47,17 +59,18 @@ $(document).ready(function () {
     /**
      * Berechnet den größten gemeinsamen Teiler (ggT) zweier Zahlen mit dem Euklidischen Algorithmus.
      * 
-     * @param {number} a - Die erste Zahl.
-     * @param {number} b - Die zweite Zahl.
+     * @param {number} value1 - Die erste Zahl.
+     * @param {number} value2 - Die zweite Zahl.
      * @returns {number} - Der größte gemeinsame Teiler (ggT).
      */
     function calculateGCD(value1, value2) {
+        // Solange die zweite Zahl nicht 0 ist, wird der Euklidische Algorithmus angewendet.
         while (value2 !== 0) {
-            let temp = value2;
-            value2 = value1 % value2;
-            value1 = temp;
+            let temp = value2; // Speichert den aktuellen Wert von value2.
+            value2 = value1 % value2; // Berechnet den Rest der Division von value1 durch value2.
+            value1 = temp; // Setzt value1 auf den vorherigen Wert von value2.
         }
-        return value1;
+        return value1; // Gibt den ggT zurück, wenn value2 0 ist.
     }
 
     /**

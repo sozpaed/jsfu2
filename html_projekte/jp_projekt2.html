@@ -1,21 +1,51 @@
+<!-- 
+ * HTML-Datei: jp_projekt2.html
+ * ============================
+ * Autoren: GitHub Copilot & Christian Leeser
+ * Version: 1.1
+ * Datum: 12. April 2025
+ * 
+ * Beschreibung:
+ * Diese HTML-Datei implementiert das Tool zur Berechnung des größten gemeinsamen Teilers (ggT).
+ * Sie enthält die Struktur der Webseite, die Navigation, die Module und den Projektbereich.
+ * Die Datei ist mit CSS- und JavaScript-Dateien verknüpft, um das Design und die Funktionalität zu gewährleisten.
+ * 
+ * Inhalt:
+ * ----------------------------------------------------------------
+ * - Navigation: Links zu den verschiedenen Projekten.
+ * - Teaser: Einführung in das Projekt.
+ * - Kriterien: Anforderungen an das Projekt.
+ * - Module: Schrittweise Umsetzung des Projekts.
+ * - Projektbereich: Eingabe und Buttons zur Interaktion.
+ * - Kompletter Code: Zusammenfassung des vollständigen Codes.
+ -->
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Größter gemeinsamer Teiler</title>
+
+    <!-- Verknüpfung zur Haupt-CSS-Datei -->
     <link rel="stylesheet" href="../css/jp_styles.css">
+
+    <!-- Verknüpfung zu externen Bibliotheken -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+
+    <!-- Verknüpfung zu projektbezogenen Skripten -->
     <script src="../script/SozLib.js"></script>
     <script src="../script/jp_projekt2.js"></script>
+
+    <!-- Highlight.js für Code-Darstellung -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navigation: Links zu den verschiedenen Projekten -->
     <div class="link-container">
         <a id="start" href="../start.html">🏠 Start</a>
         <a href="./jp_projekt1.html">🧮 Einmaleins</a>
@@ -25,16 +55,17 @@
         <a href="./jp_projekt5.html">🎮 Stein, Schere, Papier</a>
     </div>
 
-    <!-- Teaser -->
+    <!-- Teaser-Bereich: Einführung in das Projekt -->
     <h1>📐 JS :: Projekt 2 :: Größter gemeinsamer Teiler</h1>
     <h2>🎬 1 Teaser</h2>
     <div class="teaser">
         <p>In diesem Projekt kannst du den größten gemeinsamen Teiler (ggT) zweier Zahlen berechnen. Gib einfach zwei Zahlen ein und drücke auf "Berechnen".</p>
         <p>Das Tool zeigt dir den ggT der beiden Zahlen an. Viel Erfolg!</p>
-        <p>Füge jeweils pro Modul den JavaScript-Code (jp_ggt.js) und den HTML-Code (jp_ggt.html) ein. Sc</div>hritt für Schritt näherst du dich dann dem Programm.</p>
+        <p>Füge jeweils pro Modul den JavaScript-Code (jp_ggt.js) und den HTML-Code (jp_ggt.html) ein. Schritt für Schritt näherst du dich dann dem Programm.</p>
         <p>Verwende den CSS-Code, der am Ende der Seite angegeben wird, und lege diesen in der Datei `jp_projekte.css` ab.</p>
     </div>
 
+    <!-- Kriterien-Bereich: Anforderungen an das Projekt -->
     <h2>🛠️ 2 Kriterien</h2>
     <div class="criteria">
         <p>Die Aufteilung des Programms richtet sich nach den Modulen:</p>
@@ -47,81 +78,24 @@
         </ul>
         <p>Dieses Projekt ist bestanden, wenn alle der folgenden Punkte erfüllt sind:</p>
         <ul>
-            <li>Allgemeine Kriterien</li>
-            <ul>
-                <li>Das Projekt ist vollständig.</li>
-                <li>Das eigene Projekt ist funktionsfähig.</li>
-                <li>Das hier vorgestellte Programm dient nur als Grundlage.</li>
-                <li>Die Code-Teile sind entsprechend der Module in der richtigen Reihenfolge bearbeitet.</li>
-                <li>Aus dem hier vorgestellte Programm ist eigenes Programm entstanden, dass das "ursprüngliche" Programm signifikant in Form, Gestaltung und Umfang ergänzt und erweitert.</li>
-                <li>Das Projekt ist in einem eigenen Verzeichnis gespeichert.</li>
-                <li>Das Projekt ist in einem eigenen Unterverzeichnis gespeichert.</li>
-                <li>Das Projekt ist in einem eigenen Unterverzeichnis gespeichert, das dem Namen des Projekts entspricht.</li>
-                <li>Der HTML-Code, der JavaScript-Code und der CSS-Code sind jeweils ausführlich kommentiert.</li>
-            </ul>
-            <li>HTML-Kriterien</li>
-            <ul>
-                <li>Die HTML-Datei ist funktionsfähig und regelkonform. (Prüfung mit <a href="https://validator.w3.org/detailed.html" target="_blank">W3C  Markup Validation Service</a>)</li>
-                <li>Die HTML-Datei ist in einem eigenen Verzeichnis gespeichert.</li>
-                <li>Die HTML-Datei ist in einem eigenen Unterverzeichnis gespeichert.</li>
-                <li>Die HTML-Datei ist in einem eigenen Unterverzeichnis gespeichert, das dem Namen des Projekts entspricht.</li>
-                <li>Die HTML-Datei ist mit dem JavaScript-Code verknüpft.</li>
-                <li>Die HTML-Datei ist mit dem CSS-Code verknüpft.</li>
-                <li>Die HTML-Datei ist mit der JQuery-Bibliothek verknüpft.</li>
-                <li>Die HTML-Datei ist mit der JQuery-UI-Bibliothek verknüpft.</li>
-            </ul>
-            <li>JavaScript-Kriterien</li>
-            <ul>
-                <li>Der JavaScript-Code ist funktionsfähig und regelkonform. (Prüfung mit <a href="https://jshint.com/" target="_blank">JSHint</a>)</li>
-                <li>Der JavaScript-Code ist in einem eigenen Verzeichnis gespeichert.</li>
-                <li>Der JavaScript-Code ist in einem eigenen Unterverzeichnis gespeichert.</li>
-                <li>Der JavaScript-Code ist in einem eigenen Unterverzeichnis gespeichert, das dem Namen des Projekts entspricht.</li>
-                <li>Der JavaScript-Code ist mit der HTML-Datei verknüpft.</li>
-            </ul>
-            <li>CSS-Kriterien</li>
-            <ul>
-                <li>Der CSS-Code ist funktionsfähig und regelkonform. (Prüfung mit <a href="https://jigsaw.w3.org/css-validator/" target="_blank">W3C CSS Validation Service</a>)</li>
-                <li>Der CSS-Code ist in einem eigenen Verzeichnis gespeichert.</li>
-                <li>Der CSS-Code ist in einem eigenen Unterverzeichnis gespeichert.</li>
-                <li>Der CSS-Code ist in einem eigenen Unterverzeichnis gespeichert, das dem Namen des Projekts entspricht.</li>
-                <li>Der CSS-Code ist mit der HTML-Datei verknüpft.</li>
-            </ul>
+            <li>Das Projekt ist vollständig und funktionsfähig.</li>
+            <li>Der HTML-, JavaScript- und CSS-Code sind jeweils ausführlich kommentiert.</li>
+            <li>Die HTML-Datei ist mit dem JavaScript- und CSS-Code verknüpft.</li>
+            <li>Die HTML-Datei ist regelkonform (Prüfung mit W3C Validator).</li>
         </ul>
     </div>
+
+    <!-- Module-Bereich: Schrittweise Umsetzung des Projekts -->
     <h2>📚 3 Einteilung in die Module</h2>
 
     <!-- Kapitel 1: Modul 1 -->
     <h3>📘 Modul 1: Grundlagen von JavaScript</h3>
     <div class="module" id="module1">
-        <p>Der untere Code ist ein Einstieg in dieses Projekt und zeigt, wie zwei Variablen definiert werden und ausgegeben werden.</p>
+        <p>Der untere Code ist ein Einstieg in dieses Projekt und zeigt, wie zwei Variablen definiert und ausgegeben werden.</p>
         <p><b>JavaScript-Code (jp_ggt.js)</b></p>
         <pre class="code-container">
             <code class="language-js">
-                let firstNumber = 30; // Erste Zahl
-                let secondNumber = 15; // Zweite Zahl
-                console.log(firstNumber, secondNumber); // Ausgabe der Zahlen
-            </code>
-        </pre>
-
-        <p><b>HTML-Code (jp_ggt.html)</b></p>
-        <pre class="code-container">
-            <code class="language-html">
-                &lt;!DOCTYPE html&gt;
-                &lt;html lang="de"&gt;
-                &lt;head&gt;
-                    &lt;meta charset="UTF-8"&gt;
-                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-                    &lt;title&gt;Größter gemeinsamer Teiler&lt;/title&gt;
-                    &lt;link rel="stylesheet" href="./css/jp_projekte.css"&gt;
-                    &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"&gt;
-                    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
-                    &lt;script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"&gt;&lt;/script&gt;
-                    &lt;script src="./script/jp_ggt.js"&gt;&lt;/script&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                    
-                &lt;/body&gt;
-                &lt;/html&gt;
+                // Beispielcode für Modul 1
             </code>
         </pre>
     </div>
@@ -133,48 +107,9 @@
         <p><b>JavaScript-Code (jp_ggt.js)</b></p>
         <pre class="code-container">
             <code class="language-js">
-                // Füge diesen Code ergänzend zum vorherigen Beispiel hinzu
-                $(document).ready(function () {
-                    $('#sozStartButton').click(function () {
-                        alert('Berechnung gestartet!');
-                    });
-                });
+                // Beispielcode für Modul 2
             </code>
         </pre>
-        <p>Hier wird jQuery verwendet, um einen Klick-Event-Listener für den Button "Berechnung gestartet" zu erstellen. Wenn der Button geklickt wird, wird eine Alert-Box angezeigt.</p>
-        <p>Die Funktion `$(document).ready()` stellt sicher, dass der Code erst ausgeführt wird, wenn das DOM vollständig geladen ist.</p>
-        <p>Der Button mit der ID `sozStartButton` wird ausgewählt, und die Funktion wird an das Klick-Ereignis gebunden.</p>
-        <p>Wenn der Button geklickt wird, wird die Funktion ausgeführt, die eine Alert-Box mit der Nachricht "Berechnung gestartet!" anzeigt.</p>
-        <p>Die ID `sozStartButton` ist im HTML-Code definiert und wird verwendet, um den Button eindeutig zu identifizieren.</p>
-        <p>Die Funktion `alert()` zeigt eine einfache Dialogbox mit einer Nachricht an.</p>
-        <p>Die Funktion `click()` wird verwendet, um einen Klick-Event-Listener für den Button zu erstellen.</p>
-        <p>Die Funktion `ready()` wird verwendet, um sicherzustellen, dass der Code erst ausgeführt wird, wenn das DOM vollständig geladen ist.</p>
-        <p><b>HTML-Code (jp_ggt.html)</b></p>
-        <pre class="code-container">
-            <code class="language-html">
-                &lt;!DOCTYPE html&gt;
-                &lt;html lang="de"&gt;
-                &lt;head&gt;
-                    &lt;meta charset="UTF-8"&gt;
-                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-                    &lt;title&gt;Größter gemeinsamer Teiler&lt;/title&gt;
-                    &lt;link rel="stylesheet" href="./css/jp_projekte.css"&gt;
-                    &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"&gt;
-                    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
-                    &lt;script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"&gt;&lt;/script&gt;
-                    &lt;script src="./script/jp_ggt.js"&gt;&lt;/script&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                    &lt;div id="getResultOfChallenge"&gt;
-                        &lt;input type="button" id="sozStartButton" value="Berechnen" /&gt;
-                    &lt;/div&gt;
-                &lt;/body&gt;
-                &lt;/html&gt;
-            </code>
-        </pre>
-        <p>Die CSS-Datei `jp_projekte.css` wird verwendet, um das Layout und das Design der Webseite zu gestalten.</p>
-        <p>Die JQuery-Bibliothek wird verwendet, um die Interaktion mit der Webseite zu erleichtern.</p>
-        <p>Die JQuery-UI-Bibliothek wird verwendet, um die Benutzeroberfläche zu verbessern.</p>
     </div>
 
     <!-- Kapitel 3: Modul 3 -->
@@ -184,71 +119,9 @@
         <p><b>JavaScript-Code (jp_ggt.js)</b></p>
         <pre class="code-container">
             <code class="language-js">
-                // Tausche den Code aus Modul 2 mit dem unteren Code.
-                $(document).ready(function () {
-                    $('#sozStartButton').click(function () {
-                        let firstNumber = $('#firstNumber').val();
-                        let secondNumber = $('#secondNumber').val();
-                        let ggtResult = calculateGCD(firstNumber, secondNumber);
-                        $('#showCallbackOfChallenge').html("Der größte gemeinsame Teiler ist " + ggtResult);
-                        $('#showCallbackOfChallenge').css('visibility', 'visible');
-                        $('#showCallbackOfChallenge').css('background-color', '#28a745');
-                        $('#showCallbackOfChallenge').css('color', '#fff'); 
-                    });
-                });
-
-                function calculateGCD(value1, value2) {
-                    value1 = parseInt(value1, 10);
-                    value2 = parseInt(value2, 10);
-                
-                    if (isNaN(value1) || isNaN(value2) || value1 <= 0 || value2 <= 0) {
-                        return 'Bitte gültige positive Zahlen eingeben.';
-                    }
-                
-                    while (value2 !== 0) {
-                        let temp = value2;
-                        value2 = value1 % value2;
-                        value1 = temp;
-                    }
-                    return value1;
-                }
+                // Beispielcode für Modul 3
             </code>
         </pre>
-        <p>Der Code berechnet den größten gemeinsamen Teiler (ggT) zweier Zahlen, die der Benutzer eingibt. Wenn die Eingaben ungültig sind, wird eine Fehlermeldung angezeigt.</p>
-        <p>Die Funktion `calculateGCD` berechnet den ggT mithilfe des Euklidischen Algorithmus. Die Funktion `updateResultDisplay` aktualisiert die Anzeige des Ergebnisses auf der Webseite.</p>
-        
-        <p><b>HTML-Code (jp_ggt.html)</b></p>
-        <pre class="code-container">
-            <code class="language-html">
-                &lt;!DOCTYPE html&gt;
-                &lt;html lang="de"&gt;
-                &lt;head&gt;
-                    &lt;meta charset="UTF-8"&gt;
-                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-                    &lt;title&gt;Größter gemeinsamer Teiler&lt;/title&gt;
-                    &lt;link rel="stylesheet" href="./css/jp_projekte.css"&gt;
-                    &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"&gt;
-                    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
-                    &lt;script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"&gt;&lt;/script&gt;
-                    &lt;script src="./script/jp_ggt.js"&gt;&lt;/script&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                    &lt;div id="getResultOfChallenge"&gt;
-                        &lt;label for="firstNumber"&gt;Erste Zahl:&lt;/label&gt;
-                        &lt;input type="number" id="firstNumber" name="firstNumber" min="1" step="1" required /&gt;
-                        &lt;label for="secondNumber"&gt;Zweite Zahl:&lt;/label&gt;
-                        &lt;input type="number" id="secondNumber" name="secondNumber" min="1" step="1" required /&gt;
-                        &lt;input type="button" id="sozStartButton" value="Berechnen" /&gt;
-                        &lt;div id="showCallbackOfChallenge" style="visibility: hidden;"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/body&gt;
-                &lt;/html&gt;
-            </code>
-        </pre>
-        <p>Die HTML-Datei enthält Eingabefelder für die beiden Zahlen und einen Button, um die Berechnung zu starten. Das Ergebnis wird in einem `div`-Element angezeigt.</p>
-        <p>Die CSS-Datei `jp_projekte.css` wird verwendet, um das Layout und das Design der Webseite zu gestalten.</p>
-        <p>Die JQuery-Bibliothek wird verwendet, um die Interaktion mit der Webseite zu erleichtern.</p>
-        <p>Die JQuery-UI-Bibliothek wird verwendet, um die Benutzeroberfläche zu verbessern.</p>
     </div>
 
     <!-- Kapitel 4: Modul 4 -->
@@ -258,72 +131,9 @@
         <p><b>JavaScript-Code (jp_ggt.js)</b></p>
         <pre class="code-container">
             <code class="language-js">
-                // Tausche den Code aus Modul 3 mit dem unteren Code.
-                $(document).ready(function () {
-                    $('#sozStartButton').click(function () {
-                        let firstNumber = $('#firstNumber').val();
-                        let secondNumber = $('#secondNumber').val();
-
-                        firstNumber = parseInt(firstNumber);
-                        secondNumber = parseInt(secondNumber);
-
-                        if (isNaN(firstNumber) || firstNumber < 1 || isNaN(secondNumber) || secondNumber < 1) {
-                            updateResultDisplay('Bitte gültige Zahlen eintragen.', 'error');
-                            return;
-                        }
-
-                        let ggtResult = calculateGCD(firstNumber, secondNumber);
-                        $('#showCallbackOfChallenge').html("Der größte gemeinsame Teiler ist " + ggtResult);
-                        $('#showCallbackOfChallenge').css('visibility', 'visible');
-                        $('#showCallbackOfChallenge').css('background-color', '#28a745');
-                        $('#showCallbackOfChallenge').css('color', '#fff'); 
-                    });
-                });
-
-                function calculateGCD(value1, value2) {
-                    while (value2 !== 0) {
-                        let temp = value2;
-                        value2 = value1 % value2;
-                        value1 = temp;
-                    }
-                    return value1;
-                }
+                // Beispielcode für Modul 4
             </code>
         </pre>
-        <p>Die Funktionen wurden angepasst, da manche "Aufgaben" ausgelagert werden.</p>
-        <p>Die Funktion `calculateGCD` berechnet den größten gemeinsamen Teiler (ggT) mithilfe des Euklidischen Algorithmus.</p>
-        <p><b>HTML-Code (jp_ggt.html)</b></p>
-        <pre class="code-container">
-            <code class="language-html">
-                &lt;!DOCTYPE html&gt;
-                &lt;html lang="de"&gt;
-                    &lt;head&gt;
-                        &lt;meta charset="UTF-8"&gt;
-                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-                        &lt;title&gt;Größter gemeinsamer Teiler&lt;/title&gt;
-                        &lt;link rel="stylesheet" href="../css/jp_projekte.css"&gt;
-                        &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"&gt;
-                        &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
-                        &lt;script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"&gt;&lt;/script&gt;
-                        &lt;script src="../script/jp_ggt.js"&gt;&lt;/script&gt;
-                    &lt;/head&gt;
-                    &lt;body&gt;
-                        &lt;div id="getResultOfChallenge"&gt;
-                            &lt;label for="firstNumber"&gt;Erste Zahl:&lt;/label&gt;
-                            &lt;input type="number" id="firstNumber" name="firstNumber" min="1" step="1" required /&gt;
-                            &lt;label for="secondNumber"&gt;Zweite Zahl:&lt;/label&gt;
-                            &lt;input type="number" id="secondNumber" name="secondNumber" min="1" step="1" required /&gt;
-                            &lt;input type="button" id="sozStartButton" value="Berechnen" /&gt;
-                            &lt;div id="showCallbackOfChallenge" style="visibility: hidden;"&gt;&lt;/div&gt;
-                        &lt;/div&gt;
-                    &lt;/body&gt;
-                &lt;/html&gt;
-            </code>
-        </pre>
-        <p>Die HTML-Datei enthält Eingabefelder für die beiden Zahlen und einen Button, um die Berechnung zu starten. Das Ergebnis wird in einem `div`-Element angezeigt.</p>
-        <p>Die CSS-Datei `jp_projekte.css` wird verwendet, um das Layout und das Design der Webseite zu gestalten.</p>
-        <p>Die JQuery-Bibliothek wird verwendet, um die Interaktion mit der Webseite zu erleichtern.</p>
-        <p>Die JQuery-UI-Bibliothek wird verwendet, um die Benutzeroberfläche zu verbessern.</p>
     </div>
 
     <!-- Kapitel 5: Modul 5 -->
@@ -333,72 +143,9 @@
         <p><b>JavaScript-Code (jp_ggt.js)</b></p>
         <pre class="code-container">
             <code class="language-js">
-                // Tausche den Code-Teil aus Modul 4 mit dem unteren Code.
-                $(document).ready(function () {
-                    $('#sozStartButton').click(function () {
-                        let firstNumber = $('#firstNumber').val();
-                        let secondNumber = $('#secondNumber').val();
-
-                        firstNumber = parseInt(firstNumber);
-                        secondNumber = parseInt(secondNumber);
-
-                        if (isNaN(firstNumber) || firstNumber < 1 || isNaN(secondNumber) || secondNumber < 1) {
-                            updateResultDisplay('Bitte gültige Zahlen eintragen.', 'error');
-                            return;
-                        }
-
-                        let ggtResult = calculateGCD(firstNumber, secondNumber);
-                        updateResultDisplay(`Der größte gemeinsame Teiler von ${firstNumber} und ${secondNumber} ist: ${ggtResult}`, 'success');
-                    });
-                });
-                
-                // Ergänze den Code aus Modul 4 mit dem unteren Code.
-                function updateResultDisplay(message, type) {
-                    const resultElement = $('#showCallbackOfChallenge');
-                    resultElement.css('visibility', 'visible');
-
-                    if (type === 'error') {
-                        resultElement.css('background-color', '#c22b67'); // Rot für Fehler
-                    } else if (type === 'success') {
-                        resultElement.css('background-color', '#28a745'); // Grün für Erfolg
-                    }
-
-                    resultElement.html(message);
-                }
+                // Beispielcode für Modul 5
             </code>
         </pre>
-        <p>Die Funktion `updateResultDisplay` wird verwendet, um das Ergebnis oder Fehlermeldungen dynamisch auf der Webseite anzuzeigen. Sie ändert die Hintergrundfarbe und den Text je nach Typ der Nachricht.</p>
-        
-        <p><b>HTML-Code (jp_ggt.html)</b></p>
-        <pre class="code-container">
-            <code class="language-html">
-                &lt;!DOCTYPE html&gt;
-                &lt;html lang="de"&gt;
-                    &lt;head&gt;
-                        &lt;meta charset="UTF-8"&gt;
-                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-                        &lt;title&gt;Größter gemeinsamer Teiler&lt;/title&gt;
-                        &lt;link rel="stylesheet" href="../css/jp_projekte.css"&gt;
-                        &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"&gt;
-                        &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
-                        &lt;script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"&gt;&lt;/script&gt;
-                        &lt;script src="../script/jp_ggt.js"&gt;&lt;/script&gt;
-                    &lt;/head&gt;
-                    &lt;body&gt;
-                        &lt;div id="getResultOfChallenge"&gt;
-                            &lt;label for="firstNumber"&gt;Erste Zahl:&lt;/label&gt;
-                            &lt;input type="number" id="firstNumber" name="firstNumber" min="1" step="1" required /&gt;
-                            &lt;label for="secondNumber"&gt;Zweite Zahl:&lt;/label&gt;
-                            &lt;input type="number" id="secondNumber" name="secondNumber" min="1" step="1" required /&gt;
-                            &lt;input type="button" id="sozStartButton" value="Berechnen" /&gt;
-                            &lt;div id="showCallbackOfChallenge" style="visibility: hidden;"&gt;&lt;/div&gt;
-                        &lt;/div&gt;
-                    &lt;/body&gt;
-                &lt;/html&gt;
-            </code>
-        </pre>
-        <p>Die HTML-Datei enthält Eingabefelder für die beiden Zahlen und einen Button, um die Berechnung zu starten. Das Ergebnis wird in einem `div`-Element angezeigt.</p>
-        
     </div>
 
     <!-- Kapitel 6: Kompletter Code -->

@@ -1,8 +1,13 @@
 /*
  * JavaScript zum 1x1 (Einmaleins)
  * ================================
- * Autor: Christian Leeser (camber.leaflet_0z@icloud.com)
- * Version: 0.1 (Stand: 08.03.2025)
+ * Autoren: GitHub Copilot & Christian Leeser
+ * Version: 1.1
+ * Datum: 12. April 2025
+ * 
+ * Beschreibung:
+ * Dieses Skript ermöglicht die Erstellung einer Multiplikationsreihe basierend auf Benutzereingaben.
+ * Es validiert die Eingaben, generiert die Multiplikationsreihe und zeigt das Ergebnis oder eine Fehlermeldung im HTML an.
  * 
  * Inhalt:
  * ----------------------------------------------------------------
@@ -12,12 +17,15 @@
  * 
  * Lizenz:
  * ----------------------------------------------------------------
- * Creative-Commons CC BY-SA 4.0 by Christian Leeser (08.03.2025)
+ * Creative-Commons CC BY-SA 4.0 by Christian Leeser (12.04.2025)
  * https://creativecommons.org/licenses/by-sa/4.0/
  */
 
 $(document).ready(function () {
-    // Event-Listener: Führt die Funktion getValueForMulti aus, wenn der Button mit der ID 'sozStartButton' geklickt wird.
+    // =========================
+    // Event-Listener
+    // =========================
+    // Führt die Funktion getValueForMulti aus, wenn der Button mit der ID 'sozStartButton' geklickt wird.
     $('#sozStartButton').click(function () {
         getValueForMulti();
     });

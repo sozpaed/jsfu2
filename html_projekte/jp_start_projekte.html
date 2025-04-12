@@ -1,24 +1,54 @@
+<!-- 
+ * HTML-Datei: jp_start_projekte.html
+ * ============================
+ * Autoren: GitHub Copilot & Christian Leeser
+ * Version: 1.1
+ * Datum: 12. April 2025
+ * 
+ * Beschreibung:
+ * Diese HTML-Datei bietet eine Übersicht über alle Projekte, die im Kurs erstellt werden können.
+ * Sie enthält die Navigation zu den einzelnen Projekten, eine kurze Beschreibung der Projekte
+ * und die Kriterien, die für das Bestehen eines Projekts erfüllt sein müssen.
+ * 
+ * Inhalt:
+ * ----------------------------------------------------------------
+ * - Navigation: Links zu den verschiedenen Projekten.
+ * - Übersicht: Einführung und Beschreibung der Projekte.
+ * - Kriterien: Anforderungen an die Projekte.
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projekte</title>
+
+    <!-- Verknüpfung zur Haupt-CSS-Datei -->
     <link rel="stylesheet" href="../css/jp_styles.css">
 </head>
 <body>
+    <!-- Navigation: Links zu den verschiedenen Projekten -->
     <div class="link-container">
+        <!-- Link zur Startseite -->
         <a id="start" href="../start.html">🏠 Start</a>
+        <!-- Links zu den einzelnen Projekten -->
         <a href="./jp_projekt1.html">🧮 Einmaleins</a>
         <a href="./jp_projekt2.html">📐 GgT berechnen</a>
         <a href="./jp_projekt3.html">📊 Notenschnitt berechnen</a>
         <a href="./jp_projekt4.html">🔢 Zahlenraten</a>
         <a href="./jp_projekt5.html">🎮 Stein, Schere, Papier</a>
     </div>
+
+    <!-- Hauptüberschrift der Seite -->
     <h1>Projekte</h1>
+
+    <!-- Abschnitt: Übersicht der Projekte -->
     <h2>1 Übersicht der Projekte</h2>
     <div class="content">
+        <!-- Einführungstext zur Projektübersicht -->
         <p>Hier findest du eine Übersicht über die Projekte, die du in diesem Kurs erstellen kannst. Jedes Projekt ist eine praktische Anwendung der Konzepte, die du in den Modulen gelernt hast.</p>
+        <!-- Liste der Projekte mit kurzen Beschreibungen -->
         <ul>
             <li><a href="./jp_projekt1.html">🧮 Einmaleins</a>: Erstelle ein interaktives Einmaleins-Tool für Multiplikationsreihen.</li>
             <li><a href="./jp_projekt2.html">📐 GgT berechnen</a>: Entwickle eine Anwendung zur Berechnung des größten gemeinsamen Teilers.</li>
@@ -26,12 +56,17 @@
             <li><a href="./jp_projekt4.html">🔢 Zahlenraten</a>: Erstelle ein Spiel, bei dem der Benutzer eine zufällig generierte Zahl erraten muss.</li>
             <li><a href="./jp_projekt5.html">🎮 Stein, Schere, Papier</a>: Programmiere das klassische Spiel Stein, Schere, Papier.</li>
         </ul>
+        <!-- Abschluss der Übersicht -->
         <p>Jedes Projekt enthält eine detaillierte Anleitung, wie du es umsetzen kannst, sowie Beispiele und Übungen, um dein Verständnis zu vertiefen.</p>
         <p>Wähle ein Projekt aus der Liste, um mehr darüber zu erfahren und mit der Umsetzung zu beginnen.</p>
     </div>
+
+    <!-- Abschnitt: Kriterien für das Bestehen der Projekte -->
     <h2>🛠️ 2 Kriterien</h2>
     <div class="content">
+        <!-- Einführungstext zu den Kriterien -->
         <p>Ein Projekt ist bestanden, wenn alle der folgenden Punkte erfüllt sind:</p>
+        <!-- Liste der allgemeinen Kriterien -->
         <ul>
             <li>Allgemeine Kriterien</li>
             <ul>
@@ -39,15 +74,16 @@
                 <li>Das eigene Projekt ist funktionsfähig.</li>
                 <li>Das hier vorgestellte Programm dient nur als Grundlage.</li>
                 <li>Die Code-Teile sind entsprechend der Module in der richtigen Reihenfolge bearbeitet.</li>
-                <li>Aus dem hier vorgestellte Programm ist eigenes Programm entstanden, dass das "ursprüngliche" Programm signifikant in Form, Gestaltung und Umfang ergänzt und erweitert.</li>
+                <li>Aus dem hier vorgestellten Programm ist ein eigenes Programm entstanden, das das ursprüngliche Programm signifikant in Form, Gestaltung und Umfang ergänzt und erweitert.</li>
                 <li>Das Projekt ist in einem eigenen Verzeichnis gespeichert.</li>
                 <li>Das Projekt ist in einem eigenen Unterverzeichnis gespeichert.</li>
                 <li>Das Projekt ist in einem eigenen Unterverzeichnis gespeichert, das dem Namen des Projekts entspricht.</li>
                 <li>Der HTML-Code, der JavaScript-Code und der CSS-Code sind jeweils ausführlich kommentiert.</li>
             </ul>
+            <!-- Liste der HTML-spezifischen Kriterien -->
             <li>HTML-Kriterien</li>
             <ul>
-                <li>Die HTML-Datei ist funktionsfähig und regelkonform. (Prüfung mit <a href="https://validator.w3.org/detailed.html" target="_blank">W3C  Markup Validation Service</a>)</li>
+                <li>Die HTML-Datei ist funktionsfähig und regelkonform. (Prüfung mit <a href="https://validator.w3.org/detailed.html" target="_blank">W3C Markup Validation Service</a>)</li>
                 <li>Die HTML-Datei ist in einem eigenen Verzeichnis gespeichert.</li>
                 <li>Die HTML-Datei ist in einem eigenen Unterverzeichnis gespeichert.</li>
                 <li>Die HTML-Datei ist in einem eigenen Unterverzeichnis gespeichert, das dem Namen des Projekts entspricht.</li>
@@ -56,6 +92,7 @@
                 <li>Die HTML-Datei ist mit der JQuery-Bibliothek verknüpft.</li>
                 <li>Die HTML-Datei ist mit der JQuery-UI-Bibliothek verknüpft.</li>
             </ul>
+            <!-- Liste der JavaScript-spezifischen Kriterien -->
             <li>JavaScript-Kriterien</li>
             <ul>
                 <li>Der JavaScript-Code ist funktionsfähig und regelkonform. (Prüfung mit <a href="https://jshint.com/" target="_blank">JSHint</a>)</li>
@@ -64,6 +101,7 @@
                 <li>Der JavaScript-Code ist in einem eigenen Unterverzeichnis gespeichert, das dem Namen des Projekts entspricht.</li>
                 <li>Der JavaScript-Code ist mit der HTML-Datei verknüpft.</li>
             </ul>
+            <!-- Liste der CSS-spezifischen Kriterien -->
             <li>CSS-Kriterien</li>
             <ul>
                 <li>Der CSS-Code ist funktionsfähig und regelkonform. (Prüfung mit <a href="https://jigsaw.w3.org/css-validator/" target="_blank">W3C CSS Validation Service</a>)</li>
@@ -73,6 +111,7 @@
                 <li>Der CSS-Code ist mit der HTML-Datei verknüpft.</li>
             </ul>
         </ul>
+        <!-- Abschluss der Kriterien -->
         <p>Viel Spaß beim Programmieren!</p>
     </div>
 </body>

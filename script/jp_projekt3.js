@@ -1,8 +1,13 @@
 /*
  * JavaScript zur Berechnung des Notendurchschnitts
  * ================================================
- * Autor: Christian Leeser (camber.leaflet_0z@icloud.com)
- * Version: 0.1 (Stand: 08.03.2025)
+ * Autoren: GitHub Copilot & Christian Leeser
+ * Version: 1.1
+ * Datum: 12. April 2025
+ * 
+ * Beschreibung:
+ * Dieses Skript ermöglicht die Berechnung des Notendurchschnitts basierend auf Benutzereingaben.
+ * Es validiert die Eingaben, speichert die Noten und zeigt den Durchschnitt sowie die Anzahl der eingegebenen Noten im HTML an.
  * 
  * Inhalt:
  * ----------------------------------------------------------------
@@ -13,11 +18,14 @@
  * 
  * Lizenz:
  * ----------------------------------------------------------------
- * Creative-Commons CC BY-SA 4.0 by Christian Leeser (08.03.2025)
+ * Creative-Commons CC BY-SA 4.0 by Christian Leeser (12.04.2025)
  * https://creativecommons.org/licenses/by-sa/4.0/
  */
 
 $(document).ready(function () {
+    // =========================
+    // Globale Variablen
+    // =========================
     // Variablen zur Speicherung der Gesamtsumme der Noten und der Anzahl der eingegebenen Noten
     let sum = 0; // Gesamtsumme der Noten
     let count = 0; // Anzahl der eingegebenen Noten
