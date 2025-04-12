@@ -22,6 +22,7 @@ $(document).ready(function () {
         playGame();
     });
 
+
     /**
      * Führt das Spiel Zahlenraten aus.
      * Holt die Eingabe des Nutzers, validiert sie, überprüft die Eingabe und zeigt das Ergebnis an.
