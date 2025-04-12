@@ -227,6 +227,11 @@
                 &lt;/html&gt;
             </code>
         </pre>
+        <p>Hier wird die Grundstruktur der HTML-Seite definiert.</p>
+        <p>Die Datei `jp_projekte.css` enthält die CSS-Styles für die Gestaltung der Webseite.</p>
+        <p>Die Datei `jp_zahlenraten.js` enthält den JavaScript-Code für die Logik des Spiels.</p>
+        <p>Die JQuery-Bibliothek wird verwendet, um die Interaktion mit der Webseite zu erleichtern.</p>
+        <p>Die JQuery-UI-Bibliothek wird verwendet, um die Benutzeroberfläche zu verbessern.</p>
     </div>
 
     <!-- Modul 4 -->
@@ -273,17 +278,6 @@
                         return 'Deine Zahl ist zu hoch. Versuche es erneut.';
                     }
                 }
-            </code>
-        </pre>
-    </div>
-
-    <!-- Modul 5 -->
-    <h3>🎮 Modul 5: Entwicklung interaktiver Elemente</h3>
-    <div class="module" id="module5">
-        <p>Der folgende Code zeigt, wie das Ergebnis des Spiels angezeigt wird.</p>
-        <p><b>JavaScript-Code (jp_projekt4.js)</b></p>
-        <pre class="code-container">
-            <code class="language-js">
                 function updateResultDisplay(message, type) {
                     const resultElement = $('#showCallbackOfChallenge');
                     resultElement.css('visibility', 'visible');
@@ -296,13 +290,127 @@
 
                     resultElement.html(message);
                 }
+            </code>
+        </pre>
+        <p>Hier wird die Funktion `playGame()` definiert, die die Eingabe des Benutzers überprüft und das Ergebnis anzeigt.</p>
+        <p>Die Funktion `isValidGuess()` überprüft, ob die Eingabe des Benutzers eine gültige Zahl zwischen 1 und 10 ist.</p>
+        <p>Die Funktion `checkGuess()` überprüft, ob die Eingabe des Benutzers mit der Zufallszahl übereinstimmt und gibt das Ergebnis zurück.</p>
+        <p>Die Funktion `updateResultDisplay()` aktualisiert die Anzeige des Ergebnisses auf der Webseite.</p>
+        <p>Die Funktion `playGame()` wird aufgerufen, wenn der Button "Raten" geklickt wird.</p>
+        <p>Die Funktion `getRandomNumber()` wird aufgerufen, um eine neue Zufallszahl zu generieren, wenn der Benutzer gewonnen hat.</p>
+        <p><b>HTML-Code (jp_zahlenraten.html)</b></p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="de"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;Zahlenraten&lt;/title&gt;
+                    &lt;link rel="stylesheet" href="../css/jp_projekte.css"&gt;
+                    &lt;link rel="stylesheet" href="../css/jp_menue.css"&gt;
+                    &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"&gt;
+                    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+                    &lt;script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"&gt;&lt;/script&gt;
+                    &lt;script src="../script/jp_zahlenraten.js"&gt;&lt;/script&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1&gt;Zahlenraten&lt;/h1&gt;
+                    &lt;div class="content"&gt;
+                        &lt;h2&gt;Willkommen zu Zahlenraten!&lt;/h2&gt;
+                        &lt;p&gt;Der Computer wählt eine Zahl, und du musst sie erraten. Gib deine Vermutung ein und drücke auf "Raten".&lt;/p&gt;
+                        &lt;p&gt;Viel Spaß beim Spielen!&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="projektarea"&gt;
+                        &lt;div id="showChallenge"&gt;Zum Raten drücke auf &lt;b&gt;"Raten"&lt;/b&gt;&lt;/div&gt;
+                        &lt;div id="getResultOfChallenge"&gt;
+                            &lt;div id="showCallbackOfChallenge" style="visibility: hidden;"&gt;&lt;/div&gt;
+                            &lt;form name="userInputForm"&gt;
+                                &lt;label for="firstNumber"&gt;Deine Zahl:&lt;/label&gt;
+                                &lt;input type="number" id="firstNumber" name="firstNumber" min="1" max="100" required /&gt;
+                            &lt;/form&gt;
+                        &lt;/div&gt;
+                        &lt;div id="listOfButtons"&gt;
+                            &lt;form name="listOfButtons"&gt;
+                                &lt;input type="button" id="sozStartButton" value="Raten"/&gt;
+                                &lt;input type="button" id="sozReloadButton" value="Seite neu laden" onclick="location.reload(true)"/&gt;
+                            &lt;/form&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+        <p>Hier wird die Grundstruktur der HTML-Seite definiert.</p>
+        <p>Die Datei `jp_projekte.css` enthält die CSS-Styles für die Gestaltung der Webseite.</p>
+        <p>Die Datei `jp_zahlenraten.js` enthält den JavaScript-Code für die Logik des Spiels.</p>
+        <p>Die JQuery-Bibliothek wird verwendet, um die Interaktion mit der Webseite zu erleichtern.</p>
+        <p>Die JQuery-UI-Bibliothek wird verwendet, um die Benutzeroberfläche zu verbessern.</p>
+    </div>
 
+    <!-- Modul 5 -->
+    <h3>🎮 Modul 5: Entwicklung interaktiver Elemente</h3>
+    <div class="module" id="module5">
+        <p>Der folgende Code zeigt, wie das Ergebnis des Spiels angezeigt wird.</p>
+        <p><b>JavaScript-Code (jp_zahlenraten.js)</b></p>
+        <pre class="code-container">
+            <code class="language-js">
                 // Setze den Code komplett in diese Funktion
                 $(document).ready(function () {
                     ... komplette Code ...
                 });
             </code>
         </pre>
+        <p>Hier wird die Funktion `$(document).ready()` verwendet, um sicherzustellen, dass der Code erst ausgeführt wird, wenn das DOM vollständig geladen ist.</p>
+
+        <p><b>HTML-Code (jp_zahlenraten.html)</b></p>
+        <pre class="code-container">
+            <code class="language-html">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="de"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;Zahlenraten&lt;/title&gt;
+                    &lt;link rel="stylesheet" href="../css/jp_projekte.css"&gt;
+                    &lt;link rel="stylesheet" href="../css/jp_menue.css"&gt;
+                    &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"&gt;
+                    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+                    &lt;script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"&gt;&lt;/script&gt;
+                    &lt;script src="../script/jp_zahlenraten.js"&gt;&lt;/script&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1&gt;Zahlenraten&lt;/h1&gt;
+                    &lt;div class="content"&gt;
+                        &lt;h2&gt;Willkommen zu Zahlenraten!&lt;/h2&gt;
+                        &lt;p&gt;Der Computer wählt eine Zahl, und du musst sie erraten. Gib deine Vermutung ein und drücke auf "Raten".&lt;/p&gt;
+                        &lt;p&gt;Viel Spaß beim Spielen!&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="projektarea"&gt;
+                        &lt;div id="showChallenge"&gt;Zum Raten drücke auf &lt;b&gt;"Raten"&lt;/b&gt;&lt;/div&gt;
+                        &lt;div id="getResultOfChallenge"&gt;
+                            &lt;div id="showCallbackOfChallenge" style="visibility: hidden;"&gt;&lt;/div&gt;
+                            &lt;form name="userInputForm"&gt;
+                                &lt;label for="firstNumber"&gt;Deine Zahl:&lt;/label&gt;
+                                &lt;input type="number" id="firstNumber" name="firstNumber" min="1" max="100" required /&gt;
+                            &lt;/form&gt;
+                        &lt;/div&gt;
+                        &lt;div id="listOfButtons"&gt;
+                            &lt;form name="listOfButtons"&gt;
+                                &lt;input type="button" id="sozStartButton" value="Raten"/&gt;
+                                &lt;input type="button" id="sozReloadButton" value="Seite neu laden" onclick="location.reload(true)"/&gt;
+                            &lt;/form&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+        <p>Hier wird die Grundstruktur der HTML-Seite definiert.</p>
+        <p>Die Datei `jp_projekte.css` enthält die CSS-Styles für die Gestaltung der Webseite.</p>
+        <p>Die Datei `jp_zahlenraten.js` enthält den JavaScript-Code für die Logik des Spiels.</p>
+        <p>Die JQuery-Bibliothek wird verwendet, um die Interaktion mit der Webseite zu erleichtern.</p>
+        <p>Die JQuery-UI-Bibliothek wird verwendet, um die Benutzeroberfläche zu verbessern.</p>
     </div>
 
     <!-- Kompletter Code -->
