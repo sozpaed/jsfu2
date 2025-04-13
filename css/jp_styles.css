@@ -124,7 +124,7 @@ h4 {
 /* ========================= */
 /* Abschnitts-Stile          */
 /* ========================= */
-.criteria, .module, .teaser, .content, .definition, .aufgabentext,.projektarea {
+.criteria, .module, .teaser, .content, .definition, .aufgabentext,.projektarea, .projekt, .links, .loesungshinweis, .zusammenfassung, .ende {
     background-color: var(--header-bg-color);
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -134,7 +134,7 @@ h4 {
 }
 
 @media (prefers-color-scheme: dark) {
-    .criteria, .module, .teaser, .content, .definition, .aufgabentext,.projektarea {
+    .criteria, .module, .teaser, .content, .definition, .aufgabentext,.projektarea, .projekt, .links, .loesungshinweis, .zusammenfassung, .ende {
         background-color: var(--background-color);
         color: var(--text-color);
     }
@@ -159,7 +159,7 @@ h4 {
     color: #155724; /* Dunkelgrün */
     padding: 10px;
     border-radius: 8px;
-    margin: 10px 0;
+    margin: 20px;
 }
 
 .regelstandard {
@@ -167,7 +167,7 @@ h4 {
     color: #004085; /* Dunkelblau */
     padding: 10px;
     border-radius: 8px;
-    margin: 10px 0;
+    margin: 20px;
 }
 
 .expertenstandard {
@@ -175,7 +175,7 @@ h4 {
     color: #721c24; /* Dunkelrot */
     padding: 10px;
     border-radius: 8px;
-    margin: 10px 0;
+    margin: 20px;
 }
 
 /* ========================= */
@@ -240,7 +240,7 @@ textarea:focus, input[type="number"]:focus {
 }
 
 /* Toggle-Button für Code-Container */
-.toggle-button {
+.toggle-button, .toggle-button-help {
     cursor: pointer; /* Zeigt an, dass es interaktiv ist */
     color: var(--link-color); /* Farbe für den Button */
     font-size: 14px; /* Schriftgröße */
@@ -249,7 +249,7 @@ textarea:focus, input[type="number"]:focus {
     transition: color 0.3s ease; /* Sanfter Übergang für die Farbe */
 }
 
-.toggle-button:hover {
+.toggle-button:hover,.toggle-button-help:hover {
     color: var(--accent-color); /* Akzentfarbe beim Hover */
 }
 
