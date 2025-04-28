@@ -1,7 +1,7 @@
 /*
  * JavaScript für die Interaktion mit der Benutzeroberfläche und die Code-Prüfung
  * ==============================================================================
- * Autoren: GitHub Copilot & Christian Leeser
+ * Autoren: Christian Leeser
  * Version: 1.1
  * Datum: 12. April 2025
  * 
@@ -20,6 +20,9 @@
  * ----------------------------------------------------------------
  * Creative-Commons CC BY-SA 4.0 by Christian Leeser (12.04.2025)
  * https://creativecommons.org/licenses/by-sa/4.0/
+
+  
+ * Hinweis: Die Quelltexte wurden teilweise mit Unterstützung von Microsoft Copilot erstellt.
  */
 
 // =========================
