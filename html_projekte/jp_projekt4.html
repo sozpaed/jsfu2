@@ -409,158 +409,10 @@
         <p>Die JQuery-UI-Bibliothek wird verwendet, um die Benutzeroberfläche zu verbessern.</p>
     </div>
 
-    <!-- Kompletter Code -->
-    <h2>📄 4 Kompletter Code</h2>
+    <!-- Kapitel 6: Komplettes Projekt -->
+    <h2>&#128196; 4 Komplettes Projekt</h2>
     <div class="module" id="completeCode">
-        <p>Hier ist der komplette Code für das Projekt:</p>
-        <p><b>HTML-Code (jp_zahlenraten.html)</b></p>
-        <pre class="code-container">
-            <code class="language-html">
-                &lt;!DOCTYPE html&gt;
-                &lt;html lang="de"&gt;
-                &lt;head&gt;
-                    &lt;meta charset="UTF-8"&gt;
-                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-                    &lt;title&gt;Zahlenraten&lt;/title&gt;
-                    &lt;link rel="stylesheet" href="../css/jp_projekte.css"&gt;
-                    &lt;link rel="stylesheet" href="../css/jp_menue.css"&gt;
-                    &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"&gt;
-                    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
-                    &lt;script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"&gt;&lt;/script&gt;
-                    &lt;script src="../script/jp_zahlenraten.js"&gt;&lt;/script&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                    &lt;h1&gt;Zahlenraten&lt;/h1&gt;
-                    &lt;p&gt;Willkommen zum Zahlenratenspiel!&lt;/p&gt;
-                    &lt;div id="showChallenge"&gt;Zum Raten drücke auf &lt;b&gt;"Raten"&lt;/b&gt;&lt;/div&gt;
-                    &lt;div id="getResultOfChallenge"&gt;
-                        &lt;div id="showCallbackOfChallenge" style="visibility: hidden;"&gt;&lt;/div&gt;
-                        &lt;form name="userInputForm"&gt;
-                            &lt;label for="firstNumber"&gt;Deine Zahl:&lt;/label&gt;
-                            &lt;input type="number" id="firstNumber" name="firstNumber" min="1" max="10" required /&gt;
-                        &lt;/form&gt;
-                    &lt;/div&gt;
-                    &lt;div id="listOfButtons"&gt;
-                        &lt;form name="listOfButtons"&gt;
-                            &lt;input type="button" id="sozStartButton" value="Raten" /&gt;
-                            &lt;input type="button" id="sozReloadButton" value="Seite neu laden" onclick="location.reload(true)" /&gt;
-                        &lt;/form&gt;
-                    &lt;/div&gt;
-                &lt;/body&gt;
-                &lt;/html&gt;
-            </code>
-        </pre>
-        <p>Hier wird die Grundstruktur der HTML-Seite definiert.</p>
-        <p>Die Datei `jp_projekte.css` enthält die CSS-Styles für die Gestaltung der Webseite.</p>
-        <p>Die Datei `jp_zahlenraten.js` enthält den JavaScript-Code für die Logik des Spiels.</p>
-        <p>Die JQuery-Bibliothek wird verwendet, um die Interaktion mit der Webseite zu erleichtern.</p>
-        <p>Die JQuery-UI-Bibliothek wird verwendet, um die Benutzeroberfläche zu verbessern.</p>
-        <p>Die &lt;script&gt;-Tags binden die JavaScript-Dateien in die HTML-Seite ein.</p>
-        <p>Die &lt;link&gt;-Tags binden die CSS-Datei und die JQuery-UI-Bibliothek in die HTML-Seite ein.</p>
-        <p><b>JavaScript-Code (jp_zahlenraten.js)</b></p>
-        <pre class="code-container">
-            <code class="language-js">
-                // Kompletter JavaScript-Code
-                $(document).ready(function () {
-                    let randomNumber = getRandomNumber();
-                    let attempts = 0;
-
-                    $('#sozStartButton').click(function () {
-                        playGame();
-                    });
-
-                    function playGame() {
-                        let userChoice = parseInt($('#firstNumber').val());
-
-                        if (isNaN(userChoice) || userChoice < 1 || userChoice > 10) {
-                            updateResultDisplay('Bitte nur Zahlen zwischen 1 und 10 eingeben.', 'error');
-                            return;
-                        }
-
-                        attempts++;
-                        let result = checkGuess(userChoice, randomNumber);
-
-                        updateResultDisplay(result, result.includes('gewonnen') ? 'success' : 'error');
-
-                        if (result.includes('gewonnen')) {
-                            randomNumber = getRandomNumber();
-                            attempts = 0;
-                        }
-                    }
-
-                    function getRandomNumber() {
-                        return Math.floor(Math.random() * 10) + 1;
-                    }
-
-                    function checkGuess(userChoice, randomNumber) {
-                        if (userChoice === randomNumber) {
-                            return `Herzlichen Glückwunsch! Du hast gewonnen! Die Zahl war ${randomNumber}.`;
-                        } else if (userChoice < randomNumber) {
-                            return 'Deine Zahl ist zu niedrig. Versuche es erneut.';
-                        } else {
-                            return 'Deine Zahl ist zu hoch. Versuche es erneut.';
-                        }
-                    }
-
-                    function updateResultDisplay(message, type) {
-                        const resultElement = $('#showCallbackOfChallenge');
-                        resultElement.css('visibility', 'visible');
-
-                        if (type === 'error') {
-                            resultElement.css('background-color', '#c22b67');
-                        } else if (type === 'success') {
-                            resultElement.css('background-color', '#28a745');
-                        }
-
-                        resultElement.html(message);
-                    }
-                });
-            </code>
-        </pre>
-        <p>Hier wird der komplette JavaScript-Code für das Projekt angezeigt.</p>
-        <p>Die Datei `jp_zahlenraten.js` enthält die Logik des Spiels, einschließlich der Funktionen zur Generierung von Zufallszahlen, Überprüfung der Benutzereingabe und Aktualisierung der Anzeige.</p>
-        <p><b>CSS-Code (jp_projekte.css)</b></p>
-        <pre class="code-container">
-            <code class="language-css">
-                /* CSS-Code für die Gestaltung der Webseite */
-                body {
-                    font-family: Arial, sans-serif;
-                    background-color: #f4f4f4;
-                    margin: 0;
-                    padding: 20px;
-                }
-                .link-container {
-                    display: flex;
-                    justify-content: space-around;
-                    margin-bottom: 20px;
-                }
-                .link-container a {
-                    text-decoration: none;
-                    color: #333;
-                    padding: 10px 20px;
-                    background-color: #e2e2e2;
-                    border-radius: 5px;
-                }
-                .link-container a:hover {
-                    background-color: #d1d1d1;
-                }
-                .teaser, .criteria, .module, .projektarea {
-                    background-color: #fff;
-                    padding: 20px;
-                    border-radius: 5px;
-                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                    margin-bottom: 20px;
-                }
-            </code>
-        </pre>
-        <p>Hier wird der CSS-Code für die Gestaltung der Webseite angezeigt.</p>
-        <p>Die Datei `jp_projekte.css` enthält die Styles für die Gestaltung der Webseite, einschließlich Farben, Schriftarten und Layout.</p>
-        <p>Die CSS-Regeln definieren das Aussehen der Links, Container und Module auf der Seite.</p>
-        <p>Die CSS-Regeln verwenden Flexbox, um die Links in der Navigation gleichmäßig zu verteilen.</p>
-        <p>Die CSS-Regeln definieren den Hintergrund, die Schriftart und die Abstände für die verschiedenen Bereiche der Seite.</p>
-        <p>Die CSS-Regeln verwenden Schatten, um den Modulen und dem Teaser-Bereich einen 3D-Effekt zu verleihen.</p>
-        <p>Die CSS-Regeln verwenden abgerundete Ecken, um die Module und den Teaser-Bereich ansprechender zu gestalten.</p>
-        <p>Die CSS-Regeln verwenden Hover-Effekte, um die Links interaktiver zu gestalten.</p>
+        <p>Das komplette Projekt kann als <a alt="Projekt-Download" href="./complete_projekts/projekt4.zip">ZIP-Datei</a> heruntergeladen werden.</p>
     </div>
 
     <!-- Projektbereich -->
@@ -580,6 +432,7 @@
                 <input type="button" id="sozReloadButton" value="Seite neu laden" onclick="location.reload(true)" />
             </form>
         </div>
+        <p>Das Projekt ist auch ein <a alt="Projektverweis" href="./complete_projekts/projekt4/jp_cp4_index.html" target="_blank">Einzelansicht</a> verfügbar.</p>
     </div>
 </body>
 </html>

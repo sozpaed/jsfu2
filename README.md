@@ -1,4 +1,6 @@
 # JavaScript - Modul-Projekt
+Version: 0.2
+Date: 07.05.25
 
 ## Projektbeschreibung
 Dieses Projekt wurde entwickelt, um Schülerinnen und Schüler der Klasse 9 schrittweise in die Grundlagen von JavaScript einzuführen. Ziel ist es, durch verschiedene Module und Übungen ein Gesamtprojekt zu erstellen, das die erlernten Konzepte praktisch anwendet. Die Themen umfassen Variablen, Schleifen, Funktionen und die Interaktion von JavaScript mit HTML und CSS.
@@ -28,13 +30,29 @@ Dieses Projekt wurde entwickelt, um Schülerinnen und Schüler der Klasse 9 schr
 
 ## Projektstruktur
 ```
-jsfu2-1/
-├── css/                # CSS-Dateien für das Styling
-├── html_module/        # HTML-Dateien für die Module
-├── html_projekte/      # HTML-Dateien für die Projekte
-├── script/             # JavaScript-Dateien für die Logik
-├── [README.md](http://_vscodecontentref_/1)           # Projektbeschreibung
-└── [start.html](http://_vscodecontentref_/2)          # Startseite des Projekts
+jsfu2/
+├── css/                                          # CSS-Dateien für das Styling
+├── html_module/                                  # HTML-Dateien für die Module
+├── html_projekte/                                # HTML-Dateien für die Projekte
+    ├── complete_projekts/                        # Komplette Projekte
+        ├── projekt1/                             # Komplettes Projekt 1
+            ├── css/                              # CSS-Dateien für das Styling
+            ├── script/                           # JavaScript-Dateien für die Logik
+        ├── projekt2/                             # Komplettes Projekt 2
+            ├── css/                              # CSS-Dateien für das Styling
+            ├── script/                           # JavaScript-Dateien für die Logik
+        ├── projekt3/                             # Komplettes Projekt 3
+            ├── css/                              # CSS-Dateien für das Styling
+            ├── script/                           # JavaScript-Dateien für die Logik
+        ├── projekt4/                             # Komplettes Projekt 4
+            ├── css/                              # CSS-Dateien für das Styling
+            ├── script/                           # JavaScript-Dateien für die Logik
+        ├── projekt5/                             # Komplettes Projekt 5
+            ├── css/                              # CSS-Dateien für das Styling
+            ├── script/                           # JavaScript-Dateien für die Logik
+├── script/                                       # JavaScript-Dateien für die Logik
+├── [README.md](http://_vscodecontentref_/1)      # Projektbeschreibung
+└── [start.html](http://_vscodecontentref_/2)     # Startseite des Projekts
 ```
 
 ## Nutzung
