@@ -1,0 +1,288 @@
+/* 
+ * CSS-Datei: jp_styles.css
+ * =========================
+ * Autor: Christian Leeser
+ * Version: 1.5
+ * Datum: 12. April 2025
+ * Beschreibung:
+ * Diese CSS-Datei enthält die Stile für die Projekte und Module des JavaScript-Kurses.
+ * Sie wurde aktualisiert, um fehlende Klassen wie toggle-button und code-content hinzuzufügen.
+ * Hinweis: Die Quelltexte wurden teilweise mit Unterstützung von Microsoft Copilot erstellt.
+ */
+
+/* ========================= */
+/* Allgemeine Stile          */
+/* ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Standardfarben (White-Mode) */
+:root {
+    --background-color: #ffffff; /* Weißer Hintergrund */
+    --text-color: #000000; /* Schwarzer Text */
+    --primary-color: #4CAF50; /* Grün */
+    --secondary-color: #2196F3; /* Blau */
+    --accent-color: #FF5722; /* Orange */
+    --link-color: #007BFF; /* Blau für Links */
+    --header-bg-color: #f4f4f4; /* Helles Grau für Überschriften */
+    --border-color: #e0e0e0; /* Sehr helles Grau für Rahmen */
+}
+
+/* Dark-Mode Farben */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #f4f4f4; /* Helles Grau statt tiefes Schwarz */
+        --text-color: #000000; /* Schwarzer Text bleibt erhalten */
+        --primary-color: #81C784; /* Helleres Grün */
+        --secondary-color: #64B5F6; /* Helleres Blau */
+        --accent-color: #FF8A65; /* Helleres Orange */
+        --link-color: #2196F3; /* Blau bleibt gleich */
+        --header-bg-color: #ffffff; /* Weiß für Überschriften */
+        --border-color: #d0d0d0; /* Mittelgrau für Rahmen */
+    }
+}
+
+/* Globale Stile */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Flüssiger Übergang */
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* ========================= */
+/* Überschriften             */
+/* ========================= */
+h1, h2, h3, h4 {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: var(--text-color);
+    text-align: left;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    background-color: var(--header-bg-color);
+    border-radius: 8px;
+    text-shadow: none; /* Entfernt Schatten für klareren Text */
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+/* ========================= */
+/* Navigation Styles (Menü)  */
+/* ========================= */
+.link-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.link-container a {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.link-container a:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* ========================= */
+/* Abschnitts-Stile          */
+/* ========================= */
+.criteria, .module, .teaser, .content, .definition, .aufgabentext,.projektarea, .projekt, .links, .loesungshinweis, .zusammenfassung, .ende {
+    background-color: var(--header-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+    .criteria, .module, .teaser, .content, .definition, .aufgabentext,.projektarea, .projekt, .links, .loesungshinweis, .zusammenfassung, .ende {
+        background-color: var(--background-color);
+        color: var(--text-color);
+    }
+}
+
+/* ========================= */
+/* Aufgaben-Stile            */
+/* ========================= */
+.aufgabenr {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    margin: 20px 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: left;
+    border-radius: 8px;
+}
+
+.mindeststandard {
+    background-color: #d4edda; /* Hellgrün */
+    color: #155724; /* Dunkelgrün */
+    padding: 10px;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.regelstandard {
+    background-color: #cce5ff; /* Hellblau */
+    color: #004085; /* Dunkelblau */
+    padding: 10px;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.expertenstandard {
+    background-color: #f8d7da; /* Hellrot */
+    color: #721c24; /* Dunkelrot */
+    padding: 10px;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+/* ========================= */
+/* Buttons                   */
+/* ========================= */
+button, #sozStartButton, #sozReloadButton {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button, #sozStartButton:hover, #sozReloadButton:hover {
+    transform: scale(1.1);
+    background-color: var(--accent-color);
+}
+
+/* ========================= */
+/* Eingabefelder             */
+/* ========================= */
+textarea, input[type="number"] {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+textarea:focus, input[type="number"]:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+    outline: none;
+}
+
+/* ========================= */
+/* Code-Container            */
+/* ========================= */
+.code-container {
+    background-color: var(--header-bg-color); /* Heller Hintergrund */
+    color: var(--text-color); /* Standard-Textfarbe */
+    padding: 15px; /* Innenabstand */
+    border-radius: 8px; /* Abgerundete Ecken */
+    font-family: 'Courier New', Courier, monospace; /* Monospace-Schriftart */
+    overflow-x: auto; /* Horizontal scrollen bei langen Zeilen */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sanfter Schatten */
+    border: 1px solid var(--border-color); /* Rahmen */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Sanfter Übergang */
+}
+
+.code-container:hover {
+    background-color: var(--background-color); /* Hintergrundfarbe beim Hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stärkerer Schatten beim Hover */
+}
+
+/* Toggle-Button für Code-Container */
+.toggle-button, .toggle-button-help {
+    cursor: pointer; /* Zeigt an, dass es interaktiv ist */
+    color: var(--link-color); /* Farbe für den Button */
+    font-size: 14px; /* Schriftgröße */
+    margin-top: 10px; /* Abstand nach oben */
+    display: inline-block; /* Block-ähnliches Verhalten */
+    transition: color 0.3s ease; /* Sanfter Übergang für die Farbe */
+}
+
+.toggle-button:hover,.toggle-button-help:hover {
+    color: var(--accent-color); /* Akzentfarbe beim Hover */
+}
+
+/* Code-Inhalt */
+.code-content {
+    display: none; /* Standardmäßig ausgeblendet */
+    margin-top: 10px; /* Abstand nach oben */
+    padding: 10px; /* Innenabstand */
+    background-color: var(--background-color); /* Hintergrundfarbe */
+    color: var(--text-color); /* Textfarbe */
+    border-radius: 5px; /* Abgerundete Ecken */
+    border: 1px solid var(--border-color); /* Rahmen */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Innerer Schatten */
+    font-family: 'Courier New', Courier, monospace; /* Monospace-Schriftart */
+    overflow-x: auto; /* Horizontal scrollen bei langen Zeilen */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Sanfter Übergang */
+}
+
+.code-content.active {
+    display: block; /* Sichtbar, wenn aktiv */
+}
+
+/* ========================= */
+/* Responsives Design        */
+/* ========================= */
+@media (max-width: 768px) {
+    .link-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    textarea, input[type="number"] {
+        width: 100%;
+    }
+}
