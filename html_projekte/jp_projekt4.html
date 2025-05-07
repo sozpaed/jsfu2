@@ -432,6 +432,20 @@
                 &lt;body&gt;
                     &lt;h1&gt;Zahlenraten&lt;/h1&gt;
                     &lt;p&gt;Willkommen zum Zahlenratenspiel!&lt;/p&gt;
+                    &lt;div id="showChallenge"&gt;Zum Raten drücke auf &lt;b&gt;"Raten"&lt;/b&gt;&lt;/div&gt;
+                    &lt;div id="getResultOfChallenge"&gt;
+                        &lt;div id="showCallbackOfChallenge" style="visibility: hidden;"&gt;&lt;/div&gt;
+                        &lt;form name="userInputForm"&gt;
+                            &lt;label for="firstNumber"&gt;Deine Zahl:&lt;/label&gt;
+                            &lt;input type="number" id="firstNumber" name="firstNumber" min="1" max="10" required /&gt;
+                        &lt;/form&gt;
+                    &lt;/div&gt;
+                    &lt;div id="listOfButtons"&gt;
+                        &lt;form name="listOfButtons"&gt;
+                            &lt;input type="button" id="sozStartButton" value="Raten" /&gt;
+                            &lt;input type="button" id="sozReloadButton" value="Seite neu laden" onclick="location.reload(true)" /&gt;
+                        &lt;/form&gt;
+                    &lt;/div&gt;
                 &lt;/body&gt;
                 &lt;/html&gt;
             </code>
